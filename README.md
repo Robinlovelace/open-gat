@@ -1,48 +1,104 @@
-Integrating geographic analysis in transport planning workflows: a
-review of open source options
+Integrating geographic analysis in transport planning workflows with
+open source software
 ================
 Robin Lovelace
-2019-07-02
+2019-07-04
 
 # Abstract
 
 Software for working with geographic data has long been used in
 transport planning. Transport is an inherently geographic activity,
-involving movement through space, from one location to another, along a
-more or less complicated trajectory, following spatial networks. One
-would therefore expect that geographic data structures and analysis
-would be a *vital and inbuilt* part of transport planning software. This
-has not historically been the case, however, and a dichotomy between
-‘geographic/non-geographic’ components of transport planning analysis
-persists: workflows in academic, public sector and private consultancy
-transport planning contexts still tend to separate vital geographic
-processing and map making stages from the rest of the analysis. This
-paper argues that such a division is damaging to transport planning in
-three main ways, by: (1) reducing researcher effectiveness and slows
-down work due to the time-consuming process of ‘context switching’; (2)
-inhibiting reproducibility, by requiring transport planners to learn,
-install and manage different programs for geographic and non-geographic
-aspects of their job; and, more fundamentally, (3) preventing transport
-planners, decision makers and others who use the outputs of transport
-planning from seeing vital geographic relationships, concepts and
-consequences, by implicitly encouraging geographic work to be considered
-as an ‘add-on’. Building on this critique, I outline solutions using
-popular and free open source software ecosystems (R, Python and QGIS)
-that enable geographic components of data analysis, modelling and
-visualisation to be *embedded within* transport planning workflows.
+involving movement through space, from one location to another on the
+face of the Earth, along more or less complicated trajectories defined
+by ways (highways, cycleways, footways etc) that can be defined as a
+spatial network. One would therefore expect that geographic data
+structures and analysis would be a *vital and inbuilt* part of transport
+planning software. This has not historically been the case, however. A
+dichotomy between ‘geographic/non-geographic’ components of transport
+planning analysis persists: workflows in academic, public sector and
+private consultancy transport planning contexts still tend to separate
+vital geographic processing and map making stages from the rest of the
+analysis. This paper argues that this division inadvertently damages
+transport planning in three main ways, by: (1) reducing researcher
+effectiveness and slows down work due to the time-consuming process of
+‘context switching’; (2) inhibiting reproducibility, by requiring
+transport planners to learn, install and manage different programs for
+geographic and non-geographic aspects of their job; and, more
+fundamentally, (3) preventing transport planners, decision makers and
+others who use the outputs of transport planning from seeing vital
+geographic relationships, concepts and consequences, by implicitly
+encouraging geographic work to be considered as an ‘add-on’. Building on
+this critique, this paper outlines solutions using popular and free open
+source software ecosystems (R, Python and QGIS) that enable geographic
+components of data analysis, modelling and visualisation to be *embedded
+within* transport planning workflows. This process of integrating
+geographical analyis has implications that go beyond academic transport
+research: more explicit inclusion of geography in transport planning
+will lead to better decision making, something that is vital in the
+context of the global transition away from the private motor car that
+the climate, obesity and air pollution crises demand.
 
 # Introduction
 
 Transport planning is an applied discipline involving not only the
-design of ways — highways, railways, cycleways and footways — but also
-envisioning the future and making the case for change (O’Flaherty and
-Bell 1997). Successful transport plans are long-term strategies that
+design of ways — including highways, railways, cycleways and footways —
+but also envisioning the future and making the case for change
+(O’Flaherty and Bell 1997). Successful transport plans are long-term
+strategies guided by citywide, regional and even national visions that
 will have material benefits for people and the local and global
-environment for generations to come. Transport planning is thus
-inherently embedded within the democratic process: decisions about how
-public space is to be used, with impacts for generations to come, cannot
-be left to unacountable technocrats in functioning democracies as
-illustrated, for example, by prominent Mayoral transport policies in
+environment for generations to come. But transport plans are also
+inherently spatial: the ways and other pieces of transport
+infrastructure must *go somewhere* to optimise their ability to take
+people *where they want to go* (Rodrigue, Comtois, and Slack 2013).
+
+Transport planning is thus embedded within broad democratic processes
+*and* local geographic contexts. Effective transport planning is
+inherently democratic because it determines about how public space is to
+be used, with impacts for generations to come. If transport plans are
+developed by unacountable technocrats with little understanding of
+transport’s impacts on other economies, the results can be severe: the
+transport system now is the “leading cause of death for children and
+young adults aged 5-29 years” through road traffic casualties alone,
+with 1.35 million people killed and tens of millions injured and
+disabled each year (World Health Organization 2018). The air pollution
+impacts could be even worse, with a growing body of research linking air
+pollution to Alzheimer’s disease, lung cancer and heart disease among
+hundreds of millions of sufferers worldwide (Kampa and Castanas 2008;
+Kilian and Kitazawa 2018). Transport is responsible for a quarter of
+global greenhouse gas emissions and growing (Harrison and Hester 2017),
+and is one of the hardest sectors to decarbonise (Moriarty and Honnery
+2008), meaning that evidence-based plans to reduce transport energy use
+is an urgent priority affecting the global population and especially the
+projected 1.4 billion people who will live in low elevation (less than
+10 m above sea level) coastal zones by 2060 (Neumann et al. 2015).
+
+Despite their global impacts, transport systems and the networks of
+physical infrastructure that underpin them are also highly localised
+(Barth’elemy 2011; Levinson 2012) and to some degree dynamic (Xie and
+Levinson 2011) phenomena. Effective transport planning therefore
+requires a deep understanding of the geography. Where is existing
+infrastructure and ‘demand’ (current and potential travel) located? How
+will transport patterns shift in the future? And where will different
+types of intervention be most effective? Tools that can help answer
+these questions are becoming an increasingly important part of the
+transport planner’s cabinet (te Brömmelstroet and Bertolini 2008).
+
+To illustrate this point, imagine fundamental changes that could be made
+to tax system in support a transition away from fossil fuels.
+Interventions such as carbon taxes would undoubtedly have geographic
+implications, but the intervention itself (charging a fixed price for
+the extraction and sale of atmosphere polluting substances) could be
+essentially non-geographic. Notwithstanding changes to national policies
+relating to transport, transport planning interventions, by contrast,
+are inherently spatial. However, even high level national plans for a
+walking and cycling revolution must be implemented locally, down to the
+level of streets, as illustrated by the still ongoing local
+implementation of Dutch cycling ambitions (Pucher and Buehler 2008). The
+political-democratic and local-geographic aspects of transport planning
+can be considered in isolation, but an integrated approach is necessary
+for effective policies
+(<span class="citeproc-not-found" data-reference-id="hull_policy_2008">**???**</span>).
+This is well illustrated by prominent Mayoral transport policies in
 cities such as London\[1\], Paris\[2\], and Bogotá\[3\].
 
 With issues such as climate change, air pollution, obesity and social
@@ -113,6 +169,12 @@ sector.
 
 (R Core Team 2019)
 
+(Bivand 2006)
+
+(Pebesma et al. 2015)
+
+(Bivand, Pebesma, and G’omez-Rubio 2013)
+
 ## Python
 
 (Rossum 1995)
@@ -127,10 +189,99 @@ sector.
 
 <div id="refs" class="references">
 
+<div id="ref-barthelemy_spatial_2011">
+
+Barth’elemy, Marc. 2011. “Spatial Networks.” *Physics Reports* 499
+(1–3): 1–101.
+
+</div>
+
+<div id="ref-bivand_implementing_2006">
+
+Bivand, Roger. 2006. “Implementing Spatial Data Analysis Software Tools
+in R.” *Geographical Analysis* 38 (1): 23–40.
+<https://doi.org/10.1111/j.0016-7363.2005.00672.x>.
+
+</div>
+
+<div id="ref-bivand_applied_2013">
+
+Bivand, Roger, Edzer J Pebesma, and Virgilio G’omez-Rubio. 2013.
+*Applied Spatial Data Analysis with R*. Vol. 747248717. Springer.
+
+</div>
+
+<div id="ref-harrison_environmental_2017">
+
+Harrison, R. M., and R. E. Hester. 2017. *Environmental Impacts of Road
+Vehicles: Past, Present and Future*. Royal Society of Chemistry.
+
+</div>
+
+<div id="ref-kampa_human_2008">
+
+Kampa, Marilena, and Elias Castanas. 2008. “Human Health Effects of Air
+Pollution.” *Environmental Pollution*, Proceedings of the 4th
+International Workshop on Biomonitoring of Atmospheric Pollution (With
+Emphasis on Trace Elements), 151 (2): 362–67.
+<https://doi.org/10.1016/j.envpol.2007.06.012>.
+
+</div>
+
+<div id="ref-kilian_emerging_2018">
+
+Kilian, Jason, and Masashi Kitazawa. 2018. “The Emerging Risk of
+Exposure to Air Pollution on Cognitive Decline and Alzheimer’s
+Disease–Evidence from Epidemiological and Animal Studies.” *Biomedical
+Journal*.
+
+</div>
+
+<div id="ref-levinson_network_2012">
+
+Levinson, David. 2012. “Network Structure and City Size.” *PloS One* 7
+(1): e29721. <https://doi.org/10.1371/journal.pone.0029721>.
+
+</div>
+
+<div id="ref-moriarty_prospects_2008">
+
+Moriarty, Patrick, and Damon Honnery. 2008. “The Prospects for Global
+Green Car Mobility.” *Journal of Cleaner Production* 16 (16): 1717–26.
+<https://doi.org/10.1016/j.jclepro.2007.10.025>.
+
+</div>
+
+<div id="ref-neumann_future_2015">
+
+Neumann, Barbara, Athanasios T. Vafeidis, Juliane Zimmermann, and Robert
+J. Nicholls. 2015. “Future Coastal Population Growth and Exposure to
+Sea-Level Rise and Coastal Flooding-a Global Assessment.” *PloS One* 10
+(3): e0118571.
+
+</div>
+
 <div id="ref-oflaherty_transport_1997">
 
 O’Flaherty, Coleman, and Michael GH Bell. 1997. *Transport Planning and
 Traffic Engineering*. Elsevier.
+
+</div>
+
+<div id="ref-pebesma_software_2015">
+
+Pebesma, Edzer, Roger Bivand, Paulo Justiniano Ribeiro, and others.
+2015. “Software for Spatial Statistics.” *Journal of Statistical
+Software* 63 (1): 1–8.
+<http://brage.bibsys.no/xmlui/bitstream/id/320781/Pebesma_Bivand_Ribeiro.pdf>.
+
+</div>
+
+<div id="ref-pucher_making_2008">
+
+Pucher, John, and Ralph Buehler. 2008. “Making Cycling Irresistible:
+Lessons from the Netherlands, Denmark and Germany.” *Transport Reviews*
+28 (4): 495–528. <https://doi.org/10.1080/01441640701806612>.
 
 </div>
 
@@ -148,11 +299,43 @@ Computing.” <https://www.R-project.org/>.
 
 </div>
 
+<div id="ref-rodrigue_geography_2013">
+
+Rodrigue, Jean-Paul, Claude Comtois, and Brian Slack. 2013. *The
+Geography of Transport Systems*. Third. London, New York: Routledge.
+
+</div>
+
 <div id="ref-rossum_python_1995">
 
 Rossum, Guido. 1995. “Python Reference Manual.” Amsterdam, The
 Netherlands, The Netherlands: CWI (Centre for Mathematics; Computer
 Science).
+
+</div>
+
+<div id="ref-te_brommelstroet_developing_2008">
+
+te Brömmelstroet, Marco, and Luca Bertolini. 2008. “Developing Land Use
+and Transport PSS: Meaningful Information Through a Dialogue Between
+Modelers and Planners.” *Transport Policy* 15 (4): 251–59.
+<https://doi.org/10.1016/j.tranpol.2008.06.001>.
+
+</div>
+
+<div id="ref-world_health_organization_global_2018">
+
+World Health Organization. 2018. *Global Status Report on Road Safety
+2018*. S.l.
+<https://www.who.int/violence_injury_prevention/road_safety_status/2018/en/>.
+
+</div>
+
+<div id="ref-xie_evolving_2011">
+
+Xie, Feng, and David Levinson. 2011. *Evolving Transportation Networks*.
+Transportation Research, Economics and Policy. New York:
+Springer-Verlag. <https://www.springer.com/gp/book/9781441998033>.
 
 </div>
 

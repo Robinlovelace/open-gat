@@ -1,41 +1,70 @@
 ---
-title: "Integrating geographic analysis in transport planning workflows: a review of open source options"
+title: "Integrating geographic analysis in transport planning workflows with open source software"
 author: "Robin Lovelace"
 date: '`r Sys.Date()`'
 output:
   github_document: default
   pdf_document: default
   word_document: default
-bibliography: software.bib
+bibliography: references.bib
 ---
 
 ```{r, echo=FALSE, eval=FALSE}
 # get citations
-refs = RefManageR::ReadZotero(group = "418217", .params = list(collection = "JFR868KJ", limit = 100))
+refs_sof = RefManageR::ReadZotero(group = "418217", .params = list(collection = "JFR868KJ", limit = 100))
+refs_gis = RefManageR::ReadZotero(group = "418217", .params = list(collection = "KUXG5CJL", limit = 100))
+refs_geo = RefManageR::ReadZotero(group = "418217", .params = list(collection = "9K6FRP6N", limit = 100))
+refs = c(refs_sof, refs_gis, refs_geo)
 refs_df = as.data.frame(refs)
 # View(refs_df)
-RefManageR::WriteBib(refs, "software.bib")
+RefManageR::WriteBib(refs, "references.bib")
+
+n_words = wordcountaddin::word_count("README.Rmd")
+word_count = readr::read_csv("word-count.csv")
+word_count_new = rbind(word_count, data.frame(date = Sys.Date(), n_words))
+readr::write_csv(word_count_new, "word-count.csv")
 ```
 
 
 # Abstract {-}
 
 Software for working with geographic data has long been used in transport planning.
-Transport is an inherently geographic activity, involving movement through space, from one location to another, along a more or less complicated trajectory, following spatial networks.
+Transport is an inherently geographic activity, involving movement through space, from one location to another on the face of the Earth, along more or less complicated trajectories defined by ways (highways, cycleways, footways etc) that can be defined as a spatial network.
 One would therefore expect that geographic data structures and analysis would be a *vital and inbuilt* part of transport planning software.
-This has not historically been the case, however, and a dichotomy between 'geographic/non-geographic' components of transport planning analysis persists: workflows in academic, public sector and private consultancy transport planning contexts still tend to separate vital geographic processing and map making stages from the rest of the analysis.
-This paper argues that such a division is damaging to transport planning in three main ways, by:
+This has not historically been the case, however.
+A dichotomy between 'geographic/non-geographic' components of transport planning analysis persists: workflows in academic, public sector and private consultancy transport planning contexts still tend to separate vital geographic processing and map making stages from the rest of the analysis.
+This paper argues that this division inadvertently damages transport planning in three main ways, by:
 (1) reducing researcher effectiveness and slows down work due to the time-consuming process of 'context switching';
 (2) inhibiting reproducibility, by requiring transport planners to learn, install and manage different programs for geographic and non-geographic aspects of their job; and, more fundamentally, 
 (3) preventing transport planners, decision makers and others who use the outputs of transport planning from seeing vital geographic relationships, concepts and consequences, by implicitly encouraging geographic work to be considered as an 'add-on'.
-Building on this critique, I outline solutions using popular and free open source software ecosystems (R, Python and QGIS) that enable geographic components of data analysis, modelling and visualisation to be *embedded within* transport planning workflows.
-
+Building on this critique, this paper outlines solutions using popular and free open source software ecosystems (R, Python and QGIS) that enable geographic components of data analysis, modelling and visualisation to be *embedded within* transport planning workflows.
+This process of integrating geographical analyis has implications that go beyond academic transport research: more explicit inclusion of geography in transport planning will lead to better decision making, something that is vital in the context of the global transition away from the private motor car that the climate, obesity and air pollution crises demand. 
 
 # Introduction
 
-Transport planning is an applied discipline involving not only the design of ways --- highways, railways, cycleways and footways --- but also envisioning the future and making the case for change [@oflaherty_transport_1997].
-Successful transport plans are long-term strategies that will have material benefits for people and the local and global environment for generations to come.
-Transport planning is thus inherently embedded within the democratic process: decisions about how public space is to be used, with impacts for generations to come, cannot be left to unacountable technocrats in functioning democracies as illustrated, for example, by prominent Mayoral transport policies in cities such as 
+Transport planning is an applied discipline involving not only the design of ways --- including highways, railways, cycleways and footways --- but also envisioning the future and making the case for change [@oflaherty_transport_1997].
+Successful transport plans are long-term strategies guided by citywide, regional and even national visions that will have material benefits for people and the local and global environment for generations to come.
+But transport plans are also inherently spatial: the ways and other pieces of transport infrastructure must *go somewhere* to optimise their ability to take people *where they want to go* [@rodrigue_geography_2013].
+
+Transport planning is thus embedded within broad democratic processes *and* local geographic contexts.
+Effective transport planning is inherently democratic because it determines about how public space is to be used, with impacts for generations to come.
+If transport plans are developed by unacountable technocrats with little understanding of transport's impacts on other economies, the results can be severe: the transport system now is the "leading cause of death for children and young adults aged 5-29 years" through road traffic casualties alone, with 1.35 million people killed and tens of millions injured and disabled each year [@world_health_organization_global_2018].
+The air pollution impacts could be even worse, with a growing body of research linking air pollution to Alzheimer's disease, lung cancer and heart disease among hundreds of millions of sufferers worldwide [@kampa_human_2008; @kilian_emerging_2018].
+Transport is responsible for a quarter of global greenhouse gas emissions and growing [@harrison_environmental_2017], and is one of the hardest sectors to decarbonise [@moriarty_prospects_2008], meaning that evidence-based plans to reduce transport energy use is an urgent priority affecting the global population and especially the projected 1.4 billion people who will live in low elevation (less than 10 m above sea level) coastal zones by 2060 [@neumann_future_2015].
+
+Despite their global impacts, transport systems and the networks of physical infrastructure that underpin them are also highly localised [@barthelemy_spatial_2011; @levinson_network_2012] and to some degree dynamic [@xie_evolving_2011] phenomena.
+Effective transport planning therefore requires a deep understanding of the geography.
+Where is existing infrastructure and 'demand' (current and potential travel) located?
+How will transport patterns shift in the future?
+And where will different types of intervention be most effective?
+Tools that can help answer these questions are becoming an increasingly important part of the transport planner's cabinet [@te_brommelstroet_developing_2008].
+
+To illustrate this point, imagine fundamental changes that could be made to tax system in support a transition away from fossil fuels.
+Interventions such as carbon taxes would undoubtedly have geographic implications, but the intervention itself (charging a fixed price for the extraction and sale of atmosphere polluting substances) could be essentially non-geographic.
+Notwithstanding changes to national policies relating to transport, transport planning interventions, by contrast, are inherently spatial.
+However, even high level national plans for a walking and cycling revolution must be implemented locally, down to the level of streets, as illustrated by the still ongoing local implementation of Dutch cycling ambitions [@pucher_making_2008]. 
+The political-democratic and local-geographic aspects of transport planning can be considered in isolation, but an integrated approach is necessary for effective policies [@hull_policy_2008].
+This is well illustrated by prominent Mayoral transport policies in cities such as 
 London[^1],
 Paris^[
 The current Mayor of Paris, Anne Hidalgo, sees transport as a priority and has plans to make public transport free. See 
@@ -82,6 +111,13 @@ The paper concludes that 'integrated approach' can support efficient, scalable a
 ## R
 
 [@r_core_team_r:_2019]
+
+[@bivand_implementing_2006]
+
+[@pebesma_software_2015]
+
+
+[@bivand_applied_2013]
 
 
 ## Python
