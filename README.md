@@ -79,15 +79,14 @@ Levinson 2011) phenomena. This growing understanding of the fundamental
 nature of transport planning as a *spatial activity*, coupled with an
 upsurge in the amount of geographic transport data available, could
 explain why relative levels of interest in Transport Geography has grown
-over the last few decades against a backdrop of low and falling levels
-of interest in purely geographic concepts such as ‘geographic
-information systems’ and ‘geocomputation’, at least according to data
-from Google Trends. Figure 1, generated using reproducible code thanks
-to the **gtrendsR** R package (Massicotte and Eddelbuettel 2019),
-suggests that inferred interest in Transport Geography may surpass
-inferred interest in GIS within the next few years, notwithstanding the
-limitations associated with search data
-(<span class="citeproc-not-found" data-reference-id="mellon_internet_2013">**???**</span>).
+over the last decade against a backdrop of low and falling levels of
+interest in purely geographic concepts such as ‘geographic information
+systems’ and ‘geocomputation’, at least according to data from Google
+Trends. Figure 1, generated using reproducible code thanks to the
+**gtrendsR** R package (Massicotte and Eddelbuettel 2019), suggests that
+inferred interest in Transport Geography may surpass inferred interest
+in GIS within the next few years, notwithstanding the limitations
+associated with search data (Mellon 2014).
 
 ![Relative level of interest in search terms related to ‘geographic
 information systems’, ‘geocomputation’ and ‘transport geography’
@@ -325,6 +324,15 @@ Sets for Understanding Regional Retail Flows.” *Geographical Analysis*
 Massicotte, Philippe, and Dirk Eddelbuettel. 2019. *gtrendsR: Perform
 and Display Google Trends Queries*.
 <https://github.com/PMassicotte/gtrendsR>.
+
+</div>
+
+<div id="ref-mellon_internet_2014">
+
+Mellon, Jonathan. 2014. “Internet Search Data and Issue Salience: The
+Properties of Google Trends as a Measure of Issue Salience.” *Journal of
+Elections, Public Opinion and Parties* 24 (1): 45–72.
+<https://doi.org/10.1080/17457289.2013.846346>.
 
 </div>
 
