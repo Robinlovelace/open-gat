@@ -2,7 +2,7 @@ Integrating geographic analysis in transport planning with open source
 software
 ================
 Robin Lovelace
-2019-07-05
+2019-07-06
 
 # Abstract
 
@@ -75,13 +75,36 @@ projected 1.4 billion people who will live in low elevation (less than
 Despite their global impacts, transport systems and the networks of
 physical infrastructure that underpin them are also highly localised
 (Barth’elemy 2011; Levinson 2012) and to some degree dynamic (Xie and
-Levinson 2011) phenomena. Effective transport planning therefore
-requires a deep understanding of the geography. Where is existing
-infrastructure and ‘demand’ (current and potential travel) located? How
-will transport patterns shift in the future? And where will different
-types of intervention be most effective? Tools that can help answer
-these questions are becoming an increasingly important part of the
-transport planner’s cabinet (te Brömmelstroet and Bertolini 2008).
+Levinson 2011) phenomena. This growing understanding of the fundamental
+nature of transport planning as a *spatial activity*, coupled with an
+upsurge in the amount of geographic transport data available, could
+explain why relative levels of interest in Transport Geography has grown
+over the last few decades against a backdrop of low and falling levels
+of interest in purely geographic concepts such as ‘geographic
+information systems’ and ‘geocomputation’, at least according to data
+from Google Trends. Figure 1, generated using reproducible code thanks
+to the **gtrendsR** R package (Massicotte and Eddelbuettel 2019),
+suggests that inferred interest in Transport Geography may surpass
+inferred interest in GIS within the next few years, notwithstanding the
+limitations associated with search data
+(<span class="citeproc-not-found" data-reference-id="mellon_internet_2013">**???**</span>).
+
+![Relative level of interest in search terms related to ‘geographic
+information systems’, ‘geocomputation’ and ‘transport geography’
+inferred from google search data.](google-trends.png)
+
+The concept of integrating geographic data analysis in transport
+planning is not new. … Around the turn of the century, there were
+attempts to define geographic information systems for transportation
+(GIS-T) as a self-standing academic field (Miller 1999), something that
+has not caught on.
+
+Where is existing infrastructure and ‘demand’ (current and potential
+travel) located? How will transport patterns shift in the future? And
+where will different types of intervention be most effective? Tools that
+can help answer these questions are becoming an increasingly important
+part of the transport planner’s cabinet (te Brömmelstroet and Bertolini
+2008).
 
 To illustrate this point, imagine fundamental changes that could be made
 to tax system in support a transition away from fossil fuels.
@@ -294,6 +317,23 @@ Lovelace, Robin, Mark Birkin, Philip Cross, and Martin Clarke. 2016.
 “From Big Noise to Big Data: Toward the Verification of Large Data
 Sets for Understanding Regional Retail Flows.” *Geographical Analysis*
 48 (1): 59–81. <https://doi.org/10.1111/gean.12081>.
+
+</div>
+
+<div id="ref-massicotte_gtrendsr:_2019">
+
+Massicotte, Philippe, and Dirk Eddelbuettel. 2019. *gtrendsR: Perform
+and Display Google Trends Queries*.
+<https://github.com/PMassicotte/gtrendsR>.
+
+</div>
+
+<div id="ref-miller_potential_1999">
+
+Miller, Harvey J. 1999. “Potential Contributions of Spatial Analysis to
+Geographic Information Systems for Transportation (GIS-T).”
+*Geographical Analysis* 31 (4): 373–99.
+<https://doi.org/10.1111/j.1538-4632.1999.tb00991.x>.
 
 </div>
 

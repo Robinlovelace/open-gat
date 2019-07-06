@@ -33,6 +33,11 @@ ggplot(word_count_new) +
   ylim(0, 5000)
 ```
 
+```{r, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+
 
 # Abstract {-}
 
@@ -61,7 +66,29 @@ The air pollution impacts could be even worse, with a growing body of research l
 Transport is responsible for a quarter of global greenhouse gas emissions and growing [@harrison_environmental_2017], and is one of the hardest sectors to decarbonise [@moriarty_prospects_2008], meaning that evidence-based plans to reduce transport energy use is an urgent priority affecting the global population and especially the projected 1.4 billion people who will live in low elevation (less than 10 m above sea level) coastal zones by 2060 [@neumann_future_2015].
 
 Despite their global impacts, transport systems and the networks of physical infrastructure that underpin them are also highly localised [@barthelemy_spatial_2011; @levinson_network_2012] and to some degree dynamic [@xie_evolving_2011] phenomena.
-Effective transport planning therefore requires a deep understanding of the geography.
+This growing understanding of the fundamental nature of transport planning as a *spatial activity*, coupled with an upsurge in the amount of geographic transport data available, could explain why relative levels of interest in Transport Geography has grown over the last few decades against a backdrop of low and falling levels of interest in purely geographic concepts such as 'geographic information systems' and 'geocomputation', at least according to data from Google Trends.
+Figure 1, generated using reproducible code thanks to the **gtrendsR** R package [@massicotte_gtrendsr:_2019], suggests that inferred interest in Transport Geography may surpass inferred interest in GIS within the next few years, notwithstanding the limitations associated with search data [@mellon_internet_2013]. 
+
+```{r, eval=FALSE}
+library(gtrendsR)
+# res_all <- gtrends(c("transport geography", "geographic information systems", "geocomputation"), time = "all")
+res <- gtrends(c("transport geography", "geographic information systems", "geocomputation"), time = "2010-01-01 2019-06-01")
+
+
+plot(res)
+res$interest_over_time[res$interest_over_time$keyword == "geocomputation", ] %>% 
+  tail()
+ggplot2::ggsave("google-trends.png")
+```
+
+```{r, fig.cap="Relative level of interest in search terms related to 'geographic information systems', 'geocomputation' and 'transport geography' inferred from google search data."}
+knitr::include_graphics("google-trends.png")
+```
+
+The concept of integrating geographic data analysis in transport planning is not new.
+...
+Around the turn of the century, there were attempts to define geographic information systems for transportation (GIS-T) as a self-standing academic field [@miller_potential_1999], something that has not caught on.
+
 Where is existing infrastructure and 'demand' (current and potential travel) located?
 How will transport patterns shift in the future?
 And where will different types of intervention be most effective?
