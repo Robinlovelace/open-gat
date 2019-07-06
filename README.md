@@ -93,10 +93,30 @@ information systems’, ‘geocomputation’ and ‘transport geography’
 inferred from google search data.](google-trends.png)
 
 The concept of integrating geographic data analysis in transport
-planning is not new. … Around the turn of the century, there were
-attempts to define geographic information systems for transportation
-(GIS-T) as a self-standing academic field (Miller 1999), something that
-has not caught on.
+planning is not new. Geographic perspectives have contributed to the
+transport planning for over 100 years, as documented in papers on
+geographic considerations in railway design (Buxton 1908) and national
+engineering challenges (Farnham 1912), to take just a couple of pre-war
+examples. In the interwar period (1918-1939)… Around the turn of the
+century, there were attempts to define geographic information systems
+for transportation (GIS-T) as a self-standing academic field (Miller
+1999), something that has not caught on.
+
+<!-- something on the Journal of Transport Geography? -->
+
+The growing research interest in the subject is also reflected in
+teaching. Modules dedicated to Transport Geography have been advertised
+at the Universities of Aberdeen and Hofstra and, at the University of
+Leeds the Masters module Sustainable Spatial Planning and Analysis
+([SSPA](https://github.com/ITSLeeds/SSPA)) is focussed on GIS skills for
+transport planning (declaration of interest: I teach on this module).
+There are evem dedicated 3 year degrees Transport Geography.
+<!-- something on the lack of open source? -->
+
+<!-- https://www.abdn.ac.uk/registry/courses/undergraduate/2016-2017/geography/gg4016
+https://people.hofstra.edu/jean-paul_rodrigue/course_transport.html
+ in Geography with Transport Studies BA advertised by the University of Leeds
+-->
 
 Where is existing infrastructure and ‘demand’ (current and potential
 travel) located? How will transport patterns shift in the future? And
@@ -257,6 +277,20 @@ Bivand, Roger, Edzer J Pebesma, and Virgilio G’omez-Rubio. 2013.
 
 Boyce, David E., and Huw C. W. L. Williams. 2015. *Forecasting Urban
 Travel: Past, Present and Future*. Edward Elgar Publishing.
+
+</div>
+
+<div id="ref-buxton_balkan_1908">
+
+Buxton, Noel. 1908. “Balkan Geography and Balkan Railways.” *The
+Geographical Journal* 32 (3): 217–34.
+
+</div>
+
+<div id="ref-farnham_relation_1912">
+
+Farnham, Amos W. 1912. “The Relation of Some Recent Engineering Problems
+to Geography.” *Journal of Geography* 11 (2): 40–45.
 
 </div>
 
