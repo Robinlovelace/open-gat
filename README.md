@@ -1,52 +1,43 @@
-Integrating geographic analysis in transport planning with open source
-software
+Integrating geographic analysis in transport planning
 ================
 Robin Lovelace
-2019-07-06
+2019-07-19
 
 # Abstract
 
 Software for working with geographic data has long been used in
 transport planning. Transport is an inherently geographic activity,
-involving movement through space, from one location to another on the
-face of the Earth, along more or less complicated trajectories defined
-by ways (highways, cycleways, footways etc) that can be defined as a
-spatial network. One would therefore expect that geographic data
-structures and analysis would be a *vital and inbuilt* part of transport
-planning software. This has not historically been the case, however. A
-dichotomy between ‘geographic/non-geographic’ components of transport
-planning analysis persists: workflows in academic, public sector and
-private consultancy transport planning contexts still tend to separate
-vital geographic processing and map making stages from the rest of the
-analysis. This paper argues that this division inadvertently damages
-transport planning in three main ways, by: (1) reducing researcher
-effectiveness and slows down work due to the time-consuming process of
-‘context switching’; (2) inhibiting reproducibility, by requiring
-transport planners to learn, install and manage different programs for
-geographic and non-geographic aspects of their job; and, more
-fundamentally, (3) preventing transport planners, decision makers and
-others who use the outputs of transport planning from seeing vital
-geographic relationships, concepts and consequences, by implicitly
-encouraging geographic work to be considered as an ‘add-on’. Building on
-this critique, this paper outlines solutions using popular and free open
-source software ecosystems (R, Python and QGIS) that enable geographic
-components of data analysis, modelling and visualisation to be *embedded
-within* transport planning workflows. This process of integrating
-geographical analyis has implications that go beyond academic transport
-research: more explicit inclusion of geography in transport planning
-will lead to better decision making, something that is vital in the
-context of the global transition away from the private motor car that
-the climate, obesity and air pollution crises demand.
+involving movement through space, along more or less complicated
+trajectories defined by ways that can be defined as a spatial network.
+There is a strong case for geography being an *inbuilt* part of
+transport planning software, yet a dichotomy between ‘geographic’ and
+‘non-geographic’ components persists.
+<!-- workflows in academic, public sector and private consultancy transport planning contexts still tend to separate vital geographic processing and map making stages from the rest of the analysis. -->
+This paper argues that this division inadvertently damages transport
+planning in three main ways, by: (1) reducing researcher effectiveness
+due to the time-consuming process of ‘context switching’; (2) inhibiting
+reproducibility, requiring installation and management of geographic and
+non-geographic tools; and (3) reducing the visibility of vital
+geographic components in transport planning, with consequences for
+transport policy design. Building on this critique, this paper outlines
+solutions that use popular and free open source software ecosystems (R,
+Python and QGIS) to embed geographic data analysis, modelling and
+visualisation to be *embedded within* transport planning workflows.
+Ultimately, by highlighting cost effective and geographically targetted
+interventions, integrating geographic analysis in transoport planning
+could lead to better decision making.
+<!-- and support the global efforts to transition away from fossil fuels and towards a healthy, low carbon transport system. -->
 
 # Introduction
 
-Transport planning is an applied discipline involving not only the
-design of ways — including highways, railways, cycleways and footways —
-but also envisioning the future and making the case for change
-(O’Flaherty and Bell 1997). Successful transport plans are long-term
-strategies guided by citywide, regional and even national visions that
-will have material benefits for people and the local and global
-environment for generations to come. But transport plans are also
+Transport planning is an applied discipline involving the design of
+physical infrastructure, including highways, railways, cycleways and
+footways (O’Flaherty and Bell 1997). It also involves ‘visioning’
+transport futures and making the economic and political case for change
+(Timms, Tight, and Watling 2014). Successful transport plans are
+long-term strategies guided by citywide, regional and even national
+visions that will have material benefits for people and the local and
+global environment for generations to come. But transport plans are also
 inherently spatial: the ways and other pieces of transport
 infrastructure must *go somewhere* to optimise their ability to take
 people *where they want to go* (Rodrigue, Comtois, and Slack 2013).
@@ -455,6 +446,14 @@ te Brömmelstroet, Marco, and Luca Bertolini. 2008. “Developing Land Use
 and Transport PSS: Meaningful Information Through a Dialogue Between
 Modelers and Planners.” *Transport Policy* 15 (4): 251–59.
 <https://doi.org/10.1016/j.tranpol.2008.06.001>.
+
+</div>
+
+<div id="ref-timms_imagineering_2014">
+
+Timms, Paul, Miles Tight, and David Watling. 2014. “Imagineering
+Mobility: Constructing Utopias for Future Urban Transport.” *Environment
+and Planning A* 46 (1): 78–93. <https://doi.org/10.1068/a45669>.
 
 </div>
 
