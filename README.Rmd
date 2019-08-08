@@ -1,5 +1,6 @@
 ---
-title: "Integrating geographic analysis in transport planning: new tools of the trade"
+title: "Integrating geographic analysis in transport planning: new open source tools for a new era"
+# title: "Integrating geographic analysis in transport planning: new tools of the trade"
 # title: "Open source software for geographic analysis in transport planning"
 # title: "Integrating geographic analysis in transport planning"
 # title: "Integrating geographic analysis in transport planning workflows: the role of open source software
@@ -82,7 +83,7 @@ Transport is responsible for a quarter of global greenhouse gas emissions and gr
 
 Transport planning is also inherently embedded within local geographic contexts because transport systems, and the networks of physical infrastructure that underpins them, are highly localised [@barthelemy_spatial_2011; @levinson_network_2012] and to some degree dynamic [@xie_evolving_2011] phenomena.
 Transport planning is therefore fundamentally a *spatial activity*.
-Perhaps in response to an upsurge in the amount of geographic transport data available, interest in Transport Geography seems to have grown over the last decade, according to data from Google Trends.
+Perhaps in response to an upsurge in the amount of geographic transport data available, interest in Transport Geography seems to have grown over the last decade relative to other terms, according to data from Google Trends (Figure 1).
 It is interesting to compare this growth with relative levels of interest in 'geographic information systems' and 'spatial planning', both of which seem to have seen relative declines over time, notwithstanding the limitations associated with search data [@mellon_internet_2014]. 
 
 ```{r, eval=FALSE}
@@ -111,16 +112,37 @@ ggplot2::ggsave("google-trends.png")
 knitr::include_graphics("google-trends.png")
 ```
 
-The concept of integrating geographic data analysis in transport planning is not new.
+The concept of integrating geographic data analysis in transport planning is not new (although tools for integrating geographic data are).
 Geographic perspectives have contributed to the transport planning for over 100 years, as documented in papers on geographic considerations in railway design [@buxton_balkan_1908] and national engineering challenges [@farnham_relation_1912], to take just a couple of pre-war examples.
-In the inter-war period (1918-1939)...
+
+In the inter-war period (1918-1939), interest in Transport Geography seems to have grown, although a disciplinary home for transport research (let alone geographic transport research) had yet to emerge and the term 'transport geography' itself was vanishingly rare.
+A few papers from the period demonstrate the growing interest in the topic, and understanding of geographic thinking to understand evolving transport systems.
+@paterson_horse_1926 speculated quite accurately on the continued rise of motor traffic at the expense of horse powered transport during the 20^th^ Century, noting the importance of geographic factors in determining mode choice, down to the street level:
+"Many streets, like our Bond Street, Watling Street or Lombard Street, and in Seville, the Calle de las Sierpes or Kalver Straat in Amsterdam, may be unsuited to motor traffic, and frontage values may be so high that widening can hardly be considered."
+In a geographic review of Japanese cities @trewartha_japanese_1934 also alluded to the relationship between geography and mode choice:
+"widening and paving of [roads] have (sic) been accomplished [allowing] numerous taxis, motor busses, and tram cars contrasting with the slow human and animal-drawn carts and the ubiquitous bicycle".
+Rapid industrialisation during the largely unconscious build-up to World War II was associated with major road building schemes in many developed regions, demanding the practical application of new methods from a range of disciplines [e.g. @greenshields_studying_1936].
+In the USA, highway engineering even became a recommended case study for geography lessons [@fox_main_1923].
+
+```{r, echo=FALSE, eval=FALSE}
+txt = tesseract::ocr("/tmp/a515a55e15285bf2fd100fd1d8edd91c.pdf")
+writeLines(txt, "/tmp/txt.txt")
+file.edit("/tmp/txt.txt")
+```
+
+
+
+geographic 
+
+
 Around the turn of the century, there were attempts to define geographic information systems for transportation (GIS-T) as a self-standing academic field [@miller_potential_1999], something that has not caught on.
 
+<!-- Search term for interwar period: https://scholar.google.co.uk/scholar?q="transport+geography" -->
 <!-- something on the Journal of Transport Geography? -->
 
 The growing research interest in the subject is also reflected in teaching.
 Modules dedicated to Transport Geography have been advertised at the Universities of Aberdeen and Hofstra and, at the University of Leeds the Masters module Sustainable Spatial Planning and Analysis ([SSPA](https://github.com/ITSLeeds/SSPA)) is focussed on GIS skills for transport planning (declaration of interest: I teach on this module).
-There are evem dedicated 3 year degrees Transport Geography.
+There are even dedicated 3 year degrees Transport Geography.
 <!-- something on the lack of open source? -->
 
 <!-- https://www.abdn.ac.uk/registry/courses/undergraduate/2016-2017/geography/gg4016

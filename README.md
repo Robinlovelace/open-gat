@@ -1,8 +1,8 @@
-Integrating geographic analysis in transport planning: new tools of the
-trade
+Integrating geographic analysis in transport planning: new open source
+tools for a new era
 ================
 Robin Lovelace
-2019-07-21
+2019-08-08
 
 # Abstract
 
@@ -90,24 +90,56 @@ infrastructure that underpins them, are highly localised (Barth’elemy
 phenomena. Transport planning is therefore fundamentally a *spatial
 activity*. Perhaps in response to an upsurge in the amount of geographic
 transport data available, interest in Transport Geography seems to have
-grown over the last decade, according to data from Google Trends. It is
-interesting to compare this growth with relative levels of interest in
-‘geographic information systems’ and ‘spatial planning’, both of which
-seem to have seen relative declines over time, notwithstanding the
-limitations associated with search data (Mellon
+grown over the last decade relative to other terms, according to data
+from Google Trends (Figure 1). It is interesting to compare this growth
+with relative levels of interest in ‘geographic information systems’ and
+‘spatial planning’, both of which seem to have seen relative declines
+over time, notwithstanding the limitations associated with search data
+(Mellon
 2014).
 
 <img src="google-trends.png" title="Relative level of interest in search terms related to 'geographic information systems', 'geocomputation' and 'transport geography' inferred from google search data. Thanks to the **gtrendsR** R package [@massicotte_gtrendsr:_2019], code to reproduce the plot is hosted in this paper's code repository." alt="Relative level of interest in search terms related to 'geographic information systems', 'geocomputation' and 'transport geography' inferred from google search data. Thanks to the **gtrendsR** R package [@massicotte_gtrendsr:_2019], code to reproduce the plot is hosted in this paper's code repository." width="70%" />
 
 The concept of integrating geographic data analysis in transport
-planning is not new. Geographic perspectives have contributed to the
-transport planning for over 100 years, as documented in papers on
-geographic considerations in railway design (Buxton 1908) and national
-engineering challenges (Farnham 1912), to take just a couple of pre-war
-examples. In the inter-war period (1918-1939)… Around the turn of the
-century, there were attempts to define geographic information systems
-for transportation (GIS-T) as a self-standing academic field (Miller
-1999), something that has not caught on.
+planning is not new (although tools for integrating geographic data
+are). Geographic perspectives have contributed to the transport planning
+for over 100 years, as documented in papers on geographic considerations
+in railway design (Buxton 1908) and national engineering challenges
+(Farnham 1912), to take just a couple of pre-war examples.
+
+In the inter-war period (1918-1939), interest in Transport Geography
+seems to have grown, although a disciplinary home for transport research
+(let alone geographic transport research) had yet to emerge and the term
+‘transport geography’ itself was vanishingly rare. A few papers from the
+period demonstrate the growing interest in the topic, and understanding
+of geographic thinking to understand evolving transport systems.
+Paterson (1926) speculated quite accurately on the continued rise of
+motor traffic at the expense of horse powered transport during the
+20<sup>th</sup> Century, noting the importance of geographic factors in
+determining mode choice, down to the street level: “Many streets, like
+our Bond Street, Watling Street or Lombard Street, and in Seville, the
+Calle de las Sierpes or Kalver Straat in Amsterdam, may be unsuited to
+motor traffic, and frontage values may be so high that widening can
+hardly be considered.” In a geographic review of Japanese cities
+Trewartha (1934) also alluded to the relationship between geography and
+mode choice: “widening and paving of \[roads\] have (sic) been
+accomplished \[allowing\] numerous taxis, motor busses, and tram cars
+contrasting with the slow human and animal-drawn carts and the
+ubiquitous bicycle”. Rapid industrialisation during the largely
+unconscious build-up to World War II was associated with major road
+building schemes in many developed regions, demanding the practical
+application of new methods from a range of disciplines (e.g.
+Greenshields 1936). In the USA, highway engineering even became a
+recommended case study for geography lessons (Fox 1923).
+
+geographic
+
+Around the turn of the century, there were attempts to define geographic
+information systems for transportation (GIS-T) as a self-standing
+academic field (Miller 1999), something that has not caught
+on.
+
+<!-- Search term for interwar period: https://scholar.google.co.uk/scholar?q="transport+geography" -->
 
 <!-- something on the Journal of Transport Geography? -->
 
@@ -117,7 +149,7 @@ at the Universities of Aberdeen and Hofstra and, at the University of
 Leeds the Masters module Sustainable Spatial Planning and Analysis
 ([SSPA](https://github.com/ITSLeeds/SSPA)) is focussed on GIS skills for
 transport planning (declaration of interest: I teach on this module).
-There are evem dedicated 3 year degrees Transport Geography.
+There are even dedicated 3 year degrees Transport Geography.
 <!-- something on the lack of open source? -->
 
 <!-- https://www.abdn.ac.uk/registry/courses/undergraduate/2016-2017/geography/gg4016
@@ -371,6 +403,21 @@ to Geography.” *Journal of Geography* 11 (2): 40–45.
 
 </div>
 
+<div id="ref-fox_main_1923">
+
+Fox, Florence C. 1923. *Main Streets of the Nation a Series of Projects
+on Highway Transport for Elementary Schools*. Department for the
+Interior.
+
+</div>
+
+<div id="ref-greenshields_studying_1936">
+
+Greenshields, Bruce D. 1936. “Studying Traffic Capacity by New Methods.”
+*J. Appl. Psychol* 20 (3): 353–58.
+
+</div>
+
 <div id="ref-harrison_environmental_2017">
 
 Harrison, R. M., and R. E. Hester. 2017. *Environmental Impacts of Road
@@ -505,6 +552,13 @@ Principles and Practice*. ICE Publishing.
 
 </div>
 
+<div id="ref-paterson_horse_1926">
+
+Paterson, James. 1926. “Horse Transport and Motor Transport.” *RSA
+Journal* 74 (3837): 689–702.
+
+</div>
+
 <div id="ref-pebesma_software_2015">
 
 Pebesma, Edzer, Roger Bivand, Paulo Justiniano Ribeiro, and others.
@@ -573,6 +627,13 @@ and Planning A* 46 (1): 78–93. <https://doi.org/10.1068/a45669>.
 Transport Systems Catapult. 2015. “The Transport Data Revolution.”
 Government. Transport Systems Catapult.
 <https://ts.catapult.org.uk/wp-content/uploads/2016/04/The-Transport-Data-Revolution.pdf>.
+
+</div>
+
+<div id="ref-trewartha_japanese_1934">
+
+Trewartha, Glenn T. 1934. “Japanese Cities Distribution and Morphology.”
+*Geographical Review* 24 (3): 404–17. <https://doi.org/10.2307/208912>.
 
 </div>
 
