@@ -241,7 +241,27 @@ Data preprocessing and analysis stages are generally done in dedicated transport
 Geographic analysis and cartographic visualisation stages are generally done in a dedicated 'geographic information system' (GIS).
 
 
-# New tools of the trade: open source software for integrated geographic analysis
+# New tools of the trade
+
+The previous sections support and expand on the two main premises of this paper, that geographic analysis has historically been disconnected from other aspects of transport planning analysis, and that open source software should provide the foundations for future transport planning workflows.
+This section moves onto solutions, with an overview of three software 'ecosystems' --- R, Python and QGIS --- that enable integrated geographic analysis in transport planning.
+
+Before describing these ecosystems in detail, it is worth first taking a step back and considering the software 'landscape' in which the three ecosystems have evolved.
+This overview also helps explain why R, Python and QGIS were selected from the range of open source options for closer attention.
+
+<!-- Despite the central role that open source software plays, powering the majority of the world's servers... -->
+A key feature of open source software is freedom.
+The fact that anyone can download, play with and (provided they abide by the conditions of license) re-upload modified versions of open source source code means that the landscape of open source software is both rapidly evolving and highly divers.
+For this reason it is impossible to summarise anywhere, let alone within the confines of a single academic paper, the totallity of options available.
+There are literally thousands of software projects, written in hundreds of programming languages, that could be used geographic analysis in transport planning.
+Many of these are no longer actively maintained, making them unsuitable for consideration in this paper: 
+transport planners should use solutions that are future proof.
+
+Transport data analysis has much in common with the broadly defined field of 'data science', and many of the tools developed for this purpose (including those in the R and Python ecosystems) have great potential for transport planning.
+
+- Scala
+- JavaScript
+- ...
 
 ## R
 
@@ -253,6 +273,8 @@ Geographic analysis and cartographic visualisation stages are generally done in 
 
 
 [@bivand_applied_2013]
+
+[@lovelace_geocompr_2019]
 
 
 ## Python
