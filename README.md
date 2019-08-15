@@ -2,7 +2,7 @@ Integrating geographic analysis in transport planning: new open source
 tools for a new era
 ================
 Robin Lovelace
-2019-08-09
+2019-08-15
 
 # Abstract
 
@@ -329,33 +329,46 @@ cartographic visualisation stages are generally done in a dedicated
 # New tools of the trade
 
 The previous sections support and expand on the two main premises of
-this paper, that geographic analysis has historically been disconnected
-from other aspects of transport planning analysis, and that open source
-software should provide the foundations for future transport planning
-workflows. This section moves onto solutions, with an overview of three
-software ‘ecosystems’ — R, Python and QGIS — that enable integrated
-geographic analysis in transport planning.
+this paper: that geographic analysis has historically been disconnected
+from other aspects of transport planning analysis, and that the
+incumbent proprietary software products are not well suited to tackle
+21<sup>st</sup> Century transport planning needs. In this section the
+paper shifts gear, and moves onto solutions. It outlines the growth of
+free and open source software (FOSS) and how the movement can provide
+the foundations for more democratic and transparent transport planning
+workflows that bridge the ‘geographic gap’ in transport planning data
+analysis, modelling and visualisation. The focus is on three software
+‘ecosystems’ — R, Python and QGIS — that are particularly promising
+for integrated geographic analysis in transport planning.
 
-Before describing these ecosystems in detail, it is worth first taking a
-step back and considering the software ‘landscape’ in which the three
-ecosystems have evolved. This overview also helps explain why R, Python
+Before exploring these ecosystems, it is worth first taking a step back
+and considering the open source software ‘landscape’ and what ‘open
+source’ actually means. This overview also helps explain why R, Python
 and QGIS were selected from the range of open source options for closer
 attention.
 
 <!-- Despite the central role that open source software plays, powering the majority of the world's servers... -->
 
-A key feature of open source software is freedom. The fact that anyone
-can download, play with and (provided they abide by the conditions of
-license) re-upload modified versions of open source source code means
-that the landscape of open source software is both rapidly evolving and
-highly divers. For this reason it is impossible to summarise anywhere,
-let alone within the confines of a single academic paper, the totallity
-of options available. There are literally thousands of software
-projects, written in hundreds of programming languages, that could be
-used geographic analysis in transport planning. Many of these are no
-longer actively maintained, making them unsuitable for consideration in
-this paper: transport planners should use solutions that are future
-proof.
+Open source software differs from proprietary software in that users are
+free to see, download and modify the underlying source code that defines
+it. Freedom is central to open source software, which is sometimes
+referred to simply as ‘free software’, defined by the Free Software
+Foundation (FSF) as follows:
+
+> software that gives you the user the freedom to share, study and
+> modify it.
+
+Anyone can download, modify and (provided the conditions of the license
+are respected) re-upload different versions of open source software. The
+emphasis on adaptability and community the open source software
+landscape both rapidly evolving and highly diverse. For this reason it
+is impossible to summarise anywhere, let alone within the confines of a
+single academic paper, the totallity of options available. There are
+literally thousands of software projects, written in hundreds of
+programming languages, that could be used geographic analysis in
+transport planning. Many of these are no longer actively maintained,
+making them unsuitable for consideration in this paper: transport
+planners should use solutions that are future proof.
 
 Transport data analysis has much in common with the broadly defined
 field of ‘data science’, and many of the tools developed for this
