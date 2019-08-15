@@ -353,22 +353,21 @@ Open source software differs from proprietary software in that users are
 free to see, download and modify the underlying source code that defines
 it. Freedom is central to open source software, which is sometimes
 referred to simply as ‘free software’, defined by the Free Software
-Foundation (FSF) as follows:
+Foundation ([FSF](https://www.fsf.org/about/what-is-free-software)) as
+follows:
 
 > software that gives you the user the freedom to share, study and
 > modify it.
 
-Anyone can download, modify and (provided the conditions of the license
-are respected) re-upload different versions of open source software. The
-emphasis on adaptability and community the open source software
-landscape both rapidly evolving and highly diverse. For this reason it
-is impossible to summarise anywhere, let alone within the confines of a
-single academic paper, the totallity of options available. There are
-literally thousands of software projects, written in hundreds of
-programming languages, that could be used geographic analysis in
-transport planning. Many of these are no longer actively maintained,
-making them unsuitable for consideration in this paper: transport
-planners should use solutions that are future proof.
+This adaptability is conducive to collaboration, the creation of
+mutually supportive user/developer communities and rapid evolution,
+making open source software ecosystems fast moving and highly diverse.
+It is impossible to discuss all software options that could be used for
+geographic transport planning: there are literally thousands of software
+projects, written in hundreds of programming languages, many of which
+are no longer actively maintained. Transport planners should use
+solutions that are future proof and actively maintained — such as R,
+Python and QGIS.
 
 Transport data analysis has much in common with the broadly defined
 field of ‘data science’, and many of the tools developed for this
@@ -381,16 +380,57 @@ potential for transport planning.
 
 ## R
 
-(R Core Team 2019)
+R is a “a language and environment for statistical computing and
+graphics” (R Core Team 2019). First announced and released as a binary
+program in 1993 by University of Aukland statisticians Robert Gentleman
+and Ross Ihaka, the project was only open sourced and released under the
+conditions of the GNU General Public License (GPL) in 1995, thanks to
+input from one of R’s first international collaborators, Martin Mächler
+of ETH Zurich
+(<span class="citeproc-not-found" data-reference-id="ihaka_r_1998">**???**</span>).
+This history highlight’s how open source software development is an
+inherently collaborative process, usually involving people from many
+different countries and backgrounds.
+
+R has several strengths from the perspective of transport planning,
+including its proficiency with temporal and geographic data, outstanding
+visualisation capabilities, and support for a very wide range of
+statistical techniques, many of which are useful in transport problems
+(Lovelace and Ellison 2018). Out of the box R is a statistical powertool
+that can solve a wide range of problems, including generalised linear
+models (GLMs, implemented with the function `glm`) and constrained
+optimisation problems that appear frequently in transport research.
+Additional capabilities are supported by 10,000+ packages that can be
+installed from a central repository with commands such as
+`install.packages("stplanr")`. R packages are analogous to Apps on
+smartphones and plugins in QGIS (described below). Many implement
+recently developed statistical and computational techniques (some of
+which are accompanied by papers describing new methods in academic
+journals such as the *Journal for Statistical Software*) or provide
+interfaces to software written in other languages, meaning that R can
+provide transport researchers with access to many cutting-edge methods
+via a single system.
+
+Of particular interest here are packages for handling geographic data.
+Support for geographic data and methods have a long history in R …
 
 (Bivand 2006)
 
 (Pebesma et al. 2015)
 
-(Bivand, Pebesma, and G’omez-Rubio
-2013)
+(Bivand, Pebesma, and G’omez-Rubio 2013)
 
-(<span class="citeproc-not-found" data-reference-id="lovelace_geocompr_2019">**???**</span>)
+Recent advances in R’s growing community of geographic researchers
+include the package `sf` (Pebesma 2018), which provides a unified and
+high performance system for working with vector data including
+linestrings which can be used to represent roads) and `tmap` (Tennekes
+2018), which makes it easy to make maps in R. These and many other
+packages for working with geographic data in R are described in detail
+in *Geocomputation with R* (Lovelace, Nowosad, and Meunchow 2019)
+(<span class="citeproc-not-found" data-reference-id="lovelace_geocompr_2019">**???**</span>).
+Chapter 12 this of this open source book is dedicated to transport
+applications, and provides a good starting point for learning more about
+using R’s impressive geographic capabilities for transport planning.
 
 ## Python
 
@@ -548,6 +588,21 @@ Sets for Understanding Regional Retail Flows.” *Geographical Analysis*
 
 </div>
 
+<div id="ref-lovelace_stplanr:_2018">
+
+Lovelace, Robin, and Richard Ellison. 2018. “Stplanr: A Package for
+Transport Planning.” *The R Journal* 10 (2): 7–23.
+<https://doi.org/10.32614/RJ-2018-053>.
+
+</div>
+
+<div id="ref-lovelace_geocomputation_2019:1">
+
+Lovelace, Robin, Jakub Nowosad, and Jannes Meunchow. 2019.
+*Geocomputation with R*. CRC Press. <http://robinlovelace.net/geocompr>.
+
+</div>
+
 <div id="ref-mellon_internet_2014">
 
 Mellon, Jonathan. 2014. “Internet Search Data and Issue Salience: The
@@ -612,6 +667,14 @@ Journal* 74 (3837): 689–702.
 
 </div>
 
+<div id="ref-pebesma_simple_2018">
+
+Pebesma, Edzer. 2018. “Simple Features for R: Standardized Support for
+Spatial Vector Data.” *The R Journal*.
+<https://journal.r-project.org/archive/2018/RJ-2018-009/index.html>.
+
+</div>
+
 <div id="ref-pebesma_software_2015">
 
 Pebesma, Edzer, Roger Bivand, Paulo Justiniano Ribeiro, and others.
@@ -664,6 +727,14 @@ te Brömmelstroet, Marco, and Luca Bertolini. 2008. “Developing Land Use
 and Transport PSS: Meaningful Information Through a Dialogue Between
 Modelers and Planners.” *Transport Policy* 15 (4): 251–59.
 <https://doi.org/10.1016/j.tranpol.2008.06.001>.
+
+</div>
+
+<div id="ref-tennekes_tmap:_2018">
+
+Tennekes, Martijn. 2018. “Tmap: Thematic Maps in R.” *Journal of
+Statistical Software, Articles* 84 (6): 1–39.
+<https://doi.org/10.18637/jss.v084.i06>.
 
 </div>
 
