@@ -2,37 +2,46 @@ Open source software for geographic analysis in transport planning
 ================
 2019-08-16
 
+<!-- should be integraged in transport planning tools. -->
+
+<!-- --- software for transport data analysis, modelling and visualisation --- -->
+
+<!-- workflows in academic, public sector and private consultancy transport planning contexts still tend to separate vital geographic processing and map making stages from the rest of the analysis. -->
+
 # Abstract
 
-Tools for working with geographic data have long been used in transport
-planning. Transport is an inherently geographic activity, involving
-movement through space, along more or less complicated ways which,
-considered together, form interrelated spatial networks. There is
-therefore a strong case for geography being an *inbuilt* part of the
-transport planner’s ‘tools of the trade’.
-<!-- --- software for transport data analysis, modelling and visualisation --- -->
-<!-- workflows in academic, public sector and private consultancy transport planning contexts still tend to separate vital geographic processing and map making stages from the rest of the analysis. -->
-Yet a dichotomy between ‘geographic’ and ‘non-geographic’ components
-persists, damaging transport planning in three main ways, by: (1)
-reducing researcher effectiveness due to the time-consuming process of
-‘context switching’; (2) inhibiting reproducibility, requiring
-installation and management of geographic and non-geographic tools; and
-(3) reducing the visibility of vital geographic components in transport
-planning, with consequences for transport policy design. These premises
-are described in the wider context of transport planning research and
-the landscape of transport planning software that is used in practice,
-which is dominated by proprietary products. The paper then shifts gear,
-to focus on open source software as a solution to the issues with the
-current non-integrated approach to transport modelling and geographic
-analysis. Three emerging software ecosystems that enable geographic
-analysis *to be embedded within* transport planning workflows are
-reviewed in depth: the programming languages R and Python, and the
-geographic information system QGIS. The review finds that each ecosystem
-already provides numerous new ‘tools of the trade’ for transport
-planners who need to integrate geographic data in their work, with wider
-benefits for reproducibility, transparency and democratic
-accountability.
-<!--  transport planning experts and the public alike, -->
+<!-- Tools for geographic analysis have long been used in transport planning. -->
+
+<!-- , alongside other (typically primarily economic and engineering) considerations. -->
+
+Transport is an inherently geographic activity, involving movement
+through space along linear ways and, at city scales, intricate spatial
+networks. Geographic analysis therefore has a huge amount to offer
+transport planning. A strong argument can be made for geographic
+analysis to be integrated in transport planning tools. Yet geographic
+analysis is often treated as an optional ‘add-on’, conducted in
+different programs than the main transport planning tool. This
+dichotomy, between ‘geographic’ and ‘non-geographic’ analysis in
+transport planning is undesirable because it: (1) reduces researcher
+effectiveness due to the time-consuming process of ‘context switching’;
+(2) prevents reproducibility, requiring installation and management of
+geographic and non-geographic tools; and (3) hides vital geographic
+components in transport plans, with adverse consequences for
+inteventions that can benefit from being placed where they are most
+needed. These premises are described in the wider context of transport
+planning research. After outlining the landscape of transport planning
+software, which is dominated by proprietary products, the paper changes
+gear. The focus shifts to open source solutions that enable geographic
+analysis to be integrated in transport data analysis and modelling
+workflows. Three emerging software ecosystems are reviewed in depth: the
+programming languages R and Python, and the geographic information
+system QGIS. The review finds that each ecosystem already provides
+numerous ‘tools of the trade’ for integrating geographic analysis in
+transport research and that some of these tools are already being used
+in practice. In addition to integrating geographic considerations, the
+shift to such open source solutions will have wider benefits for
+reproducibility, transparency and democratic accountability in transport
+planning. <!--  transport planning experts and the public alike, -->
 <!-- Ultimately, by highlighting cost effective and geographically targeted interventions, integrating geographic analysis in transport planning could lead to better decision making. -->
 <!-- and support the global efforts to transition away from fossil fuels and towards a healthy, low carbon transport system. -->
 
@@ -49,7 +58,9 @@ emphasis? And are there any other open source software projects I should
 include, within or in addition to the overview of the three ecosystems
 selected?
 
-# Introduction: the importance of geographic analysis in transport planning
+# Introduction
+
+<!-- : the importance of geographic analysis in transport planning -->
 
 <!-- Should that heading omit the "Introduction:" part? -->
 
@@ -64,6 +75,7 @@ guided by citywide, regional and even national visions. The rewards can
 be great: transport planners who have designed — and helped to implement
 — plans appropriate to the needs of an area leave a legacy that will
 benefit people and the environment for generations to come.\[1\]
+
 Transport planning can be considered as “more of an art than a
 technique”, although *good* transport plans also rely on robust
 analysis and modelling of sometimes large and usually spatial input
@@ -71,8 +83,10 @@ datsets (Dios Ort’uzar and Willumsen 2001). Ways and other pieces of
 transport infrastructure must *go somewhere* to optimise their ability
 to take people *where they want to go*, yet the importance of geography
 in transport systems is often overlooked (Rodrigue, Comtois, and Slack
-2013). Transport planning is thus embedded within broader democratic
-processes *and* local geographic contexts.
+2013).
+
+Transport planning is embedded within broader democratic processes *and*
+local geographic contexts.
 
 Effective transport planning is inherently embedded within democratic
 processes (to the extent that democracy exists in the area where
@@ -113,12 +127,14 @@ over time, notwithstanding the limitations associated with search data
 
 <img src="google-trends.png" title="Relative level of interest in search terms related to 'geographic information systems', 'geocomputation' and 'transport geography' inferred from google search data. Thanks to the **gtrendsR** R package [@massicotte_gtrendsr:_2019], code to reproduce the plot is hosted in this paper's code repository." alt="Relative level of interest in search terms related to 'geographic information systems', 'geocomputation' and 'transport geography' inferred from google search data. Thanks to the **gtrendsR** R package [@massicotte_gtrendsr:_2019], code to reproduce the plot is hosted in this paper's code repository." width="70%" />
 
+# Geography in transport planning
+
 The concept of integrating geographic data analysis in transport
 planning is not new (although tools for integrating geographic data
 are). Geographic perspectives have contributed to the transport planning
 for over 100 years, as documented in papers on geographic considerations
-in railway design (Buxton 1908) and national engineering challenges
-(Farnham 1912), to take just a couple of pre-war examples.
+in railway design and other transport engineering challenges (Farnham
+1912; Buxton 1908).
 
 In the inter-war period (1918-1939), interest in Transport Geography
 seems to have grown, although a disciplinary home for transport research
