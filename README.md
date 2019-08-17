@@ -1,4 +1,5 @@
-Open source software for geographic analysis in transport planning
+Integrating geographic analysis in transport planning: origins, software
+and open source solutions
 ================
 2019-08-17
 
@@ -14,14 +15,16 @@ Open source software for geographic analysis in transport planning
 
 <!-- , alongside other (typically primarily economic and engineering) considerations. -->
 
-Transport is an inherently geographic activity, involving movement
-through space along linear ways. At city scales, interventions in the
-transport system are most effective when they are placed where they are
-most needed. Geographic analysis therefore has a huge amount to offer
-transport planning and, more specifically, to transport planning tools.
-Yet geographic analysis is often treated as an optional ‘add-on’,
-conducted in different programs than those typically used in practice
-for transport data analysis and modelling. This dichotomy, between
+Transport is an inherently geographic activity. Movement of people,
+goods and electrons, between points and polygons along linear ways in
+spatial networks, is a defining feature of civilisation. Decarbonising
+transport systems is vital for the future. Sustainable transport
+interventions are most effective when they are located intelligently.  
+Geographic analysis therefore has a huge amount to offer transport
+planning and, more specifically, to transport planning tools. Yet
+geographic analysis is often treated as an optional ‘add-on’, conducted
+in different programs than those typically used in practice for
+transport data analysis and modelling. This dichotomy, between
 ‘geographic’ and ‘non-geographic’ analysis in transport planning is
 undesirable because it: (1) reduces researcher effectiveness due to the
 time-consuming process of ‘context switching’; (2) prevents
@@ -155,16 +158,34 @@ new and deeper insight into the meaning of areal differentiation”
 demonstrate growing interest in the topic, and understanding of
 geographic thinking to understand evolving transport systems.\[2\]
 
-geographic
+By the late 1970s, there was enough research for review papers
+reflecting on the status of Transport Geography as a self-standing
+branch of Geography (Rimmer 1978; Hay 1979). A book on the transport
+geography of India provides an insight into the field at the time, with
+a focus on infrastructure and statistcs, transport geography sat firmly
+in the quantitative tradition of geographic research (Raza and Aggarwal
+1986), despite Rimmer (1979) criticism that much of the field ignored
+the wider impacts of transport systems. Geographic analysis in transport
+research was given a substantial boost in the 1990s, with the first
+publication of the Journal of Transport Geography (Knowles 1993).
+Transport Geography has subsequently come to be defined as a branch of
+geography. Notwithstanding influential methodological and review papers
+provind transport planners with insight into the state-of-the-art \[e.g.
+@ \], the level of engagement between academic transport geographers and
+transport planning practitioners is debatable (although the same could
+be said of academic planners).
 
-Around the turn of the century, there were attempts to define geographic
-information systems for transportation (GIS-T) as a self-standing
-academic field (Miller 1999), something that has not caught
-on.
+Around the turn of the century, there were attempts to define a more
+applied geographic information systems (GIS) approach transport
+research. Labelled GIS-T, the field was posited as an academic field at
+the interface between transport planning and GIS (Miller 1999). Although
+the label gained limited traction in academia or practice, Harvey
+Miller’s call for a shift to methods and tools has been answered in
+the 2000s and 2010s by researchers who have developed ideas and software
+that transport planners can actually use, including
+…
 
 <!-- Search term for interwar period: https://scholar.google.co.uk/scholar?q="transport+geography" -->
-
-<!-- something on the Journal of Transport Geography? -->
 
 The growing research interest in the subject is also reflected in
 teaching. Modules dedicated to Transport Geography have been advertised
@@ -610,6 +631,13 @@ Software* 75 (1): 1–24. <https://doi.org/10.18637/jss.v075.i03>.
 
 </div>
 
+<div id="ref-hay_transport_1979">
+
+Hay, Alan. 1979. “Transport Geography.” *Progress in Geography* 3 (2):
+267–72.
+
+</div>
+
 <div id="ref-hull_policy_2008">
 
 Hull, Angela. 2008. “Policy Integration: What Will It Take to Achieve
@@ -650,6 +678,14 @@ Journal*.
 Klosterman, R. E. 1999. “The What If? Collaborative Planning Support
 System.” *Environment and Planning B: Planning and Design* 26 (3):
 393–408. <https://doi.org/10.1068/b260393>.
+
+</div>
+
+<div id="ref-knowles_research_1993">
+
+Knowles, Richard D. 1993. “Research Agendas in Transport Geography for
+the 1990s.” *Journal of Transport Geography* 1 (1): 3–11.
+<https://doi.org/10.1016/0966-6923(93)90033-V>.
 
 </div>
 
@@ -831,10 +867,25 @@ QGIS Development Team. 2019. “QGIS Geographic Information System.”
 
 </div>
 
+<div id="ref-raza_transport_1986">
+
+Raza, Moonis, and Yash Aggarwal. 1986. *Transport Geography of India:
+Commodity Flows and the Regional Structure of the Indian Economy*.
+Concept Publishing Company.
+
+</div>
+
 <div id="ref-r_core_team_r:_2019">
 
 R Core Team. 2019. “R: A Language and Environment for Statistical
 Computing.” <https://www.R-project.org/>.
+
+</div>
+
+<div id="ref-rimmer_redirections_1978">
+
+Rimmer, Peter J. 1978. “Redirections in Transport Geography.” *Progress
+in Geography* 2 (1): 76–100.
 
 </div>
 

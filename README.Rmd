@@ -1,9 +1,10 @@
 ---
 # title: "Integrating geographic analysis in transport planning: new open source tools for the trade"
 # title: "Integrating geographic analysis in transport planning: new tools of the trade"
-title: "Open source software for geographic analysis in transport planning"
+# title: "Open source software for geographic analysis in transport planning"
 # title: "Open source software for geographic analysis in transport planning: a review of emerging ecosystems"
 # title: "Integrating geographic analysis in transport planning"
+title: "Integrating geographic analysis in transport planning: origins, software and open source solutions"
 # title: "Integrating geographic analysis in transport planning workflows: the role of open source software
 # author: "Robin Lovelace"
 date: '`r Sys.Date()`'
@@ -58,8 +59,10 @@ knitr::opts_chunk$set(echo = FALSE)
 <!-- Tools for geographic analysis have long been used in transport planning. -->
 <!-- , alongside other (typically primarily economic and engineering) considerations. -->
 
-Transport is an inherently geographic activity, involving movement through space along linear ways.
-At city scales, interventions in the transport system are most effective when they are placed where they are most needed.
+Transport is an inherently geographic activity.
+Movement of people, goods and electrons, between points and polygons along linear ways in spatial networks, is a defining feature of civilisation.
+Decarbonising transport systems is vital for the future.
+Sustainable transport interventions are most effective when they are located intelligently.  
 Geographic analysis therefore has a huge amount to offer transport planning and, more specifically, to transport planning tools.
 Yet geographic analysis is often treated as an optional 'add-on', conducted in different programs than those typically used in practice for transport data analysis and modelling.
 This dichotomy, between 'geographic' and 'non-geographic' analysis in transport planning is undesirable because it:
@@ -368,3 +371,5 @@ A similar project is [E-mission](https://github.com/e-mission) [@shankari_e-miss
 # Conclusion
 
 # References
+
+
