@@ -289,14 +289,16 @@ Titled "Computing environment and travel forecasting software", the chapter prov
 Of course, software development has always depended on the physical hardware on which it runs and the early days of transport planning software were characterised by bespoke programs running on mainframe computers and maintained by domain experts.
 Transport planning bodies and researchers in the USA led developments in the 1960s and 1970s when computers first started to be used for transport planning, when the main problem that they addressed was how to deal with the explosive growth in car ownership and use that was taking place during those decades.
 More overtly political factors also influenced the direction of transport planning software: 
-"certain private firms complained to US DoT [Department of Transport] that its agencies were developing software in competition with the private sector", leading to the abandonment of publicly funded transport planning software development projects, notably UTPS.^[
+"certain private firms complained to US DoT [Department of Transport] that its agencies were developing software in competition with the private sector", leading to the abandonment of publicly funded transport planning software development projects, notably UTPS [@boyce_forecasting_2015].^[
 UTPS stands for the UMT (Urban Mass Transportation Administration, an agency of the DoT responsible for transport planning) Transportation Planning System (UTPS) and PLANPAC
 ]
-This contrasts with the history of GRASS, a publicly funded GIS system that has been under continuous development by state, academic and commercial organisation since 1982 [@neteler_open_2008].
+This transfer of transport planning software development to the private sector contrasts with the history of GIS, in which open source solutions have come to dominate .
+The example of GRASS (Geographic Resources Analysis Support System) illustrates this point and helps explain the dominance of proprietary software in transport planning.
+Like UTPS, GRASS was a publicly funded software project.
+Unlike UTPS, it was made freely available to the public and was open sourced (in 1999), meaning that it has been under continuous development by state, academic and commercial organisation since 1982 [@neteler_open_2008].
 Would the landscape of transport planning software have been different if the DoT had continued to fund software development projects?
 That question is outside the scope of this paper.
 What is certain, however, is that software used in transport planning over the past three decades has been dominated by companies and that the sector has been slow to adopt open an open source approach.
-
 
 In response to the 'siloed' development of GIS and transport software, there have been calls for greater integration.
 @loidl_gis_2016, building on the observation that "geography and GIS remained a niche topic within traditional transport modeling", made a case for strengthening the 'spatial perspective' in transport modelling.
@@ -307,7 +309,44 @@ and visualization" [@loidl_gis_2016].
 Although the paper focussed on conceptual issues rather than software per-se, it did identify mention four open source programming languages that could provide the foundation for future developments, two of which (R and Python) are covered in the next section.
 
 Data preprocessing and analysis stages are generally done in dedicated transport planning and spreadsheet software.
-Geographic analysis and cartographic visualisation stages are generally done in a dedicated 'geographic information system' (GIS).
+Geographic analysis and cartographic visualisation stages are often done in a dedicated (GIS).
+Some prominent transport planning software products, and levels of support for geographic data analysis, are summarised in Table 1.
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+geo_capabilities = "I, B, E, P"
+tms = readr::read_csv("https://github.com/ITSLeeds/TDS/raw/master/transport-software.csv")
+tms = arrange(tms, desc(Citations))[c(1, 2, 4)]
+# knitr::kable(tms, booktabs = TRUE, caption = "Sample of transport modelling software in use by practitioners. Note: citation counts based on searches for company/developer name, the product name and 'transport'. Data source: Google Scholar searches, October 2018.", format = "latex")
+# tms$`Geographic capabilities` = c(
+#   "Plotting, editing, import, buffer, intersections", # https://www.ptvgroup.com/fileadmin/user_upload/Products/PTV_Visum/Documents/Release-Highlights/PTV_Visum_18_release_highlights_EN.pdf # http://www.traffic-inside.com/2014/11/27/ptv-visum-tip-catchment-areas-accessibility-of-places-in-the-network/
+#   "I, E, P, R"
+# )
+tms$I = c("Y", "Y", "Y", "Y", "Y", "Y", "?")
+tms$G = c("Y", "?", "Y", "N", "Y", "?", "N")
+tms$R = c("Y", "Y", "Y", "?", "Y", "?", "?")
+tms$RNA = c("Y", "Y", "Y", "Y", "Y", "Y", "Y")
+tms$SV = c("Y", "Y", "Y", "Y", "Y", "Y", "N")
+tms$IV = c("?", "?", "?", "?", "?", "?", "?")
+tms$EX = c("?", "?", "?", "?", "Y", "?", "N")
+knitr::kable(tms, caption = "Sample of transport modelling software in use by practitioners. Note: citation counts based on searches for company/developer name, the product name and 'transport'. The columns I, G, R, RNA, SV, IV  and EX refer to Import of a wide range of geographic data formats, Geographic capabilities such as buffer calculations and intersections, Route calculation, Route Network Analysis, Static Visual outputs, Interactive Visual outputs for web publication, and Export to a wide range of geographic data formats, with ? meaning partial support (e.g. via add-on software). Data source: Google Scholar searches, October 2018.")
+```
+
+Table 1 shows that popular transport planning tools have differing levels of geographic capabilities.
+It should be noted that the geographic capabilities were assessed based on reading of publicly available manuals (to be linked to in an appendex accompanying this paper) and that each software product is actively developed, meaning that the results may change with additional information and subsequent releases.
+An interesting pattern is that the open source options, MATSim, SUMO and sDNA all have limited 'in house' geographic capabilities.
+Furthermore, in the author's experience, they are difficult to install and use, creating an additional barrier to the integration of geographic analysis in transport planning for people without access to expensive proprietary software.
+To what extent can these barriers be overcome by open source software ecosystems?
+That is the topic of the next section.
+
+
+```{r, echo=FALSE, eval=FALSE}
+# alternative way to get citation data (WIP)
+library(fulltext)
+ft_search("vissum", from = "crossref", scopusopts = )
+scopus_search(query = "vissum", key = Sys.getenv("SCOPUS"))
+```
+
+
 
 
 # New tools of the trade

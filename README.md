@@ -400,15 +400,21 @@ planning software: “certain private firms complained to US DoT
 \[Department of Transport\] that its agencies were developing software
 in competition with the private sector”, leading to the abandonment of
 publicly funded transport planning software development projects,
-notably UTPS.\[6\] This contrasts with the history of GRASS, a publicly
-funded GIS system that has been under continuous development by state,
-academic and commercial organisation since 1982 (Neteler and Mitasova
-2008). Would the landscape of transport planning software have been
-different if the DoT had continued to fund software development
-projects? That question is outside the scope of this paper. What is
-certain, however, is that software used in transport planning over the
-past three decades has been dominated by companies and that the sector
-has been slow to adopt open an open source approach.
+notably UTPS (Boyce and Williams 2015).\[6\] This transfer of transport
+planning software development to the private sector contrasts with the
+history of GIS, in which open source solutions have come to dominate .
+The example of GRASS (Geographic Resources Analysis Support System)
+illustrates this point and helps explain the dominance of proprietary
+software in transport planning. Like UTPS, GRASS was a publicly funded
+software project. Unlike UTPS, it was made freely available to the
+public and was open sourced (in 1999), meaning that it has been under
+continuous development by state, academic and commercial organisation
+since 1982 (Neteler and Mitasova 2008). Would the landscape of transport
+planning software have been different if the DoT had continued to fund
+software development projects? That question is outside the scope of
+this paper. What is certain, however, is that software used in transport
+planning over the past three decades has been dominated by companies and
+that the sector has been slow to adopt open an open source approach.
 
 In response to the ‘siloed’ development of GIS and transport software,
 there have been calls for greater integration. Loidl et al. (2016),
@@ -429,8 +435,45 @@ of which (R and Python) are covered in the next section.
 
 Data preprocessing and analysis stages are generally done in dedicated
 transport planning and spreadsheet software. Geographic analysis and
-cartographic visualisation stages are generally done in a dedicated
-‘geographic information system’ (GIS).
+cartographic visualisation stages are often done in a dedicated (GIS).
+Some prominent transport planning software products, and levels of
+support for geographic data analysis, are summarised in Table
+1.
+
+| Software | Company/Developer  | Licence           | I | G | R | RNA | SV | IV | EX |
+| :------- | :----------------- | :---------------- | :- | :- | :- | :-- | :- | :- | :- |
+| Visum    | PTV                | Proprietary       | Y | Y | Y | Y   | Y  | ?  | ?  |
+| MATSim   | TU Berlin          | Open source (GPL) | Y | ? | Y | Y   | Y  | ?  | ?  |
+| TransCAD | Caliper            | Proprietary       | Y | Y | Y | Y   | Y  | ?  | ?  |
+| SUMO     | DLR                | Open source (EPL) | Y | N | ? | Y   | Y  | ?  | ?  |
+| Emme     | INRO               | Proprietary       | Y | Y | Y | Y   | Y  | ?  | Y  |
+| Cube     | Citilabs           | Proprietary       | Y | ? | ? | Y   | Y  | ?  | ?  |
+| sDNA     | Cardiff University | Open source (GPL) | ? | N | ? | Y   | N  | ?  | N  |
+
+Sample of transport modelling software in use by practitioners. Note:
+citation counts based on searches for company/developer name, the
+product name and ‘transport’. The columns I, G, R, RNA, SV, IV and EX
+refer to Import of a wide range of geographic data formats, Geographic
+capabilities such as buffer calculations and intersections, Route
+calculation, Route Network Analysis, Static Visual outputs, Interactive
+Visual outputs for web publication, and Export to a wide range of
+geographic data formats, with ? meaning partial support (e.g. via add-on
+software). Data source: Google Scholar searches, October 2018.
+
+Table 1 shows that popular transport planning tools have differing
+levels of geographic capabilities. It should be noted that the
+geographic capabilities were assessed based on reading of publicly
+available manuals (to be linked to in an appendex accompanying this
+paper) and that each software product is actively developed, meaning
+that the results may change with additional information and subsequent
+releases. An interesting pattern is that the open source options,
+MATSim, SUMO and sDNA all have limited ‘in house’ geographic
+capabilities. Furthermore, in the author’s experience, they are
+difficult to install and use, creating an additional barrier to the
+integration of geographic analysis in transport planning for people
+without access to expensive proprietary software. To what extent can
+these barriers be overcome by open source software ecosystems? That is
+the topic of the next section.
 
 # New tools of the trade
 
