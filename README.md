@@ -1,7 +1,7 @@
 Integrating geographic analysis in transport planning: origins, software
 and open source solutions
 ================
-2019-08-18
+2019-08-19
 
 <!-- should be integraged in transport planning tools. -->
 
@@ -445,10 +445,10 @@ support for geographic data analysis, are summarised in Table
 | Visum    | PTV                | Proprietary       | Y | Y | Y | Y   | Y  | ?  | ?  |
 | MATSim   | TU Berlin          | Open source (GPL) | Y | ? | Y | Y   | Y  | ?  | ?  |
 | TransCAD | Caliper            | Proprietary       | Y | Y | Y | Y   | Y  | ?  | ?  |
-| SUMO     | DLR                | Open source (EPL) | Y | N | ? | Y   | Y  | ?  | ?  |
+| SUMO     | DLR                | Open source (EPL) | Y | ? | ? | Y   | Y  | ?  | ?  |
 | Emme     | INRO               | Proprietary       | Y | Y | Y | Y   | Y  | ?  | Y  |
 | Cube     | Citilabs           | Proprietary       | Y | ? | ? | Y   | Y  | ?  | ?  |
-| sDNA     | Cardiff University | Open source (GPL) | ? | N | ? | Y   | N  | ?  | N  |
+| sDNA     | Cardiff University | Open source (GPL) | Y | Y | Y | Y   | ?  | ?  | ?  |
 
 Sample of transport modelling software in use by practitioners. Note:
 citation counts based on searches for company/developer name, the
@@ -466,14 +466,51 @@ geographic capabilities were assessed based on reading of publicly
 available manuals (to be linked to in an appendex accompanying this
 paper) and that each software product is actively developed, meaning
 that the results may change with additional information and subsequent
-releases. An interesting pattern is that the open source options,
-MATSim, SUMO and sDNA all have limited ‘in house’ geographic
-capabilities. Furthermore, in the author’s experience, they are
-difficult to install and use, creating an additional barrier to the
-integration of geographic analysis in transport planning for people
-without access to expensive proprietary software. To what extent can
-these barriers be overcome by open source software ecosystems? That is
-the topic of the next section.
+releases. An interesting pattern is that the open source options —
+MATSim, SUMO and sDNA — all have limited ‘in house’ geographic
+capabilities. This can be explained by the ‘Unix philosophy’, the second
+tenet of which is modularity, meaning that “each program should do one
+thing well”, reducing duplication of effort and allowing the best tool
+to be used for each job (Gancarz 2003). The next section describes the
+this modularity in more detail, including outstanding support for
+geographic data in open source software.
+
+A major barrier affecting the current landscape of transport planning
+tools is accessibility and reproducibility: All the proprietary products
+are expensive (costing hundreds of dollars for a single licence),
+ensuring that only a small fraction of transport planners, let alone the
+public, has access to them. Another barrier associated with the
+proprietary options is platform dependence: as far as the author can
+tell, they all run only on the proprietary operating system Windows,
+preventing use in on other operating systems such as Linux, Mac and
+FreeBSD. A final issue affecting reproducibility with the proprietary
+options listed in Table 1 is that they all have a prominent Graphical
+User Interface (GUI) (although they increasingly offer a command line
+interface, enabling scripting). As is the case with GUI based GIS
+software, this has the “unintended consequence of discouraging
+reproducibility” by enabling the user to get to a solution without
+writing a script that others can use
+(<span class="citeproc-not-found" data-reference-id="lovelace_geocompr_2019">**???**</span>).
+
+Another barrier, which may affect the open source options listed in
+Table 1 more than the proprietary options, is that they can be (in the
+author’s experience) difficult to install and use. This creates an
+additional barrier to the integration of geographic analysis in
+transport planning for people, especially the majority of people who
+have limited computing skills.
+
+A final barrier, which may be more social and organisational than
+software-related (although discerning cause and effect is difficult), is
+that organisations’ GIS and Transport functions tend to be siloed into
+their respective departments/teams with little communication between
+them, meaning that transport planners may not have access to the latest
+geographic data or software.\[7\] A software-related issue is that, if
+transport planners and GIS analysts are using different programs for
+their work, transport planners will be less likely to collaborate with
+people with geographic analysis skills or identify potential geographic
+solutions to their domain-specific problems. To what extent can these
+barriers be overcome by open source software ecosystems? That is the
+topic of the next section.
 
 # New tools of the trade
 
@@ -549,7 +586,7 @@ models (GLMs, implemented with the function `glm`) and constrained
 optimisation problems that appear frequently in transport research.
 Additional capabilities are supported by 10,000+ packages that can be
 installed from a central repository with commands such as
-`install.packages("stplanr")`.\[7\]
+`install.packages("stplanr")`.\[8\]
 
 A good example of a transport problem that R’s statistical capabilities
 are well suited to solving is mode choice. Unimodal models estimating
@@ -574,7 +611,7 @@ data, making it well suited to the task of integrating geographic
 analysis in transport planning: R excels at doing modelling *and*
 geographic analysis. This is particular interest here because, as
 outlined in previous sections, ‘context switching’ between programs for
-statistical and geographic analysis is time consuming.\[8\] Support for
+statistical and geographic analysis is time consuming.\[9\] Support for
 geographic data and methods have a long history in R (Rowlingson et al.
 2003; Bivand 2006; Pebesma et al. 2015; Bivand, Pebesma, and
 G’omez-Rubio 2013). The development of R’s spatial capabilities are
@@ -709,6 +746,12 @@ to Geography.” *Journal of Geography* 11 (2): 40–45.
 Fox, Florence C. 1923. *Main Streets of the Nation a Series of Projects
 on Highway Transport for Elementary Schools*. Department for the
 Interior.
+
+</div>
+
+<div id="ref-gancarz_linux_2003">
+
+Gancarz, Mike. 2003. *Linux and the Unix Philosophy*. Digital Press.
 
 </div>
 
@@ -1232,7 +1275,9 @@ Zandbergen, Paul A. 2015. *Python Scripting for ArcGIS*. Esri press.
     an agency of the DoT responsible for transport planning)
     Transportation Planning System (UTPS) and PLANPAC
 
-7.   Like Python packages, R packages are analogous to Apps on
+7.   Thanks to Crispin Cooper, author of sDNA, for raising this barrier.
+
+8.   Like Python packages, R packages are analogous to Apps on
     smartphones and plugins in QGIS (described below), that provide new
     functionality. Many implement recently developed statistical and
     computational techniques (some of which are accompanied by papers
@@ -1241,7 +1286,7 @@ Zandbergen, Paul A. 2015. *Python Scripting for ArcGIS*. Esri press.
     other languages, meaning that R can provide transport researchers
     with access to many cutting-edge methods via a single system.
 
-8.   The author has first hand experience of the costs of
+9.   The author has first hand experience of the costs of
     context-switching: during my PhD I used R for the statistical and
     modelling analysis, and then switched to QGIS for geographic
     analysis and visualisation. While this approach worked well, the
