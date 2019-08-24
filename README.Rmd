@@ -397,7 +397,7 @@ They have also seen impressive growth in popularity over the past decade, sugges
 
 ```{r, eval=FALSE}
 library(gtrendsR)
-res <- gtrends(c("R programming", "Python programming", "QGIS"), time = "2010-01-01 2019-08-01")
+res = gtrends(c("R programming", "Python programming", "QGIS"), time = "2010-01-01 2019-08-01")
 res
 plot(res)
 
@@ -417,7 +417,23 @@ res$interest_over_time$hits_smoothed = c(
   zoo::rollmean(res$interest_over_time$hits[(start_rows:end_rows) + end_rows], 6, fill = "extend"),
   zoo::rollmean(res$interest_over_time$hits[(start_rows:end_rows) + 2 * end_rows], 6, fill = "extend")
 )
-ggplot(res$interest_over_time) +
+
+res2 = gtrends(c("RStudio", "Pycharm", "VS code"), time = "2010-01-01 2019-08-01")
+
+plot(res2)
+end_rows = nrow(res2$interest_over_time) / 3
+class(res2$interest_over_time$hits) = "numeric"
+
+res2$interest_over_time$hits_smoothed = c(
+  # slide::slide_dbl(res2$interest_over_time$hits[start_rows:end_rows], ~mean(.x), .before = 6, .after = 6)
+  zoo::rollmean(res2$interest_over_time$hits[start_rows:end_rows], 6, fill = "extend"),
+  zoo::rollmean(res2$interest_over_time$hits[(start_rows:end_rows) + end_rows], 6, fill = "extend"),
+  zoo::rollmean(res2$interest_over_time$hits[(start_rows:end_rows) + 2 * end_rows], 6, fill = "extend")
+)
+
+res_all = rbind(res$interest_over_time, res2$interest_over_time)
+
+ggplot(res_all) +
   geom_line(aes(date, hits_smoothed, colour = keyword), size = 2) +
   ylab("Relative number of hits") +
   theme(legend.position = c(0.2, 0.8))
