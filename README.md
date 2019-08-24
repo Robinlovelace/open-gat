@@ -579,10 +579,10 @@ over the past decade, suggesting they are future proof, as illustrated
 in Figure
 2.
 
-<img src="google-trends-open.png" title="Relative number of searches for terms related to open source ecosystems R, Python and QGIS. Code to reproduce the plot is hosted in this paper's code repository." alt="Relative number of searches for terms related to open source ecosystems R, Python and QGIS. Code to reproduce the plot is hosted in this paper's code repository." width="70%" />
+<img src="google-trends-facet.png" title="Relative number of searches for terms related to open source (R and Python) and proprietary-based (VBA) programming languages (left) and open source programs (Pychame, QGIS, RStudio) that can be used for transport planning. Code to reproduce the plot is hosted in this paper's code repository." alt="Relative number of searches for terms related to open source (R and Python) and proprietary-based (VBA) programming languages (left) and open source programs (Pychame, QGIS, RStudio) that can be used for transport planning. Code to reproduce the plot is hosted in this paper's code repository." width="70%" />
 
-Each ecosystem, and it’s potential to be used for geographic analysis in
-transport planning, is outlined below.
+Each open source ecosystem, and it’s potential to be used for geographic
+analysis in transport planning, is outlined below.
 
 ## R
 

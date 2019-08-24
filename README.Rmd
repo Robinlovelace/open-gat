@@ -397,9 +397,10 @@ They have also seen impressive growth in popularity over the past decade, sugges
 
 ```{r, eval=FALSE}
 library(gtrendsR)
-res = gtrends(c("R programming", "Python programming", "QGIS"), time = "2010-01-01 2019-08-01")
+res = gtrends(c("R programming", "Python programming", " VBA programming"), time = "2010-01-01 2019-08-01")
 res
-plot(res)
+p = plot(res)
+class(p)
 
 head(res$interest_over_time)
 tail(res$interest_over_time)
@@ -418,9 +419,15 @@ res$interest_over_time$hits_smoothed = c(
   zoo::rollmean(res$interest_over_time$hits[(start_rows:end_rows) + 2 * end_rows], 6, fill = "extend")
 )
 
-res2 = gtrends(c("RStudio", "Pycharm", "VS code"), time = "2010-01-01 2019-08-01")
+res2 = gtrends(c("RStudio", "Pycharm", " QGIS"), time = "2010-01-01 2019-08-01")
 
-plot(res2)
+p2 = plot(res2)
+
+devtools::install_github("thomasp85/patchwork")
+library(patchwork)
+
+p + p2
+
 end_rows = nrow(res2$interest_over_time) / 3
 class(res2$interest_over_time$hits) = "numeric"
 
@@ -441,13 +448,11 @@ ggplot(res_all) +
 ggplot2::ggsave("google-trends-open.png", width = 6, height = 4)
 ```
 
-```{r, fig.cap="Relative number of searches for terms related to open source ecosystems R, Python and QGIS. Code to reproduce the plot is hosted in this paper's code repository.", out.width="70%"}
-knitr::include_graphics("google-trends-open.png")
+```{r, fig.cap="Relative number of searches for terms related to open source (R and Python) and proprietary-based (VBA) programming languages (left) and open source programs (Pychame, QGIS, RStudio) that can be used for transport planning. Code to reproduce the plot is hosted in this paper's code repository.", out.width="70%"}
+knitr::include_graphics("google-trends-facet.png")
 ```
 
-Each ecosystem, and it's potential to be used for geographic analysis in transport planning, is outlined below.
-
-
+Each open source ecosystem, and it's potential to be used for geographic analysis in transport planning, is outlined below.
 
 ## R
 
