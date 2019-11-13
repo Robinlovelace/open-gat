@@ -13,7 +13,9 @@ output:
 #     latex_engine: xelatex
   # word_document: default
   github_document: default
-bibliography: references.bib
+bibliography:
+  - references.bib
+  - ortuzar.bib
 ---
 
 ```{r, include=FALSE}
@@ -107,7 +109,7 @@ Articles about successful transport planners illustrate the point.
 Ben Hamilton-Baillie (1955 - 2019), for example, was an influential transport planner and street designer whose obituary stated that "hundreds of thousands of people who are safer and happier as a result of his achievements" (Tim Stornor, quoted in [TransportExtra](https://www.transportxtra.com/publications/local-transport-today/news/60655/obituary-ben-hamilton-baillie/)).
 ]
 
-Transport planning can be considered as "more of an art than a technique", although *good* transport plans also rely on robust analysis and modelling of sometimes large and usually spatial input datasets  [@ortuzar_modelling_2001].
+Transport planning can be considered as "more of an art than a technique", although *good* transport plans also rely on robust analysis and modelling of sometimes large and usually spatial input datasets  [@ortuzars_modelling_2001].
 Ways and other pieces of transport infrastructure must *go somewhere* to optimise their ability to take people *where they want to go*, yet the importance of geography in transport systems is often overlooked [@rodrigue_geography_2013].
 Transport planning is embedded within broader democratic processes *and* local geographic contexts.
 

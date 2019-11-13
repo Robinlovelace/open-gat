@@ -1,7 +1,7 @@
 Integrating geographic analysis in transport planning: origins, software
 and open source solutions
 ================
-2019-08-24
+2019-11-13
 
 <!-- should be integrated in transport planning tools. -->
 
@@ -84,7 +84,7 @@ generations to come.\[1\]
 Transport planning can be considered as “more of an art than a
 technique”, although *good* transport plans also rely on robust
 analysis and modelling of sometimes large and usually spatial input
-datasets (Dios Ort’uzar and Willumsen 2001). Ways and other pieces of
+datasets (Ortúzar S. and Willumsen 2001). Ways and other pieces of
 transport infrastructure must *go somewhere* to optimise their ability
 to take people *where they want to go*, yet the importance of geography
 in transport systems is often overlooked (Rodrigue, Comtois, and Slack
@@ -900,13 +900,6 @@ Croissant, Yves. 2019. *Mlogit: Multinomial Logit Models*.
 
 </div>
 
-<div id="ref-ortuzar_modelling_2001">
-
-Dios Ort’uzar, Juan de, and Luis G. Willumsen. 2001. *Modelling
-Transport*. John Wiley; Sons.
-
-</div>
-
 <div id="ref-dong_population-weighted_2016">
 
 Dong, Lei, Ruiqi Li, Jiang Zhang, and Zengru Di. 2016.
@@ -1225,6 +1218,13 @@ Sea-Level Rise and Coastal Flooding-a Global Assessment.” *PloS One* 10
 
 O’Flaherty, Coleman, and Michael GH Bell. 1997. *Transport Planning and
 Traffic Engineering*. Elsevier.
+
+</div>
+
+<div id="ref-ortuzars_modelling_2001">
+
+Ortúzar S., Juan de Dios, and Luis G. Willumsen. 2001. *Modelling
+Transport*. 3rd ed. Chichester New York: J. Wiley.
 
 </div>
 
