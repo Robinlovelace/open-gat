@@ -1,21 +1,23 @@
 ---
 # title: "Integrating geographic analysis in transport planning: new open source tools for the trade"
 # title: "Integrating geographic analysis in transport planning: new tools of the trade"
-# title: "Open source software for geographic analysis in transport planning"
+title: "Open source software for geographic analysis in transport planning"
 # title: "Open source software for geographic analysis in transport planning: a review of emerging ecosystems"
 # title: "Integrating geographic analysis in transport planning"
-title: "Integrating geographic analysis in transport planning: origins, software and open source solutions"
+# title: "Integrating geographic analysis in transport planning: origins, software and open source solutions"
 # title: "Integrating geographic analysis in transport planning workflows: the role of open source software
 # author: "Robin Lovelace"
 date: '`r Sys.Date()`'
 output:
-#   bookdown::pdf_document2:
-#     latex_engine: xelatex
+  bookdown::pdf_document2:
+    latex_engine: xelatex
   # word_document: default
   github_document: default
 bibliography:
   - references.bib
   - ortuzar.bib
+  - newrefs.bib
+  - tds.bib
 ---
 
 ```{r, include=FALSE}
@@ -68,21 +70,26 @@ knitr::opts_chunk$set(echo = FALSE)
 <!-- Tools for geographic analysis have long been used in transport planning. -->
 <!-- , alongside other (typically primarily economic and engineering) considerations. -->
 
-Transport is inherently geographic.
-Movement of people, goods and electrons, between points and polygons along linear ways in spatial networks, is a defining feature of civilisation.
-Decarbonising transport systems is vital for the future.
-Sustainable transport interventions are most effective when they are located intelligently.  
-Geographic analysis therefore has a huge amount to offer transport planning and, more specifically, to transport planning tools.
-Yet geographic analysis is often treated as an optional 'add-on', conducted in different programs than those typically used in practice for transport data analysis and modelling.
-This dichotomy, between 'geographic' and 'non-geographic' analysis in transport planning is undesirable because it:
-(1) reduces researcher effectiveness due to the time-consuming process of 'context switching';
-(2) prevents reproducibility, requiring installation and management of geographic and non-geographic tools; and 
-(3) hides vital geographic components in transport plans, with adverse consequences for interventions that can benefit from being placed where they are most needed.
-These premises are described in the wider context of transport planning research and the landscape of transport planning software, which is dominated by proprietary products.
-The paper then shifts gear, to focus on open source solutions.
-Three emerging software ecosystems for integrating geographic analysis in transport planning (data analysis and modelling) workflows are reviewed in depth: the statistical programming language R, the general purpose programming language Python, and the geographic information system QGIS.
-Each ecosystem is found to provide numerous 'tools of the trade' for integrating geographic analysis in transport research, some of which are already being used in practice.
-In addition to integrating geographic considerations, the shift to such open source solutions will have wider benefits for reproducibility, transparency and democratic accountability in transport planning.
+Transport is inherently geographic, involving the movement of people and goods between places along spatial networks.
+<!-- Decarbonising transport systems is vital for the future. -->
+Geographic analysis has a huge amount to offer transport planning and, more specifically, to transport planning tools.
+<!-- Yet geographic analysis is often treated as an optional 'add-on'  transport data analysis and modelling. -->
+<!-- This dichotomy, between 'geographic' and 'non-geographic' analysis in transport planning is undesirable because it: -->
+<!-- (1) reduces researcher effectiveness due to the time-consuming process of 'context switching'; -->
+<!-- (2) prevents reproducibility, requiring installation and management of geographic and non-geographic tools; and  -->
+<!-- (3) hides vital geographic components in transport plans, with adverse consequences for interventions that can benefit from being placed where they are most needed. -->
+However, many of the 'tools of the trade' for geographic analysis in transport planning have historically been proprietary
+<!-- or difficult to integrate into the wider planning process or both. -->
+In this context, the aim of this paper is to describe emerging open source options for geographic analysis in transport planning.
+Solutions are reviewed with reference to academic and practitioner-led literature, with explicit coverage of demand-side data, data processing and geographical data generation (including transport routing and route network generation).
+A key finding from the literature is that a growing number of solutions exist that can help tackle these issues, ranging from single functions dedicated to a particular geographic transport planning task to large software projects.
+Prominent options include dedicated transport modelling software products such as MATsim and SUMO, in addition to more general programs such as QGIS, as well as open source languages such as R and Python which are used as the foundation of a growing number of 'packages' for transport planning.
+Due to the size and rapidly evolving state of the software landscape for transport planning, the paper cannot be complete in its coverage.
+However, the focus on a specific aspect of transport planning --- geographic analysis --- highlights themes, such as ease-of-use and community support, that may be relevant to other branches of the planning process.
+Overall we conclude that there has never been a better time for transport planners to 'shift gear' and adopt open source solutions end-to-end in their everyday practice.
+<!-- otwithstanding institutional barriers,  -->
+<!-- Each ecosystem is found to provide numerous 'tools of the trade' for integrating geographic analysis in transport research, some of which are already being used in practice. -->
+<!-- In addition to integrating geographic considerations, the shift to such open source solutions will have wider benefits for reproducibility, transparency and democratic accountability in transport planning. -->
 <!--  transport planning experts and the public alike, -->
 <!-- Ultimately, by highlighting cost effective and geographically targeted interventions, integrating geographic analysis in transport planning could lead to better decision making. -->
 <!-- and support the global efforts to transition away from fossil fuels and towards a healthy, low carbon transport system. -->
@@ -103,7 +110,7 @@ In addition to integrating geographic considerations, the shift to such open sou
 
 Transport planning is an applied discipline involving the design and placement of physical infrastructure, especially ways, including highways, railways, cycleways and footways [@oflaherty_transport_1997; @parkin_designing_2018].
 It also involves visioning transport futures and making the economic and political case for change [@timms_imagineering_2014].
-Successful transport plans are therefore a combination of geographically specific recommendations (e.g. "build this way here") and long-term strategies guided by citywide, regional and even national visions (e.g. "imagine the benefits of making the city free from private cars by 2030").
+Successful transport plans are therefore a combination of geographically specific recommendations (e.g. "build this way here") and long-term strategies guided by citywide, regional and even national visions (e.g. "imagine the benefits of making the city free from private cars by 2030") and policy drivers.
 The rewards can be great: transport planners who have designed --- and helped to implement --- plans appropriate to the needs of an area leave a legacy that will benefit people and the environment for generations to come.^[
 Articles about successful transport planners illustrate the point.
 Ben Hamilton-Baillie (1955 - 2019), for example, was an influential transport planner and street designer whose obituary stated that "hundreds of thousands of people who are safer and happier as a result of his achievements" (Tim Stornor, quoted in [TransportExtra](https://www.transportxtra.com/publications/local-transport-today/news/60655/obituary-ben-hamilton-baillie/)).
@@ -114,8 +121,14 @@ Ways and other pieces of transport infrastructure must *go somewhere* to optimis
 Transport planning is embedded within broader democratic processes *and* local geographic contexts.
 
 Effective transport planning is inherently embedded within democratic processes (to the extent that democracy exists in the area where transport plans are commissioned) because it determines how public spaces and other shared resources are used, affecting everyone in society.
-If transport plans are developed by unaccountable technocrats with little understanding of their impacts, the results can be severe: the transport system now is the "leading cause of death for children and young adults aged 5-29 years" through road traffic casualties alone, with 1.35 million people killed and tens of millions injured and disabled each year [@world_health_organization_global_2018].
+Transport planning should therefore adapt to contemporary policy priorities, which have shifted substantially over the past few decades.
+If transport plans are developed based on out-of-date policies (such as accommodating growth in car ownership and use) or by unaccountable technocrats with little understanding of their impacts, the results can be severe.
+the transport system now is the "leading cause of death for children and young adults aged 5-29 years" through road traffic casualties alone, with 1.35 million people killed and tens of millions injured and disabled each year [@world_health_organization_global_2018].
 The air pollution impacts could be even greater, with a growing body of research linking air pollution to Alzheimer's disease, lung cancer and heart disease among hundreds of millions of sufferers worldwide [@kampa_human_2008; @kilian_emerging_2018].
+Transport planning has the potential to improve health outcomes by ensuring that motor traffic is constrained to areas where the fumes they emit can reach few lungs and, in the longer term, removing internal combustion engines from densley populated areas altogether.
+Transport planning can also have positive health impacts by enabling millions of people to integrate physical activity into their everyday lives, thereby tackling one of the root causes of the 'obesity crisis': lack of regular physical activity [@yang_travelobesity_2013].
+A wider issue global challenge in the 21^st^ Century is social and economic inequalities, which can be exacerbated or tackled by transport plans that can prioritise mobility for high income citizens or more socially equitable transport options that can be used by a wide range of people [@moreno-monroy_public_2017], from '8 to 80 year olds'.^[The term "from 8 to 80 year olds" is used informally by transport planning practitioners to convey their intention to design for everyone, as exemplified by the use of the phrase in a 2015 article in the [Guardian](https://www.theguardian.com/uk-news/davehillblog/2015/sep/23/whitechapel-high-street-cycle-superhighway-bus-stop-bypass-is-a-mess).]  
+A global and perhaps more important recent policy driver of transport planning is climate change mitigation.
 Transport is responsible for a quarter of global greenhouse gas emissions and growing [@harrison_environmental_2017], and is one of the hardest sectors to decarbonise [@moriarty_prospects_2008], meaning that evidence-based plans to reduce transport energy use is an urgent priority affecting the global population, especially the projected 1.4 billion people who will live in low elevation (less than 10 m above sea level) coastal zones by 2060 [@neumann_future_2015].
 
 Transport planning is inherently embedded within local geographic contexts because transport systems, and the networks of physical infrastructure that underpins them, are highly localised [@barthelemy_spatial_2011; @levinson_network_2012] and to some degree dynamic [@xie_evolving_2011] phenomena.
@@ -160,7 +173,11 @@ Modules dedicated to Transport Geography have been advertised at the Universitie
 
 The paper outlines the relationship between geographic analysis and transport planning, in relation to the history of geographic thinking in transport research and practice (in Section 3) and the resulting specialisation and monopolisation of particular transport planning software products (outlined in Section 4).
 The focus of the paper is Section 5, which reviews open source software ecosystems that enable an integrated approach, which combines non geographically explicit stages (e.g. modelling) and geographic processing stages *in a single workflow*.
-Three software ecosystems (R, Python and QGIS) are reviewed in detail; alternative current and potential future approaches, including 'cloud lock in' are discussed; and the relative merits of different approaches are discussed.
+Three software ecosystems are reviewed in detail:
+the statistical programming language R [@r_core_team_r:_2019],
+the general purpose programming language Python [@rossum_python_1995],
+and the desktop GIS QGIS [@qgis_development_team_qgis_2019].
+Alternative current and potential future approaches, including 'cloud lock in' are discussed; and the relative merits of different approaches are discussed.
 Building on this discussion, Section 6 concludes by returning to the importance of integrating geographic analysis in transport planning workflows.
 Before proceeding with the main task of this paper --- to review new tools for integrating geographic analysis in transport planning, and provide guidance to transport researchers and practitioners tackling 21^st^ Century challenges --- it is worth taking a step back, to think about the key policy drivers of 21^st^ century transport planning.
 
@@ -179,7 +196,7 @@ Tools that can help answer these questions are becoming an increasingly importan
 
 To illustrate this point, imagine being the mayor of a major city that has declared a 'climate emergency' and being given the task of leading the transition away from fossil fuels [@hadfield_financing_2019].
 Policies such as carbon taxes would undoubtedly have geographic implications, but the intervention itself (charging a fixed price for the extraction and sale of atmosphere polluting substances) could be essentially non-geographic.
-Notwithstanding changes to national policies relating to transport, transport planning options, by contrast, are inherently spatial.
+Except for specific national transport policies such as fuel tax, transport policies tend to have geographic outcomes (to build new cycle infrastructure, for example, which must go somewhere).
 Even high level national plans for a walking and cycling revolution must be implemented locally, down to the level of streets, as illustrated by the still ongoing local implementation of Dutch cycling ambitions [@pucher_making_2008]. 
 The political-democratic and local-geographic aspects of transport planning can be considered in isolation, but an integrated approach is necessary for effective policies [@hull_policy_2008].
 This is well illustrated by prominent Mayoral transport policies in cities such as 
@@ -380,7 +397,9 @@ This overview also helps explain why R, Python and QGIS were selected from the r
 
 <!-- Despite the central role that open source software plays, powering the majority of the world's servers... -->
 Open source software differs from proprietary software in that users are free to see, download and modify the underlying source code that defines it.
-Freedom is central to open source software, which is sometimes referred to simply as 'free software', defined by the Free Software Foundation ([FSF](https://www.fsf.org/about/what-is-free-software)) as follows:
+Freedom is central to open source software, which is sometimes referred to simply as 'free software', defined by the Free Software Foundation (FSF) as follows:^[
+See https://www.fsf.org/about/what-is-free-software for a full definition and context.
+]
 
 > software that gives you the user the freedom to share, study and modify it.
 
@@ -536,11 +555,17 @@ Hundreds of other transport planning projects have used QGIS for the mapping and
 # Conclusion
 
 Geographic analysis is an important yet often under-appreciated aspect of transport planning, and looks set to play a more prominent role in transport policy-making due to technological, data and policy drivers of change.
-In the context of the obesity crisis, air pollution concerns and the 'climate emergency' that has been declared by some city authorities, many transport planners have been tasked with discouraging energy intensive modes, particularly car use, and enabling more walking and cycling [@hickman_transitions_2011] .
-Furthermore, in the age of evidence-based policy, open data and citizen science, there is an onus on practitioners to provide solutions that are transparent, accessible and, increasingly, participatory [@] .
+In the context of now policy drivers --- including the obesity crisis, air pollution concerns and the 'climate emergency' that has been declared by some city authorities --- many transport planners have been tasked with new sustainable transport targets.
+These include discouraging energy intensive modes, particularly car use, and enabling more walking and cycling [@hickman_transitions_2011] .
+Furthermore, in the age of evidence-based policy, open data and citizen science, there is an onus on practitioners to provide solutions that are transparent, accessible and, increasingly, participatory  [@banister_sustainable_2008].
 
 This poses a challenge to incumbent transport planning software which is expensive and thereby inaccessible to most people, monolithic and (to a greater or lesser extent) limited in terms of geographic capabilities, particularly in relation to publicly accessible interactive visualisation and adaptability.
-Partly in response to these pressures and challenges, a number of open source transport planning tools have emerged, notably MATSim, SUMO and sDNA.
+The new planning priorities also present opportunities, in terms of institutional processes [@beddoe_overcoming_2009], but also new technologies that are explicitly designed to enable more participatory, transparent and community-driven transport planning processes.
+A shift to open source planning tools in general, and open source tools for local planning in particular, can help help tackle wider problems, including the 'crisis of participatory planning' [@Legacy_2016], feelings of disempowerment due to lack of opportunities to engage in democratic processes --- which some have blamed for the election of populist leaders and the UK Brexit vote [@monbiot_out_2017] --- and low levels of data and software literacy [@Christozov_2017].
+A key feature of geographically localised transport plans is that they encourage participation by local residents, who have access to information about their local area that goes beyond the datasets beyond the reach of remote planners.
+And a key feature of open software is that anyone can use it, encouraging citizen engagement.
+
+Partly in response to these pressures and challenges, a number of open source transport planning tools have emerged, notably MATSim, SUMO and sDNA, as outlined in Section 4.
 Following the Unix philosophy of modularity [@gancarz_linux_2003], each of these tools has a particular niche.
 However, despite a long history of geographic thinking in transport planning and calls to strengthen the links between GIS and transport software [@loidl_gis_2016] but none of the open source solutions reviewed provide 'in house' GIS capabilities of the type needed for an integrated transport planning workflow in which a single piece of software can be used to import a range data, undertake statistical analysis and modelling and plot the results in interactive maps, e.g. for the design and modelling of new walking and cycling networks.
 
