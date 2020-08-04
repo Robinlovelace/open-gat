@@ -11,9 +11,9 @@ date: '`r Sys.Date()`'
 # header-includes:
 #    - \usepackage{coloremoji}
 output:
-  bookdown::github_document2: default
-  # bookdown::pdf_document2:
-  #   latex_engine: xelatex
+  # bookdown::github_document2: default
+  bookdown::pdf_document2:
+    latex_engine: xelatex
   # word_document: default
 bibliography:
   - references.bib
@@ -562,11 +562,17 @@ These tools could be classified by the five main stages illustrated in Figure \@
 Instead, because many tools can be used in multiple stages, can be more usefully classified from the user's perspective.
 Based on open tools identified through web searches, they can be classified into the follow broad, and to some extent overlapping,^[
 Some tools can be used through multiple interfaces but most have a dominant interface type.
-] user interface (UI) types (see Table \@ref(tab:open-tools)):
+]
+user interface (UI) types (see Table \@ref(tab:open-tools)):
 
 - command-line interface (CLI) tools, primarily controlled by typing commands 
 - graphical user interface (GUI) tools, primarily controlled by mouse clicks
 - web user interface (WUI) tools that users access through a web browser
+- web application programming interfaces (API) that computers access over the web
+
+In this paper we will focus on projects in the first three categories.
+Numerous open source 'routing engine' projects provide a range of high performance routing and other transport data analysis services via a web application programming interface (API).
+While technically these can be used for geographic analysis tasks, they are more commonly used by transport planners as remote services, and are usually the preserve of software developers, so were excluded from Table \@ref(tab:open-tools).
 
 ## Defining open source
 
@@ -647,23 +653,24 @@ names(open_tools) = tools::toTitleCase(names(open_tools))
 open_tools %>% 
   select(-Website, -Interface) %>% 
   filter(Type != "Routing engine") %>% 
-  # kable(format = "latex", escape = F, booktabs = T, caption = "Open source tools for geographic analysis in transport planning, based on data from Google Scholar, GitHub and web searches and classified in by their primary user interface. CLI, GUI and WUI refer to command-line, graphical user and web user interfaces respectively.") %>%
-  # pack_rows(group_label = "CLI", start_row = 1, end_row = 9) %>% 
-  # pack_rows(group_label = "GUI", start_row = 10, end_row = 14) %>% 
-  # pack_rows(group_label = "WUI", start_row = 15, end_row = 18) %>% 
-  # kable_styling(bootstrap_options = c("hover", "condensed")) 
-  knitr::kable(caption = "Open source tools for geographic analysis in transport planning, based on data from Google Scholar, GitHub and web searches and classified in by their primary user interface. CLI, GUI and WUI refer to command-line, graphical user and web user interfaces respectively.")
+  kable(format = "latex", escape = F, booktabs = T, caption = "Open source tools for geographic analysis in transport planning, based on data from Google Scholar, GitHub and web searches and classified in by their primary user interface. CLI, GUI and WUI refer to command-line, graphical user and web user interfaces respectively.") %>%
+  pack_rows(group_label = "CLI", start_row = 1, end_row = 12) %>%
+  pack_rows(group_label = "GUI", start_row = 13, end_row = 18) %>%
+  pack_rows(group_label = "WUI", start_row = 19, end_row = 23) %>%
+  kable_styling(bootstrap_options = c("hover", "condensed"))
+  # knitr::kable(caption = "Open source tools for geographic analysis in transport planning, based on data from Google Scholar, GitHub and web searches and classified in by their primary user interface. CLI, GUI and WUI refer to command-line, graphical user and web user interfaces respectively.")
 ```
 
-Finally, to overcome the limitation that not all open source software projects are hosted on GitHub *or* described in academic papers, snowballing via fora such as the [QGIS plugin homepage](https://plugins.qgis.org/) and links in project README files were used to find additional projects that met the following criteria:
+Finally, to overcome the limitation that not all open source software projects are hosted on GitHub *or* described in academic papers, snowballing via fora such as the [QGIS plugin homepage](https://plugins.qgis.org/), links in project README files and social media were used to find additional projects that met the following criteria:
 
 1. The tool uses geographic analysis for transport planning, supporting the design and placement of physical infrastructure for urban mobility, based on the project's website or code repository
 1. Evidence that the tool is being used in practice, via citations, 'stars' or other type of 'upvote'
 2. Evidence that the tool is actively maintained, with activity in the last 12 months
 3. Availability of source code with a visible open source license
 
-124 projects or papers were identified using the methods outlined using the methods described above.
-Of those, 17 met the criteria listed above (see Table \@ref(tab:open-tools)).
+<!-- Projects or papers were identified using the methods outlined using the methods described above. -->
+30 projects were identified that met the criteria listed above.
+7 of those were routing engines, which were excluded for reasons outlined in the previous section, resulting in 23 projects outlined in Table \@ref(tab:open-tools)).
 Although these tools could also be classified into different 'ecosystems', such as R packages, Python packages and QGIS plugins, it is clear that some tools do not fit into such prescribed boxes.
 We therefore describe the tools in order of their primary user interface, in chronological order of the interface's development (CLIs predate GUIs which predate WUIs).
 
@@ -688,7 +695,10 @@ readr::write_csv(res, "res-scholar-2010-2020geographic spatial network transport
 
 ```
 
-
+It should be clear that the 'Type' and 'Language' values shown in Table \@ref(tab:open-tools) are to some extent fuzzy: open source software is by nature modular and flexible, meaning that the same piece of code can take multiple different forms and the same method can be implemented in multiple languages.
+The AequilibraE QGIS plugin [@camargo_aequilibrae_2015], for example, is also a Python package.
+Conversely, the MovingPandas Python package by @graser_movingpandas_2019 is also a QGIS plugin.
+The point is that the *most prominent* category into which each project seemed to fall, based on the README, was used.
 
 <!-- --- such as R, Python and QGIS.  -->
 
@@ -788,26 +798,41 @@ With complex installation and usage instructions, **SUMO** and **MATSim** are bo
 This has the advantage of enabling many research and (particularly in the case of **MATSim**) applied use cases due to the flexibility of the tools, but has the disadvantage of reducing accessibility.
 
 The remaining CLI-based tools in Table \@ref(tab:open-tools) are smaller, simpler and more accessible R/Python packages that fit within the framework of these pre-existing open source software ecosystems.
-**osmnx** is a Python package for downloading and analysing transport networks from OpenStreetMap that has a focus on urban transport network analysis [@boeing_osmnx_2017].
+**OSMnx** is a Python package for downloading and analysing transport networks from OpenStreetMap that has a focus on urban transport network analysis [@boeing_osmnx_2017].
 **OSMnx** has been used for a wide range of research and real-world applications, with a focus on spatial network analysis via functions for calculating a range of transport network measures.
 **Movingpandas** is a Python package and QGIS plug-in for visualising a wide range of movement datasets, with a focus on trajectory data [@graser_movingpandas_2019].
 **momepy** is a Python package for measuring 'urban morphology', meaning the measurement and analysis of collections of geographic entities that constitute cities [@fleischmann_momepy_2019].
 
-Python packages **UrbanAccess** and **scikit-mobility** have a broader remit, aiming to support a range of transport planning objectives.
-**UrbanAccess** is another Python package for analysing geographic transport network data, with a focus on accessibility.
+Python packages **UrbanAccess**, **spaghetti** and **scikit-mobility** have broader (and to some extent overlapping) remits, aiming to support a range of transport planning objectives.
+**UrbanAccess** is a Python package for analysing geographic transport network data, with a focus on accessibility.
 The paper describing the tool has more of a focus on applied transport planning than other Python tools, highlighting the potential for the tool to assist metropolitan planning organizations (MPOs) to prioritise investments that cost-effectively increase accessibility for those most in need [@blanchard_urbanaccess_2017].
 In addition to using OSM data, **UrbanAccess** can import and process GTFS data to calculate multi-modal travel times and other metrics.
+Like **momepy**, the **spaghetti** package (which stands for SPAtial GrapHs: nETworks, Topology, & Inference) is focussed on street network analysis, but focusses less on urban morphology and more on segment-level statistics [@Gaboardi2018].
 **scikit-mobility** implements a framework for statistical modelling of travel behaviour, including functions for estimating movement between geographic zones using spatial interaction models, as well as route assignment [@pappalardo_scikit-mobility:_2019].
+
+The JavaScript package Trip-simulator, from the not-for-profit organisation Shared Streets, enables geographic analysis for transport planning by simulating GPS flows on street networks.
+Its command-line interface allows a wide variety of trip types and volumes to be simulated which can, given a new street network layout, be used to estimate the impact of changes to the network.
 
 The remaining two CLI-based tools in Table \@ref(tab:open-tools) are R packages focussed on applied transport planning.
 **stplanr** (which stands for sustainable transport planning with R) contains a range of functions for processing origin-destination, routes and route networks.
 The package takes an explicitly geographic approach to transport planning and many of the functions use geographic operations such as buffers and spatial aggregation in workflows that start with origin-destination data and end with estimates of travel demand down to the route network level under different scenarios of change [@lovelace_stplanr:_2018].
 **opentripplanner** is an R package for multi-modal routing and accessibility analysis that provides an interface to the OpenTripPlanner Java library, enabling not only calculation of travel times and route geometries but also monetary costs and accessibility isochrone maps where GTFS data allow [@morgan_opentripplanner_2019].
 
-
-
 ## Graphical user interface (GUI) tools
 
+Other than A/B Street, all of the GUI-based tools presented in Table \@ref(open-tools) are QGIS plugin.
+This came as a surprise: given the dominance of GUIs in many areas of computing one would expect a range of stand-alone transport planning tools to have been developed (the criterion that tools must be actively maintained to be considered explains the exclusion of some tools such as Tranus [@delabarra_tranusj_1984]. 
+
+A/B Street does not market itself as a transport planning tool but instead as a game and educational tool.
+However, that does not mean that it lacks capabilities.
+A/B Street combines the real-time capabilities of MATSim with the usability of online tools such as StreetMix, discussed in the next section, taking a 'SimCity' approach to transport planning, while still allowing the user to zoom in to single vehicles (while they are in motion via a moving camera!) and change the geometries of street layouts with an intuitive in-built editor.
+
+The QGIS plugins for transport planning are even more explicitly focussed on geographic analysis for transport planning.
+**AequilibraE**, **QNEAT3** and the **Networks** plugins provide various transport planning tools from the mature and popular QGIS GUI-based Geographic Information System (GIS). 
+**AequilibraE** provides a broad range of functions for processing transport networks and assigning traffic [@camargo_aequilibrae_2015], as detailed in the project's substantial [documentation website](http://aequilibrae.com/python).
+[**QNEAT3**](https://root676.github.io/) provides a narrower but well documented set of algorithms for transport planning applications, including shortest path, network buffers and OD matrix visualisation.
+The **Networks** plugin uses an interface to external software developed by the same author to enable multi-modal routing and GTFS data import. 
+With 68 ratings on the [QGIS Plugins web page](https://plugins.qgis.org/plugins/networks/) (averaging 4 out of 5) the plugin is clearly popular, although with limited documentation except for assorted .pdf files in the package's GitHub repo, it is hard to assess exactly what its capabilities are.
 
 ## Web user interface (WUI) tools
 
