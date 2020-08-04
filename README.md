@@ -1038,7 +1038,7 @@ Reference
 
 <td style="text-align:left;">
 
-osmnx
+OSMnx
 
 </td>
 
@@ -1176,7 +1176,7 @@ Python
 
 <td style="text-align:left;">
 
-MatSIM
+MATSim
 
 </td>
 
@@ -1360,6 +1360,52 @@ Python
 
 <td style="text-align:left;">
 
+Trip-simulator
+
+</td>
+
+<td style="text-align:left;">
+
+JavaScript package
+
+</td>
+
+<td style="text-align:left;">
+
+MIT
+
+</td>
+
+<td style="text-align:left;">
+
+JavaScript
+
+</td>
+
+<td style="text-align:right;">
+
+117
+
+</td>
+
+<td style="text-align:right;">
+
+NA
+
+</td>
+
+<td style="text-align:left;">
+
+NA
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
 urbanaccess
 
 </td>
@@ -1397,6 +1443,98 @@ Python
 <td style="text-align:left;">
 
 (Blanchard 2017)
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+dodgr
+
+</td>
+
+<td style="text-align:left;">
+
+R package
+
+</td>
+
+<td style="text-align:left;">
+
+GPLv3
+
+</td>
+
+<td style="text-align:left;">
+
+C++
+
+</td>
+
+<td style="text-align:right;">
+
+84
+
+</td>
+
+<td style="text-align:right;">
+
+2
+
+</td>
+
+<td style="text-align:left;">
+
+NA
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+spaghetti
+
+</td>
+
+<td style="text-align:left;">
+
+Python package
+
+</td>
+
+<td style="text-align:left;">
+
+BSD-3
+
+</td>
+
+<td style="text-align:left;">
+
+Python
+
+</td>
+
+<td style="text-align:right;">
+
+60
+
+</td>
+
+<td style="text-align:right;">
+
+0
+
+</td>
+
+<td style="text-align:left;">
+
+NA
 
 </td>
 
@@ -1488,383 +1626,475 @@ NA
 
 <td style="text-align:left;">
 
-  - 
-    
-    </td>
-    
-    </tr>
-    
-    <tr>
-    
-    <td style="text-align:left;">
-    
-    AequilibraE
-    
-    </td>
-    
-    <td style="text-align:left;">
-    
-    QGIS plugin
-    
-    </td>
-    
-    <td style="text-align:left;">
-    
-    Custom
-    
-    </td>
-    
-    <td style="text-align:left;">
-    
-    Python
-    
-    </td>
-    
-    <td style="text-align:right;">
-    
-    57
-    
-    </td>
-    
-    <td style="text-align:right;">
-    
-    3
-    
-    </td>
-    
-    <td style="text-align:left;">
-    
-    (Carmargo 2015)
-    
-    </td>
-    
-    </tr>
-    
-    <tr>
-    
-    <td style="text-align:left;">
-    
-    ORS Tools
-    
-    </td>
-    
-    <td style="text-align:left;">
-    
-    QGIS plugin
-    
-    </td>
-    
-    <td style="text-align:left;">
-    
-    MIT
-    
-    </td>
-    
-    <td style="text-align:left;">
-    
-    Python
-    
-    </td>
-    
-    <td style="text-align:right;">
-    
-    39
-    
-    </td>
-    
-    <td style="text-align:right;">
-    
-    NA
-    
-    </td>
-    
-    <td style="text-align:left;">
-    
-      - 
-        
-        </td>
-        
-        </tr>
-        
-        <tr>
-        
-        <td style="text-align:left;">
-        
-        Networks plugin
-        
-        </td>
-        
-        <td style="text-align:left;">
-        
-        QGIS plugin
-        
-        </td>
-        
-        <td style="text-align:left;">
-        
-        GPLv3
-        
-        </td>
-        
-        <td style="text-align:left;">
-        
-        Python
-        
-        </td>
-        
-        <td style="text-align:right;">
-        
-        9
-        
-        </td>
-        
-        <td style="text-align:right;">
-        
-        NA
-        
-        </td>
-        
-        <td style="text-align:left;">
-        
-          - 
-            
-            </td>
-            
-            </tr>
-            
-            <tr>
-            
-            <td style="text-align:left;">
-            
-            sDNA
-            
-            </td>
-            
-            <td style="text-align:left;">
-            
-            QGIS plugin
-            
-            </td>
-            
-            <td style="text-align:left;">
-            
-            GPLv3
-            
-            </td>
-            
-            <td style="text-align:left;">
-            
-            C++
-            
-            </td>
-            
-            <td style="text-align:right;">
-            
-            9
-            
-            </td>
-            
-            <td style="text-align:right;">
-            
-            27
-            
-            </td>
-            
-            <td style="text-align:left;">
-            
-            (Cooper 2015)
-            
-            </td>
-            
-            </tr>
-            
-            <tr>
-            
-            <td style="text-align:left;">
-            
-            Citybound
-            
-            </td>
-            
-            <td style="text-align:left;">
-            
-            Standalone
-            
-            </td>
-            
-            <td style="text-align:left;">
-            
-            AGPLv3
-            
-            </td>
-            
-            <td style="text-align:left;">
-            
-            Rust
-            
-            </td>
-            
-            <td style="text-align:right;">
-            
-            6124
-            
-            </td>
-            
-            <td style="text-align:right;">
-            
-            NA
-            
-            </td>
-            
-            <td style="text-align:left;">
-            
-              - 
-                
-                </td>
-                
-                </tr>
-                
-                <tr>
-                
-                <td style="text-align:left;">
-                
-                StreetMix
-                
-                </td>
-                
-                <td style="text-align:left;">
-                
-                Hosted service
-                
-                </td>
-                
-                <td style="text-align:left;">
-                
-                BSD-3
-                
-                </td>
-                
-                <td style="text-align:left;">
-                
-                JavaScript
-                
-                </td>
-                
-                <td style="text-align:right;">
-                
-                440
-                
-                </td>
-                
-                <td style="text-align:right;">
-                
-                6
-                
-                </td>
-                
-                <td style="text-align:left;">
-                
-                (Riggs et al. 2016)
-                
-                </td>
-                
-                </tr>
-                
-                <tr>
-                
-                <td style="text-align:left;">
-                
-                PCT
-                
-                </td>
-                
-                <td style="text-align:left;">
-                
-                Hosted service
-                
-                </td>
-                
-                <td style="text-align:left;">
-                
-                AGPLv3
-                
-                </td>
-                
-                <td style="text-align:left;">
-                
-                R
-                
-                </td>
-                
-                <td style="text-align:right;">
-                
-                16
-                
-                </td>
-                
-                <td style="text-align:right;">
-                
-                66
-                
-                </td>
-                
-                <td style="text-align:left;">
-                
-                (Lovelace et al. 2017)
-                
-                </td>
-                
-                </tr>
-                
-                <tr>
-                
-                <td style="text-align:left;">
-                
-                TrajAnalytics
-                
-                </td>
-                
-                <td style="text-align:left;">
-                
-                Standalone
-                
-                </td>
-                
-                <td style="text-align:left;">
-                
-                BSD-3
-                
-                </td>
-                
-                <td style="text-align:left;">
-                
-                JavaScript
-                
-                </td>
-                
-                <td style="text-align:right;">
-                
-                NA
-                
-                </td>
-                
-                <td style="text-align:right;">
-                
-                0
-                
-                </td>
-                
-                <td style="text-align:left;">
-                
-                (Shamal et al. 2019)
-                
-                </td>
-                
-                </tr>
-                
-                </tbody>
-                
-                </table>
+NA
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+AequilibraE
+
+</td>
+
+<td style="text-align:left;">
+
+QGIS plugin
+
+</td>
+
+<td style="text-align:left;">
+
+Custom
+
+</td>
+
+<td style="text-align:left;">
+
+Python
+
+</td>
+
+<td style="text-align:right;">
+
+57
+
+</td>
+
+<td style="text-align:right;">
+
+3
+
+</td>
+
+<td style="text-align:left;">
+
+(Carmargo 2015)
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+ORS Tools
+
+</td>
+
+<td style="text-align:left;">
+
+QGIS plugin
+
+</td>
+
+<td style="text-align:left;">
+
+MIT
+
+</td>
+
+<td style="text-align:left;">
+
+Python
+
+</td>
+
+<td style="text-align:right;">
+
+39
+
+</td>
+
+<td style="text-align:right;">
+
+NA
+
+</td>
+
+<td style="text-align:left;">
+
+NA
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+QNEAT3
+
+</td>
+
+<td style="text-align:left;">
+
+QGIS plugin
+
+</td>
+
+<td style="text-align:left;">
+
+GPLv3
+
+</td>
+
+<td style="text-align:left;">
+
+Python
+
+</td>
+
+<td style="text-align:right;">
+
+35
+
+</td>
+
+<td style="text-align:right;">
+
+NA
+
+</td>
+
+<td style="text-align:left;">
+
+NA
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+Networks plugin
+
+</td>
+
+<td style="text-align:left;">
+
+QGIS plugin
+
+</td>
+
+<td style="text-align:left;">
+
+GPLv3
+
+</td>
+
+<td style="text-align:left;">
+
+Python
+
+</td>
+
+<td style="text-align:right;">
+
+9
+
+</td>
+
+<td style="text-align:right;">
+
+NA
+
+</td>
+
+<td style="text-align:left;">
+
+NA
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+sDNA
+
+</td>
+
+<td style="text-align:left;">
+
+QGIS plugin
+
+</td>
+
+<td style="text-align:left;">
+
+GPLv3
+
+</td>
+
+<td style="text-align:left;">
+
+C++
+
+</td>
+
+<td style="text-align:right;">
+
+9
+
+</td>
+
+<td style="text-align:right;">
+
+27
+
+</td>
+
+<td style="text-align:left;">
+
+(Cooper 2015)
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+Citybound
+
+</td>
+
+<td style="text-align:left;">
+
+Standalone
+
+</td>
+
+<td style="text-align:left;">
+
+AGPLv3
+
+</td>
+
+<td style="text-align:left;">
+
+Rust
+
+</td>
+
+<td style="text-align:right;">
+
+6124
+
+</td>
+
+<td style="text-align:right;">
+
+NA
+
+</td>
+
+<td style="text-align:left;">
+
+NA
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+StreetMix
+
+</td>
+
+<td style="text-align:left;">
+
+Hosted service
+
+</td>
+
+<td style="text-align:left;">
+
+BSD-3
+
+</td>
+
+<td style="text-align:left;">
+
+JavaScript
+
+</td>
+
+<td style="text-align:right;">
+
+440
+
+</td>
+
+<td style="text-align:right;">
+
+6
+
+</td>
+
+<td style="text-align:left;">
+
+(Riggs et al. 2016)
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+flowmap.blue
+
+</td>
+
+<td style="text-align:left;">
+
+Standalone
+
+</td>
+
+<td style="text-align:left;">
+
+MIT
+
+</td>
+
+<td style="text-align:left;">
+
+TypeScript
+
+</td>
+
+<td style="text-align:right;">
+
+90
+
+</td>
+
+<td style="text-align:right;">
+
+NA
+
+</td>
+
+<td style="text-align:left;">
+
+NA
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+PCT
+
+</td>
+
+<td style="text-align:left;">
+
+Hosted service
+
+</td>
+
+<td style="text-align:left;">
+
+AGPLv3
+
+</td>
+
+<td style="text-align:left;">
+
+R
+
+</td>
+
+<td style="text-align:right;">
+
+16
+
+</td>
+
+<td style="text-align:right;">
+
+66
+
+</td>
+
+<td style="text-align:left;">
+
+(Lovelace et al. 2017)
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+TrajAnalytics
+
+</td>
+
+<td style="text-align:left;">
+
+Standalone
+
+</td>
+
+<td style="text-align:left;">
+
+BSD-3
+
+</td>
+
+<td style="text-align:left;">
+
+JavaScript
+
+</td>
+
+<td style="text-align:right;">
+
+NA
+
+</td>
+
+<td style="text-align:right;">
+
+0
+
+</td>
+
+<td style="text-align:left;">
+
+(Shamal et al. 2019)
+
+</td>
+
+</tr>
+
+</tbody>
+
+</table>
 
 Finally, to overcome the limitation that not all open source software
 projects are hosted on GitHub *or* described in academic papers,

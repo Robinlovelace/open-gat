@@ -626,23 +626,27 @@ The complete list of GitHub topics used to identify projects was as follows (man
 
 ```{r open-tools, echo=FALSE, message=FALSE}
 library(kableExtra)
-open_tools_all = readODS::read_ods("open-tools.ods")
-open_tools = open_tools_all %>%
-  select(tool_name, interface, type, licence, langage, website, stars, citations = n_citations, maintained, reference) %>%
-  mutate(
-    # tool_name = paste0("[", tool_name, "](", website, ")"),
-    # tool_name = cell_spec(tool_name, format = "latex", link = website),
-    stars = as.numeric(stars),
-    citations = as.numeric(citations)
-    ) %>% 
-  filter(maintained == 1) %>%
-  # mutate(tool = paste0("\\href{http://", website, "}{", tool_name, "}")) %>%
-  mutate(tool = tool_name) %>%
-  relocate(tool) %>% 
-  arrange(interface, desc(stars)) %>%  
-  select(-website, -maintained, -tool_name, -interface)
+# open_tools_all = readODS::read_ods("open-tools.ods")
+# open_tools = open_tools_all %>%
+#   select(tool_name, interface, type, licence, langage, website, stars, citations = n_citations, maintained, reference) %>%
+#   mutate(
+#     # tool_name = paste0("[", tool_name, "](", website, ")"),
+#     # tool_name = cell_spec(tool_name, format = "latex", link = website),
+#     stars = as.numeric(stars),
+#     citations = as.numeric(citations)
+#     ) %>% 
+#   filter(maintained == 1) %>%
+#   # mutate(tool = paste0("\\href{http://", website, "}{", tool_name, "}")) %>%
+#   mutate(tool = tool_name) %>%
+#   relocate(tool) %>% 
+#   arrange(interface, desc(stars)) %>%  
+#   select(-maintained, -tool_name)
+# readr::write_csv(open_tools, "open_tools.csv")
+open_tools = readr::read_csv("open_tools.csv")
 names(open_tools) = tools::toTitleCase(names(open_tools))  
 open_tools %>% 
+  select(-Website, -Interface) %>% 
+  filter(Type != "Routing engine") %>% 
   # kable(format = "latex", escape = F, booktabs = T, caption = "Open source tools for geographic analysis in transport planning, based on data from Google Scholar, GitHub and web searches and classified in by their primary user interface. CLI, GUI and WUI refer to command-line, graphical user and web user interfaces respectively.") %>%
   # pack_rows(group_label = "CLI", start_row = 1, end_row = 9) %>% 
   # pack_rows(group_label = "GUI", start_row = 10, end_row = 14) %>% 
