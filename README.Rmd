@@ -10,11 +10,11 @@ title: "Open source tools for geographic analysis in transport planning"
 date: '`r Sys.Date()`'
 # header-includes:
 #    - \usepackage{coloremoji}
-# output:
+output:
+  github_document: default
 #   bookdown::pdf_document2:
 #     latex_engine: xelatex
   # word_document: default
-github_document: default
 bibliography:
   - references.bib
   - refs-new.bib
@@ -636,17 +636,19 @@ open_tools = open_tools_all %>%
     citations = as.numeric(citations)
     ) %>% 
   filter(maintained == 1) %>%
-  mutate(tool = paste0("\\href{http://", website, "}{", tool_name, "}")) %>%
+  # mutate(tool = paste0("\\href{http://", website, "}{", tool_name, "}")) %>%
+  mutate(tool = tool_name) %>%
   relocate(tool) %>% 
   arrange(interface, desc(stars)) %>%  
   select(-website, -maintained, -tool_name, -interface)
 names(open_tools) = tools::toTitleCase(names(open_tools))  
 open_tools %>% 
-  kable("latex", escape = F, booktabs = T, caption = "Open source tools for geographic analysis in transport planning, based on data from Google Scholar, GitHub and web searches and classified in by their primary user interface. CLI, GUI and WUI refer to command-line, graphical user and web user interfaces respectively.") %>%
-  pack_rows(group_label = "CLI", start_row = 1, end_row = 9) %>% 
-  pack_rows(group_label = "GUI", start_row = 10, end_row = 14) %>% 
-  pack_rows(group_label = "WUI", start_row = 15, end_row = 18) %>% 
-  kable_styling(bootstrap_options = c("hover", "condensed")) 
+  # kable(format = "latex", escape = F, booktabs = T, caption = "Open source tools for geographic analysis in transport planning, based on data from Google Scholar, GitHub and web searches and classified in by their primary user interface. CLI, GUI and WUI refer to command-line, graphical user and web user interfaces respectively.") %>%
+  # pack_rows(group_label = "CLI", start_row = 1, end_row = 9) %>% 
+  # pack_rows(group_label = "GUI", start_row = 10, end_row = 14) %>% 
+  # pack_rows(group_label = "WUI", start_row = 15, end_row = 18) %>% 
+  # kable_styling(bootstrap_options = c("hover", "condensed")) 
+  knitr::kable(caption = "Open source tools for geographic analysis in transport planning, based on data from Google Scholar, GitHub and web searches and classified in by their primary user interface. CLI, GUI and WUI refer to command-line, graphical user and web user interfaces respectively.")
 ```
 
 Finally, to overcome the limitation that not all open source software projects are hosted on GitHub *or* described in academic papers, snowballing via fora such as the [QGIS plugin homepage](https://plugins.qgis.org/) and links in project README files were used to find additional projects that met the following criteria:
