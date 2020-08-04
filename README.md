@@ -129,9 +129,9 @@ in the literature, providing evidence for a range of transport planning
 interventions (e.g. Jäppinen, Toivonen, and Salonen 2013; Larsen,
 Patterson, and El-Geneidy 2013; Tribby and a. Zandbergen 2012). But
 there has been less research into digital geographic *tools*, as
-discussed in Section @ref(the-current-landscape), despite the fact that
-geographic methods must be accompanied by software and a user interface
-if they are to be of use in practice.
+discussed in Section <a href="#the-current-landscape">3</a>, despite the
+fact that geographic methods must be accompanied by software and a user
+interface if they are to be of use in practice.
 
 A range of data driven transport planning approaches has evolved in
 recent years to take advantage of new datasets and technologies. Large
@@ -174,20 +174,20 @@ esoteric concept).
 
 The focus on *open source* tools for geographic analysis in transport
 planning is timely because this is an area of rapid growth, as outlined
-in Section @ref(open-source-tools). The topic has yet to be explored in
-the academic literature, to the best of the author’s knowledge. A deeper
-reason that transport planning benefits from levels of transparency and
-citizen participation that are more easily reached with open source
-solutions than proprietary solutions (Peters 2020). Transport planning
-involves decisions about how public funds, spaces and other shared
-resources are used. It is, to a greater or lesser extent, part of wider
-democratic processes that reflect contemporary political and societal
-priorities (Legacy 2016). These priorities have shifted substantially
-over the past few decades, meaning that transport plans based on
-out-of-date ideas or faulty model assumptions (such as the assumption
-that congestion can be tackled by building more roads) can lead to
-unwanted impacts (such as increased congestion), which can be fatal
-(Hollander 2016).
+in Section <a href="#open-source-tools">4</a>. The topic has yet to be
+explored in the academic literature, to the best of the author’s
+knowledge. A deeper reason that transport planning benefits from levels
+of transparency and citizen participation that are more easily reached
+with open source solutions than proprietary solutions (Peters 2020).
+Transport planning involves decisions about how public funds, spaces and
+other shared resources are used. It is, to a greater or lesser extent,
+part of wider democratic processes that reflect contemporary political
+and societal priorities (Legacy 2016). These priorities have shifted
+substantially over the past few decades, meaning that transport plans
+based on out-of-date ideas or faulty model assumptions (such as the
+assumption that congestion can be tackled by building more roads) can
+lead to unwanted impacts (such as increased congestion), which can be
+fatal (Hollander 2016).
 
 The importance of transparency and democratic accountability in
 transport planning (and hence the importance of open source tools in
@@ -235,17 +235,18 @@ of transport planning as follows (Dios Ort’uzar S. and Willumsen 2011).
 4)  evaluation
 5)  implementation of solutions
 
-Each of these stages, illustrated in Figure @ref(fig:schematic), has
-geographic components. The 3<sup>rd</sup> stage, can refer to at least
-three distinct processes: the ‘four stage’ transport model (left box);
-statistical modelling (central box) or geographic analysis and modelling
-(right box, Figure @ref(fig:schematic)). The wider point is that
-geographic techniques can supplement and in some cases replace
-traditional modelling, and the classic four stage transport model. Many
-of the inputs (datasets with geographic coordinates) and outputs (maps
-and geographically specific recommendations) shown in Figure
-@ref(fig:schematic) are spatial, suggesting the importance of geographic
-tools throughout the transport planning process.
+Each of these stages, illustrated in Figure
+<a href="#fig:schematic">1</a>, has geographic components. The
+3<sup>rd</sup> stage, can refer to at least three distinct processes:
+the ‘four stage’ transport model (left box); statistical modelling
+(central box) or geographic analysis and modelling (right box, Figure
+<a href="#fig:schematic">1</a>). The wider point is that geographic
+techniques can supplement and in some cases replace traditional
+modelling, and the classic four stage transport model. Many of the
+inputs (datasets with geographic coordinates) and outputs (maps and
+geographically specific recommendations) shown in Figure
+<a href="#fig:schematic">1</a> are spatial, suggesting the importance of
+geographic tools throughout the transport planning process.
 
 <div class="figure">
 
@@ -253,28 +254,30 @@ tools throughout the transport planning process.
 
 <p class="caption">
 
-Schematic diagram illustrating the modelling process, geographic
-analysis and the four-stage in the context of the wider transport
-planning process (adapted from Ortúzar and Willumsen, 2011, with the
-‘Geographic analysis and modelling component’ added for this paper).
+Figure 1: Schematic diagram illustrating the modelling process,
+geographic analysis and the four-stage in the context of the wider
+transport planning process (adapted from Ortúzar and Willumsen, 2011,
+with the ‘Geographic analysis and modelling component’ added for this
+paper).
 
 </p>
 
 </div>
 
 **Formulation of the problem** (stage 1 in the transport planning
-process illustrated in Figure @ref(fig:schematic)) and identification of
-the scope of solutions that the transport planning process can propose
-is inherently geographic. The first step of many projects is defining
-the ‘region of interest’. This step has important implications because
-it can focus the analysis on areas where solutions are most likely to be
-implemented and, conversely, highlight the potential for inter-regional
-collaboration. Although the region of interest may be pre-determined by
-administrative boundaries over which a planning authority presides,
-geographic analysis this first stage in the transport planning process
-can help refine the definition of the ‘region of interest’ to include
-different ‘spheres of influence’ such as the wider catchment area, the
-administrative region, and the area that is the focus of the study.
+process illustrated in Figure <a href="#fig:schematic">1</a>) and
+identification of the scope of solutions that the transport planning
+process can propose is inherently geographic. The first step of many
+projects is defining the ‘region of interest’. This step has important
+implications because it can focus the analysis on areas where solutions
+are most likely to be implemented and, conversely, highlight the
+potential for inter-regional collaboration. Although the region of
+interest may be pre-determined by administrative boundaries over which a
+planning authority presides, geographic analysis this first stage in the
+transport planning process can help refine the definition of the ‘region
+of interest’ to include different ‘spheres of influence’ such as the
+wider catchment area, the administrative region, and the area that is
+the focus of the study.
 <!-- Defining, demarcating and visualising the study region in a more nuanced way could... -->
 <!-- Todo: could add (e.g. the city centre) and other comments to each sphere comment. -->
 <!-- To take one example, in a project where the study region was Leeds city centre... -->
@@ -331,8 +334,8 @@ solutions relies on results that are specific, including being
 geographically specific and presented in clear and accurate geographic
 visualisations (Pensa, Masala, and Lami 2013). <!-- Todo: add refs -->
 
-The stages represented in Figure @ref(fig:schematic) have been
-criticized for being simplistic, linear and ‘top-down’, with
+The stages represented in Figure <a href="#fig:schematic">1</a> have
+been criticized for being simplistic, linear and ‘top-down’, with
 particularly strong criticisms focusing on the lack of stages for impact
 assessment and public participation (Löfgren, Nilsson, and Johansson
 2018; Tornberg and Odhage 2018), and more sophisticated representations
@@ -351,13 +354,13 @@ Lack of access to, knowledge of and skills in the use of tools for
 geographic analysis represent another reason why geographic factors may
 be excluded from transport plans (although evidence of the tools that
 transport planners use and can use is scarce, suggesting areas of future
-research, as discussed in Section @ref(conclusion)). There *is* evidence
-that these ‘barriers to entry’ for geographic analysis — at high
-resolution based on high quality data and high performance software —
-are being removed, as outlined in Section @ref(open-source-tools). In
-this context, the aim of this paper is to explore emerging open source
-tools for geographic analysis in transport planning, with reference to
-the literature.
+research, as discussed in Section <a href="#conclusion">6</a>). There
+*is* evidence that these ‘barriers to entry’ for geographic analysis —
+at high resolution based on high quality data and high performance
+software — are being removed, as outlined in Section
+<a href="#open-source-tools">4</a>. In this context, the aim of this
+paper is to explore emerging open source tools for geographic analysis
+in transport planning, with reference to the literature.
 <!-- , with a focus on geographic data analysis, routing and route network analysis.
 todo: include this at the end -->
 
@@ -369,14 +372,15 @@ increasing demand for geographic analysis) over the last few decades is
 discussed in the next section. Despite the increasing availability of
 open source options, proprietary tools still appear to dominate
 transport planning in practice, as we will see in Section
-@ref(the-current-landscape). The nature and functionality of open source
-tools for geographic analysis in transport planning is outlined in
-Section @ref(open-source-tools). Section @ref(conclusion) concludes by
-summarising the state and future prospects of open tools in transport
-planning, highlighting gaps in the current crop of open source options,
-and flagging ways of getting involved to improve the provision of open
-source tools for the benefit of researchers, companies, governments and
-interested citizens with stakes in transport planning processes.
+<a href="#the-current-landscape">3</a>. The nature and functionality of
+open source tools for geographic analysis in transport planning is
+outlined in Section <a href="#open-source-tools">4</a>. Section
+<a href="#conclusion">6</a> concludes by summarising the state and
+future prospects of open tools in transport planning, highlighting gaps
+in the current crop of open source options, and flagging ways of getting
+involved to improve the provision of open source tools for the benefit
+of researchers, companies, governments and interested citizens with
+stakes in transport planning processes.
 
 <!-- Transport planning documents often contain maps only for the *proposed intervention*, omitting important geographic data (and analysis) showing the geographic factors that were considered during and influenced the final design. -->
 
@@ -589,7 +593,7 @@ planning.
 
 <!-- Furthermore, the policy context increasingly demands transparency and citizen involvement in the decision-making process. -->
 
-<!-- Only open source ecosystems, of the type outlined in Section \@ref(new-tools-of-the-trade) can deliver true transparency and encourage 'citizen science' for everyone. -->
+<!-- Only open source ecosystems, of the type outlined in Section <a href="#new-tools-of-the-trade"><strong>??</strong></a> can deliver true transparency and encourage 'citizen science' for everyone. -->
 
 <!-- These policy drivers make an exploration of open source options for transport planning workflows timely. -->
 
@@ -776,14 +780,14 @@ geographic capabilities.
 | Cube     | Citilabs           | Proprietary       | Y | ? | ? | Y   | Y  | ?  | ?  |
 | sDNA     | Cardiff University | Open source (GPL) | Y | Y | Y | Y   | ?  | ?  | ?  |
 
-Sample of transport modelling software in use by practitioners, with
-citation counts based on citation from searches for company/developer
-name, the product name and ‘transport’. The columns I, G, R, RNA, SV, IV
-and EX refer to Import of a wide range of geographic data formats,
-Geographic capabilities such as buffer calculations and intersections,
-Route calculation, Route Network Analysis, Static Visual outputs,
-Interactive Visual outputs for web publication, and Export to a wide
-range of geographic data formats, with ? meaning partial support
+Table 1: Sample of transport modelling software in use by practitioners,
+with citation counts based on citation from searches for
+company/developer name, the product name and ‘transport’. The columns I,
+G, R, RNA, SV, IV and EX refer to Import of a wide range of geographic
+data formats, Geographic capabilities such as buffer calculations and
+intersections, Route calculation, Route Network Analysis, Static Visual
+outputs, Interactive Visual outputs for web publication, and Export to a
+wide range of geographic data formats, with ? meaning partial support
 (e.g. via add-on software). Data source: Google Scholar searches,
 October 2018.
 
@@ -853,13 +857,13 @@ planning have not emerged in a vacuum. They were developed in the wider
 landscape of open source software (Dhir and Dhir 2017).
 
 These tools could be classified by the five main stages illustrated in
-Figure @ref(fig:schematic) (data collection, processing, routing,
-modelling and visualisation). Instead, because many tools can be used in
-multiple stages, can be more usefully classified from the user’s
-perspective. Based on open tools identified through web searches, they
-can be classified into the follow broad, and to some extent
+Figure <a href="#fig:schematic">1</a> (data collection, processing,
+routing, modelling and visualisation). Instead, because many tools can
+be used in multiple stages, can be more usefully classified from the
+user’s perspective. Based on open tools identified through web searches,
+they can be classified into the follow broad, and to some extent
 overlapping,\[9\] user interface (UI) types (see Table
-@ref(tab:open-tools)):
+<a href="#tab:open-tools">2</a>):
 
   - command-line interface (CLI) tools, primarily controlled by typing
     commands
@@ -911,13 +915,13 @@ with a minimum level of popularity. The method was as follows:
     analysis of package documentation and source code.
 4.  Classify and the projects based on their main user interface,
     resulting in the top 10 open source tools for geographic analysis in
-    transport planning shown in Table @ref(tab:open-tools) (see the
-    appendix for a complete table of results). These tools are described
-    in more detail in the following three sections.
+    transport planning shown in Table <a href="#tab:open-tools">2</a>
+    (see the appendix for a complete table of results). These tools are
+    described in more detail in the following three sections.
 
 The following search terms were used to find relevant projects using
 Google Scholar, the result of a search shown in Figure
-@ref(fig:scholar-search):
+<a href="#fig:scholar-search">2</a>:
 
 <!-- > "open source" software "transport planning" "geographic data" OR "geographic analysis" OR "spatial data" OR spatial OR analysis" -->
 
@@ -938,8 +942,9 @@ additional projects and search terms. This method worked as follows:
 
 <p class="caption">
 
-Illustration of the Google Scholar search terms used to identify open
-source software for geographic analysis in transport planning.
+Figure 2: Illustration of the Google Scholar search terms used to
+identify open source software for geographic analysis in transport
+planning.
 
 </p>
 
@@ -970,10 +975,10 @@ planning):
 
 <caption>
 
-Open source tools for geographic analysis in transport planning, based
-on data from Google Scholar, GitHub and web searches and classified in
-by their primary user interface. CLI, GUI and WUI refer to command-line,
-graphical user and web user interfaces respectively.
+Table 2: Open source tools for geographic analysis in transport
+planning, based on data from Google Scholar, GitHub and web searches and
+classified in by their primary user interface. CLI, GUI and WUI refer to
+command-line, graphical user and web user interfaces respectively.
 
 </caption>
 
@@ -1878,11 +1883,11 @@ were used to find additional projects that met the following criteria:
 
 124 projects or papers were identified using the methods outlined using
 the methods described above. Of those, 17 met the criteria listed above
-(see Table @ref(tab:open-tools)). Although these tools could also be
-classified into different ‘ecosystems’, such as R packages, Python
-packages and QGIS plugins, it is clear that some tools do not fit into
-such prescribed boxes. We therefore describe the tools in order of their
-primary user interface, in chronological order of the interface’s
+(see Table <a href="#tab:open-tools">2</a>). Although these tools could
+also be classified into different ‘ecosystems’, such as R packages,
+Python packages and QGIS plugins, it is clear that some tools do not fit
+into such prescribed boxes. We therefore describe the tools in order of
+their primary user interface, in chronological order of the interface’s
 development (CLIs predate GUIs which predate WUIs).
 
 <!-- --- such as R, Python and QGIS.  -->
@@ -1912,8 +1917,8 @@ geographic analysis.
 
 The longest standing and still actively maintained CLI tools for
 geographic analysis in transport planning shown in Table
-@ref(tab:open-tools) are **SUMO** (first released in 2001) and
-**MATSim** (first released in 2006). Both projects are traffic
+<a href="#tab:open-tools">2</a> are **SUMO** (first released in 2001)
+and **MATSim** (first released in 2006). Both projects are traffic
 microsimulation models (with meso and in the cast of MATSim macroscopic
 capabilities) that simulate individual vehicles at high spatial and
 temporal resolution. Neither project focus on geographic analysis, but
@@ -1938,20 +1943,20 @@ enabling many research and (particularly in the case of **MATSim**)
 applied use cases due to the flexibility of the tools, but has the
 disadvantage of reducing accessibility.
 
-The remaining CLI-based tools in Table @ref(tab:open-tools) are smaller,
-simpler and more accessible R/Python packages that fit within the
-framework of these pre-existing open source software ecosystems.
-**osmnx** is a Python package for downloading and analysing transport
-networks from OpenStreetMap that has a focus on urban transport network
-analysis (Boeing 2017). **OSMnx** has been used for a wide range of
-research and real-world applications, with a focus on spatial network
-analysis via functions for calculating a range of transport network
-measures. **Movingpandas** is a Python package and QGIS plug-in for
-visualising a wide range of movement datasets, with a focus on
-trajectory data (Graser 2019). **momepy** is a Python package for
-measuring ‘urban morphology’, meaning the measurement and analysis of
-collections of geographic entities that constitute cities (Fleischmann
-2019).
+The remaining CLI-based tools in Table <a href="#tab:open-tools">2</a>
+are smaller, simpler and more accessible R/Python packages that fit
+within the framework of these pre-existing open source software
+ecosystems. **osmnx** is a Python package for downloading and analysing
+transport networks from OpenStreetMap that has a focus on urban
+transport network analysis (Boeing 2017). **OSMnx** has been used for a
+wide range of research and real-world applications, with a focus on
+spatial network analysis via functions for calculating a range of
+transport network measures. **Movingpandas** is a Python package and
+QGIS plug-in for visualising a wide range of movement datasets, with a
+focus on trajectory data (Graser 2019). **momepy** is a Python package
+for measuring ‘urban morphology’, meaning the measurement and analysis
+of collections of geographic entities that constitute cities
+(Fleischmann 2019).
 
 Python packages **UrbanAccess** and **scikit-mobility** have a broader
 remit, aiming to support a range of transport planning objectives.
@@ -1969,20 +1974,21 @@ including functions for estimating movement between geographic zones
 using spatial interaction models, as well as route assignment
 (Pappalardo et al. 2019a).
 
-The remaining two CLI-based tools in Table @ref(tab:open-tools) are R
-packages focussed on applied transport planning. **stplanr** (which
-stands for sustainable transport planning with R) contains a range of
-functions for processing origin-destination, routes and route networks.
-The package takes an explicitly geographic approach to transport
-planning and many of the functions use geographic operations such as
-buffers and spatial aggregation in workflows that start with
-origin-destination data and end with estimates of travel demand down to
-the route network level under different scenarios of change (Lovelace
-and Ellison 2018a). **opentripplanner** is an R package for multi-modal
-routing and accessibility analysis that provides an interface to the
-OpenTripPlanner Java library, enabling not only calculation of travel
-times and route geometries but also monetary costs and accessibility
-isochrone maps where GTFS data allow (Morgan et al. 2019).
+The remaining two CLI-based tools in Table
+<a href="#tab:open-tools">2</a> are R packages focussed on applied
+transport planning. **stplanr** (which stands for sustainable transport
+planning with R) contains a range of functions for processing
+origin-destination, routes and route networks. The package takes an
+explicitly geographic approach to transport planning and many of the
+functions use geographic operations such as buffers and spatial
+aggregation in workflows that start with origin-destination data and end
+with estimates of travel demand down to the route network level under
+different scenarios of change (Lovelace and Ellison 2018a).
+**opentripplanner** is an R package for multi-modal routing and
+accessibility analysis that provides an interface to the OpenTripPlanner
+Java library, enabling not only calculation of travel times and route
+geometries but also monetary costs and accessibility isochrone maps
+where GTFS data allow (Morgan et al. 2019).
 
 ## Graphical user interface (GUI) tools
 
@@ -2148,15 +2154,16 @@ Python console.
 A good example of the flexibility of QGIS’s plugin model, and
 illustrating the wider point that open source software tends to be
 modular and do ‘one thing well’, is that sDNA, mentioned in Section
-@ref(the-current-landscape) can be used in QGIS via the sDNA plugin
-(Chan and Cooper 2019). Indeed, the open source transport modelling
-framework MATSim also benefits from being used alongside QGIS, for road
-network editing and visualisation (Horni, Nagel, and Axhausen 2016b).
-QGIS plugins and extensions specifically designed for transport planning
-applications include the AwaP-IC walkability analysis plugin (Majic and
-Pafka 2019), extensions to QGIS’s Processing model development framework
-for assessing road network completeness (Sehra, Singh, and Rai 2017) and
-the ORS (OpenRouteService) plugin, for multi-modal routing.
+<a href="#the-current-landscape">3</a> can be used in QGIS via the sDNA
+plugin (Chan and Cooper 2019). Indeed, the open source transport
+modelling framework MATSim also benefits from being used alongside QGIS,
+for road network editing and visualisation (Horni, Nagel, and Axhausen
+2016b). QGIS plugins and extensions specifically designed for transport
+planning applications include the AwaP-IC walkability analysis plugin
+(Majic and Pafka 2019), extensions to QGIS’s Processing model
+development framework for assessing road network completeness (Sehra,
+Singh, and Rai 2017) and the ORS (OpenRouteService) plugin, for
+multi-modal routing.
 
 QGIS can also be used as a self-standing application for transport data
 analysis. Ilayaraja (2013), for example, used QGIS as the platform of
@@ -2244,16 +2251,17 @@ amount of overlap between the three ecosystems and, in practice, the
 prior experience and preferences of transport planners may be more
 important than functionality.
 
-As the FOSS philosophy described in Section @ref(new-tools-of-the-trade)
-emphasises, open source software by its very nature is collaborative,
-innovative and evolving (Gancarz 2003), allowing it to out-compete and
-eventually dominate in sectors from machine learning to web development.
-The review of capabilities in open source software communities clearly
-shows that high-performance and innovative solutions are already
-available in the ‘ecological niche’ of geographic analysis for transport
-planning. Given the nascent nature of many of the transport-oriented
-packages, plugins and extensions in each ecosystem, fruitful directions
-of research would explore the relative merits of different options, and
+As the FOSS philosophy described in Section
+<a href="#new-tools-of-the-trade"><strong>??</strong></a> emphasises,
+open source software by its very nature is collaborative, innovative and
+evolving (Gancarz 2003), allowing it to out-compete and eventually
+dominate in sectors from machine learning to web development. The review
+of capabilities in open source software communities clearly shows that
+high-performance and innovative solutions are already available in the
+‘ecological niche’ of geographic analysis for transport planning.
+Given the nascent nature of many of the transport-oriented packages,
+plugins and extensions in each ecosystem, fruitful directions of
+research would explore the relative merits of different options, and
 combinations of options, in terms of computer and programmer efficiency.
 Furthermore, the modular and ‘pluginable’ nature of open source software
 suggests there are great opportunities for integration: could there be R

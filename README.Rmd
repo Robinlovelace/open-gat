@@ -11,9 +11,9 @@ date: '`r Sys.Date()`'
 # header-includes:
 #    - \usepackage{coloremoji}
 output:
-  github_document: default
-#   bookdown::pdf_document2:
-#     latex_engine: xelatex
+  bookdown::github_document2: default
+  # bookdown::pdf_document2:
+  #   latex_engine: xelatex
   # word_document: default
 bibliography:
   - references.bib
