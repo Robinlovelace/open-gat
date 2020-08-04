@@ -1,0 +1,17 @@
+---
+title: "Open source software for transport planning, including routing engines"
+output: github_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+library(tidyverse)
+```
+
+```{r open-tools, echo=FALSE, message=FALSE}
+library(kableExtra)
+open_tools = readr::read_csv("open_tools.csv")
+names(open_tools) = tools::toTitleCase(names(open_tools))  
+open_tools %>% 
+  knitr::kable(caption = "Open source tools for geographic analysis in transport planning")
+```
