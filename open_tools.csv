@@ -16,7 +16,7 @@ momepy,CLI,Python package,network analysis,MIT,Python,133,3,NA,NA,(Fleischmann 2
 Trip-simulator,CLI,JavaScript package,trajectory analysis,MIT,JavaScript,117,NA,NA,NA,NA,https://github.com/sharedstreets/trip-simulator
 urbanaccess,CLI,Python package,network analysis,AGPLv3,Python,105,12,6,NA,(Blanchard 2017),https://github.com/UDST/urbanaccess
 dodgr,CLI,R package,routing engine,GPLv3,C++,84,2,NA,NA,NA,https://github.com/ATFutures/dodgr
-spaghetti,CLI,Python package,network analysis,BSD-3,Python,60,0,NA,NA,NA,https://github.com/pysal/spaghetti
+spaghetti,CLI,Python package,network analysis,BSD-3,Python,60,0,NA,NA,"(Gaboardi et al., 2018)",https://github.com/pysal/spaghetti
 optentripplanner,CLI,R package,interface,GPLv3,R,47,0,NA,NA,(Morgan et al. 2019),https://github.com/ropensci/opentripplanner
 urbanpy,CLI,Python package,network analysis,MIT,Python,16,NA,NA,2020,NA,https://github.com/EL-BID/urbanpy
 abstreet,GUI,Standalone,abm,Apache-2.0,Rust,4896,NA,NA,NA,NA,https://github.com/dabreegster/abstreet
