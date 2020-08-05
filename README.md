@@ -1509,52 +1509,6 @@ Python
 
 <td style="text-align:left;">
 
-dodgr
-
-</td>
-
-<td style="text-align:left;">
-
-R package
-
-</td>
-
-<td style="text-align:left;">
-
-GPLv3
-
-</td>
-
-<td style="text-align:left;">
-
-C++
-
-</td>
-
-<td style="text-align:right;">
-
-84
-
-</td>
-
-<td style="text-align:right;">
-
-2
-
-</td>
-
-<td style="text-align:left;">
-
-NA
-
-</td>
-
-</tr>
-
-<tr>
-
-<td style="text-align:left;">
-
 spaghetti
 
 </td>

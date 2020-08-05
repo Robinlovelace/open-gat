@@ -649,6 +649,7 @@ library(kableExtra)
 #   select(-maintained, -tool_name)
 # readr::write_csv(open_tools, "open_tools.csv")
 open_tools = readr::read_csv("open_tools.csv")
+# table(open_tools$emphasis)
 # edit the data:
 # remotes::install_github("DillonHammill/DataEditR")
 # open_tools_new = DataEditR::data_edit(open_tools)
@@ -656,6 +657,7 @@ open_tools = readr::read_csv("open_tools.csv")
 names(open_tools) = tools::toTitleCase(names(open_tools))  
 open_tools %>% 
   filter(Emphasis != "interface") %>% 
+  filter(Emphasis != "routing engine") %>% 
   select(Tool, Type, Licence, Language, Stars, Citations, Reference) %>% 
   filter(Type != "Routing engine") %>% 
   # kable(format = "latex", escape = F, booktabs = T, caption = "Open source tools for geographic analysis in transport planning, based on data from Google Scholar, GitHub and web searches and classified in by their primary user interface. CLI, GUI and WUI refer to command-line, graphical user and web user interfaces respectively.") %>%
