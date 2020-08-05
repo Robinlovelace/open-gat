@@ -925,10 +925,9 @@ with a minimum level of popularity. The method was as follows:
 3.  Verify that the projects are open source and actively maintained by
     analysis of package documentation and source code.
 4.  Classify and the projects based on their main user interface,
-    resulting in the top 10 open source tools for geographic analysis in
-    transport planning shown in Table <a href="#tab:open-tools">2</a>
-    (see the appendix for a complete table of results). These tools are
-    described in more detail in the following three sections.
+    resulting in Table <a href="#tab:open-tools">2</a> (see the appendix
+    for a complete table of results). These tools are described in more
+    detail in the following three sections.
 
 The following search terms were used to find relevant projects using
 Google Scholar, the result of a search shown in Figure
@@ -938,14 +937,6 @@ Google Scholar, the result of a search shown in Figure
 
 > software transport “open source” “transport planning” OR “geographic
 > data” OR “geographic analysis” OR “spatial data” OR “spatial network”
-
-To identify open source projects on GitHub an alternative approach was
-taken due to the limited capabilities of GitHub’s [advanced search
-page](https://github.com/search/advanced): An ‘snowball’ method,
-analogous to that used by Grabowicz et al. (2012) in the context of
-social media, was used whereby known projects were identified and the
-‘topic’ descriptions they used were searched for to identify
-additional projects and search terms. This method worked as follows:
 
 <div class="figure">
 
@@ -961,13 +952,19 @@ planning.
 
 </div>
 
-  - The search term [`transport
-    planning`](https://github.com/search?q=transport+planning&type=Repositories&l=&l=)
-    identified the stplanr project.
+To identify open source projects on GitHub’s [advanced search
+page](https://github.com/search/advanced) a ‘snowball’ method, analogous
+to that used by Grabowicz et al. (2012) in the context of social media,
+was used. The ‘topic’ descriptions of previously identified open tools
+were used to identify additional projects and search terms. This method
+worked as follows:
+
+  - The GitHub page of the previously identified project stplanr project
+    was visited.
   - One of the ‘topics’ in the stplanr repository was was the broader
-    term `transport`, which was used to identify the SUMO projct
-  - The SUMO project also had the term ‘simulation’, leading to the
-    discovery of the abstreet project
+    term `transport`, which was used to identify the SUMO project
+  - The SUMO project had the topic ‘simulation’, leading to the
+    discovery of the A/B Street project
 
 The complete list of GitHub topics used to identify projects was as
 follows (manual reading of the README for each project was used to
@@ -2107,12 +2104,12 @@ NA
 
 </table>
 
-Finally, to overcome the limitation that not all open source software
-projects are hosted on GitHub *or* described in academic papers,
-snowballing via fora such as the [QGIS plugin
-homepage](https://plugins.qgis.org/), links in project README files and
-social media were used to find additional projects that met the
-following criteria:
+To overcome the limitation that not all open source software projects
+are hosted on GitHub *or* described in academic papers, snowballing via
+fora such as the [QGIS plugin homepage](https://plugins.qgis.org/),
+links in project README files and social media were used to find
+additional projects. Only projects with the following criteria were
+included (see [link here]() for online version):
 
 1.  The tool uses geographic analysis for transport planning, supporting
     the design and placement of physical infrastructure for urban
@@ -2125,25 +2122,46 @@ following criteria:
 
 <!-- Projects or papers were identified using the methods outlined using the methods described above. -->
 
-30 projects were identified that met the criteria listed above. 7 of
-those were routing engines, which were excluded for reasons outlined in
-the previous section, resulting in 23 projects outlined in Table
-<a href="#tab:open-tools">2</a>). Although these tools could also be
-classified into different ‘ecosystems’, such as R packages, Python
-packages and QGIS plugins, it is clear that some tools do not fit into
-such prescribed boxes. We therefore describe the tools in order of their
-primary user interface, in chronological order of the interface’s
-development (CLIs predate GUIs which predate WUIs).
+<!-- 30 projects were identified that met the criteria listed above. -->
+
+<!-- 7 of those were routing engines, which were excluded for reasons outlined in the previous section, resulting in 23 projects outlined in. -->
+
+A secondary filter was used to focus attention on tools for analysis:
+projects whose primary purpose is to provide an interface to an existing
+software/services, such as the R package **opentripplanner**
+(e.g. Morgan et al. 2019; Giraud 2019) and routing engines (Luxen and
+Vetter 2011; Padgham 2019) are omitted from Table
+<a href="#tab:open-tools">2</a> for brevity (routing engines are
+mentioned in the final section of the paper). Tools can be classified in
+a variety of ways from a developer’s perspective including sometimes
+tribal ‘ecosystems’ such as R packages, Python packages and QGIS
+plugins.
+<!-- However, it is clear that some tools do not fit into such prescribed boxes, with **MovingPandas** being both a Python package and a QGIS plugin, for example. -->
+From a transport planner’s perspective, however, the technology or
+developer community from which tools emerge may be irrelevant: what is
+important is what the tool can do and its ease-of-use. We therefore
+describe the tools in order of their primary user interface, in
+chronological order of the interface’s development (CLIs predate GUIs
+which predate WUIs), acknowledging the fact that most tools with a
+prominent GUI and WUI can also be used from the command line. While sDNA
+and AequilibraE *can* be used from the command-line, their documentation
+suggests they are more likely to be used from graphical interfaces via
+QGIS plugins.
 
 It should be clear that the ‘Type’ and ‘Language’ values shown in Table
-<a href="#tab:open-tools">2</a> are to some extent fuzzy: open source
-software is by nature modular and flexible, meaning that the same piece
-of code can take multiple different forms and the same method can be
-implemented in multiple languages. The AequilibraE QGIS plugin (Camargo
-2015), for example, is also a Python package. Conversely, the
-MovingPandas Python package by Graser (2019) is also a QGIS plugin. The
-point is that the *most prominent* category into which each project
-seemed to fall, based on the README, was used.
+<a href="#tab:open-tools">2</a> are also fuzzy: open source software is
+by nature modular and flexible, meaning that the same piece of code can
+take multiple different forms and the same method can be implemented in
+multiple languages. The AequilibraE QGIS plugin (Camargo 2015), for
+example, is also a Python package. Conversely, the MovingPandas Python
+package by Graser (2019) is also a QGIS plugin. The point is that the
+*most prominent* category into which each project seemed to fall, based
+on documentation, was used. The rest of this section outlines some of
+the capabilities of each tool presented in Table
+<a href="#tab:open-tools">2</a> based on the author’s reading of easily
+available documentation: due to time constraints no systematic
+installation tests or benchmarks were undertaken, although this could be
+a direction of future research.
 
 <!-- --- such as R, Python and QGIS.  -->
 
@@ -2173,12 +2191,17 @@ geographic analysis.
 The longest standing and still actively maintained CLI tools for
 geographic analysis in transport planning shown in Table
 <a href="#tab:open-tools">2</a> are **SUMO** (first released in 2001)
-and **MATSim** (first released in 2006). Both projects are traffic
-microsimulation models (with meso and in the cast of MATSim macroscopic
-capabilities) that simulate individual vehicles at high spatial and
-temporal resolution. Neither project focus on geographic analysis, but
-they both rely on geographic inputs (detailed road geometries) and
-produce geographic outputs.
+and **MATSim** (first released in 2006). Both projects operate at the
+‘microscropic’ (street) level and simulate individual vehicles at high
+spatial and temporal resolution, although the emphasis of **MATSim** is
+more on citywide analysis compared with the emphasis on modelling
+traffic at junctions in **SUMO**. There is evidence of uptake of both
+projects in applied transport planning contexts, with **MATSim** in
+particular being
+[cited](https://scholar.google.com/scholar?hl=en&as_sdt=0%2C5&q=%22matsim%22+%22transport+planning%22)
+in dozens of applied transport planning papers. Neither project focusses
+on geographic analysis but both rely on geographic inputs (detailed road
+geometries) and produce geographic outputs.
 
 **MATSim**, which stands for Multi-Agent Transport Simulation, is
 perhaps the more ambitious project, enabling the transport systems of
@@ -2190,13 +2213,11 @@ and Axhausen 2016a). **SUMO** is focussed on modelling traffic on road
 segments and junctions and although the emphasis is not on geographic
 analysis, the inclusion of a geographic road network editor (called
 NETEDIT) means that the tool can be used to analyse geographic scenarios
-of change (Lopez et al. 2018).
-
-With complex installation and usage instructions, **SUMO** and
-**MATSim** are both aimed at advanced users. This has the advantage of
-enabling many research and (particularly in the case of **MATSim**)
-applied use cases due to the flexibility of the tools, but has the
-disadvantage of reducing accessibility.
+of change (Lopez et al. 2018). With complex installation and usage
+instructions, **SUMO** and **MATSim** are both aimed at advanced users.
+This has the advantage of enabling many research and (particularly in
+the case of **MATSim**) applied use cases due to the flexibility of the
+tools, but has the disadvantage of reducing accessibility.
 
 The remaining CLI-based tools in Table <a href="#tab:open-tools">2</a>
 are smaller, simpler and more accessible R/Python packages that fit
@@ -2213,27 +2234,34 @@ for measuring ‘urban morphology’, meaning the measurement and analysis
 of collections of geographic entities that constitute cities
 (Fleischmann 2019).
 
-Python packages **UrbanAccess**, **spaghetti** and **scikit-mobility**
-have broader (and to some extent overlapping) remits, aiming to support
-a range of transport planning objectives. **UrbanAccess** is a Python
-package for analysing geographic transport network data, with a focus on
-accessibility. The paper describing the tool has more of a focus on
-applied transport planning than other Python tools, highlighting the
-potential for the tool to assist metropolitan planning organizations
+The other Python packages in Table <a href="#tab:open-tools">2</a> have
+broader (and to some extent overlapping) remits, aiming to support a
+range of transport planning objectives. **UrbanSim** and **UrbanAccess**
+are Python packages that are part of the [Urban Data Science
+Toolkit](https://github.com/UDST) project, with the former oriented
+towards statistical analysis of citywide transport systems and the
+latter focused on analyzing geographic transport network data from an
+accessibility perspective. The documentation describing these tool
+highlights their ability to assist metropolitan planning organizations
 (MPOs) to prioritise investments that cost-effectively increase
 accessibility for those most in need (Blanchard and Waddell 2017). In
 addition to using OSM data, **UrbanAccess** can import and process GTFS
-data to calculate multi-modal travel times and other metrics. Like
-**momepy**, the **spaghetti** package (which stands for SPAtial GrapHs:
-nETworks, Topology, & Inference) is focussed on street network analysis,
-but focusses less on urban morphology and more on segment-level
-statistics (Gaboardi et al. 2018). **scikit-mobility** implements a
-framework for statistical modelling of travel behaviour, including
-functions for estimating movement between geographic zones using spatial
-interaction models, as well as route assignment (Pappalardo et al.
-2019a).
+data to calculate multi-modal travel times and other metrics.
+[**UrbanPy**](https://github.com/EL-BID/urbanpy) has similar objectives
+and includes functionality for spinning-up Docker containers to do
+routing using the OSRM routing engine, highlighting the interoperability
+between open source tools.
 
-The JavaScript package Trip-simulator, from the not-for-profit
+Like **momepy**, the **spaghetti** package (which stands for SPAtial
+GrapHs: nETworks, Topology, & Inference) is focussed on street network
+analysis, but focusses less on urban morphology and more on
+segment-level statistics (Gaboardi et al. 2018). **scikit-mobility**
+implements a framework for statistical modelling of travel behaviour,
+including functions for estimating movement between geographic zones
+using spatial interaction models, as well as route assignment
+(Pappalardo et al. 2019a).
+
+The JavaScript package **Trip-simulator**, from the not-for-profit
 organisation Shared Streets, enables geographic analysis for transport
 planning by simulating GPS flows on street networks. Its command-line
 interface allows a wide variety of trip types and volumes to be
@@ -2264,7 +2292,7 @@ surprise: given the dominance of GUIs in many areas of computing one
 would expect a range of stand-alone transport planning tools to have
 been developed (the criterion that tools must be actively maintained to
 be considered explains the exclusion of some tools such as Tranus (de la
-Barra, P’erez, and Vera 1984).
+Barra, P’erez, and Vera 1984)).
 
 A/B Street does not market itself as a transport planning tool but
 instead as a game and educational tool. However, that does not mean that
@@ -2275,13 +2303,13 @@ while still allowing the user to zoom in to single vehicles (while they
 are in motion via a moving camera\!) and change the geometries of street
 layouts with an intuitive in-built editor.
 
-The QGIS plugins for transport planning are even more explicitly
-focussed on geographic analysis for transport planning. **AequilibraE**,
-**QNEAT3** and the **Networks** plugins provide various transport
-planning tools from the mature and popular QGIS GUI-based Geographic
-Information System (GIS). **AequilibraE** provides a broad range of
-functions for processing transport networks and assigning traffic
-(Camargo 2015), as detailed in the project’s substantial [documentation
+QGIS plugins for transport planning are explicitly focussed on
+geographic analysis for transport planning. **AequilibraE**, **QNEAT3**
+and the **Networks** plugins provide various transport planning tools
+from the mature and popular QGIS GUI-based Geographic Information System
+(GIS). **AequilibraE** provides a broad range of functions for
+processing transport networks and assigning traffic (Camargo 2015), as
+detailed in the project’s substantial [documentation
 website](http://aequilibrae.com/python).
 [**QNEAT3**](https://root676.github.io/) provides a narrower but well
 documented set of algorithms for transport planning applications,
@@ -2298,7 +2326,74 @@ to assess exactly what its capabilities are.
 
 <!-- ### The propensity to cycle tool -->
 
-### Streetmix
+Installing and running code on sufficiently powerful computers has long
+been a barrier preventing people from accessing software, and transport
+planning tools are no exception. In this context web user interfaces
+(WUIs, by which I mean an in-browser graphical user interface rather
+than a web API) can provide multiple advantages in terms of
+participatory planning (although cloud-based solutions also pose risks
+in terms of concentration of processing and economic power).
+
+Like **A/B Street**,
+[**CityBound**](https://github.com/citybound/citybound) takes a gaming
+approach to transport planning, with an interactive editor and an
+agent-based approach that allows hundreds of vehicles to interact on
+city scale networks in real time. Perhaps its most interesting feature
+from a transport planner’s perspective is the editing framework, which
+offers “the power and expressiveness of professional CAD tools while
+being much more intuitive and fun to use.” Also like **A/B Street** the
+project does not originate from a transport planning context, instead
+approaching city planning from a computer science perspective using
+recent developments in digital technology such as
+[WebAssembly](https://webassembly.org/) to push boundaries, which in
+part explains the project’s popularity among developers as evidenced by
+the fact it has more than 6k ‘Stars’ on GitHub.
+
+**Streetmix** is primarily available and used as a free and open web
+service hosted at [streetmix.net](https://streetmix.net/), but it is
+also an open source software project supported by free software giant
+Mozilla that enables anyone to create a locally hosted instance of the
+service. Unlike the other projects listed in Table
+<a href="#tab:open-tools">2</a>, **Streetmix** does not use 2
+dimensional (longitude/latitude) data but instead allows the user to
+interactively edit a 1D street profile, from the edge of buildings on
+one side to the other side. You can add pavements, cycleways, aesthetic
+features such as trees and other items to support more sustainable
+planning policies and designs (Riggs, Boswell, and Ross 2016). As
+discussed in Section <a href="#conclusion">6</a>, the combination of the
+emphasis on participatory design for sustainable futures in
+**Streetmix** with the technology for 2D (and even 3D) intiutive editing
+in **CityBound** represents a promising possibility for future research
+and development.
+
+**Conveyal Analysis** represents a step in that direction, providing a
+hosted service for city-wide scenarios of change. With only 19 Stars on
+GitHub and limited documentation, however, the **Analysis** tool has
+some way to go before it builds a ‘community of practice’ of the type
+enjoyed by more established and well-documented projects such as
+**MATSim**.
+
+The JavaScript/TypeScript-based projects **flowmap.blue** and
+**TrajAnalytics** are interactive, web-based geographic mobility data
+visualisation tools at opposite ends of the spectrum in terms of size
+and complexity. **flowmap.blue** is a lightweight tool that focusses on
+ease of use and, via an R package of the same name, inter-operability
+for people working with origin-destination data. **TrajAnalytics** is a
+large (83 MB zipped) project providing a visualisation framework for
+displaying and analysing large trajectory datasets. Unlike
+**Streetmix**, which focusses on the individual street level, both
+projects are designed for visualising citywide and regional scale
+transport systems.
+
+The Propensity to Cycle Tool (PCT) is an interactive map-based web tool
+designed to support cost effective investment in cycling infrastructure
+(Lovelace et al. 2017). The emphasis is on where to build to maximise
+cycling uptake. By exploring scenarios of change including Go Dutch — in
+which cycling levels are simulated to grow to Dutch levels nationwide —
+planners, active travel advocates and other stakeholders build business
+cases for investment along desire lines with high cycling potential and
+better understand health and environmental benefits of interventions in
+different places.
 
 # Software ecosystems
 
@@ -2479,21 +2574,19 @@ to the application’s user friendly GUI, it is rapidly gaining in
 popularity among government transport planning departments, including
 Transport for Wales and Transport for Greater Manchester.
 
-# Conclusion
+# Discussion and conclusion
 
 Geographic analysis is an important yet often under-appreciated aspect
 of transport planning, and looks set to play a more prominent role in
-transport policy-making due to technological, data and policy drivers of
-change. In the context of now policy drivers — including the obesity
-crisis, air pollution concerns and the ‘climate emergency’ that has been
-declared by some city authorities — many transport planners have been
-tasked with new sustainable transport targets. These include
-discouraging energy intensive modes, particularly car use, and enabling
-more walking and cycling (Hickman, Ashiru, and Banister 2011) .
-Furthermore, in the age of evidence-based policy, open data and citizen
-science, there is an onus on practitioners to provide solutions that are
-transparent, accessible and, increasingly, participatory (Banister 2008;
-Peters 2020).
+the future. In the context of urgent policy drivers — including the
+obesity crisis, air pollution concerns and the ‘climate emergency’ that
+has been declared by some city authorities — many transport planners
+have been tasked with new sustainable transport targets, including
+reduced private car use and increasing levels of walking and cycling
+(Hickman, Ashiru, and Banister 2011). In the age of evidence-based
+policy, open data and citizen science, there is an onus on practitioners
+to provide solutions that are transparent, accessible and, increasingly,
+participatory (Banister 2008; Peters 2020).
 
 This poses a challenge to incumbent transport planning software which is
 expensive and thereby inaccessible to most people, monolithic and (to a
@@ -2789,6 +2882,13 @@ Folch, Wei Kang, Philip Stephens, and Charles Schmidt. 2018.
 <div id="ref-gancarz_linux_2003">
 
 Gancarz, Mike. 2003. *Linux and the Unix Philosophy*. Digital Press.
+
+</div>
+
+<div id="ref-R-osrm">
+
+Giraud, Timoth’ee. 2019. *Osrm: Interface Between R and the
+OpenStreetMap-Based Routing Service OSRM*.
 
 </div>
 
@@ -3104,6 +3204,15 @@ Löfgren, Sofia, Kristina L. Nilsson, and Charlotta M. Johansson. 2018.
 
 </div>
 
+<div id="ref-luxen_realtime_2011">
+
+Luxen, Dennis, and Christian Vetter. 2011. “Real-Time Routing with
+OpenStreetMap Data.” In *Proceedings of the 19th ACM SIGSPATIAL
+International Conference on Advances in Geographic Information Systems*,
+513–16.
+
+</div>
+
 <div id="ref-majic_awap-icopen-source_2019">
 
 Majic, Ivan, and Elek Pafka. 2019. “AwaP-IC—an Open-Source GIS Tool for
@@ -3197,6 +3306,13 @@ GIS Approach*. Third. New York, NY: Springer.
 
 O’Flaherty, Coleman, and Michael GH Bell. 1997. *Transport Planning and
 Traffic Engineering*. Elsevier.
+
+</div>
+
+<div id="ref-padgham_dodgr_2019">
+
+Padgham, Mark. 2019. “Dodgr: An R Package for Network Flow Aggregation.”
+*Transport Findings*, February. <https://doi.org/10.32866/6945>.
 
 </div>
 
@@ -3296,6 +3412,14 @@ Source Geospatial Foundation.
 
 R Core Team. 2019. “R: A Language and Environment for Statistical
 Computing.” Vienna, Austria: R Foundation for Statistical Computing.
+
+</div>
+
+<div id="ref-riggs_streetplan_2016">
+
+Riggs, William W., Michael R. Boswell, and Ryder Ross. 2016.
+“Streetplan: Hacking Streetmix for Community-Based Outreach on the
+Future of Streets.” *Focus* 13 (1): 14.
 
 </div>
 
