@@ -1,6 +1,6 @@
 Open source tools for geographic analysis in transport planning
 ================
-2020-08-04
+2020-08-05
 
 <!-- should be integrated in transport planning tools. -->
 
@@ -871,6 +871,17 @@ overlapping,\[9\] user interface (UI) types (see Table
     clicks
   - web user interface (WUI) tools that users access through a web
     browser
+  - web application programming interfaces (API) that computers access
+    over the web
+
+In this paper we will focus on projects in the first three categories.
+Numerous open source ‘routing engine’ projects provide a range of high
+performance routing and other transport data analysis services via a web
+application programming interface (API). While technically these can be
+used for geographic analysis tasks, they are more commonly used by
+transport planners as remote services, and are usually the preserve of
+software developers, so were excluded from Table
+<a href="#tab:open-tools">2</a>.
 
 ## Defining open source
 
@@ -1006,7 +1017,7 @@ Licence
 
 <th style="text-align:left;">
 
-Langage
+Language
 
 </th>
 
@@ -1121,6 +1132,52 @@ C++
 <td style="text-align:left;">
 
 (Lopez et al. 2018)
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+UrbanSim
+
+</td>
+
+<td style="text-align:left;">
+
+Python package
+
+</td>
+
+<td style="text-align:left;">
+
+AGPLv3
+
+</td>
+
+<td style="text-align:left;">
+
+Python
+
+</td>
+
+<td style="text-align:right;">
+
+310
+
+</td>
+
+<td style="text-align:right;">
+
+1444
+
+</td>
+
+<td style="text-align:left;">
+
+(Waddell 2002)
 
 </td>
 
@@ -1534,7 +1591,7 @@ Python
 
 <td style="text-align:left;">
 
-NA
+(Gaboardi et al., 2018)
 
 </td>
 
@@ -1544,43 +1601,43 @@ NA
 
 <td style="text-align:left;">
 
-optentripplanner
+urbanpy
 
 </td>
 
 <td style="text-align:left;">
 
-R package
+Python package
 
 </td>
 
 <td style="text-align:left;">
 
-GPLv3
+MIT
 
 </td>
 
 <td style="text-align:left;">
 
-R
+Python
 
 </td>
 
 <td style="text-align:right;">
 
-47
+16
 
 </td>
 
 <td style="text-align:right;">
 
-0
+NA
 
 </td>
 
 <td style="text-align:left;">
 
-(Morgan et al. 2019)
+NA
 
 </td>
 
@@ -1673,52 +1730,6 @@ Python
 <td style="text-align:left;">
 
 (Carmargo 2015)
-
-</td>
-
-</tr>
-
-<tr>
-
-<td style="text-align:left;">
-
-ORS Tools
-
-</td>
-
-<td style="text-align:left;">
-
-QGIS plugin
-
-</td>
-
-<td style="text-align:left;">
-
-MIT
-
-</td>
-
-<td style="text-align:left;">
-
-Python
-
-</td>
-
-<td style="text-align:right;">
-
-39
-
-</td>
-
-<td style="text-align:right;">
-
-NA
-
-</td>
-
-<td style="text-align:left;">
-
-NA
 
 </td>
 
@@ -2004,6 +2015,52 @@ NA
 
 <td style="text-align:left;">
 
+Conveyal Analysis
+
+</td>
+
+<td style="text-align:left;">
+
+Hosted service
+
+</td>
+
+<td style="text-align:left;">
+
+MIT
+
+</td>
+
+<td style="text-align:left;">
+
+Java
+
+</td>
+
+<td style="text-align:right;">
+
+19
+
+</td>
+
+<td style="text-align:right;">
+
+NA
+
+</td>
+
+<td style="text-align:left;">
+
+NA
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
 PCT
 
 </td>
@@ -2099,8 +2156,9 @@ NA
 Finally, to overcome the limitation that not all open source software
 projects are hosted on GitHub *or* described in academic papers,
 snowballing via fora such as the [QGIS plugin
-homepage](https://plugins.qgis.org/) and links in project README files
-were used to find additional projects that met the following criteria:
+homepage](https://plugins.qgis.org/), links in project README files and
+social media were used to find additional projects that met the
+following criteria:
 
 1.  The tool uses geographic analysis for transport planning, supporting
     the design and placement of physical infrastructure for urban
@@ -2111,14 +2169,27 @@ were used to find additional projects that met the following criteria:
     last 12 months
 4.  Availability of source code with a visible open source license
 
-124 projects or papers were identified using the methods outlined using
-the methods described above. Of those, 17 met the criteria listed above
-(see Table <a href="#tab:open-tools">2</a>). Although these tools could
-also be classified into different ‘ecosystems’, such as R packages,
-Python packages and QGIS plugins, it is clear that some tools do not fit
-into such prescribed boxes. We therefore describe the tools in order of
-their primary user interface, in chronological order of the interface’s
+<!-- Projects or papers were identified using the methods outlined using the methods described above. -->
+
+30 projects were identified that met the criteria listed above. 7 of
+those were routing engines, which were excluded for reasons outlined in
+the previous section, resulting in 23 projects outlined in Table
+<a href="#tab:open-tools">2</a>). Although these tools could also be
+classified into different ‘ecosystems’, such as R packages, Python
+packages and QGIS plugins, it is clear that some tools do not fit into
+such prescribed boxes. We therefore describe the tools in order of their
+primary user interface, in chronological order of the interface’s
 development (CLIs predate GUIs which predate WUIs).
+
+It should be clear that the ‘Type’ and ‘Language’ values shown in Table
+<a href="#tab:open-tools">2</a> are to some extent fuzzy: open source
+software is by nature modular and flexible, meaning that the same piece
+of code can take multiple different forms and the same method can be
+implemented in multiple languages. The AequilibraE QGIS plugin (Camargo
+2015), for example, is also a Python package. Conversely, the
+MovingPandas Python package by Graser (2019) is also a QGIS plugin. The
+point is that the *most prominent* category into which each project
+seemed to fall, based on the README, was used.
 
 <!-- --- such as R, Python and QGIS.  -->
 
@@ -2176,7 +2247,7 @@ disadvantage of reducing accessibility.
 The remaining CLI-based tools in Table <a href="#tab:open-tools">2</a>
 are smaller, simpler and more accessible R/Python packages that fit
 within the framework of these pre-existing open source software
-ecosystems. **osmnx** is a Python package for downloading and analysing
+ecosystems. **OSMnx** is a Python package for downloading and analysing
 transport networks from OpenStreetMap that has a focus on urban
 transport network analysis (Boeing 2017). **OSMnx** has been used for a
 wide range of research and real-world applications, with a focus on
@@ -2188,21 +2259,32 @@ for measuring ‘urban morphology’, meaning the measurement and analysis
 of collections of geographic entities that constitute cities
 (Fleischmann 2019).
 
-Python packages **UrbanAccess** and **scikit-mobility** have a broader
-remit, aiming to support a range of transport planning objectives.
-**UrbanAccess** is another Python package for analysing geographic
-transport network data, with a focus on accessibility. The paper
-describing the tool has more of a focus on applied transport planning
-than other Python tools, highlighting the potential for the tool to
-assist metropolitan planning organizations (MPOs) to prioritise
-investments that cost-effectively increase accessibility for those most
-in need (Blanchard and Waddell 2017). In addition to using OSM data,
-**UrbanAccess** can import and process GTFS data to calculate
-multi-modal travel times and other metrics. **scikit-mobility**
-implements a framework for statistical modelling of travel behaviour,
-including functions for estimating movement between geographic zones
-using spatial interaction models, as well as route assignment
-(Pappalardo et al. 2019a).
+Python packages **UrbanAccess**, **spaghetti** and **scikit-mobility**
+have broader (and to some extent overlapping) remits, aiming to support
+a range of transport planning objectives. **UrbanAccess** is a Python
+package for analysing geographic transport network data, with a focus on
+accessibility. The paper describing the tool has more of a focus on
+applied transport planning than other Python tools, highlighting the
+potential for the tool to assist metropolitan planning organizations
+(MPOs) to prioritise investments that cost-effectively increase
+accessibility for those most in need (Blanchard and Waddell 2017). In
+addition to using OSM data, **UrbanAccess** can import and process GTFS
+data to calculate multi-modal travel times and other metrics. Like
+**momepy**, the **spaghetti** package (which stands for SPAtial GrapHs:
+nETworks, Topology, & Inference) is focussed on street network analysis,
+but focusses less on urban morphology and more on segment-level
+statistics (Gaboardi et al. 2018). **scikit-mobility** implements a
+framework for statistical modelling of travel behaviour, including
+functions for estimating movement between geographic zones using spatial
+interaction models, as well as route assignment (Pappalardo et al.
+2019a).
+
+The JavaScript package Trip-simulator, from the not-for-profit
+organisation Shared Streets, enables geographic analysis for transport
+planning by simulating GPS flows on street networks. Its command-line
+interface allows a wide variety of trip types and volumes to be
+simulated which can, given a new street network layout, be used to
+estimate the impact of changes to the network.
 
 The remaining two CLI-based tools in Table
 <a href="#tab:open-tools">2</a> are R packages focussed on applied
@@ -2221,6 +2303,42 @@ geometries but also monetary costs and accessibility isochrone maps
 where GTFS data allow (Morgan et al. 2019).
 
 ## Graphical user interface (GUI) tools
+
+Other than A/B Street, all of the GUI-based tools presented in Table
+<a href="#tab:open-tools">2</a> are QGIS plugin. This came as a
+surprise: given the dominance of GUIs in many areas of computing one
+would expect a range of stand-alone transport planning tools to have
+been developed (the criterion that tools must be actively maintained to
+be considered explains the exclusion of some tools such as Tranus (de la
+Barra, P’erez, and Vera 1984).
+
+A/B Street does not market itself as a transport planning tool but
+instead as a game and educational tool. However, that does not mean that
+it lacks capabilities. A/B Street combines the real-time capabilities of
+MATSim with the usability of online tools such as StreetMix, discussed
+in the next section, taking a ‘SimCity’ approach to transport planning,
+while still allowing the user to zoom in to single vehicles (while they
+are in motion via a moving camera\!) and change the geometries of street
+layouts with an intuitive in-built editor.
+
+The QGIS plugins for transport planning are even more explicitly
+focussed on geographic analysis for transport planning. **AequilibraE**,
+**QNEAT3** and the **Networks** plugins provide various transport
+planning tools from the mature and popular QGIS GUI-based Geographic
+Information System (GIS). **AequilibraE** provides a broad range of
+functions for processing transport networks and assigning traffic
+(Camargo 2015), as detailed in the project’s substantial [documentation
+website](http://aequilibrae.com/python).
+[**QNEAT3**](https://root676.github.io/) provides a narrower but well
+documented set of algorithms for transport planning applications,
+including shortest path, network buffers and OD matrix visualisation.
+The **Networks** plugin uses an interface to external software developed
+by the same author to enable multi-modal routing and GTFS data import.
+With 68 ratings on the [QGIS Plugins web
+page](https://plugins.qgis.org/plugins/networks/) (averaging 4 out of 5)
+the plugin is clearly popular, although with limited documentation
+except for assorted .pdf files in the package’s GitHub repo, it is hard
+to assess exactly what its capabilities are.
 
 ## Web user interface (WUI) tools
 
@@ -2482,16 +2600,16 @@ prior experience and preferences of transport planners may be more
 important than functionality.
 
 As the FOSS philosophy described in Section
-<a href="#new-tools-of-the-trade"><strong>??</strong></a> emphasises,
-open source software by its very nature is collaborative, innovative and
-evolving (Gancarz 2003), allowing it to out-compete and eventually
-dominate in sectors from machine learning to web development. The review
-of capabilities in open source software communities clearly shows that
-high-performance and innovative solutions are already available in the
-‘ecological niche’ of geographic analysis for transport planning.
-Given the nascent nature of many of the transport-oriented packages,
-plugins and extensions in each ecosystem, fruitful directions of
-research would explore the relative merits of different options, and
+<a href="#open-source-tools-for-transport-planning"><strong>??</strong></a>
+emphasises, open source software by its very nature is collaborative,
+innovative and evolving (Gancarz 2003), allowing it to out-compete and
+eventually dominate in sectors from machine learning to web development.
+The review of capabilities in open source software communities clearly
+shows that high-performance and innovative solutions are already
+available in the ‘ecological niche’ of geographic analysis for transport
+planning. Given the nascent nature of many of the transport-oriented
+packages, plugins and extensions in each ecosystem, fruitful directions
+of research would explore the relative merits of different options, and
 combinations of options, in terms of computer and programmer efficiency.
 Furthermore, the modular and ‘pluginable’ nature of open source software
 suggests there are great opportunities for integration: could there be R
@@ -2611,6 +2729,13 @@ Travel: Past, Present and Future*. Edward Elgar Publishing.
 
 </div>
 
+<div id="ref-camargo_aequilibrae_2015">
+
+Camargo, P. 2015. “AequilibraE: A Free QGIS Add-on for Transportation
+Modeling.” *FOSS4G North America*.
+
+</div>
+
 <div id="ref-chan_using_2019">
 
 Chan, Eric Yin Cheung, and Crispin HV Cooper. 2019. “Using Road Class as
@@ -2640,6 +2765,14 @@ Technology* 122 (June): 106274.
 <div id="ref-croissant_mlogit_2019">
 
 Croissant, Yves. 2019. *Mlogit: Multinomial Logit Models*.
+
+</div>
+
+<div id="ref-delabarra_tranusj_1984">
+
+de la Barra, T, B P’erez, and N Vera. 1984. “TRANUS-J: Putting Large
+Models into Small Computers.” *Environment and Planning B: Planning and
+Design* 11 (1): 87–101. <https://doi.org/10.1068/b110087>.
 
 </div>
 
@@ -2688,6 +2821,14 @@ Fleischmann, Martin. 2019. “MOMEPY: Urban Morphology Measuring Toolkit.”
 Franco-Bedoya, Oscar, David Ameller, Dolors Costal, and Xavier Franch.
 2017. “Open Source Software Ecosystems: A Systematic Mapping.”
 *Information and Software Technology* 91: 160–85.
+
+</div>
+
+<div id="ref-Gaboardi2018">
+
+Gaboardi, James D., Jay Laura, Sergio Rey, Levi John Wolf, David C.
+Folch, Wei Kang, Philip Stephens, and Charles Schmidt. 2018.
+“Pysal/Spaghetti.”
 
 </div>
 

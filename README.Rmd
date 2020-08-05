@@ -11,9 +11,9 @@ date: '`r Sys.Date()`'
 # header-includes:
 #    - \usepackage{coloremoji}
 output:
-  # bookdown::github_document2: default
-  bookdown::pdf_document2:
-    latex_engine: xelatex
+  bookdown::github_document2: default
+  # bookdown::pdf_document2:
+  #   latex_engine: xelatex
   # word_document: default
 bibliography:
   - references.bib
@@ -658,12 +658,12 @@ open_tools %>%
   filter(Emphasis != "interface") %>% 
   select(Tool, Type, Licence, Language, Stars, Citations, Reference) %>% 
   filter(Type != "Routing engine") %>% 
-  kable(format = "latex", escape = F, booktabs = T, caption = "Open source tools for geographic analysis in transport planning, based on data from Google Scholar, GitHub and web searches and classified in by their primary user interface. CLI, GUI and WUI refer to command-line, graphical user and web user interfaces respectively.") %>%
-  pack_rows(group_label = "CLI", start_row = 1, end_row = 12) %>%
-  pack_rows(group_label = "GUI", start_row = 13, end_row = 18) %>%
-  pack_rows(group_label = "WUI", start_row = 19, end_row = 23) %>%
-  kable_styling(bootstrap_options = c("hover", "condensed"), latex_options = c("scale_down"))
-  # knitr::kable(caption = "Open source tools for geographic analysis in transport planning, based on data from Google Scholar, GitHub and web searches and classified in by their primary user interface. CLI, GUI and WUI refer to command-line, graphical user and web user interfaces respectively.")
+  # kable(format = "latex", escape = F, booktabs = T, caption = "Open source tools for geographic analysis in transport planning, based on data from Google Scholar, GitHub and web searches and classified in by their primary user interface. CLI, GUI and WUI refer to command-line, graphical user and web user interfaces respectively.") %>%
+  # pack_rows(group_label = "CLI", start_row = 1, end_row = 12) %>%
+  # pack_rows(group_label = "GUI", start_row = 13, end_row = 18) %>%
+  # pack_rows(group_label = "WUI", start_row = 19, end_row = 23) %>%
+  # kable_styling(bootstrap_options = c("hover", "condensed"), latex_options = c("scale_down"))
+  knitr::kable(caption = "Open source tools for geographic analysis in transport planning, based on data from Google Scholar, GitHub and web searches and classified in by their primary user interface. CLI, GUI and WUI refer to command-line, graphical user and web user interfaces respectively.")
 ```
 
 Finally, to overcome the limitation that not all open source software projects are hosted on GitHub *or* described in academic papers, snowballing via fora such as the [QGIS plugin homepage](https://plugins.qgis.org/), links in project README files and social media were used to find additional projects that met the following criteria:
@@ -825,7 +825,7 @@ The package takes an explicitly geographic approach to transport planning and ma
 
 ## Graphical user interface (GUI) tools
 
-Other than A/B Street, all of the GUI-based tools presented in Table \@ref(open-tools) are QGIS plugin.
+Other than A/B Street, all of the GUI-based tools presented in Table \@ref(tab:open-tools) are QGIS plugin.
 This came as a surprise: given the dominance of GUIs in many areas of computing one would expect a range of stand-alone transport planning tools to have been developed (the criterion that tools must be actively maintained to be considered explains the exclusion of some tools such as Tranus [@delabarra_tranusj_1984]. 
 
 A/B Street does not market itself as a transport planning tool but instead as a game and educational tool.
@@ -954,7 +954,7 @@ Although each ecosystem is mature (yet still growing), their use in transport pl
 However, tentative guidance can be made, based on the origins and direction of each project: for statistically-orientated projects in which interactive online visualisation is vital, R provides a strong foundation; for applications in which general purpose languages and interoperability with other frameworks, and integration with other software frameworks, Python may be the most appropriate option; and when a user friendly interface and rapid map making without need for programming skills are required, QGIS may be suitable.
 There is a huge amount of overlap between the three ecosystems and, in practice, the prior experience and preferences of transport planners may be more important than functionality.
 
-As the FOSS philosophy described in Section \@ref(new-tools-of-the-trade) emphasises, open source software by its very nature is collaborative, innovative and evolving [@gancarz_linux_2003], allowing it to out-compete and eventually dominate in sectors from machine learning to web development.
+As the FOSS philosophy described in Section \@ref(open-source-tools-for-transport-planning) emphasises, open source software by its very nature is collaborative, innovative and evolving [@gancarz_linux_2003], allowing it to out-compete and eventually dominate in sectors from machine learning to web development.
 The review of capabilities in open source software communities clearly shows that high-performance and innovative solutions are already available in the 'ecological niche' of geographic analysis for transport planning.
 Given the nascent nature of many of the transport-oriented packages, plugins and extensions in each ecosystem, fruitful directions of research would explore the relative merits of different options, and combinations of options, in terms of computer and programmer efficiency.
 Furthermore, the modular and 'pluginable' nature of open source software suggests there are great opportunities for integration: could there be R and Python interfaces to MATSim, SUMO and sDNA?
