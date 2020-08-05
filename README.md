@@ -1049,7 +1049,7 @@ Reference
 
 <td style="text-align:left;">
 
-OSMnx
+[OSMnx](https://github.com/gboeing/osmnx/)
 
 </td>
 
@@ -1095,7 +1095,7 @@ Python
 
 <td style="text-align:left;">
 
-SUMO
+[SUMO](https://github.com/eclipse/sumo)
 
 </td>
 
@@ -1141,7 +1141,7 @@ C++
 
 <td style="text-align:left;">
 
-UrbanSim
+[UrbanSim](https://github.com/UDST/urbansim)
 
 </td>
 
@@ -1187,7 +1187,7 @@ Python
 
 <td style="text-align:left;">
 
-MovingPandas
+[MovingPandas](https://github.com/anitagraser/movingpandas/)
 
 </td>
 
@@ -1233,7 +1233,7 @@ Python
 
 <td style="text-align:left;">
 
-MATSim
+[MATSim](https://github.com/matsim-org/matsim-libs)
 
 </td>
 
@@ -1279,7 +1279,7 @@ Java
 
 <td style="text-align:left;">
 
-Scikit-mobility
+[Scikit-mobility](https://github.com/scikit-mobility/scikit-mobility)
 
 </td>
 
@@ -1325,7 +1325,7 @@ Python
 
 <td style="text-align:left;">
 
-stplanr
+[stplanr](https://github.com/ropensci/stplanr)
 
 </td>
 
@@ -1371,7 +1371,7 @@ R
 
 <td style="text-align:left;">
 
-momepy
+[momepy](https://github.com/martinfleis/momepy)
 
 </td>
 
@@ -1417,7 +1417,7 @@ Python
 
 <td style="text-align:left;">
 
-Trip-simulator
+[Trip-simulator](https://github.com/sharedstreets/trip-simulator)
 
 </td>
 
@@ -1463,7 +1463,7 @@ NA
 
 <td style="text-align:left;">
 
-urbanaccess
+[urbanaccess](https://github.com/UDST/urbanaccess)
 
 </td>
 
@@ -1509,7 +1509,7 @@ Python
 
 <td style="text-align:left;">
 
-spaghetti
+[spaghetti](https://github.com/pysal/spaghetti)
 
 </td>
 
@@ -1555,7 +1555,7 @@ Python
 
 <td style="text-align:left;">
 
-urbanpy
+[urbanpy](https://github.com/EL-BID/urbanpy)
 
 </td>
 
@@ -1601,7 +1601,7 @@ NA
 
 <td style="text-align:left;">
 
-abstreet
+[abstreet](https://github.com/dabreegster/abstreet)
 
 </td>
 
@@ -1647,7 +1647,7 @@ NA
 
 <td style="text-align:left;">
 
-AequilibraE
+[AequilibraE](https://github.com/AequilibraE/AequilibraE-GUI)
 
 </td>
 
@@ -1693,7 +1693,7 @@ Python
 
 <td style="text-align:left;">
 
-QNEAT3
+[QNEAT3](https://github.com/root676/QNEAT3/)
 
 </td>
 
@@ -1739,7 +1739,7 @@ NA
 
 <td style="text-align:left;">
 
-Networks plugin
+[Networks plugin](https://github.com/crocovert/networks)
 
 </td>
 
@@ -1785,7 +1785,7 @@ NA
 
 <td style="text-align:left;">
 
-sDNA
+[sDNA](https://github.com/fiftysevendegreesofrad/sdna_open)
 
 </td>
 
@@ -1831,7 +1831,7 @@ C++
 
 <td style="text-align:left;">
 
-Citybound
+[Citybound](https://github.com/citybound/citybound)
 
 </td>
 
@@ -1877,7 +1877,7 @@ NA
 
 <td style="text-align:left;">
 
-StreetMix
+[StreetMix](https://github.com/streetmix/streetmix)
 
 </td>
 
@@ -1923,7 +1923,7 @@ JavaScript
 
 <td style="text-align:left;">
 
-flowmap.blue
+[flowmap.blue](https://github.com/FlowmapBlue/flowmap.blue)
 
 </td>
 
@@ -1969,7 +1969,7 @@ NA
 
 <td style="text-align:left;">
 
-Conveyal Analysis
+[Conveyal Analysis](https://github.com/conveyal/analysis-backend)
 
 </td>
 
@@ -2015,7 +2015,7 @@ NA
 
 <td style="text-align:left;">
 
-PCT
+[PCT](https://github.com/npct/pct-shiny/)
 
 </td>
 
@@ -2061,7 +2061,7 @@ R
 
 <td style="text-align:left;">
 
-TrajAnalytics
+[TrajAnalytics](http://vis.cs.kent.edu/TrajAnalytics/)
 
 </td>
 
