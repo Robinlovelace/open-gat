@@ -841,6 +841,10 @@ QGIS plugins for transport planning are explicitly focussed on geographic analys
 The **Networks** plugin uses an interface to external software developed by the same author to enable multi-modal routing and GTFS data import. 
 With 68 ratings on the [QGIS Plugins web page](https://plugins.qgis.org/plugins/networks/) (averaging 4 out of 5) the plugin is clearly popular, although with limited documentation except for assorted .pdf files in the package's GitHub repo, it is hard to assess exactly what its capabilities are.
 
+Finally, the sDNA QGIS plugin provides an interface to the C++ project sDNA, a tool for spatial network analysis that has been developed to support transport planning for walking and cycling [@cooper_sdna:_2015].
+A range of route network analysis functions are available, enabling the user to parameterise models to best represent travel behaviour at city scales base on the high performance routing between every vertex on the network.
+By changing network characteristics and geometries or adjusting parameters, model experiments can be undertaken in sDNA to represent scenarios of change [@cooper_predictive_2018].
+
 ## Web user interface (WUI) tools
 
 <!-- ### The propensity to cycle tool -->

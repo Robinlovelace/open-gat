@@ -2322,6 +2322,16 @@ the plugin is clearly popular, although with limited documentation
 except for assorted .pdf files in the package’s GitHub repo, it is hard
 to assess exactly what its capabilities are.
 
+Finally, the sDNA QGIS plugin provides an interface to the C++ project
+sDNA, a tool for spatial network analysis that has been developed to
+support transport planning for walking and cycling (Cooper and Chiaradia
+2015). A range of route network analysis functions are available,
+enabling the user to parameterise models to best represent travel
+behaviour at city scales base on the high performance routing between
+every vertex on the network. By changing network characteristics and
+geometries or adjusting parameters, model experiments can be undertaken
+in sDNA to represent scenarios of change (Cooper 2018).
+
 ## Web user interface (WUI) tools
 
 <!-- ### The propensity to cycle tool -->
@@ -2806,6 +2816,24 @@ Silva. 2020. “Is This GitHub Project Maintained? Measuring the Level of
 Maintenance Activity of Open-Source Projects.” *Information and Software
 Technology* 122 (June): 106274.
 <https://doi.org/10.1016/j.infsof.2020.106274>.
+
+</div>
+
+<div id="ref-cooper_sdna:_2015">
+
+Cooper, Crispin, and Alain J. Chiaradia. 2015. “sDNA: How and Why We
+Reinvented Spatial Network Analysis for Health, Economics and Active
+Modes of Transport.” University of Cardiff.
+
+</div>
+
+<div id="ref-cooper_predictive_2018">
+
+Cooper, Crispin H. V. 2018. “Predictive Spatial Network Analysis for
+High-Resolution Transport Modeling, Applied to Cyclist Flows, Mode
+Choice, and Targeting Investment.” *International Journal of Sustainable
+Transportation* 0 (0): 1–11.
+<https://doi.org/10.1080/15568318.2018.1432730>.
 
 </div>
 
