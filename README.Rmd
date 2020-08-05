@@ -655,6 +655,7 @@ open_tools = readr::read_csv("open_tools.csv")
 # readr::write_csv(open_tools_new, "open_tools.csv")
 names(open_tools) = tools::toTitleCase(names(open_tools))  
 open_tools %>% 
+  filter(Emphasis != "interface") %>% 
   select(Tool, Type, Licence, Language, Stars, Citations, Reference) %>% 
   filter(Type != "Routing engine") %>% 
   kable(format = "latex", escape = F, booktabs = T, caption = "Open source tools for geographic analysis in transport planning, based on data from Google Scholar, GitHub and web searches and classified in by their primary user interface. CLI, GUI and WUI refer to command-line, graphical user and web user interfaces respectively.") %>%
