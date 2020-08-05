@@ -1,31 +1,35 @@
-tool,interface,type,licence,langage,website,stars,citations,reference
-OSRM,API,Routing engine,BSD-2,C++,https://github.com/Project-OSRM/osrm-backend,3882,240,(Luxen and Vetter 2011)
-GraphHopper,API,Routing engine,Apache-2.0,Java,https://github.com/graphhopper/graphhopper,2820,NA,NA
-Valhalla,API,Routing engine,MIT,C++,https://github.com/valhalla/valhalla,1204,NA,NA
-OpenRouteService,API,Routing engine,GPLv3,Java,https://github.com/GIScience/openrouteservice,471,NA,NA
-OpenTripPlanner,API,Routing engine,GPLv2,Java,https://github.com/opentripplanner/OpenTripPlanner,1476,NA,NA
-OSMnx,CLI,Python package,MIT,Python,https://github.com/gboeing/osmnx/,2496,302,(Boeing 2017)
-SUMO,CLI,Standalone,EPL-2.0,C++,https://github.com/eclipse/sumo,736,219,(Lopez et al. 2018)
-pgRouting,CLI,Routing engine,GPLv2,C++,https://github.com/pgRouting/pgrouting,731,NA,NA
-MovingPandas,CLI,Python package,BSD-3,Python,https://github.com/anitagraser/movingpandas/,307,6,(Graser 2019)
-MATSim,CLI,Standalone,GPLv2,Java,https://github.com/matsim-org/matsim-libs,285,564,(Horni et al. 2016)
-Scikit-mobility,CLI,Python package,BSD-3,Python,https://github.com/scikit-mobility/scikit-mobility,251,1,(Pappalardo et al. 2019)
-stplanr,CLI,R package,MIT,R,https://github.com/ropensci/stplanr,201,9,(Lovelace et al. 2018)
-momepy,CLI,Python package,MIT,Python,https://github.com/martinfleis/momepy,133,3,(Fleischmann 2019)
-Trip-simulator,CLI,JavaScript package,MIT,JavaScript,https://github.com/sharedstreets/trip-simulator,117,NA,NA
-urbanaccess,CLI,Python package,AGPLv3,Python,https://github.com/UDST/urbanaccess,105,12,(Blanchard 2017)
-dodgr,CLI,R package,GPLv3,C++,https://github.com/ATFutures/dodgr,84,2,NA
-spaghetti,CLI,Python package,BSD-3,Python,https://github.com/pysal/spaghetti,60,0,NA
-optentripplanner,CLI,R package,GPLv3,R,https://github.com/ropensci/opentripplanner,47,0,(Morgan et al. 2019)
-abstreet,GUI,Standalone,Apache-2.0,Rust,https://github.com/dabreegster/abstreet,4896,NA,NA
-AequilibraE,GUI,QGIS plugin,Custom,Python,https://github.com/AequilibraE/AequilibraE-GUI,57,3,(Carmargo 2015)
-ORS Tools,GUI,QGIS plugin,MIT,Python,https://github.com/GIScience/orstools-qgis-plugin,39,NA,NA
-QNEAT3,GUI,QGIS plugin,GPLv3,Python,https://github.com/root676/QNEAT3/,35,NA,NA
-Networks plugin,GUI,QGIS plugin,GPLv3,Python,https://github.com/crocovert/networks,9,NA,NA
-sDNA,GUI,QGIS plugin,GPLv3,C++,https://github.com/fiftysevendegreesofrad/sdna_open,9,27,(Cooper 2015)
-Citybound,WUI,Standalone,AGPLv3,Rust,https://github.com/citybound/citybound,6124,NA,NA
-StreetMix,WUI,Hosted service,BSD-3,JavaScript,https://github.com/streetmix/streetmix,440,6,(Riggs et al. 2016)
-flowmap.blue,WUI,Standalone,MIT,TypeScript,https://github.com/FlowmapBlue/flowmap.blue,90,NA,NA
-PCT,WUI,Hosted service,AGPLv3,R,https://github.com/npct/pct-shiny/,16,66,(Lovelace et al. 2017)
-Routino,WUI,Routing engine,AGPLv3,C,https://www.routino.org/,NA,NA,NA
-TrajAnalytics,WUI,Standalone,BSD-3,JavaScript,http://vis.cs.kent.edu/TrajAnalytics/,NA,0,(Shamal et al. 2019)
+tool,interface,type,licence,language,website,stars,citations,ncitingtransportplanning,reference,released
+OSRM,API,Routing engine,BSD-2,C++,https://github.com/Project-OSRM/osrm-backend,3882,240,34,(Luxen and Vetter 2011),NA
+GraphHopper,API,Routing engine,Apache-2.0,Java,https://github.com/graphhopper/graphhopper,2820,26,40,NA,NA
+OpenTripPlanner,API,Routing engine,GPLv2,Java,https://github.com/opentripplanner/OpenTripPlanner,1476,NA,117,NA,NA
+Valhalla,API,Routing engine,MIT,C++,https://github.com/valhalla/valhalla,1204,NA,NA,NA,NA
+motis,API,Routing engine,MIT,C++,https://github.com/motis-project/motis,16,NA,NA,NA,NA
+OSMnx,CLI,Python package,MIT,Python,https://github.com/gboeing/osmnx/,2496,302,25,(Boeing 2017),NA
+SUMO,CLI,Standalone,EPL-2.0,C++,https://github.com/eclipse/sumo,736,219,330,(Lopez et al. 2018),NA
+pgRouting,CLI,Routing engine,GPLv2,C++,https://github.com/pgRouting/pgrouting,731,NA,35,NA,NA
+UrbanSim,CLI,Python package,AGPLv3,Python,https://github.com/UDST/urbansim,310,1444,461,(Waddell 2002),2014
+MovingPandas,CLI,Python package,BSD-3,Python,https://github.com/anitagraser/movingpandas/,307,6,NA,(Graser 2019),NA
+MATSim,CLI,Standalone,GPLv2,Java,https://github.com/matsim-org/matsim-libs,285,564,901,(Horni et al. 2016),NA
+Scikit-mobility,CLI,Python package,BSD-3,Python,https://github.com/scikit-mobility/scikit-mobility,251,1,1,(Pappalardo et al. 2019),NA
+stplanr,CLI,R package,MIT,R,https://github.com/ropensci/stplanr,201,9,31,(Lovelace et al. 2018),NA
+momepy,CLI,Python package,MIT,Python,https://github.com/martinfleis/momepy,133,3,NA,(Fleischmann 2019),NA
+Trip-simulator,CLI,JavaScript package,MIT,JavaScript,https://github.com/sharedstreets/trip-simulator,117,NA,NA,NA,NA
+urbanaccess,CLI,Python package,AGPLv3,Python,https://github.com/UDST/urbanaccess,105,12,6,(Blanchard 2017),NA
+dodgr,CLI,R package,GPLv3,C++,https://github.com/ATFutures/dodgr,84,2,NA,NA,NA
+spaghetti,CLI,Python package,BSD-3,Python,https://github.com/pysal/spaghetti,60,0,NA,NA,NA
+optentripplanner,CLI,R package,GPLv3,R,https://github.com/ropensci/opentripplanner,47,0,NA,(Morgan et al. 2019),NA
+urbanpy,CLI,Python package,MIT,Python,https://github.com/EL-BID/urbanpy,16,NA,NA,NA,2020
+abstreet,GUI,Standalone,Apache-2.0,Rust,https://github.com/dabreegster/abstreet,4896,NA,NA,NA,NA
+AequilibraE,GUI,QGIS plugin,Custom,Python,https://github.com/AequilibraE/AequilibraE-GUI,57,3,5,(Carmargo 2015),NA
+ORS Tools,GUI,QGIS plugin,MIT,Python,https://github.com/GIScience/orstools-qgis-plugin,39,NA,NA,NA,NA
+QNEAT3,GUI,QGIS plugin,GPLv3,Python,https://github.com/root676/QNEAT3/,35,NA,NA,NA,NA
+Networks plugin,GUI,QGIS plugin,GPLv3,Python,https://github.com/crocovert/networks,9,NA,NA,NA,NA
+sDNA,GUI,QGIS plugin,GPLv3,C++,https://github.com/fiftysevendegreesofrad/sdna_open,9,27,27,(Cooper 2015),NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Citybound,WUI,Standalone,AGPLv3,Rust,https://github.com/citybound/citybound,6124,NA,NA,NA,NA
+StreetMix,WUI,Hosted service,BSD-3,JavaScript,https://github.com/streetmix/streetmix,440,6,10,(Riggs et al. 2016),NA
+flowmap.blue,WUI,Standalone,MIT,TypeScript,https://github.com/FlowmapBlue/flowmap.blue,90,NA,NA,NA,NA
+Conveyal Analysis,WUI,Hosted service,MIT,Java,https://github.com/conveyal/analysis-backend,19,NA,11,NA,NA
+PCT,WUI,Hosted service,AGPLv3,R,https://github.com/npct/pct-shiny/,16,66,97,(Lovelace et al. 2017),NA
+Routino,WUI,Routing engine,AGPLv3,C,https://www.routino.org/,NA,NA,11,NA,NA
+TrajAnalytics,WUI,Standalone,BSD-3,JavaScript,http://vis.cs.kent.edu/TrajAnalytics/,NA,0,NA,(Shamal et al. 2019),NA
