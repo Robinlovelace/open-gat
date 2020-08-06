@@ -840,7 +840,7 @@ The **Networks** plugin uses an interface to external software [**Mulsiw**](http
 The **AwaP** plugin uses data on urban 'blocks' (typically buildings) to calculate indicators relating to walkability.
 The tool can been used to compare the urban morphologies of different areas cities from a walkability perspective [@majic_awapic_2019].
 
-Finally, the sDNA QGIS plugin provides an interface to the C++ project sDNA, a tool for spatial network analysis that has been developed to support transport planning for walking and cycling [@cooper_sdna:_2015].
+Finally, the sDNA QGIS plugin provides an interface to the C++ project sDNA, a tool for spatial network analysis that has been developed to support transport planning for walking and cycling [@cooper_sdna_2020].
 A range of route network analysis functions are available, enabling the user to parameterise models to best represent travel behaviour at city scales base on the high performance routing between every vertex on the network.
 By changing network characteristics and geometries or adjusting parameters, model experiments can be undertaken in sDNA to represent scenarios of change [@cooper_predictive_2018].
 
@@ -1001,7 +1001,7 @@ A limitation of the paper is that it is not comprehensive, omitting due to space
 See https://jakobmiksch.eu/post/openstreetmap_routing/ for an overview or routing engines for OpenStreetMap data.
 ]
 and tools that *can* be applied to transport planning but which were not designed for transport planning such as the [**gama**](https://github.com/gama-platform/gama) platform and general purpose geographic data processing projects.
-Future research could review and benchmark such alternative tools for transport planning to provide valuable insight into which tools work best for different applications including, critically, how to rapidly decarbonise transport systems worldwide [@hickman_transitions_2011:1].
+Future research could review and benchmark such alternative tools for transport planning to provide valuable insight into which tools work best for different applications including, critically, how to rapidly decarbonise transport systems worldwide [@hickman_transitions_2011].
 
 As the FOSS philosophy described in Section \@ref(open-source-tools) emphasizes, open source software by its very nature is collaborative, innovative and evolving [@gancarz_linux_2003], allowing it to out-compete and eventually dominate in sectors from machine learning to web development.
 This paper shows that high-performance and innovative solutions are already available in the 'ecological niche' of geographic analysis for transport planning.
@@ -1010,7 +1010,7 @@ Furthermore, the modular and 'pluginable' nature of open source software suggest
 And from a research perspective, how can the growth of open source solutions for geographic transport data analysis be monitored to identify 'tipping points' in practitioners' uptake of open source solutions?
 
 <!-- These considerations wider questions, about if and when will open source software rise to ascendancy in the wider field of transport planning. -->
-Returning to the most urgent policy driver of climate change mitigation, it is clear than a step change is needed in transport interventions.
+Returning to the most urgent policy driver of climate change mitigation, it is clear that a step change is needed in geographically specific transport interventions and the tools used to design them.
 If these interventions are made on the basis of analysis undertaken in open source software --- enabling rigorous, transparent and reproducible evidence that can easily be repeated in new settings and when new datasets become available --- they are all the more likely to succeed.
 In this sense it may not be an exaggeration to say that open source software can save the world.
 
