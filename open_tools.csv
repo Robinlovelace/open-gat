@@ -17,7 +17,7 @@ Trip-simulator,CLI,JavaScript package,trajectory analysis,MIT,JavaScript,117,NA,
 urbanaccess,CLI,Python package,network analysis,AGPLv3,Python,105,12,6,NA,(Blanchard 2017),https://github.com/UDST/urbanaccess
 dodgr,CLI,R package,routing engine,GPLv3,C++,84,2,NA,NA,NA,https://github.com/ATFutures/dodgr
 spaghetti,CLI,Python package,network analysis,BSD-3,Python,60,0,NA,NA,"(Gaboardi et al., 2018)",https://github.com/pysal/spaghetti
-optentripplanner,CLI,R package,interface,GPLv3,R,47,0,NA,NA,(Morgan et al. 2019),https://github.com/ropensci/opentripplanner
+opentripplanner,CLI,R package,interface,GPLv3,R,47,0,NA,NA,(Morgan et al. 2019),https://github.com/ropensci/opentripplanner
 urbanpy,CLI,Python package,network analysis,MIT,Python,16,NA,NA,2020,NA,https://github.com/EL-BID/urbanpy
 abstreet,GUI,Standalone,abm,Apache-2.0,Rust,4896,NA,NA,NA,NA,https://github.com/dabreegster/abstreet
 AequilibraE,GUI,QGIS plugin,network analysis,Custom,Python,57,3,5,NA,(Carmargo 2015),https://github.com/AequilibraE/AequilibraE-GUI
@@ -25,6 +25,7 @@ ORS Tools,GUI,QGIS plugin,interface,MIT,Python,39,NA,NA,NA,NA,https://github.com
 QNEAT3,GUI,QGIS plugin,network analysis,GPLv3,Python,35,NA,NA,NA,NA,https://github.com/root676/QNEAT3/
 Networks plugin,GUI,QGIS plugin,network analysis,GPLv3,Python,9,NA,NA,NA,NA,https://github.com/crocovert/networks
 sDNA,GUI,QGIS plugin,network analysis,GPLv3,C++,9,27,27,NA,(Cooper 2015),https://github.com/fiftysevendegreesofrad/sdna_open
+AwaP,GUI,QGIS plugin,network analysis,GPLv3,Python,3,2,NA,2019,(Majik and Pafka 2019),https://github.com/Awapic/AwaP
 Citybound,WUI,Standalone,abm,AGPLv3,Rust,6124,NA,NA,NA,NA,https://github.com/citybound/citybound
 StreetMix,WUI,Hosted service,design,BSD-3,JavaScript,440,6,10,NA,(Riggs et al. 2016),https://github.com/streetmix/streetmix
 flowmap.blue,WUI,Standalone,OD data analysis,MIT,TypeScript,90,NA,NA,NA,NA,https://github.com/FlowmapBlue/flowmap.blue

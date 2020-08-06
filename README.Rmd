@@ -654,7 +654,7 @@ open_tools_filtered %>%
   # kable(format = "latex", escape = F, booktabs = T, caption = "Open source tools for geographic analysis in transport planning, based on data from Google Scholar, GitHub and web searches and classified in by their primary user interface. CLI, GUI and WUI refer to command-line, graphical user and web user interfaces respectively.") %>%
   # pack_rows(group_label = "CLI", start_row = 1, end_row = 12) %>%
   # pack_rows(group_label = "GUI", start_row = 13, end_row = 17) %>%
-  # pack_rows(group_label = "WUI", start_row = 18, end_row = 23) %>%
+  # pack_rows(group_label = "WUI", start_row = 19, end_row = 24) %>%
   # kable_styling(bootstrap_options = c("hover", "condensed"), latex_options = c("scale_down"))
   knitr::kable(caption = "Open source tools for geographic analysis in transport planning, based on data from Google Scholar, GitHub and web searches and classified in by their primary user interface. CLI, GUI and WUI refer to command-line, graphical user and web user interfaces respectively.")
 ```
@@ -838,8 +838,10 @@ QGIS plugins for transport planning are explicitly focussed on geographic analys
 **AequilibraE**, **QNEAT3** and the **Networks** plugins provide various transport planning tools from the mature and popular QGIS GUI-based Geographic Information System (GIS). 
 **AequilibraE** provides a broad range of functions for processing transport networks and assigning traffic [@camargo_aequilibrae_2015], as detailed in the project's substantial [documentation website](http://aequilibrae.com/python).
 [**QNEAT3**](https://root676.github.io/) provides a narrower but well documented set of algorithms for transport planning applications, including shortest path, network buffers and OD matrix visualisation.
-The **Networks** plugin uses an interface to external software developed by the same author to enable multi-modal routing and GTFS data import. 
-With 68 ratings on the [QGIS Plugins web page](https://plugins.qgis.org/plugins/networks/) (averaging 4 out of 5) the plugin is clearly popular, although with limited documentation except for assorted .pdf files in the package's GitHub repo, it is hard to assess exactly what its capabilities are.
+The **Networks** plugin uses an interface to external software [**Mulsiw**](https://github.com/crocovert/Musliw) to enable multi-modal routing and GTFS data import. 
+<!-- With 68 ratings on the [QGIS Plugins web page](https://plugins.qgis.org/plugins/networks/) (averaging 4 out of 5) the plugin is clearly popular, although with limited documentation except for assorted .pdf files in the package's GitHub repo, it is hard to assess exactly what its capabilities are. -->
+The **AwaP** plugin uses data on urban 'blocks' (typically buildings) to calculate indicators relating to walkability.
+The tool can been used to compare the urban morphologies of different areas cities from a walkability perspective [@majic_awapic_2019].
 
 Finally, the sDNA QGIS plugin provides an interface to the C++ project sDNA, a tool for spatial network analysis that has been developed to support transport planning for walking and cycling [@cooper_sdna:_2015].
 A range of route network analysis functions are available, enabling the user to parameterise models to best represent travel behaviour at city scales base on the high performance routing between every vertex on the network.

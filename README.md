@@ -1,6 +1,6 @@
 Open source tools for geographic analysis in transport planning
 ================
-2020-08-05
+2020-08-06
 
 <!-- should be integrated in transport planning tools. -->
 
@@ -1828,6 +1828,52 @@ C++
 
 <td style="text-align:left;">
 
+[AwaP](https://github.com/Awapic/AwaP)
+
+</td>
+
+<td style="text-align:left;">
+
+QGIS plugin
+
+</td>
+
+<td style="text-align:left;">
+
+GPLv3
+
+</td>
+
+<td style="text-align:left;">
+
+Python
+
+</td>
+
+<td style="text-align:right;">
+
+3
+
+</td>
+
+<td style="text-align:right;">
+
+2
+
+</td>
+
+<td style="text-align:left;">
+
+(Majik and Pafka 2019)
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
 [Citybound](https://github.com/citybound/citybound)
 
 </td>
@@ -2314,13 +2360,14 @@ website](http://aequilibrae.com/python).
 [**QNEAT3**](https://root676.github.io/) provides a narrower but well
 documented set of algorithms for transport planning applications,
 including shortest path, network buffers and OD matrix visualisation.
-The **Networks** plugin uses an interface to external software developed
-by the same author to enable multi-modal routing and GTFS data import.
-With 68 ratings on the [QGIS Plugins web
-page](https://plugins.qgis.org/plugins/networks/) (averaging 4 out of 5)
-the plugin is clearly popular, although with limited documentation
-except for assorted .pdf files in the package’s GitHub repo, it is hard
-to assess exactly what its capabilities are.
+The **Networks** plugin uses an interface to external software
+[**Mulsiw**](https://github.com/crocovert/Musliw) to enable multi-modal
+routing and GTFS data import.
+<!-- With 68 ratings on the [QGIS Plugins web page](https://plugins.qgis.org/plugins/networks/) (averaging 4 out of 5) the plugin is clearly popular, although with limited documentation except for assorted .pdf files in the package's GitHub repo, it is hard to assess exactly what its capabilities are. -->
+The **AwaP** plugin uses data on urban ‘blocks’ (typically buildings) to
+calculate indicators relating to walkability. The tool can been used to
+compare the urban morphologies of different areas cities from a
+walkability perspective (Majic and Pafka 2019a).
 
 Finally, the sDNA QGIS plugin provides an interface to the C++ project
 sDNA, a tool for spatial network analysis that has been developed to
@@ -2567,7 +2614,7 @@ modelling framework MATSim also benefits from being used alongside QGIS,
 for road network editing and visualisation (Horni, Nagel, and Axhausen
 2016b). QGIS plugins and extensions specifically designed for transport
 planning applications include the AwaP-IC walkability analysis plugin
-(Majic and Pafka 2019), extensions to QGIS’s Processing model
+(Majic and Pafka 2019b), extensions to QGIS’s Processing model
 development framework for assessing road network completeness (Sehra,
 Singh, and Rai 2017) and the ORS (OpenRouteService) plugin, for
 multi-modal routing.
@@ -3241,10 +3288,17 @@ International Conference on Advances in Geographic Information Systems*,
 
 </div>
 
+<div id="ref-majic_awapic_2019">
+
+Majic, Ivan, and Elek Pafka. 2019a. “AwaP-ICAn Open-Source GIS Tool for
+Measuring Walkable Access.” *Urban Science* 3 (2): 48.
+
+</div>
+
 <div id="ref-majic_awap-icopen-source_2019">
 
-Majic, Ivan, and Elek Pafka. 2019. “AwaP-IC—an Open-Source GIS Tool for
-Measuring Walkable Access.” *Urban Science* 3 (2): 48.
+———. 2019b. “AwaP-IC—an Open-Source GIS Tool for Measuring Walkable
+Access.” *Urban Science* 3 (2): 48.
 
 </div>
 
