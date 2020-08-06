@@ -16,50 +16,60 @@ Open source tools for geographic analysis in transport planning
 
 <!-- Transport is inherently geographic, involving the movement of people and goods between places along spatial networks. -->
 
+<!-- Decarbonising transport systems is vital for the future. -->
+
+<!-- Yet geographic analysis is often treated as an optional 'add-on'  transport data analysis and modelling. -->
+
+<!-- This dichotomy, between 'geographic' and 'non-geographic' analysis in transport planning is undesirable because it: -->
+
+<!-- (1) reduces researcher effectiveness due to the time-consuming process of 'context switching'; -->
+
+<!-- (2) prevents reproducibility, requiring installation and management of geographic and non-geographic tools; and  -->
+
+<!-- (3) hides vital geographic components in transport plans, with adverse consequences for interventions that can benefit from being placed where they are most needed. -->
+
+<!-- --- from policies encouraging car sharing to investment in geographically specific sustainable transport infrastructure networks --- -->
+
+<!-- in terms of the economic, social and environmental benefits of different scenarios. -->
+
+<!-- The continued dominance of closed software in the field -->
+
+<!-- --- at a time of innovation in computer hardware and software and uptake of open source software in fields such as data science --- -->
+
+<!-- also has negative consequences in terms of reproducibility, transparency, scalability of solutions and public participation in the wider transport planning process. -->
+
+<!-- or difficult to integrate into the wider planning process or both. -->
+
+<!-- , with a focus on geographic data analysis, routing and route network analysis. -->
+
 Geographic methods have long supported transport planners to develop
 effective and evidence-based interventions that are appropriate to local
-contexts.
-<!-- Decarbonising transport systems is vital for the future. -->
-<!-- Yet geographic analysis is often treated as an optional 'add-on'  transport data analysis and modelling. -->
-<!-- This dichotomy, between 'geographic' and 'non-geographic' analysis in transport planning is undesirable because it: -->
-<!-- (1) reduces researcher effectiveness due to the time-consuming process of 'context switching'; -->
-<!-- (2) prevents reproducibility, requiring installation and management of geographic and non-geographic tools; and  -->
-<!-- (3) hides vital geographic components in transport plans, with adverse consequences for interventions that can benefit from being placed where they are most needed. -->
-Many popular ‘tools of the trade’ for geographic analysis used in
-practice are proprietary, reducing access to the benefits of methods
-such as spatial interaction <!-- transport demand --> modelling, routing
-and route network analysis. <!-- to estimate the impacts of change, -->
-<!-- --- from policies encouraging car sharing to investment in geographically specific sustainable transport infrastructure networks --- -->
-<!-- in terms of the economic, social and environmental benefits of different scenarios. -->
-<!-- The continued dominance of closed software in the field -->
-<!-- --- at a time of innovation in computer hardware and software and uptake of open source software in fields such as data science --- -->
-<!-- also has negative consequences in terms of reproducibility, transparency, scalability of solutions and public participation in the wider transport planning process. -->
-<!-- or difficult to integrate into the wider planning process or both. -->
-In this context, the aim of this paper is to explore emerging open
-source
-<!-- , with a focus on geographic data analysis, routing and route network analysis. -->
-tools for geographic analysis in transport planning, with reference to
-the literature. A key finding is that a growing number of open source
-options exist. These can be classified as command-line interface (CLI),
-graphical user interface (GUI) or web-based tools, instances of which
-can be accessed remotely or set-up locally. Open source tools for
-transport planning come in many forms, ranging from single functions
-dedicated to a particular task to large software projects and enabling
-geographic analysis at every stage of the transport planning process,
-from data collection and demand modelling to visualisation of results on
-publicly available and interactive web-based maps. Although options are
-abundant, many lack documentation explaining how they can be used ‘in
-production’ and few case studies exist showing how they can support
-established transport planning workflows. Thus, while open source tools
-for geographic analysis in transport planning *as they exist today* hold
-great promise, their *future potential* is even greater. There are many
-ways for developers, researchers, practitioners and the interested
-public to participate and ‘fill gaps’ in the emerging landscape,
-particularly in relation to: integration and cross-compatibility of
-diverse tools; accessible tutorials; and real world case studies
-published in the academic literature. The paper concludes that time
-invested in developing open source tools and associated ‘communities of
-practice’ is time well-spent.
+contexts. Many popular ‘tools of the trade’ for geographic analysis used
+in practice are proprietary, reducing access to the benefits of methods
+such as spatial interaction modelling, routing and route network
+analysis. In this context, the aim of this paper is to explore emerging
+open source tools for geographic analysis in transport planning, with
+reference to the literature. A key finding is that a growing number of
+open source options exist. These can be classified as command-line
+interface (CLI), graphical user interface (GUI) or web-based tools,
+instances of which can be accessed remotely or set-up locally. Open
+source tools for transport planning come in many forms, ranging from
+single functions dedicated to a particular task to large software
+projects and enabling geographic analysis at every stage of the
+transport planning process, from data collection and demand modelling to
+visualisation of results on publicly available and interactive web-based
+maps. Although options are abundant, many lack documentation explaining
+how they can be used ‘in production’ and few case studies exist showing
+how they can support established transport planning workflows. Thus,
+while open source tools for geographic analysis in transport planning
+*as they exist today* hold great promise, their *future potential* is
+even greater. There are many ways for developers, researchers,
+practitioners and the interested public to participate and ‘fill gaps’
+in the emerging landscape, particularly in relation to: integration and
+cross-compatibility of diverse tools; accessible tutorials; and real
+world case studies published in the academic literature. The paper
+concludes that time invested in developing open source tools and
+associated ‘communities of practice’ is time well-spent.
 <!-- such as MATsim and SUMO (which have limited geographic analysis capabilities), in addition to more general programs such as QGIS, as well as open source languages such as R and Python which are used as the foundation of a growing number of 'packages' for transport planning. -->
 <!-- Due to the size and rapidly evolving state of the software landscape for transport planning, the paper cannot be complete in its coverage. -->
 <!-- However, the focus on a specific aspect of transport planning --- geographic analysis --- highlights themes, such as ease-of-use and community support, that may be relevant to other branches of the planning process. -->
@@ -94,16 +104,15 @@ policies and the design and placement of physical infrastructure
 including ways — highways, railways, cycleways and footways — for the
 greatest economic, social and environmental benefit (O’Flaherty and Bell
 1997; Parkin 2018). Planning also involves thinking about the future,
-envisioning scenarios of change and making the
-<!-- economic and political --> case for change (Timms, Tight, and
-Watling 2014). Successful transport plans are therefore a combination of
-geographically specific recommendations (e.g. “build this way here”) and
-long-term strategies guided by citywide, regional and national visions
-(e.g. “imagine the benefits of making the city free from private cars by
-2030”). The rewards can be great: transport planners who have designed —
-and helped to implement — plans appropriate to the needs of an area
-leave a legacy that will benefit people and the environment for
-generations to come.\[1\]
+envisioning scenarios of change and making the case for change (Timms,
+Tight, and Watling 2014). Successful transport plans are therefore a
+combination of geographically specific recommendations (e.g. “build this
+way here”) and long-term strategies guided by citywide, regional and
+national visions (e.g. “imagine the benefits of making the city free
+from private cars by 2030”). The rewards can be great: transport
+planners who have designed — and helped to implement — plans appropriate
+to the needs of an area leave a legacy that will benefit people and the
+environment for generations to come.\[1\]
 
 Transport planning can be considered as “more of an art than a
 technique”, although *good* transport plans also rely on robust
@@ -2455,19 +2464,22 @@ different places.
 # Software ecosystems
 
 Many of the tools presented in the previous section fit into one or more
-software ‘ecosystems’, by which we mean communities of software
-developers linked by an overarching organisation, technology or
-language. Software is not developed in isolation but in a social context
-(Dhir and Dhir 2017), three of these ecosystems from which several open
-source tools for geographic analysis in transport planning have — R,
-Python and QGIS — are described below.
-
-Other open source ecosystems include those surrounding the languages
-JavaScript, Julia and Rust, and the GUI-based Java traffic management
-system [IRIS](http://iris.dot.state.mn.us/). R, Python and QGIS
-ecosystems were selected due to their maturity, wide uptake in industry
-and academia and, above all, for their mature support for geographic
-analysis.
+software ‘ecosystems’, communities of software developers linked by an
+overarching organisation, technology or language. Software is not
+developed in isolation but in a social context (Dhir and Dhir 2017).
+While some of the most popular tools shown in Table
+<a href="#open-tools"><strong>??</strong></a> arose from new contexts
+(Rust is not generally seen as a language for data analysis, alone
+transport planning for example), such ecosystems can be important for
+longevity of projects, support and getting new people involved in the
+software development process. Three software ecosystems — R, Python and
+QGIS — account for over half of the projects presented in Table
+<a href="#open-tools"><strong>??</strong></a>. Other open source
+ecosystems include those surrounding the languages JavaScript, Julia and
+Rust, and the GUI-based Java traffic management system
+[IRIS](http://iris.dot.state.mn.us/). These were selected due to their
+maturity, relatively low barrier to entry wide uptake in industry and
+academia and, above all, for their support for geographic data analysis.
 <!-- They have also seen impressive growth in popularity over the past decade, suggesting they are future proof. -->
 
 ## R
@@ -2625,11 +2637,11 @@ choice for analysing street networks using the [Road Graph
 plugin](https://docs.qgis.org/2.14/en/docs/user_manual/plugins/plugins_road_graph.html),
 which ships with QGIS by default. Dong et al. (2016), to provide another
 example, used QGIS as the basis of geographic analysis of route network
-efficiency. Hundreds of other transport planning projects have used QGIS
-for the mapping and geographic analysis component of the work and, due
-to the application’s user friendly GUI, it is rapidly gaining in
-popularity among government transport planning departments, including
-Transport for Wales and Transport for Greater Manchester.
+efficiency. Many other transport planning projects have used QGIS for
+the mapping and geographic analysis component of the work and, due to
+the application’s user friendly GUI, it is gaining in popularity among
+government transport planning departments, including Transport for Wales
+and Transport for Greater Manchester.
 
 # Discussion and conclusion
 
@@ -2653,32 +2665,49 @@ visualisation and adaptability. The new planning priorities also present
 opportunities, in terms of institutional processes (Beddoe et al. 2009),
 but also new technologies that are explicitly designed to enable more
 participatory, transparent and community-driven transport planning
-processes. A shift to open source planning tools in general, and open
-source tools for local planning in particular, can help help tackle
-wider problems, including the ‘crisis of participatory planning’ (Legacy
-2016), feelings of dis-empowerment due to lack of opportunities to
-engage in democratic processes — which some have blamed for the election
-of populist leaders and the UK Brexit vote (Monbiot 2017) — and low
-levels of data and software literacy (Christozov and Rasheva-Yordanova
-2017). A key feature of geographically localised transport plans is that
-they encourage participation by local residents, who have access to
-information about their local area that goes beyond the datasets beyond
-the reach of remote planners. And a key feature of open software is that
-anyone can use it, encouraging citizen engagement.
+processes. Game-like approaches to city/street analysis tools such as
+**A/B Street**, **CityBound** and the intuitive and popular
+**StreetMix** web service demonstrate the huge potential for tools to
+revolutionise not only *how* transport plans are developed by *who* can
+be involved in the planning process. This raises the question: what
+would a tool for geographic analysis in transport planning that was as
+powerful and flexible as **CityBound**, as ‘playable’ and ‘analysis
+ready’ as **A/B Street** and as user friendly as **StreetMix** look
+like? Each of the projects outlined in this paper show that open source
+solutions to transport planning needs are advanced, and in a growing
+number of areas more advanced, than propriety software raising a more
+fundamental question: what would a completely open source, participatory
+and reproducible landscape for transport planning look like?
 
-Partly in response to these pressures and challenges, a number of open
-source transport planning tools have emerged, notably MATSim, SUMO and
-sDNA, as outlined in Section 4. Following the Unix philosophy of
-modularity (Gancarz 2003), each of these tools has a particular niche.
-However, despite a long history of geographic thinking in transport
-planning and calls to strengthen the links between GIS and transport
-software (Loidl et al. 2016) but none of the open source solutions
-reviewed provide ‘in house’ GIS capabilities of the type needed for an
-integrated transport planning workflow in which a single piece of
-software can be used to import a range data, undertake statistical
-analysis and modelling and plot the results in interactive maps,
-e.g. for the design and modelling of new walking and cycling networks.
+Answers to these broader questions are beyond the scope of this paper,
+but the tools and ecosystems outlined in previous sections provide, that
+have emerged recently, provide an indication of what is possible over
+the coming decades. Insights from open tools that are already widely
+used suggest that the continued uptake of open tools will have
+substantial benefits, ranging from the increased opportunities for
+participation that tools such as the **PCT** and **StreetMix** enable to
+the possibilities for extending tools in multiple directions, as shown
+by the various plug-ins that have been developed for tools such as
+**QGIS** and **MATSim**.
 
+Based on these observations I conclude that a shift to open source
+planning tools in general, and open source tools for local planning in
+particular, can help help tackle wider problems, including the ‘crisis
+of participatory planning’ (Legacy 2016), feelings of dis-empowerment
+due to lack of opportunities to engage in democratic processes — which
+some have blamed for the election of populist leaders and the UK Brexit
+vote (Monbiot 2017) — and low levels of data and software literacy
+(Christozov and Rasheva-Yordanova 2017). A key feature of geographic
+tools for transport planning is that they encourage users to focus on
+local areas, moving beyond ‘one size fits all’, enabling diverse designs
+to fit a wide range of diverse local needs. A key feature of open tools,
+and especially open online tools that are easy to use, is that anyone
+can use them, encouraging citizen engagement.
+
+Following the Unix philosophy of modularity (Gancarz 2003), each of the
+tools outlined in Section <a href="#open-source-tools">4</a> has a
+particular niche.
+<!-- Geographic thinking has a long history in transport planning and calls to strengthen the links between GIS and transport software have  [@loidl_gis_2016] but none of the open source solutions reviewed provide 'in house' GIS capabilities of the type needed for an integrated transport planning workflow in which a single piece of software can be used to import a range data, undertake statistical analysis and modelling and plot the results in interactive maps, e.g. for the design and modelling of new walking and cycling networks. -->
 With a view to the future of transport planning software, three
 established ‘software ecosystems’, each of which has a substantial
 following and large community of developers building extensions, were
@@ -2698,32 +2727,32 @@ foundation; for applications in which general purpose languages and
 interoperability with other frameworks, and integration with other
 software frameworks, Python may be the most appropriate option; and when
 a user friendly interface and rapid map making without need for
-programming skills are required, QGIS may be suitable. There is a huge
-amount of overlap between the three ecosystems and, in practice, the
-prior experience and preferences of transport planners may be more
-important than functionality.
+programming skills are required, QGIS may be suitable. For more bespoke
+needs a diverse range of solutions can be found in the open source
+world, many of which are yet to be developed.
+<!-- There is a huge amount of overlap between the three ecosystems and, in practice, the prior experience and preferences of transport planners may be more important than functionality. -->
 
 As the FOSS philosophy described in Section
-<a href="#open-source-tools-for-transport-planning"><strong>??</strong></a>
-emphasises, open source software by its very nature is collaborative,
-innovative and evolving (Gancarz 2003), allowing it to out-compete and
-eventually dominate in sectors from machine learning to web development.
-The review of capabilities in open source software communities clearly
-shows that high-performance and innovative solutions are already
-available in the ‘ecological niche’ of geographic analysis for transport
-planning. Given the nascent nature of many of the transport-oriented
-packages, plugins and extensions in each ecosystem, fruitful directions
-of research would explore the relative merits of different options, and
-combinations of options, in terms of computer and programmer efficiency.
-Furthermore, the modular and ‘pluginable’ nature of open source software
-suggests there are great opportunities for integration: could there be R
-and Python interfaces to MATSim, SUMO and sDNA? And from a research
-perspective, how can the growth of open source solutions for geographic
-transport data analysis be monitored to identify ‘tipping points’ in
-practitioners’ uptake of open source solutions?
+<a href="#open-source-tools">4</a> emphasizes, open source software by
+its very nature is collaborative, innovative and evolving (Gancarz
+2003), allowing it to out-compete and eventually dominate in sectors
+from machine learning to web development. The review of capabilities in
+open source software communities clearly shows that high-performance and
+innovative solutions are already available in the ‘ecological niche’ of
+geographic analysis for transport planning. Given the nascent nature of
+many of the transport-oriented packages, plugins and extensions in each
+ecosystem, fruitful directions of research would explore the relative
+merits of different options, and combinations of options, in terms of
+computer and programmer efficiency. Furthermore, the modular and
+‘pluginable’ nature of open source software suggests there are great
+opportunities for integration: could there be R and Python interfaces to
+MATSim, SUMO and sDNA? And from a research perspective, how can the
+growth of open source solutions for geographic transport data analysis
+be monitored to identify ‘tipping points’ in practitioners’ uptake of
+open source solutions?
 
-These considerations wider questions, about if and when will open source
-software rise to ascendancy in the wider field of transport planning.
+<!-- These considerations wider questions, about if and when will open source software rise to ascendancy in the wider field of transport planning. -->
+
 Returning to the most urgent policy driver of climate change mitigation,
 it is clear than a step change is needed in transport interventions. If
 these interventions are made on the basis of analysis undertaken in open
