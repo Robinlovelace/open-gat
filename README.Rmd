@@ -14,6 +14,8 @@ output:
   # bookdown::github_document2: default
   bookdown::pdf_document2:
     latex_engine: xelatex
+header-includes:
+   - \usepackage{amsfonts}
   # word_document: default
 bibliography:
   - references.bib
@@ -89,16 +91,16 @@ online = curl::has_internet()
 <!-- , with a focus on geographic data analysis, routing and route network analysis. -->
 Geographic methods have long supported transport planners to develop effective and evidence-based interventions that are appropriate to local contexts.
 Many popular 'tools of the trade' for geographic analysis used in practice are proprietary, reducing access to the benefits of methods such as spatial interaction
-modelling, routing and route network analysis.
+modeling, routing and route network analysis.
 In this context, the aim of this paper is to explore emerging open source
 tools for geographic analysis in transport planning, with reference to the literature.
 A key finding is that a growing number of open source options exist.
 These can be classified as command-line interface (CLI), graphical user interface (GUI) or web-based tools, instances of which can be accessed remotely or set-up locally.
-Open source tools for transport planning come in many forms, ranging from single functions dedicated to a particular task to large software projects and enabling geographic analysis at every stage of the transport planning process, from data collection and demand modelling to visualisation of results on publicly available and interactive web-based maps.
+Open source tools for transport planning come in many forms, ranging from single functions dedicated to a particular task to large software projects and enabling geographic analysis at every stage of the transport planning process, from data collection and demand modeling to visualization of results on publicly available and interactive web-based maps.
 Although options are abundant, many lack documentation explaining how they can be used 'in production' and few case studies exist showing how they can support established transport planning workflows.
 Thus, while open source tools for geographic analysis in transport planning *as they exist today* hold great promise, their *future potential* is even greater.
 There are many ways for developers, researchers, practitioners and the interested public to participate and 'fill gaps' in the emerging landscape, particularly in relation to: integration and cross-compatibility of diverse tools; accessible tutorials; and real world case studies published in the academic literature.
-The paper concludes that time invested in developing open source tools and associated 'communities of practice' is time well-spent.
+The paper concludes that time invested in developing open source tools and associated communities of practice is time well-spent.
 <!-- such as MATsim and SUMO (which have limited geographic analysis capabilities), in addition to more general programs such as QGIS, as well as open source languages such as R and Python which are used as the foundation of a growing number of 'packages' for transport planning. -->
 <!-- Due to the size and rapidly evolving state of the software landscape for transport planning, the paper cannot be complete in its coverage. -->
 <!-- However, the focus on a specific aspect of transport planning --- geographic analysis --- highlights themes, such as ease-of-use and community support, that may be relevant to other branches of the planning process. -->
@@ -119,7 +121,7 @@ The paper concludes that time invested in developing open source tools and assoc
 <!-- And are there any other open source software projects I should include, within or in addition to the overview of the three ecosystems selected? -->
 
 
-# Introduction: geographic analysis in transport planning
+# Introduction: geographic analysis in transport planning {#intro}
 
 <!-- : the importance of geographic analysis in transport planning -->
 <!-- Should that heading omit the "Introduction:" part? -->
@@ -650,7 +652,7 @@ open_tools_filtered %>%
   select(Tool, Type, Licence, Language, Stars, Citations, Reference) %>% 
   kable(format = "latex", escape = F, booktabs = T, caption = "Open source tools for geographic analysis in transport planning, based on data from Google Scholar, GitHub and web searches and classified in by their primary user interface. CLI, GUI and WUI refer to command-line, graphical user and web user interfaces respectively.") %>%
   pack_rows(group_label = "CLI", start_row = 1, end_row = 12) %>%
-  pack_rows(group_label = "GUI", start_row = 13, end_row = 17) %>%
+  pack_rows(group_label = "GUI", start_row = 13, end_row = 18) %>%
   pack_rows(group_label = "WUI", start_row = 19, end_row = 24) %>%
   kable_styling(bootstrap_options = c("hover", "condensed"), latex_options = c("scale_down"))
   # knitr::kable(caption = "Open source tools for geographic analysis in transport planning, based on data from Google Scholar, GitHub and web searches and classified in by their primary user interface. CLI, GUI and WUI refer to command-line, graphical user and web user interfaces respectively.")
@@ -763,20 +765,6 @@ due to time constraints no systematic installation tests or benchmarks were unde
 
 <!-- Each open source ecosystem, and it's potential to be used for geographic analysis in transport planning, is outlined below. -->
 
-
-```{r, message=FALSE}
-# open_tools = readr::read_csv("open-tools-for-transport.csv") 
-# # open_tools$`Search terms`
-# open_tools_min = open_tools %>% 
-#   select(-matches("website")) %>% 
-#   mutate_all(~case_when(is.na(.) ~ "", TRUE ~ as.character(.) ))
-# 
-# 
-#   # select(-matches("data|routing|vis|website"))
-# open_tools_min %>% knitr::kable("latex", booktabs = T) %>%
-#   kableExtra::kable_styling(latex_options = c("striped", "scale_down"))
-```
-
 ## Command-line interface (CLI) tools
 
 Tools based on a *command line interface* (CLI) are designed to be controlled primarily by typing commands.
@@ -829,7 +817,7 @@ This came as a surprise: given the dominance of GUIs in many areas of computing 
 
 A/B Street does not market itself as a transport planning tool but instead as a game and educational tool.
 However, that does not mean that it lacks capabilities.
-A/B Street combines the real-time capabilities of MATSim with the usability of online tools such as StreetMix, discussed in the next section, taking a 'SimCity' approach to transport planning, while still allowing the user to zoom in to single vehicles (while they are in motion via a moving camera!) and change the geometries of street layouts with an intuitive in-built editor.
+A/B Street combines the real-time capabilities of MATSim with the usability of online tools such as Streetmix, discussed in the next section, taking a 'SimCity' approach to transport planning, while still allowing the user to zoom in to single vehicles (while they are in motion via a moving camera!) and change the geometries of street layouts with an intuitive in-built editor.
 
 QGIS plugins for transport planning are explicitly focussed on geographic analysis for transport planning.
 **AequilibraE**, **QNEAT3** and the **Networks** plugins provide various transport planning tools from the mature and popular QGIS GUI-based Geographic Information System (GIS). 
@@ -872,109 +860,156 @@ The Propensity to Cycle Tool (PCT) is an interactive map-based web tool designed
 The emphasis is on where to build to maximise cycling uptake.
 By exploring scenarios of change including Go Dutch --- in which cycling levels are simulated to grow to Dutch levels nationwide --- planners, active travel advocates and other stakeholders build business cases for investment along desire lines with high cycling potential and better understand health and environmental benefits of interventions in different places.
 
-# Software ecosystems
+## Geographic capabilities
 
-Many of the tools presented in the previous section fit into one or more software 'ecosystems', communities of software developers linked by an overarching organisation, technology or language.
-Software is not developed in isolation but in a social context [@dhir_adoption_2017].
-While some of the most popular tools shown in table \@ref(tab:open-tools) arose from new contexts (Rust is not generally seen as a language for data analysis, alone transport planning for example), such ecosystems can be important for longevity of projects, support and getting new people involved in the software development process.
-Three software ecosystems --- R, Python and QGIS --- account for over half of the projects presented in table \@ref(tab:open-tools).
-Other open source ecosystems include those surrounding the languages JavaScript, Julia and Rust, and the GUI-based Java traffic management system [IRIS](http://iris.dot.state.mn.us/).
-These were selected due to their maturity, relatively low barrier to entry wide uptake in industry and academia and, above all, for their support for geographic data analysis.
+The brief descriptions of CLI, GUI and WUI-based tools for transport planning above show diversity of approaches to geographic data, ranging from 1D editing in **Streetmix** to full geographic data editing and analysis functionality available to users of QGIS-based tools.
+With reference to the transport planning process shown in Figure \@ref(fig:schematic), the geographic capabilities of the tools is shown in Table \@ref(tab:capabilities).
+The columns in \@ref(tab:capabilities) broadly match the main stages of transport planning as follows:
+
+<!-- {:start="2"} -->
+
+2) data collection: supported by download (Dld) functionality 
+3) modelling/analysis: supported by routing (Rou) and geographic analysis (Geo)
+4) evaluation: supported by modelling and data analysis (Mod) capabilities
+5) implementation of solutions: supported by visualisation (Vis)
+
+Additional important considerations include the geographic resolution, support for time series analysis (over seconds to years), the scale at which the tools are documented to run at and the level of expertise needed to install, set-up and use the tool.
+Many tools provide functionality through documented interfaces to other packages.
+R and Python packages have access to advanced statistical analyisis and modelling capabilities in their native environment and QGIS plugins place the user in a mature environment for geographic analyis and visualisation, for example.
+
+Another key finding from Table \@ref(tab:capabilities) is that there is no single tool that every desirable feature of tools for geographic analysis in transport planning.
+There is generally a trade-off between the complexity of the tool and ease-of-use, with **MATSim** and **SUMO** being sophisticated yet hard to use and **Streetmix** providing an intuitive interface yet limited geographic capabilities, for example.
+There are exceptions: **A/B Street** provides a user friendly interface and even a 'demo' mode inspired by computer game design yet also has sophisticated functionality, although due to the nascent nature of the project and focus on education/fun rather than real-world transport planning these capabilities have yet to be documented in applied settings.
+
+```{r capabilities, message=FALSE}
+open_tools = readr::read_csv("open_tools.csv")
+# table(open_tools$emphasis)
+# edit the data:
+# remotes::install_github("DillonHammill/DataEditR")
+# open_tools_new = DataEditR::data_edit(open_tools)
+# readr::write_csv(open_tools_new, "open_tools.csv")
+names(open_tools) = tools::toTitleCase(names(open_tools))  
+open_tools_filtered = open_tools %>% 
+  filter(Emphasis != "interface") %>% 
+  filter(Emphasis != "routing engine") %>% 
+  filter(Type != "Routing engine")
+open_tools_filtered$Vis[open_tools_filtered$Vis == "✓"] = "y"
+open_tools_filtered$Dld[open_tools_filtered$Vis == "✓"] = "y"
+open_tools_filtered %>% 
+  select(Tool, Type, Dld, Rou, Geo, Mod, Vis, Resolution, Time, Scale, Expertise) %>% 
+  mutate_if(is.character, str_replace_all, pattern = "✓", replacement = "y") %>% 
+  mutate_if(is.character, replace_na, replace = "") %>% 
+  kable(format = "latex", escape = F, booktabs = T, caption = "Geographic capabilities and features of open source tools for transport planning. Dld, Rou, Geo, Mod and Vis refer to Downloading, Routing, Geographic analysis, Modelling and Visualisation capabilities, respectively. Cell values y, i, and e mean Yes (with in-house capabilities), yes via Interfaces to other packages/software and Editing capabilities. a, od, p, s and t refer to Agent, Origin-destination, Point (transect), Street (segment) and Trajectory as the main level of geographic resolution of data used by each tool, respectively. Values in the Time column report whether the tool has inbuilt support and documentation for incremental time simulations. Scale refers to the most common scale of analysis that the tool is documented to work at, with values p, c, n and  g referring to Point, City, National and Global scales respectively. Expertise refers to the level of expertise needed to install, set-up and run the tool, ranging from 1 (easy) via 2 (intermediate) to 3 (expertise required).") %>%
+  pack_rows(group_label = "CLI", start_row = 1, end_row = 12) %>%
+  pack_rows(group_label = "GUI", start_row = 13, end_row = 18) %>%
+  pack_rows(group_label = "WUI", start_row = 19, end_row = 24) %>%
+  kable_styling(latex_options = c("scale_down"))
+```
+
+
+<!-- # Software ecosystems -->
+
+<!-- Many of the tools presented in the previous section fit into one or more software 'ecosystems', communities of software developers linked by an overarching organisation, technology or language. -->
+<!-- Software is not developed in isolation but in a social context [@dhir_adoption_2017]. -->
+<!-- While some of the most popular tools shown in table \@ref(tab:open-tools) arose from new contexts (Rust is not generally seen as a language for data analysis, alone transport planning for example), such ecosystems can be important for longevity of projects, support and getting new people involved in the software development process. -->
+<!-- Three software ecosystems --- R, Python and QGIS --- account for over half of the projects presented in table \@ref(tab:open-tools). -->
+<!-- Other open source ecosystems include those surrounding the languages JavaScript, Julia and Rust, and the GUI-based Java traffic management system [IRIS](http://iris.dot.state.mn.us/). -->
+<!-- These were selected due to their maturity, relatively low barrier to entry wide uptake in industry and academia and, above all, for their support for geographic data analysis. -->
 <!-- They have also seen impressive growth in popularity over the past decade, suggesting they are future proof. -->
 
-## R
+<!-- ## R -->
 
-R is a "a language and environment for statistical computing and graphics" [@rcoreteam_language_2019].
-First announced and released as a binary program in 1993 by University of Aukland statisticians Robert Gentleman and Ross Ihaka, the project was only open sourced and released under the conditions of the GNU General Public License (GPL) in 1995, thanks to input from one of R's first international collaborators, Martin Mächler of ETH Zurich
-[@ihaka_future_1998].
-This history highlight's how open source software development is an inherently collaborative process, usually involving people from many different countries and backgrounds.
+<!-- R is a "a language and environment for statistical computing and graphics" [@rcoreteam_language_2019]. -->
+<!-- First announced and released as a binary program in 1993 by University of Aukland statisticians Robert Gentleman and Ross Ihaka, the project was only open sourced and released under the conditions of the GNU General Public License (GPL) in 1995, thanks to input from one of R's first international collaborators, Martin Mächler of ETH Zurich -->
+<!-- [@ihaka_future_1998]. -->
+<!-- This history highlight's how open source software development is an inherently collaborative process, usually involving people from many different countries and backgrounds. -->
 
-R has several strengths from the perspective of transport planning and has an active community of developers working between academia and industry.
-Strengths include support for with temporal and geographic data, outstanding visualisation capabilities, and support for a very wide range of statistical techniques, many of which are useful in transport problems [@lovelace_stplanr_2018].
-R is a statistical statistical programming language, meaning the base R installation can solve a wide range of problems, including generalised linear models (GLMs, implemented with the function `glm`) and constrained optimisation problems that appear frequently in transport research.
-Additional capabilities are supported by 10,000+ packages that can be installed from a central repository with commands such as `install.packages("stplanr")`.^[
-Like Python packages, R packages are analogous to Apps on smartphones and plugins in QGIS (described below), that provide new functionality.
-Many implement recently developed statistical and computational techniques (some of which are accompanied by papers describing new methods in academic journals such as the *Journal for Statistical Software*) or provide interfaces to software written in other languages, meaning that R can provide transport researchers with access to many cutting-edge methods via a single system.
-]
+<!-- R has several strengths from the perspective of transport planning and has an active community of developers working between academia and industry. -->
+<!-- Strengths include support for with temporal and geographic data, outstanding visualisation capabilities, and support for a very wide range of statistical techniques, many of which are useful in transport problems [@lovelace_stplanr_2018]. -->
+<!-- R is a statistical statistical programming language, meaning the base R installation can solve a wide range of problems, including generalised linear models (GLMs, implemented with the function `glm`) and constrained optimisation problems that appear frequently in transport research. -->
+<!-- Additional capabilities are supported by 10,000+ packages that can be installed from a central repository with commands such as `install.packages("stplanr")`.^[ -->
+<!-- Like Python packages, R packages are analogous to Apps on smartphones and plugins in QGIS (described below), that provide new functionality. -->
+<!-- Many implement recently developed statistical and computational techniques (some of which are accompanied by papers describing new methods in academic journals such as the *Journal for Statistical Software*) or provide interfaces to software written in other languages, meaning that R can provide transport researchers with access to many cutting-edge methods via a single system. -->
+<!-- ] -->
 
-A good example of a transport problem that R's statistical capabilities are well suited to solving is mode choice.
-Unimodal models estimating mode share (or the logit thereof) can use R's inbuilt statistical capabilities, as demonstrated in the Propensity to Cycle Tool project [@lovelace_propensity_2017].
-More sophisticated multinomial models are needed when estimating mode share across multiple travel options such as walk, cycle, bus [@martin_individual_2019].
-R has mature support for such models via the `multinom` function in the long-standing package `nnet` [@venables_modern_2002], as demonstrated by [Germán Rodríguez](https://data.princeton.edu/wws509/r/c6s2).
-Subsequent packages provide additional methods for estimating mode split [@hasan_fast_2016; @croissant_mlogit_2019].
-Appollo and mlr3 are recently developed examples of R packages providing support for sophisticated choice models and cutting edge machine learning functionality, respectively.
+<!-- A good example of a transport problem that R's statistical capabilities are well suited to solving is mode choice. -->
+<!-- Unimodal models estimating mode share (or the logit thereof) can use R's inbuilt statistical capabilities, as demonstrated in the Propensity to Cycle Tool project [@lovelace_propensity_2017]. -->
+<!-- More sophisticated multinomial models are needed when estimating mode share across multiple travel options such as walk, cycle, bus [@martin_individual_2019]. -->
+<!-- R has mature support for such models via the `multinom` function in the long-standing package `nnet` [@venables_modern_2002], as demonstrated by [Germán Rodríguez](https://data.princeton.edu/wws509/r/c6s2). -->
+<!-- Subsequent packages provide additional methods for estimating mode split [@hasan_fast_2016; @croissant_mlogit_2019]. -->
+<!-- Appollo and mlr3 are recently developed examples of R packages providing support for sophisticated choice models and cutting edge machine learning functionality, respectively. -->
 
 <!-- [@hess_apollo_2019;@bischl_mlr_2016]. -->
 
-R is well known for having outstanding statistical analysis and modelling capabilities, of the type useful in transport planning.
-Less known is that R also has a mature ecosystem for working with geographic data, making it well suited to the task of integrating geographic analysis in transport planning: R excels at doing modelling *and* geographic analysis.
-This is particular interest here because, as outlined in previous sections, 'context switching' between programs for statistical and geographic analysis is time consuming.^[
-The author has first hand experience of the costs of context-switching: during my PhD I used R for the statistical and modelling analysis, and then switched to QGIS for geographic analysis and visualisation.
-While this approach worked well, the cognitive burden of having to learn and manage two substantial programs was substantial.
-]
-Support for geographic data and methods have a long history in R [@bivand_implementing_2006;@pebesma_software_2015;@bivand_applied_2013].
-The development of R's spatial capabilities are well documented elsewhere [link to other articles in the special edition].
-However, a few advances are worth mentioning due to their relevance to transport transport planning.
-The package `sf` [@pebesma_simple_2018] provides a unified and high performance system for working geographic lines (in addition to its support for points and polygons), which can be used to represent roads.
-Building on `sf`, the package `stplanr` [@lovelace_stplanr_2018] provides many functions for working with geographic transport data, including `overline` which enables thousands routes to be aggregated to create route networks (Morgan and Lovelace, in press) and `dl_stats19`, which has evolved into the `stats19` package [@lovelace_stats19_2019].
-Geographic data visualisation, cartography, is another area where R excels, with packages such as `tmap` [@tennekes_tmap_2018] providing powerful functions for map making.
-These and many other packages for working with geographic data in R are described in detail in *Geocomputation with R* [@lovelace_geocomputation_2019].
-Chapter 12 this of this open source book is dedicated to transport applications, and provides a good starting point for learning more about using R's impressive geographic capabilities for transport planning.
+<!-- R is well known for having outstanding statistical analysis and modelling capabilities, of the type useful in transport planning. -->
+<!-- Less known is that R also has a mature ecosystem for working with geographic data, making it well suited to the task of integrating geographic analysis in transport planning: R excels at doing modelling *and* geographic analysis. -->
+<!-- This is particular interest here because, as outlined in previous sections, 'context switching' between programs for statistical and geographic analysis is time consuming.^[ -->
+<!-- The author has first hand experience of the costs of context-switching: during my PhD I used R for the statistical and modelling analysis, and then switched to QGIS for geographic analysis and visualisation. -->
+<!-- While this approach worked well, the cognitive burden of having to learn and manage two substantial programs was substantial. -->
+<!-- ] -->
+<!-- Support for geographic data and methods have a long history in R [@bivand_implementing_2006;@pebesma_software_2015;@bivand_applied_2013]. -->
+<!-- The development of R's spatial capabilities are well documented elsewhere [link to other articles in the special edition]. -->
+<!-- However, a few advances are worth mentioning due to their relevance to transport transport planning. -->
+<!-- The package `sf` [@pebesma_simple_2018] provides a unified and high performance system for working geographic lines (in addition to its support for points and polygons), which can be used to represent roads. -->
+<!-- Building on `sf`, the package `stplanr` [@lovelace_stplanr_2018] provides many functions for working with geographic transport data, including `overline` which enables thousands routes to be aggregated to create route networks (Morgan and Lovelace, in press) and `dl_stats19`, which has evolved into the `stats19` package [@lovelace_stats19_2019]. -->
+<!-- Geographic data visualisation, cartography, is another area where R excels, with packages such as `tmap` [@tennekes_tmap_2018] providing powerful functions for map making. -->
+<!-- These and many other packages for working with geographic data in R are described in detail in *Geocomputation with R* [@lovelace_geocomputation_2019]. -->
+<!-- Chapter 12 this of this open source book is dedicated to transport applications, and provides a good starting point for learning more about using R's impressive geographic capabilities for transport planning. -->
 
-## Python
+<!-- ## Python -->
 
-Python is a general-purpose programming language originally conceived in the late 1980s and first released in 1991 [@rossum_python_1995].
-The language was designed from a computer science perspective, with a focus on code elegance and consistency, rather than R's focus on statistical functionality.
-However, Python has become very popular for data analysis and 'data science' thanks to packages such as [Pandas](https://github.com/pandas-dev/pandas), and SciKitLearn [@mckinney_python_2017].
-Due to its range of features, large open source community, and flexibility, Python has been used as a 'glue' language to interact with many other software systems.
-It is a highly diverse language that is widely used in domains ranging from web development [@grinberg_flask_2018], to computer vision and [@zafar_hands-convolutional_2018] text analysis [@bengfort_applied_2018].
+<!-- Python is a general-purpose programming language originally conceived in the late 1980s and first released in 1991 [@rossum_python_1995]. -->
+<!-- The language was designed from a computer science perspective, with a focus on code elegance and consistency, rather than R's focus on statistical functionality. -->
+<!-- However, Python has become very popular for data analysis and 'data science' thanks to packages such as [Pandas](https://github.com/pandas-dev/pandas), and SciKitLearn [@mckinney_python_2017]. -->
+<!-- Due to its range of features, large open source community, and flexibility, Python has been used as a 'glue' language to interact with many other software systems. -->
+<!-- It is a highly diverse language that is widely used in domains ranging from web development [@grinberg_flask_2018], to computer vision and [@zafar_hands-convolutional_2018] text analysis [@bengfort_applied_2018]. -->
 
-Of particular interest here is Python's support for geographic data.
-There are dozens of geographic projects written in Python, ranging from the use of the language to teach low level geographic concepts and algorithms [@xiao_gis_2016] to its use as an interface to libraries such as GDAL.
-Dozens of Python packages have been published for solving specific geographic problems, ranging from the processing of scientific gravimetric measurements [@mccubbine_gsolve_2018] to handling remote sensing data for Ireland [@serbin_opensourced_2018], both of which could have transport applications.
-Furthermore, Python is used as the language of choice of choice for command-line interfaces to the popular proprietary GIS ArcMAP [@zandbergen_python_2015].
+<!-- Of particular interest here is Python's support for geographic data. -->
+<!-- There are dozens of geographic projects written in Python, ranging from the use of the language to teach low level geographic concepts and algorithms [@xiao_gis_2016] to its use as an interface to libraries such as GDAL. -->
+<!-- Dozens of Python packages have been published for solving specific geographic problems, ranging from the processing of scientific gravimetric measurements [@mccubbine_gsolve_2018] to handling remote sensing data for Ireland [@serbin_opensourced_2018], both of which could have transport applications. -->
+<!-- Furthermore, Python is used as the language of choice of choice for command-line interfaces to the popular proprietary GIS ArcMAP [@zandbergen_python_2015]. -->
 
-More general purpose package for handling spatial datasets that could be used for transport research include [GeoPandas](http://geopandas.org/), for handling vector data such as roads and [rasterio](https://rasterio.readthedocs.io/en/stable/) for handling raster datasets.
-Building on such foundations, a number of Python developers have written packages with a transport focus.
-This include OSMnx [@boeing_osmnx_2017], for downloading and analysing street network data from OpenStreetMap and the recent and ambitious project 
-[@pappalardo_scikitmobility_2019] which, despite limited documentation at the time of writing, sets out to create a framework for modelling transport systems.
+<!-- More general purpose package for handling spatial datasets that could be used for transport research include [GeoPandas](http://geopandas.org/), for handling vector data such as roads and [rasterio](https://rasterio.readthedocs.io/en/stable/) for handling raster datasets. -->
+<!-- Building on such foundations, a number of Python developers have written packages with a transport focus. -->
+<!-- This include OSMnx [@boeing_osmnx_2017], for downloading and analysing street network data from OpenStreetMap and the recent and ambitious project  -->
+<!-- [@pappalardo_scikitmobility_2019] which, despite limited documentation at the time of writing, sets out to create a framework for modelling transport systems. -->
 
-Because Python is a general purpose language, it has been used as the basis of transport applications that go beyond the transport planning remit of this paper.
-A couple of projects are worth mentioning to give an indication of the wider Python transport ecosystem.
-[Itinerum](https://github.com/TRIP-Lab) is an open source travel survey development project, which includes a backend written in Python and smartphone apps [@patterson_itinerum_2019].
-A similar project is [E-mission](https://github.com/e-mission) [@shankari_emission_2018] the backend of which is partly written in Python. 
+<!-- Because Python is a general purpose language, it has been used as the basis of transport applications that go beyond the transport planning remit of this paper. -->
+<!-- A couple of projects are worth mentioning to give an indication of the wider Python transport ecosystem. -->
+<!-- [Itinerum](https://github.com/TRIP-Lab) is an open source travel survey development project, which includes a backend written in Python and smartphone apps [@patterson_itinerum_2019]. -->
+<!-- A similar project is [E-mission](https://github.com/e-mission) [@shankari_emission_2018] the backend of which is partly written in Python.  -->
 
-## QGIS
+<!-- ## QGIS -->
 
-QGIS is a cross-platform desktop GIS application with a huge user base (likely the most popular GIS software in the world) and more than 1000 community supported plugins [@qgisdevelopmentteam_qgis_2019].
-QGIS itself is written primarily in C++ and Python, meaning that there is strong symbiosis between the Python and QGIS ecosystems.
-In fact the majority of QGIS plugins are written in Python, meaning that Python developers can use QGIS as a platform for providing users with a graphical user interface and, conversely, QGIS users can learn to use a CLI, via QGIS's Python console.
+<!-- QGIS is a cross-platform desktop GIS application with a huge user base (likely the most popular GIS software in the world) and more than 1000 community supported plugins [@qgisdevelopmentteam_qgis_2019]. -->
+<!-- QGIS itself is written primarily in C++ and Python, meaning that there is strong symbiosis between the Python and QGIS ecosystems. -->
+<!-- In fact the majority of QGIS plugins are written in Python, meaning that Python developers can use QGIS as a platform for providing users with a graphical user interface and, conversely, QGIS users can learn to use a CLI, via QGIS's Python console. -->
 
-A good example of the flexibility of QGIS's plugin model, and illustrating the wider point that open source software tends to be modular and do 'one thing well', is that sDNA, mentioned in Section \@ref(the-current-landscape) can be used in QGIS via the sDNA plugin [@chan_using_2019].
-Indeed, the open source transport modelling framework MATSim also benefits from being used alongside QGIS, for road network editing and visualisation [@horni_multiagent_2016].
-QGIS plugins and extensions specifically designed for transport planning applications include the AwaP-IC walkability analysis plugin [@majic_awap-icopen-source_2019], extensions to QGIS's Processing model development framework for assessing road network completeness [@sehra_assessing_2017] and the ORS (OpenRouteService) plugin, for multi-modal routing.
+<!-- A good example of the flexibility of QGIS's plugin model, and illustrating the wider point that open source software tends to be modular and do 'one thing well', is that sDNA, mentioned in Section \@ref(the-current-landscape) can be used in QGIS via the sDNA plugin [@chan_using_2019]. -->
+<!-- Indeed, the open source transport modelling framework MATSim also benefits from being used alongside QGIS, for road network editing and visualisation [@horni_multiagent_2016]. -->
+<!-- QGIS plugins and extensions specifically designed for transport planning applications include the AwaP-IC walkability analysis plugin [@majic_awap-icopen-source_2019], extensions to QGIS's Processing model development framework for assessing road network completeness [@sehra_assessing_2017] and the ORS (OpenRouteService) plugin, for multi-modal routing. -->
 
-QGIS can also be used as a self-standing application for transport data analysis.
-@ilayaraja_road_2013, for example, used QGIS as the platform of choice for analysing street networks using the [Road Graph plugin](https://docs.qgis.org/2.14/en/docs/user_manual/plugins/plugins_road_graph.html), which ships with QGIS by default.
-@dong_population-weighted_2016, to provide another example, used QGIS as the basis of geographic analysis of route network efficiency.
-Many other transport planning projects have used QGIS for the mapping and geographic analysis component of the work and, due to the application's user friendly GUI, it is gaining in popularity among government transport planning departments, including Transport for Wales and Transport for Greater Manchester.
+<!-- QGIS can also be used as a self-standing application for transport data analysis. -->
+<!-- @ilayaraja_road_2013, for example, used QGIS as the platform of choice for analysing street networks using the [Road Graph plugin](https://docs.qgis.org/2.14/en/docs/user_manual/plugins/plugins_road_graph.html), which ships with QGIS by default. -->
+<!-- @dong_population-weighted_2016, to provide another example, used QGIS as the basis of geographic analysis of route network efficiency. -->
+<!-- Many other transport planning projects have used QGIS for the mapping and geographic analysis component of the work and, due to the application's user friendly GUI, it is gaining in popularity among government transport planning departments, including Transport for Wales and Transport for Greater Manchester. -->
 
 # Discussion and conclusion {#conclusion}
 
 Geographic analysis is an important yet often under-appreciated aspect of transport planning, and looks set to play a more prominent role in the future.
-In the context of urgent policy drivers --- including the obesity crisis, air pollution concerns and the 'climate emergency' that has been declared by some city authorities --- many transport planners have been tasked with new sustainable transport targets, including reduced private car use and increasing levels of walking and cycling [@hickman_transitions_2011].
+In the context of urgent policy drivers --- including the obesity crisis, air pollution concerns and the climate emergency that has been declared by some city authorities --- many transport planners have been tasked with new sustainable transport targets, including reduced private car use and increasing levels of walking and cycling [@hickman_transitions_2011].
 In the age of evidence-based policy, open data and citizen science, there is an onus on practitioners to provide solutions that are transparent, accessible and, increasingly, participatory  [@banister_sustainable_2008;@peters_citizen_2020].
 
 This poses a challenge to incumbent transport planning software which is expensive and thereby inaccessible to most people, monolithic and (to a greater or lesser extent) limited in terms of geographic capabilities, particularly in relation to publicly accessible interactive visualisation and adaptability.
 The new planning priorities also present opportunities, in terms of institutional processes [@beddoe_overcoming_2009], but also new technologies that are explicitly designed to enable more participatory, transparent and community-driven transport planning processes.
-Game-like approaches to city/street analysis tools such as **A/B Street**, **CityBound** and the intuitive and popular **StreetMix** web service demonstrate the huge potential for tools to revolutionise not only *how* transport plans are developed by *who* can be involved in the planning process.
-This raises the question: what would a tool for geographic analysis in transport planning that was as powerful and flexible as **CityBound**, as 'playable' and 'analysis ready' as **A/B Street** and as user friendly as **StreetMix** look like?
+Game-like approaches to city/street analysis tools such as **A/B Street**, **CityBound** and the intuitive and popular **Streetmix** web service demonstrate the huge potential for tools to revolutionise not only *how* transport plans are developed by *who* can be involved in the planning process.
+This raises the question: what would a tool for geographic analysis in transport planning that was as powerful and flexible as **CityBound**, as 'playable' and 'analysis ready' as **A/B Street** and as user friendly as **Streetmix** look like?
 Each of the projects outlined in this paper show that open source solutions to transport planning needs are advanced, and in a growing number of areas more advanced, than propriety software raising a more fundamental question:
 what would a completely open source, participatory and reproducible landscape for transport planning look like?
 
 Answers to these broader questions are beyond the scope of this paper, but the tools and ecosystems outlined in previous sections provide provide an indication of what is possible.
 Insights from open tools that are already widely used suggest that the continued uptake of open tools will have substantial benefits in the coming years and decades.
-Benefits of the free and open source approach range from the increased opportunities for participation that tools such as the **PCT** and **StreetMix** enable, to the possibilities for extending capabilities, as shown by the various plug-ins that have been developed for tools such as **QGIS** and **MATSim**.
+Benefits of the free and open source approach range from the increased opportunities for participation that tools such as the **PCT** and **Streetmix** enable, to the possibilities for extending capabilities, as shown by the various plug-ins that have been developed for tools such as **QGIS** and **MATSim**.
 
 <!-- --- which some have blamed for the election of populist leaders and the UK Brexit vote [@monbiot_out_2017] --- -->
 The research presented in this paper suggests that a shift to open source planning tools in general, and open source tools for local planning in particular, could tackle wider problems, including the 'crisis of participatory planning' and feelings of dis-empowerment due to lack of opportunities to engage in democratic processes [@legacy_there_2016; @monbiot_out_2017]. 
@@ -1010,9 +1045,13 @@ Furthermore, the modular and 'pluginable' nature of open source software suggest
 And from a research perspective, how can the growth of open source solutions for geographic transport data analysis be monitored to identify 'tipping points' in practitioners' uptake of open source solutions?
 
 <!-- These considerations wider questions, about if and when will open source software rise to ascendancy in the wider field of transport planning. -->
-Returning to the most urgent policy driver of climate change mitigation, it is clear that a step change is needed in geographically specific transport interventions and the tools used to design them.
-If these interventions are made on the basis of analysis undertaken in open source software --- enabling rigorous, transparent and reproducible evidence that can easily be repeated in new settings and when new datasets become available --- they are all the more likely to succeed.
-In this sense it may not be an exaggeration to say that open source software can save the world.
+Returning to the pressing policy driver of climate change mitigation introduced in Section \@ref(intro), it is clear that a paradigm shift is needed.
+Attention has focused on changes to the overall planning process [@banister_sustainable_2008; @legacy_there_2016].
+This paper highlights the importance of not only processes, but also the tools used for designing geographically specific transport plans.
+Open source tools generate evidence that is more likely to be rigorous, transparent, reproducible and shared than evidence generated by the established proprietary tools of the trade.
+Plans based on such open evidence are likely to be effective.
+Given the importance of effective policies to improve the social, economic and environmental performance of transport systems worldwide, the conclusion of this paper is that uptake of open source tools for geographic analysis.
+In other words, alongside systemic political and institutional shifts to prioritize sustainability over simplistic and out-dated indicators of economic and transport system performance [@beddoe_overcoming_2009; @litman_developing_2007], open source software can save the world.
 
 
 # References

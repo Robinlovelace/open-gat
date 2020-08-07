@@ -1,35 +1,35 @@
-tool,interface,type,emphasis,licence,language,stars,citations,ncitingtransportplanning,released,reference,website
-OSRM,API,Routing engine,routing,BSD-2,C++,3882,240,34,NA,(Luxen and Vetter 2011),https://github.com/Project-OSRM/osrm-backend
-GraphHopper,API,Routing engine,routing,Apache-2.0,Java,2820,26,40,NA,NA,https://github.com/graphhopper/graphhopper
-OpenTripPlanner,API,Routing engine,routing,GPLv2,Java,1476,NA,117,NA,NA,https://github.com/opentripplanner/OpenTripPlanner
-Valhalla,API,Routing engine,routing,MIT,C++,1204,NA,NA,NA,NA,https://github.com/valhalla/valhalla
-motis,API,Routing engine,routing,MIT,C++,16,NA,NA,NA,NA,https://github.com/motis-project/motis
-OSMnx,CLI,Python package,network analysis,MIT,Python,2496,302,25,NA,(Boeing 2017),https://github.com/gboeing/osmnx/
-SUMO,CLI,Standalone,traffic simulation,EPL-2.0,C++,736,219,330,NA,(Lopez et al. 2018),https://github.com/eclipse/sumo
-pgRouting,CLI,Routing engine,routing,GPLv2,C++,731,NA,35,NA,NA,https://github.com/pgRouting/pgrouting
-UrbanSim,CLI,Python package,abm,AGPLv3,Python,310,1444,461,2014,(Waddell 2002),https://github.com/UDST/urbansim
-MovingPandas,CLI,Python package,trajectory analysis,BSD-3,Python,307,6,NA,NA,(Graser 2019),https://github.com/anitagraser/movingpandas/
-MATSim,CLI,Standalone,abm,GPLv2,Java,285,564,901,NA,(Horni et al. 2016),https://github.com/matsim-org/matsim-libs
-Scikit-mobility,CLI,Python package,modelling,BSD-3,Python,251,1,1,NA,(Pappalardo et al. 2019),https://github.com/scikit-mobility/scikit-mobility
-stplanr,CLI,R package,OD data analysis,MIT,R,201,9,31,NA,(Lovelace et al. 2018),https://github.com/ropensci/stplanr
-momepy,CLI,Python package,network analysis,MIT,Python,133,3,NA,NA,(Fleischmann 2019),https://github.com/martinfleis/momepy
-Trip-simulator,CLI,JavaScript package,trajectory analysis,MIT,JavaScript,117,NA,NA,NA,NA,https://github.com/sharedstreets/trip-simulator
-urbanaccess,CLI,Python package,network analysis,AGPLv3,Python,105,12,6,NA,(Blanchard 2017),https://github.com/UDST/urbanaccess
-dodgr,CLI,R package,routing engine,GPLv3,C++,84,2,NA,NA,NA,https://github.com/ATFutures/dodgr
-spaghetti,CLI,Python package,network analysis,BSD-3,Python,60,0,NA,NA,"(Gaboardi et al., 2018)",https://github.com/pysal/spaghetti
-opentripplanner,CLI,R package,interface,GPLv3,R,47,0,NA,NA,(Morgan et al. 2019),https://github.com/ropensci/opentripplanner
-urbanpy,CLI,Python package,network analysis,MIT,Python,16,NA,NA,2020,NA,https://github.com/EL-BID/urbanpy
-abstreet,GUI,Standalone,abm,Apache-2.0,Rust,4896,NA,NA,NA,NA,https://github.com/dabreegster/abstreet
-AequilibraE,GUI,QGIS plugin,network analysis,Custom,Python,57,3,5,NA,(Carmargo 2015),https://github.com/AequilibraE/AequilibraE-GUI
-ORS Tools,GUI,QGIS plugin,interface,MIT,Python,39,NA,NA,NA,NA,https://github.com/GIScience/orstools-qgis-plugin
-QNEAT3,GUI,QGIS plugin,network analysis,GPLv3,Python,35,NA,NA,NA,NA,https://github.com/root676/QNEAT3/
-Networks plugin,GUI,QGIS plugin,network analysis,GPLv3,Python,9,NA,NA,NA,NA,https://github.com/crocovert/networks
-sDNA,GUI,QGIS plugin,network analysis,GPLv3,C++,9,27,27,NA,(Cooper 2015),https://github.com/fiftysevendegreesofrad/sdna_open
-AwaP,GUI,QGIS plugin,network analysis,GPLv3,Python,3,2,NA,2019,(Majik and Pafka 2019),https://github.com/Awapic/AwaP
-Citybound,WUI,Standalone,abm,AGPLv3,Rust,6124,NA,NA,NA,NA,https://github.com/citybound/citybound
-StreetMix,WUI,Hosted service,design,BSD-3,JavaScript,440,6,10,NA,(Riggs et al. 2016),https://github.com/streetmix/streetmix
-flowmap.blue,WUI,Standalone,OD data analysis,MIT,TypeScript,90,NA,NA,NA,NA,https://github.com/FlowmapBlue/flowmap.blue
-Conveyal Analysis,WUI,Hosted service,scenarios,MIT,Java,19,NA,11,NA,NA,https://github.com/conveyal/analysis-backend
-PCT,WUI,Hosted service,scenarios,AGPLv3,R,16,66,97,NA,(Lovelace et al. 2017),https://github.com/npct/pct-shiny/
-Routino,WUI,Routing engine,routing,AGPLv3,C,NA,NA,11,NA,NA,https://www.routino.org/
-TrajAnalytics,WUI,Standalone,trajectory analysis,BSD-3,JavaScript,NA,0,NA,NA,(Shamal et al. 2019),http://vis.cs.kent.edu/TrajAnalytics/
+tool,interface,type,emphasis,licence,language,stars,citations,ncitingtransportplanning,released,reference,website,vis,dld,rou,mod,geo,resolution,time,scale,expertise
+OSRM,API,Routing engine,routing,BSD-2,C++,3882,240,34,NA,(Luxen and Vetter 2011),https://github.com/Project-OSRM/osrm-backend,NA,NA,✓,NA,NA,s,NA,g,3
+GraphHopper,API,Routing engine,routing,Apache-2.0,Java,2820,26,40,NA,NA,https://github.com/graphhopper/graphhopper,NA,NA,✓,NA,NA,s,NA,g,3
+OpenTripPlanner,API,Routing engine,routing,GPLv2,Java,1476,NA,117,NA,NA,https://github.com/opentripplanner/OpenTripPlanner,NA,NA,✓,NA,NA,s,NA,g,3
+Valhalla,API,Routing engine,routing,MIT,C++,1204,NA,NA,NA,NA,https://github.com/valhalla/valhalla,NA,NA,✓,NA,NA,s,NA,g,3
+motis,API,Routing engine,routing,MIT,C++,16,NA,NA,NA,NA,https://github.com/motis-project/motis,NA,NA,✓,NA,NA,s,NA,g,3
+OSMnx,CLI,Python package,network analysis,MIT,Python,2496,302,25,NA,(Boeing 2017),https://github.com/gboeing/osmnx/,i,✓,✓,✓,i,s,NA,c,2
+SUMO,CLI,Standalone,traffic simulation,EPL-2.0,C++,736,219,330,NA,(Lopez et al. 2018),https://github.com/eclipse/sumo,✓,NA,✓,i,e,s,✓,c,3
+pgRouting,CLI,Routing engine,routing,GPLv2,C++,731,NA,35,NA,NA,https://github.com/pgRouting/pgrouting,i,NA,✓,i,i,s,NA,g,3
+UrbanSim,CLI,Python package,abm,AGPLv3,Python,310,1444,461,2014,(Waddell 2002),https://github.com/UDST/urbansim,i,i,i,✓,✓,s,✓,c,2
+MovingPandas,CLI,Python package,trajectory analysis,BSD-3,Python,307,6,NA,NA,(Graser 2019),https://github.com/anitagraser/movingpandas/,i,i,NA,✓,✓,t,NA,c,2
+MATSim,CLI,Standalone,abm,GPLv2,Java,285,564,901,NA,(Horni et al. 2016),https://github.com/matsim-org/matsim-libs,✓,NA,✓,i,e,a,NA,c,3
+Scikit-mobility,CLI,Python package,modelling,BSD-3,Python,251,1,1,NA,(Pappalardo et al. 2019),https://github.com/scikit-mobility/scikit-mobility,i,i,✓,✓,i,a,NA,c,2
+stplanr,CLI,R package,OD data analysis,MIT,R,201,9,31,NA,(Lovelace et al. 2018),https://github.com/ropensci/stplanr,i,i,i,✓,✓,od,NA,c,2
+momepy,CLI,Python package,network analysis,MIT,Python,133,3,NA,NA,(Fleischmann 2019),https://github.com/martinfleis/momepy,i,i,i,✓,✓,s,NA,c,2
+Trip-simulator,CLI,JavaScript package,trajectory analysis,MIT,JavaScript,117,NA,NA,NA,NA,https://github.com/sharedstreets/trip-simulator,✓,NA,NA,NA,NA,t,NA,c,2
+urbanaccess,CLI,Python package,network analysis,AGPLv3,Python,105,12,6,NA,(Blanchard 2017),https://github.com/UDST/urbanaccess,i,i,i,✓,✓,s,NA,c,2
+dodgr,CLI,R package,routing engine,GPLv3,C++,84,2,NA,NA,NA,https://github.com/ATFutures/dodgr,i,i,✓,✓,✓,s,NA,c,2
+spaghetti,CLI,Python package,network analysis,BSD-3,Python,60,0,NA,NA,"(Gaboardi et al., 2018)",https://github.com/pysal/spaghetti,✓,i,✓,✓,✓,s,NA,c,2
+opentripplanner,CLI,R package,interface,GPLv3,R,47,0,NA,NA,(Morgan et al. 2019),https://github.com/ropensci/opentripplanner,i,i,i,i,i,s,NA,c,2
+urbanpy,CLI,Python package,network analysis,MIT,Python,16,NA,NA,2020,NA,https://github.com/EL-BID/urbanpy,i,i,i,i,✓,s,NA,c,2
+abstreet,GUI,Standalone,abm,Apache-2.0,Rust,4896,NA,NA,NA,NA,https://github.com/dabreegster/abstreet,✓,NA,✓,✓,e,a,✓,c,1
+AequilibraE,GUI,QGIS plugin,network analysis,Custom,Python,57,3,5,NA,(Carmargo 2015),https://github.com/AequilibraE/AequilibraE-GUI,i,i,i,✓,i,s,NA,c,2
+ORS Tools,GUI,QGIS plugin,interface,MIT,Python,39,NA,NA,NA,NA,https://github.com/GIScience/orstools-qgis-plugin,i,i,i,i,i,s,NA,c,2
+QNEAT3,GUI,QGIS plugin,network analysis,GPLv3,Python,35,NA,NA,NA,NA,https://github.com/root676/QNEAT3/,i,i,i,✓,i,s,NA,c,2
+Networks plugin,GUI,QGIS plugin,network analysis,GPLv3,Python,9,NA,NA,NA,NA,https://github.com/crocovert/networks,i,i,i,✓,i,s,NA,c,2
+sDNA,GUI,QGIS plugin,network analysis,GPLv3,C++,9,27,27,NA,(Cooper 2015),https://github.com/fiftysevendegreesofrad/sdna_open,i,NA,✓,i,i,s,NA,c,2
+AwaP,GUI,QGIS plugin,network analysis,GPLv3,Python,3,2,NA,2019,(Majik and Pafka 2019),https://github.com/Awapic/AwaP,i,i,NA,i,i,s,NA,c,2
+Citybound,WUI,Standalone,abm,AGPLv3,Rust,6124,NA,NA,NA,NA,https://github.com/citybound/citybound,✓,NA,✓,NA,e,a,✓,c,1
+StreetMix,WUI,Hosted service,design,BSD-3,JavaScript,440,6,10,NA,(Riggs et al. 2016),https://github.com/streetmix/streetmix,✓,NA,NA,NA,NA,p,NA,p,1
+flowmap.blue,WUI,Standalone,OD data analysis,MIT,TypeScript,90,NA,NA,NA,NA,https://github.com/FlowmapBlue/flowmap.blue,✓,i,NA,NA,NA,od,NA,g,1
+Conveyal Analysis,WUI,Hosted service,scenarios,MIT,Java,19,NA,11,NA,NA,https://github.com/conveyal/analysis-backend,✓,i,i,✓,e,s,NA,c,3
+PCT,WUI,Hosted service,scenarios,AGPLv3,R,16,66,97,NA,(Lovelace et al. 2017),https://github.com/npct/pct-shiny/,✓,i,i,NA,NA,od,NA,n,1
+Routino,WUI,Routing engine,routing,AGPLv3,C,NA,NA,11,NA,NA,https://www.routino.org/,i,NA,✓,NA,NA,s,NA,g,3
+TrajAnalytics,WUI,Standalone,trajectory analysis,BSD-3,JavaScript,NA,0,NA,NA,(Shamal et al. 2019),http://vis.cs.kent.edu/TrajAnalytics/,✓,NA,NA,✓,NA,t,NA,c,3
