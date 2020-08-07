@@ -1,0 +1,9 @@
+Software,Company/Developer,Company HQ,Licence,Citations,Price (single license),Comments,Source of price,Source of price,X10,Cost ($),Dld,Geo,Rou,Vis,SV,IV,EX
+Emme,INRO,Canada,Proprietary,201,?,FALSE,NA,https://scholar.google.com/scholar?hl=en&num=20&as_sdt=0%2C5&q=%22inro%22+%22emme%22+%22transport+planning%22,FALSE,12000,?,Y,Y,Y,Y,?,?
+TransCAD,Caliper,USA,Proprietary,229,14000,FALSE,https://www.caliper.com/tcprice.htm,https://scholar.google.com/scholar?hl=en&num=20&as_sdt=0%2C5&q=%22caliper%22+%22transcad%22+%22transport+planning%22,FALSE,NA,?,?,Y,Y,Y,?,?
+Visum,PTV,Germany,Proprietary,512,?,FALSE,NA,https://scholar.google.com/scholar?hl=en&num=20&as_sdt=0%2C5&q=%22ptv%22+%22visum%22+%22transport+planning%22,FALSE,NA,?,Y,Y,Y,Y,?,?
+Cube,Citilabs,USA,Proprietary,91,?,FALSE,NA,https://scholar.google.com/scholar?hl=en&num=20&as_sdt=0%2C5&q=%22cube%22+%22citilabs%22+%22transport+planning%22,FALSE,NA,?,?,?,Y,Y,?,?
+MATSim,TU Berlin,Germany,Open source (GPL),901,0,FALSE,NA,https://scholar.google.com/scholar?hl=en&num=20&as_sdt=0%2C5&q=%22matsim%22+%22transport+planning%22,FALSE,NA,?,Y,Y,Y,Y,?,Y
+SUMO,DLR,Germany,Open source (EPL),330,0,FALSE,NA,https://scholar.google.com/scholar?hl=en&num=20&as_sdt=0%2C5&q=%22sumo%22+%22transport+planning%22,FALSE,NA,?,?,?,Y,Y,?,?
+sDNA,Cardiff University,UK,Open source (GPL),27,?,FALSE,NA,https://scholar.google.com/scholar?hl=en&num=20&as_sdt=0%2C5&q=%22sdna%22+%22transport+planning%22,FALSE,NA,?,Y,Y,Y,?,?,?
+ArcMap,ESRI,USA,Proprietary,449,NA,FALSE,NA,https://scholar.google.com/scholar?hl=en&num=20&as_sdt=0%2C5&q=%22arcmap%22+%22transport+planning%22,FALSE,NA,?,?,Y,Y,Y,?,?

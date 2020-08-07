@@ -319,7 +319,7 @@ A final driver of demand for such tools is technology.
 Rapidly emerging digital technologies could transform transport planning, with two-way communications between planning authorities and citizens, and even peer-to-peer communications on transport planning issues, now feasible.^[
 See https://www.cyclescape.org/ for an example of such a peer-to-peer transport planning tool.
 ]
-Consideration of each of these drivers of change in transport planning tools provides the context in which incumbent and new open source tools will be assessed.
+These drivers of change provide the context in which open source tools for transport planning are being developed.
 
 ## Political drivers
 
@@ -379,7 +379,7 @@ With unprecedented access to increasingly detailed datasets on transport behavio
 The sheer volume and complexity of new datasets require new approaches that can scale and integrate multiple data sources [@lovelace_big_2016].
 Advances in software and hardware allow not only for current transport systems to be modelled at high temporal and geographic resolution, but for future scenarios and 'model experiments' to be developed, which can support identification and implementation of the most effective interventions [@klosterman_what_1999].
 
-With the explosion in open source software, which has come to dominate data science, policy, data and technological drivers are pushing for geographic analysis to be better integrated in transport planning tools, alongside wider shifts for towards more data driven, transparent and democratically accountable transport planning workflows.
+With the explosion in open source software, which has risen to prominence data science, policy, data and technological drivers are pushing for geographic analysis to be better integrated in transport planning tools, alongside wider shifts for towards more data driven, transparent and democratically accountable transport planning workflows.
 At present this dream is far from reality, despite the long history of geographic methods, public involvement and technological innovation in transport planning.
 
 
@@ -498,23 +498,31 @@ Geographic analysis and cartographic visualisation stages are often done in a de
 Some prominent transport planning software products, and levels of support for geographic data analysis, are summarised in Table 1, which shows that popular transport planning tools have differing levels of geographic capabilities.
 
 ```{r, echo=FALSE, message=FALSE, warning=FALSE, eval=TRUE}
-geo_capabilities = "I, B, E, P"
-tms = readr::read_csv("https://github.com/ITSLeeds/TDS/raw/master/transport-software.csv")
+# geo_capabilities = "I, B, E, P"
+# tms = readr::read_csv("https://github.com/ITSLeeds/TDS/raw/master/transport-software.csv")
+# # tms$`Source of citations`
 # tms$`Source of citations`
-tms = arrange(tms, desc(Citations))[c(1, 2, 4)]
+# 
+# tms$I = c("Y", "Y", "Y", "Y", "Y", "Y", "Y")
+# tms$G = c("Y", "?", "Y", "?", "Y", "?", "Y")
+# tms$R = c("Y", "Y", "Y", "?", "Y", "?", "Y")
+# tms$RNA = c("Y", "Y", "Y", "Y", "Y", "Y", "Y")
+# tms$SV = c("Y", "Y", "Y", "Y", "Y", "Y", "?")
+# tms$IV = c("?", "?", "?", "?", "?", "?", "?")
+# tms$EX = c("?", "?", "?", "?", "Y", "?", "?")
+# 
+# tms_new = DataEditR::data_edit(tms)
+# readr::write_csv(tms_new, "transport-modelling-software.csv")
+tms = readr::read_csv("transport-modelling-software.csv")
+
+tms = arrange(tms, desc(Citations))[1:5]
+
+knitr::kable(tms, caption = "Sample of transport modelling software in use by practitioners, with citation counts based on citation from searches for the product name (plus company name for the common word 'cube') and 'transport planning'. Data source: Google Scholar searches, August 2020.", booktabs = TRUE)
 # knitr::kable(tms, booktabs = TRUE, caption = "Sample of transport modelling software in use by practitioners. Note: citation counts based on searches for company/developer name, the product name and 'transport'. Data source: Google Scholar searches, October 2018.", format = "latex")
 # tms$`Geographic capabilities` = c(
 #   "Plotting, editing, import, buffer, intersections", # https://www.ptvgroup.com/fileadmin/user_upload/Products/PTV_Visum/Documents/Release-Highlights/PTV_Visum_18_release_highlights_EN.pdf # http://www.traffic-inside.com/2014/11/27/ptv-visum-tip-catchment-areas-accessibility-of-places-in-the-network/
 #   "I, E, P, R"
 # )
-tms$I = c("Y", "Y", "Y", "Y", "Y", "Y", "Y")
-tms$G = c("Y", "?", "Y", "?", "Y", "?", "Y")
-tms$R = c("Y", "Y", "Y", "?", "Y", "?", "Y")
-tms$RNA = c("Y", "Y", "Y", "Y", "Y", "Y", "Y")
-tms$SV = c("Y", "Y", "Y", "Y", "Y", "Y", "?")
-tms$IV = c("?", "?", "?", "?", "?", "?", "?")
-tms$EX = c("?", "?", "?", "?", "Y", "?", "?")
-knitr::kable(tms, caption = "Sample of transport modelling software in use by practitioners, with citation counts based on citation from searches for company/developer name, the product name and 'transport'. The columns I, G, R, RNA, SV, IV  and EX refer to Import of a wide range of geographic data formats, Geographic capabilities such as buffer calculations and intersections, Route calculation, Route Network Analysis, Static Visual outputs, Interactive Visual outputs for web publication, and Export to a wide range of geographic data formats, with ? meaning partial support (e.g. via add-on software). Data source: Google Scholar searches, October 2018.", booktabs = TRUE)
 ```
 
 <!-- The geographic capabilities were assessed based on reading of publicly available manuals (to be linked to in an appendix accompanying this paper) and that each software product is actively developed, meaning that the results may change with additional information and subsequent releases. -->
@@ -522,21 +530,20 @@ An interesting observation is that the open source options --- MATSim, SUMO and 
 This can be explained by the 'Unix philosophy', the second tenet of which is modularity, meaning that "each program should do one thing well", reducing duplication of effort and allowing the best tool to be used for each job [@gancarz_linux_2003].
 The next section describes the this modularity in more detail, including outstanding support for geographic data in open source software.
 
-A major barrier affecting the current landscape of transport planning tools is accessibility and reproducibility:
-all the proprietary products are expensive (costing hundreds of dollars for a single license), ensuring that only a small fraction of transport planners, let alone the public, has access to them.
-Another barrier associated with the proprietary options is platform dependence: as far as the author can tell, they all run only on the proprietary operating system Windows, preventing use in on other operating systems such as Linux, Mac and FreeBSD.
-A final issue affecting reproducibility with the proprietary options listed in Table 1 is that they all have a prominent Graphical User Interface (GUI) (although they increasingly offer a command line interface, enabling scripting).
-As is the case with GUI based GIS software, this has the "unintended consequence of discouraging reproducibility" by enabling the user to get to a solution without writing a script that others can use [@lovelace_geocomputation_2019].
+There are many 'barriers to access' prominent tools in the current landscape of transport planning.
+Proprietary tools are expensive (costing up to hundreds of dollars for a single license), ensuring that only a small fraction of transport planners, let alone the public, has access to them.
+Many proprietary tools are tied to a particular Windows, preventing use in on other operating systems such as Linux, Mac and FreeBSD.
+This reduces reproducibility of results and prevents 'citizen science' and educational projects that use the same tools as professional planners.
+<!-- A final issue affecting reproducibility with the proprietary options listed in Table 1 is that they all have a prominent Graphical User Interface (GUI) (although they increasingly offer a command line interface, enabling scripting). -->
+<!-- As is the case with GUI based GIS software, this has the "unintended consequence of discouraging reproducibility" by enabling the user to get to a solution without writing a script that others can use [@lovelace_geocomputation_2019]. -->
 
-Another barrier, which may affect the open source options listed in Table 1 more than the proprietary options, is that they can be (in the author's experience) difficult to install and use.
-This creates an additional barrier to the integration of geographic analysis in transport planning for people, especially the majority of people who have limited computing skills.
-
-A final barrier, which may be more social and organisational than software-related (although discerning cause and effect is difficult), is that organisations' GIS and Transport functions tend to be siloed into their respective departments/teams with little communication between them, meaning that transport planners may not have access to the latest geographic data or software.^[
+<!-- Another barrier, which may affect the open source options listed in Table 1 more than the proprietary options, is that they can be (in the author's experience) difficult to install and use. -->
+<!-- This creates an additional barrier to the integration of geographic analysis in transport planning for people, especially the majority of people who have limited computing skills. -->
+A wider barrier is that organisations' GIS and Transport functions tend to be siloed into their respective departments/teams with little communication between them, meaning that transport planners may not have access to the latest geographic data or software.^[
 Thanks to Crispin Cooper, author of sDNA, for raising this barrier.
 ]
-A software-related issue is that, if transport planners and GIS analysts are using different programs for their work, transport planners will be less likely to collaborate with people with geographic analysis skills or identify potential geographic solutions to their domain-specific problems.
-To what extent can these barriers be overcome by open source software ecosystems?
-That is the topic of the next section.
+This relates to tools because if transport planners and GIS analysts are using different programs for their work, transport planners will be less likely to collaborate with people with geographic analysis skills or identify potential geographic solutions to their domain-specific problems.
+The extent to which these barriers can be overcome by open source software ecosystems is explored in the next section.
 
 
 ```{r, echo=FALSE, eval=FALSE}
@@ -1000,7 +1007,7 @@ Geographic analysis is an important yet often under-appreciated aspect of transp
 In the context of urgent policy drivers --- including the obesity crisis, air pollution concerns and the climate emergency that has been declared by some city authorities --- many transport planners have been tasked with new sustainable transport targets, including reduced private car use and increasing levels of walking and cycling [@hickman_transitions_2011].
 In the age of evidence-based policy, open data and citizen science, there is an onus on practitioners to provide solutions that are transparent, accessible and, increasingly, participatory  [@banister_sustainable_2008;@peters_citizen_2020].
 
-This poses a challenge to incumbent transport planning software which is expensive and thereby inaccessible to most people, monolithic and (to a greater or lesser extent) limited in terms of geographic capabilities, particularly in relation to publicly accessible interactive visualisation and adaptability.
+This poses a challenge to the vendors of proprietary transport planning software, which tends to be expensive and thereby inaccessible to most people, monolithic and (to a greater or lesser extent) limited in terms of geographic capabilities, particularly in relation to publicly accessible interactive visualisation and adaptability.
 The new planning priorities also present opportunities, in terms of institutional processes [@beddoe_overcoming_2009], but also new technologies that are explicitly designed to enable more participatory, transparent and community-driven transport planning processes.
 Game-like approaches to city/street analysis tools such as **A/B Street**, **CityBound** and the intuitive and popular **Streetmix** web service demonstrate the huge potential for tools to revolutionise not only *how* transport plans are developed by *who* can be involved in the planning process.
 This raises the question: what would a tool for geographic analysis in transport planning that was as powerful and flexible as **CityBound**, as 'playable' and 'analysis ready' as **A/B Street** and as user friendly as **Streetmix** look like?
@@ -1042,7 +1049,7 @@ As the FOSS philosophy described in Section \@ref(open-source-tools) emphasizes,
 This paper shows that high-performance and innovative solutions are already available in the 'ecological niche' of geographic analysis for transport planning.
 Given the nascent nature of many of the transport-oriented packages, plugins and extensions in each ecosystem, fruitful directions of research would explore the relative merits of different options, and combinations of options, in terms of computer and programmer efficiency.
 Furthermore, the modular and 'pluginable' nature of open source software suggests there are great opportunities for integration: could there be R and Python interfaces to MATSim, SUMO and sDNA?
-And from a research perspective, how can the growth of open source solutions for geographic transport data analysis be monitored to identify 'tipping points' in practitioners' uptake of open source solutions?
+And from a research perspective, how can the growth of open source solutions for geographic transport data analysis be monitored to identify 'tipping points' in uptake?
 
 <!-- These considerations wider questions, about if and when will open source software rise to ascendancy in the wider field of transport planning. -->
 Returning to the pressing policy driver of climate change mitigation introduced in Section \@ref(intro), it is clear that a paradigm shift is needed.
