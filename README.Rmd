@@ -11,7 +11,7 @@ date: '`r Sys.Date()`'
 # header-includes:
 #    - \usepackage{coloremoji}
 output:
-  # bookdown::github_document2: default
+  bookdown::github_document2: default
   bookdown::pdf_document2:
     latex_engine: xelatex
 header-includes:
@@ -29,6 +29,8 @@ library(tidyverse)
 
 
 ```{r, echo=FALSE, include=FALSE, eval=FALSE}
+pdftools::pdf_subset(input = "README.pdf", pages = 1:2, output = "title-page.pdf")
+browseURL("title-page.pdf")
 # Priorty: write new tools of the trade section
 # get citationschan_using_2019	
 # refs_est = RefManageR::ReadZotero(group = "418217", .params = list(collection = "ABALWWZN", limit = 100))
@@ -654,15 +656,15 @@ open_tools_filtered = open_tools %>%
   filter(Emphasis != "routing engine") %>% 
   filter(Type != "Routing engine")
 open_tools_filtered %>% 
-  mutate(Tool = paste0("\\href{http://", Website, "}{", Tool, "}")) %>%
-  # mutate(Tool = paste0("[", Tool, "](", Website, ")")) %>%
+  # mutate(Tool = paste0("\\href{http://", Website, "}{", Tool, "}")) %>%
+  mutate(Tool = paste0("[", Tool, "](", Website, ")")) %>%
   select(Tool, Type, Licence, Language, Stars, Citations, Reference) %>% 
-  kable(format = "latex", escape = F, booktabs = T, caption = "Open source tools for geographic analysis in transport planning, based on data from Google Scholar, GitHub and web searches and classified in by their primary user interface. CLI, GUI and WUI refer to command-line, graphical user and web user interfaces respectively.") %>%
-  pack_rows(group_label = "CLI", start_row = 1, end_row = 12) %>%
-  pack_rows(group_label = "GUI", start_row = 13, end_row = 18) %>%
-  pack_rows(group_label = "WUI", start_row = 19, end_row = 24) %>%
-  kable_styling(bootstrap_options = c("hover", "condensed"), latex_options = c("scale_down"))
-  # knitr::kable(caption = "Open source tools for geographic analysis in transport planning, based on data from Google Scholar, GitHub and web searches and classified in by their primary user interface. CLI, GUI and WUI refer to command-line, graphical user and web user interfaces respectively.")
+  # kable(format = "latex", escape = F, booktabs = T, caption = "Open source tools for geographic analysis in transport planning, based on data from Google Scholar, GitHub and web searches and classified in by their primary user interface. CLI, GUI and WUI refer to command-line, graphical user and web user interfaces respectively.") %>%
+  # pack_rows(group_label = "CLI", start_row = 1, end_row = 12) %>%
+  # pack_rows(group_label = "GUI", start_row = 13, end_row = 18) %>%
+  # pack_rows(group_label = "WUI", start_row = 19, end_row = 24) %>%
+  # kable_styling(bootstrap_options = c("hover", "condensed"), latex_options = c("scale_down"))
+  knitr::kable(caption = "Open source tools for geographic analysis in transport planning, based on data from Google Scholar, GitHub and web searches and classified in by their primary user interface. CLI, GUI and WUI refer to command-line, graphical user and web user interfaces respectively.")
 ```
 
 To overcome the limitation that not all open source software projects are hosted on GitHub *or* described in academic papers, snowballing via fora such as the [QGIS plugin homepage](https://plugins.qgis.org/), links in project README files and social media were used to find additional projects.
@@ -900,17 +902,16 @@ open_tools_filtered = open_tools %>%
   filter(Emphasis != "interface") %>% 
   filter(Emphasis != "routing engine") %>% 
   filter(Type != "Routing engine")
-open_tools_filtered$Vis[open_tools_filtered$Vis == "✓"] = "y"
-open_tools_filtered$Dld[open_tools_filtered$Vis == "✓"] = "y"
 open_tools_filtered %>% 
   select(Tool, Type, Dld, Rou, Geo, Mod, Vis, Resolution, Time, Scale, Expertise) %>% 
-  mutate_if(is.character, str_replace_all, pattern = "✓", replacement = "y") %>% 
+  # mutate_if(is.character, str_replace_all, pattern = "✓", replacement = "y") %>% 
   mutate_if(is.character, replace_na, replace = "") %>% 
-  kable(format = "latex", escape = F, booktabs = T, caption = "Geographic capabilities and features of open source tools for transport planning. Dld, Rou, Geo, Mod and Vis refer to Downloading, Routing, Geographic analysis, Modelling and Visualisation capabilities, respectively. Cell values y, i, and e mean Yes (with in-house capabilities), yes via Interfaces to other packages/software and Editing capabilities. a, od, p, s and t refer to Agent, Origin-destination, Point (transect), Street (segment) and Trajectory as the main level of geographic resolution of data used by each tool, respectively. Values in the Time column report whether the tool has inbuilt support and documentation for incremental time simulations. Scale refers to the most common scale of analysis that the tool is documented to work at, with values p, c, n and  g referring to Point, City, National and Global scales respectively. Expertise refers to the level of expertise needed to install, set-up and run the tool, ranging from 1 (easy) via 2 (intermediate) to 3 (expertise required).") %>%
-  pack_rows(group_label = "CLI", start_row = 1, end_row = 12) %>%
-  pack_rows(group_label = "GUI", start_row = 13, end_row = 18) %>%
-  pack_rows(group_label = "WUI", start_row = 19, end_row = 24) %>%
-  kable_styling(latex_options = c("scale_down"))
+  kable(escape = F, caption = "Geographic capabilities and features of open source tools for transport planning. Dld, Rou, Geo, Mod and Vis refer to Downloading, Routing, Geographic analysis, Modelling and Visualisation capabilities, respectively. Cell values y, i, and e mean Yes (with in-house capabilities), yes via Interfaces to other packages/software and Editing capabilities. a, od, p, s and t refer to Agent, Origin-destination, Point (transect), Street (segment) and Trajectory as the main level of geographic resolution of data used by each tool, respectively. Values in the Time column report whether the tool has inbuilt support and documentation for incremental time simulations. Scale refers to the most common scale of analysis that the tool is documented to work at, with values p, c, n and  g referring to Point, City, National and Global scales respectively. Expertise refers to the level of expertise needed to install, set-up and run the tool, ranging from 1 (easy) via 2 (intermediate) to 3 (expertise required).")
+  # kable(format = "latex", escape = F, booktabs = T, caption = "Geographic capabilities and features of open source tools for transport planning. Dld, Rou, Geo, Mod and Vis refer to Downloading, Routing, Geographic analysis, Modelling and Visualisation capabilities, respectively. Cell values y, i, and e mean Yes (with in-house capabilities), yes via Interfaces to other packages/software and Editing capabilities. a, od, p, s and t refer to Agent, Origin-destination, Point (transect), Street (segment) and Trajectory as the main level of geographic resolution of data used by each tool, respectively. Values in the Time column report whether the tool has inbuilt support and documentation for incremental time simulations. Scale refers to the most common scale of analysis that the tool is documented to work at, with values p, c, n and  g referring to Point, City, National and Global scales respectively. Expertise refers to the level of expertise needed to install, set-up and run the tool, ranging from 1 (easy) via 2 (intermediate) to 3 (expertise required).") %>%
+  # pack_rows(group_label = "CLI", start_row = 1, end_row = 12) %>%
+  # pack_rows(group_label = "GUI", start_row = 13, end_row = 18) %>%
+  # pack_rows(group_label = "WUI", start_row = 19, end_row = 24) %>%
+  # kable_styling(latex_options = c("scale_down"))
 ```
 
 
