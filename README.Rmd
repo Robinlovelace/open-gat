@@ -1,12 +1,5 @@
 ---
-# title: "Integrating geographic analysis in transport planning: new open source tools for the trade"
-# title: "Integrating geographic analysis in transport planning: new tools of the trade"
 title: "Open source tools for geographic analysis in transport planning"
-# title: "Open source software for geographic analysis in transport planning: a review of emerging ecosystems"
-# title: "Integrating geographic analysis in transport planning"
-# title: "Integrating geographic analysis in transport planning: origins, software and open source solutions"
-# title: "Integrating geographic analysis in transport planning workflows: the role of open source software
-# author: "Robin Lovelace"
 date: '`r Sys.Date()`'
 # header-includes:
 #    - \usepackage{coloremoji}
@@ -19,8 +12,6 @@ header-includes:
   # word_document: default
 bibliography:
   - references.bib
-  - refs-new.bib
-  - refs-new2.bib
 ---
 
 ```{r, include=FALSE}
@@ -31,34 +22,7 @@ library(tidyverse)
 ```{r, echo=FALSE, include=FALSE, eval=FALSE}
 pdftools::pdf_subset(input = "README.pdf", pages = 1:2, output = "title-page.pdf")
 browseURL("title-page.pdf")
-# Priorty: write new tools of the trade section
-# get citationschan_using_2019	
-# refs_est = RefManageR::ReadZotero(group = "418217", .params = list(collection = "ABALWWZN", limit = 100))
-# RefManageR::WriteBib(refs_est, "trafficEstimatr.bib")
-# refs_sof = RefManageR::ReadZotero(group = "418217", .params = list(collection = "JFR868KJ", limit = 100))
-# refs_gis = RefManageR::ReadZotero(group = "418217", .params = list(collection = "KUXG5CJL", limit = 100))
-# refs_geo = RefManageR::ReadZotero(group = "418217", .params = list(collection = "9K6FRP6N", limit = 100))
-# refs_mod = RefManageR::ReadZotero(group = "418217", .params = list(collection = "BN2XXKPI", limit = 100))
-# refs_tds = RefManageR::ReadZotero(group = "418217", .params = list(collection = "R38L2EXB", limit = 100))
-# o = ls()
-# r = o[grepl(pattern = "refs_", x = o)]
-# # refs = c(refs_sof, refs_gis, refs_geo, refs_tds)
-# refs = do.call(what = c, args = mget(r))
-# ref_df = as.data.frame(refs)
-# # View(ref_df)
-# RefManageR::WriteBib(refs, "references.bib")
-citr::tidy_bib_file(rmd_file = "README.Rmd", messy_bibliography = "~/uaf/allrefs.bib", "refs-new2.bib") 
-# n_words = wordcountaddin::text_stats("README.Rmd")
-# word_count = readr::read_csv("word-count.csv")
-# word_count_new = rbind(word_count, data.frame(date = Sys.Date(), n_words))
-# readr::write_csv(word_count_new, "word-count.csv")
-# ggplot(word_count_new) +
-#   geom_line(aes(date, n_words)) +
-#   xlim(as.Date(c("2019-01-01", "2020-01-01"))) +
-#   ylim(0, 5000)
-# f = "~/hd/books/David E. Boyce, Huw C.W.L. Williams/Forecasting Urban Travel (599)/Forecasting Urban Travel - David E. Boyce, Huw C.W.L. Williams.pdf"
-# img_file <- pdftools::pdf_convert(f, format ='tiff', pages = 1:9, dpi = 400)
-# txt = tesseract::ocr(img_file)
+citr::tidy_bib_file(rmd_file = "README.Rmd", messy_bibliography = "~/uaf/allrefs.bib", "references.bib") 
 ```
 
 ```{r, include=FALSE}
@@ -66,31 +30,8 @@ knitr::opts_chunk$set(echo = FALSE, warning = FALSE)
 online = curl::has_internet()
 ```
 
-<!-- should be integrated in transport planning tools. -->
-<!-- --- software for transport data analysis, modelling and visualisation --- -->
-<!-- workflows in academic, public sector and private consultancy transport planning contexts still tend to separate vital geographic processing and map making stages from the rest of the analysis. -->
-
-
-
 # Abstract {-}
 
-<!-- Tools for geographic analysis have long been used in transport planning. -->
-<!-- , alongside other (typically primarily economic and engineering) considerations. -->
-
-<!-- Transport is inherently geographic, involving the movement of people and goods between places along spatial networks. -->
-<!-- Decarbonising transport systems is vital for the future. -->
-<!-- Yet geographic analysis is often treated as an optional 'add-on'  transport data analysis and modelling. -->
-<!-- This dichotomy, between 'geographic' and 'non-geographic' analysis in transport planning is undesirable because it: -->
-<!-- (1) reduces researcher effectiveness due to the time-consuming process of 'context switching'; -->
-<!-- (2) prevents reproducibility, requiring installation and management of geographic and non-geographic tools; and  -->
-<!-- (3) hides vital geographic components in transport plans, with adverse consequences for interventions that can benefit from being placed where they are most needed. -->
-<!-- --- from policies encouraging car sharing to investment in geographically specific sustainable transport infrastructure networks --- -->
-<!-- in terms of the economic, social and environmental benefits of different scenarios. -->
-<!-- The continued dominance of closed software in the field -->
-<!-- --- at a time of innovation in computer hardware and software and uptake of open source software in fields such as data science --- -->
-<!-- also has negative consequences in terms of reproducibility, transparency, scalability of solutions and public participation in the wider transport planning process. -->
-<!-- or difficult to integrate into the wider planning process or both. -->
-<!-- , with a focus on geographic data analysis, routing and route network analysis. -->
 Geographic methods have long supported transport planners to develop effective and evidence-based interventions that are appropriate to local contexts.
 Many popular 'tools of the trade' for geographic analysis used in practice are proprietary, reducing access to the benefits of methods such as spatial interaction
 modeling, routing and route network analysis.
@@ -103,25 +44,6 @@ Although options are abundant, many lack documentation explaining how they can b
 Thus, while open source tools for geographic analysis in transport planning *as they exist today* hold great promise, their *future potential* is even greater.
 There are many ways for developers, researchers, practitioners and the interested public to participate and 'fill gaps' in the emerging landscape, particularly in relation to: integration and cross-compatibility of diverse tools; accessible tutorials; and real world case studies published in the academic literature.
 The paper concludes that time invested in developing open source tools and associated communities of practice is time well-spent.
-<!-- such as MATsim and SUMO (which have limited geographic analysis capabilities), in addition to more general programs such as QGIS, as well as open source languages such as R and Python which are used as the foundation of a growing number of 'packages' for transport planning. -->
-<!-- Due to the size and rapidly evolving state of the software landscape for transport planning, the paper cannot be complete in its coverage. -->
-<!-- However, the focus on a specific aspect of transport planning --- geographic analysis --- highlights themes, such as ease-of-use and community support, that may be relevant to other branches of the planning process. -->
-<!-- In light of the rapid growth in the size, number and quality of open source tools for transport planning, there has never been a better time for transport planners to adopt open source solutions end-to-end in their everyday practice. -->
-<!-- notwithstanding institutional barriers,  -->
-<!-- Each ecosystem is found to provide numerous 'tools of the trade' for integrating geographic analysis in transport research, some of which are already being used in practice. -->
-<!-- In addition to integrating geographic considerations, the shift to such open source solutions will have wider benefits for reproducibility, transparency and democratic accountability in transport planning. -->
-<!--  transport planning experts and the public alike, -->
-<!-- Ultimately, by highlighting cost effective and geographically targeted interventions, integrating geographic analysis in transport planning could lead to better decision making. -->
-<!-- and support the global efforts to transition away from fossil fuels and towards a healthy, low carbon transport system. -->
-
-<!-- ### Notes/questions -->
-
-<!-- This paper is work in progress and its focus has shifted over time. -->
-<!-- A previous working title was "Integrating geographic analysis in transport planning: new open source tools for the trade". -->
-<!-- The need to integrate geographic analysis in transport planning is still a central theme of the paper but the focus is now on solutions, in the form of open source software. -->
-<!-- Does the paper now have too much on the importance on integrating geographic analysis in transport planning, given the new emphasis? -->
-<!-- And are there any other open source software projects I should include, within or in addition to the overview of the three ecosystems selected? -->
-
 
 # Introduction: geographic analysis in transport planning {#intro}
 
@@ -170,7 +92,7 @@ It is, to a greater or lesser extent, part of wider democratic processes that re
 These priorities have shifted substantially over the past few decades, meaning that transport plans based on out-of-date ideas or faulty model assumptions (such as the assumption that congestion can be tackled by building more roads) can lead to unwanted impacts (such as increased congestion), which can be fatal [@hollander_transport_2016].
 
 The importance of transparency and democratic accountability in transport planning (and hence the importance of open source tools in transport planning) has increased alongside wider campaigns for evidence-based decision making and 'participatory democracy' [@monbiot_out_2017;@hackl_promoting_2019], and growing evidence that transport systems cause substantial damage to the environment and human health and wellbeing.
-Roads are now the "leading cause of death for children and young adults aged 5-29 years" with 1.35 million people killed and tens of millions injured and disabled each year due a range of factors including unsafe speeds, weak road traffic laws, lack of enforcement and poor infrastructure that forces pedestrians and cyclists to mix with motorised modes [@world_health_organization_global_2018].
+Roads are now the "leading cause of death for children and young adults aged 5-29 years" with 1.35 million people killed and tens of millions injured and disabled each year due a range of factors including unsafe speeds, weak road traffic laws, lack of enforcement and poor infrastructure that forces pedestrians and cyclists to mix with motorised modes [@worldhealthorganization_global_2018].
 The air pollution impacts could be even greater, with a growing body of research linking air pollution to Alzheimer's disease, lung cancer and heart disease among hundreds of millions of sufferers worldwide [@kampa_human_2008; @kilian_emerging_2018].
 Transport is responsible for a quarter of global greenhouse gas emissions and growing [@harrison_environmental_2017], and is one of the hardest sectors to decarbonise [@moriarty_prospects_2008], meaning that reducing transport energy use is an urgent priority.
 <!-- affecting the global population, especially the projected 1.4 billion people who will live in low elevation (less than 10 m above sea level) coastal zones by 2060 [@neumann_future_2015]. -->
@@ -335,7 +257,7 @@ What are the barriers preventing people from switching to more sustainable modes
 How are transport behaviours likely to shift in the future, in response to technological changes including autonomous vehicles and the continued rise of online working?
 Where will different types of intervention be most effective?
 And how can citizens be engaged in transport decisions?
-Tools that can help answer these questions are becoming an increasingly important part of the transport planner's cabinet [@te_brommelstroet_developing_2008].
+Tools that can help answer these questions are becoming an increasingly important part of the transport planner's cabinet [@tebrommelstroet_developing_2008].
 
 As the gap between what the science seems to say is necessary in the near future and the reality of polluting and unhealthy transport systems grows, so does the need for transparent models that stand up to scrutiny and enable participation and informed debate.
 This has been well documented in with respect to energy models by @morrison_energy_2018, who observed that "opaque policy models simply engender distrust".
@@ -377,7 +299,7 @@ Although the label gained limited traction in academia or practice, Harvey Mille
 ## Technological drivers
 
 Technological change has increased the capabilities of transport planners since the the beginning of the discipline, with transport planning tasks being an early use case of mainframe computers [@boyce_forecasting_2015].
-With unprecedented access to increasingly detailed datasets on transport behaviours and infrastructure, transport planners today require tools that enable them to make sense of this 'data revolution' [@transport_systems_catapult_transport_2015].
+With unprecedented access to increasingly detailed datasets on transport behaviours and infrastructure, transport planners today require tools that enable them to make sense of this 'data revolution' [@transportsystemscatapult_transport_2015].
 The sheer volume and complexity of new datasets require new approaches that can scale and integrate multiple data sources [@lovelace_big_2016].
 Advances in software and hardware allow not only for current transport systems to be modelled at high temporal and geographic resolution, but for future scenarios and 'model experiments' to be developed, which can support identification and implementation of the most effective interventions [@klosterman_what_1999].
 
@@ -791,7 +713,7 @@ Both projects operate at the 'microscropic' (street) level and simulate individu
 There is evidence of uptake of both projects in applied transport planning contexts, with **MATSim** in particular being [cited](https://scholar.google.com/scholar?hl=en&as_sdt=0%2C5&q=%22matsim%22+%22transport+planning%22) in dozens of applied transport planning papers.
 Neither project focusses on geographic analysis but both rely on geographic inputs (detailed road geometries) and produce geographic outputs.
 
-**MATSim**, which stands for Multi-Agent Transport Simulation, is perhaps the more ambitious project, enabling the transport systems of entire cities to be simulated, creating opportunities for detailed model experiments based on transport networks that can be edited using a plugin to the [JOSM GIS](https://github.com/matsim-org/josm-matsim-plugin) [@horni_multi-agent_2016].
+**MATSim**, which stands for Multi-Agent Transport Simulation, is perhaps the more ambitious project, enabling the transport systems of entire cities to be simulated, creating opportunities for detailed model experiments based on transport networks that can be edited using a plugin to the [JOSM GIS](https://github.com/matsim-org/josm-matsim-plugin) [@horni_multiagent_2016].
 **SUMO** is focussed on modelling traffic on road segments and junctions and although the emphasis is not on geographic analysis, the inclusion of a geographic road network editor (called NETEDIT) means that the tool can be used to analyse geographic scenarios of change [@lopez_microscopic_2018].
 With complex installation and usage instructions, **SUMO** and **MATSim** are both aimed at advanced users.
 This has the advantage of enabling many research and (particularly in the case of **MATSim**) applied use cases due to the flexibility of the tools, but has the disadvantage of reducing accessibility.
@@ -809,14 +731,14 @@ In addition to using OSM data, **UrbanAccess** can import and process GTFS data 
 [**UrbanPy**](https://github.com/EL-BID/urbanpy) has similar objectives and includes functionality for spinning-up Docker containers to do routing using the OSRM routing engine, highlighting the interoperability between open source tools.
 
 Like **momepy**, the **spaghetti** package (which stands for SPAtial GrapHs: nETworks, Topology, & Inference) is focussed on street network analysis, but focusses less on urban morphology and more on segment-level statistics [@Gaboardi2018].
-**scikit-mobility** implements a framework for statistical modelling of travel behaviour, including functions for estimating movement between geographic zones using spatial interaction models, as well as route assignment [@pappalardo_scikit-mobility:_2019].
+**scikit-mobility** implements a framework for statistical modelling of travel behaviour, including functions for estimating movement between geographic zones using spatial interaction models, as well as route assignment [@pappalardo_scikitmobility_2019].
 
 The JavaScript package **Trip-simulator**, from the not-for-profit organisation Shared Streets, enables geographic analysis for transport planning by simulating GPS flows on street networks.
 Its command-line interface allows a wide variety of trip types and volumes to be simulated which can, given a new street network layout, be used to estimate the impact of changes to the network.
 
 The remaining two CLI-based tools in Table \@ref(tab:open-tools) are R packages focussed on applied transport planning.
 **stplanr** (which stands for sustainable transport planning with R) contains a range of functions for processing origin-destination, routes and route networks.
-The package takes an explicitly geographic approach to transport planning and many of the functions use geographic operations such as buffers and spatial aggregation in workflows that start with origin-destination data and end with estimates of travel demand down to the route network level under different scenarios of change [@lovelace_stplanr:_2018].
+The package takes an explicitly geographic approach to transport planning and many of the functions use geographic operations such as buffers and spatial aggregation in workflows that start with origin-destination data and end with estimates of travel demand down to the route network level under different scenarios of change [@lovelace_stplanr_2018].
 **opentripplanner** is an R package for multi-modal routing and accessibility analysis that provides an interface to the OpenTripPlanner Java library, enabling not only calculation of travel times and route geometries but also monetary costs and accessibility isochrone maps where GTFS data allow [@morgan_opentripplanner_2019].
 
 ## Graphical user interface (GUI) tools

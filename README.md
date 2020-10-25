@@ -1,48 +1,10 @@
 Open source tools for geographic analysis in transport planning
 ================
-2020-08-07
+2020-10-25
 
 
-
-<!-- should be integrated in transport planning tools. -->
-
-<!-- --- software for transport data analysis, modelling and visualisation --- -->
-
-<!-- workflows in academic, public sector and private consultancy transport planning contexts still tend to separate vital geographic processing and map making stages from the rest of the analysis. -->
 
 # Abstract
-
-<!-- Tools for geographic analysis have long been used in transport planning. -->
-
-<!-- , alongside other (typically primarily economic and engineering) considerations. -->
-
-<!-- Transport is inherently geographic, involving the movement of people and goods between places along spatial networks. -->
-
-<!-- Decarbonising transport systems is vital for the future. -->
-
-<!-- Yet geographic analysis is often treated as an optional 'add-on'  transport data analysis and modelling. -->
-
-<!-- This dichotomy, between 'geographic' and 'non-geographic' analysis in transport planning is undesirable because it: -->
-
-<!-- (1) reduces researcher effectiveness due to the time-consuming process of 'context switching'; -->
-
-<!-- (2) prevents reproducibility, requiring installation and management of geographic and non-geographic tools; and  -->
-
-<!-- (3) hides vital geographic components in transport plans, with adverse consequences for interventions that can benefit from being placed where they are most needed. -->
-
-<!-- --- from policies encouraging car sharing to investment in geographically specific sustainable transport infrastructure networks --- -->
-
-<!-- in terms of the economic, social and environmental benefits of different scenarios. -->
-
-<!-- The continued dominance of closed software in the field -->
-
-<!-- --- at a time of innovation in computer hardware and software and uptake of open source software in fields such as data science --- -->
-
-<!-- also has negative consequences in terms of reproducibility, transparency, scalability of solutions and public participation in the wider transport planning process. -->
-
-<!-- or difficult to integrate into the wider planning process or both. -->
-
-<!-- , with a focus on geographic data analysis, routing and route network analysis. -->
 
 Geographic methods have long supported transport planners to develop
 effective and evidence-based interventions that are appropriate to local
@@ -72,33 +34,10 @@ cross-compatibility of diverse tools; accessible tutorials; and real
 world case studies published in the academic literature. The paper
 concludes that time invested in developing open source tools and
 associated communities of practice is time well-spent.
-<!-- such as MATsim and SUMO (which have limited geographic analysis capabilities), in addition to more general programs such as QGIS, as well as open source languages such as R and Python which are used as the foundation of a growing number of 'packages' for transport planning. -->
-<!-- Due to the size and rapidly evolving state of the software landscape for transport planning, the paper cannot be complete in its coverage. -->
-<!-- However, the focus on a specific aspect of transport planning --- geographic analysis --- highlights themes, such as ease-of-use and community support, that may be relevant to other branches of the planning process. -->
-<!-- In light of the rapid growth in the size, number and quality of open source tools for transport planning, there has never been a better time for transport planners to adopt open source solutions end-to-end in their everyday practice. -->
-<!-- notwithstanding institutional barriers,  -->
-<!-- Each ecosystem is found to provide numerous 'tools of the trade' for integrating geographic analysis in transport research, some of which are already being used in practice. -->
-<!-- In addition to integrating geographic considerations, the shift to such open source solutions will have wider benefits for reproducibility, transparency and democratic accountability in transport planning. -->
-<!--  transport planning experts and the public alike, -->
-<!-- Ultimately, by highlighting cost effective and geographically targeted interventions, integrating geographic analysis in transport planning could lead to better decision making. -->
-<!-- and support the global efforts to transition away from fossil fuels and towards a healthy, low carbon transport system. -->
 
-<!-- ### Notes/questions -->
-
-<!-- This paper is work in progress and its focus has shifted over time. -->
-
-<!-- A previous working title was "Integrating geographic analysis in transport planning: new open source tools for the trade". -->
-
-<!-- The need to integrate geographic analysis in transport planning is still a central theme of the paper but the focus is now on solutions, in the form of open source software. -->
-
-<!-- Does the paper now have too much on the importance on integrating geographic analysis in transport planning, given the new emphasis? -->
-
-<!-- And are there any other open source software projects I should include, within or in addition to the overview of the three ecosystems selected? -->
-
-# Introduction: geographic analysis in transport planning
+# 1 Introduction: geographic analysis in transport planning
 
 <!-- : the importance of geographic analysis in transport planning -->
-
 <!-- Should that heading omit the "Introduction:" part? -->
 
 Transport planning is an applied discipline involving developing local
@@ -114,12 +53,12 @@ national visions (e.g. “imagine the benefits of making the city free
 from private cars by 2030”). The rewards can be great: transport
 planners who have designed — and helped to implement — plans appropriate
 to the needs of an area leave a legacy that will benefit people and the
-environment for generations to come.\[1\]
+environment for generations to come.[1]
 
 Transport planning can be considered as “more of an art than a
-technique”, although *good* transport plans also rely on robust
-analysis and modelling of sometimes large and usually spatial input
-datasets (Dios Ort’uzar S. and Willumsen 2011). Ways and other pieces of
+technique,” although *good* transport plans also rely on robust analysis
+and modelling of sometimes large and usually spatial input datasets
+(Dios Ort’uzar S. and Willumsen 2011). Ways and other pieces of
 transport infrastructure must *go somewhere*; transport planning
 involves consideration of where investment and other interventions are
 most needed. Tools for geographic analysis have been used in transport
@@ -133,11 +72,11 @@ proprietary GISs such as ‘SPANS’ (Ebdon 1992).
 Despite the inherently geographic nature of movement, and the growth of
 GIS in transport planning, the importance of geographic in transport
 systems has long been overlooked (Rodrigue, Comtois, and Slack 2013),
-notwithstanding efforts to formalise the field of ‘GIS-T’, described in
+notwithstanding efforts to formalise the field of ‘GIS-T,’ described in
 the next section. Geographic methods — such as origin-destination
 modelling, route assessment and spatial network analysis — are prominent
 in the literature, providing evidence for a range of transport planning
-interventions (e.g. Jäppinen, Toivonen, and Salonen 2013; Larsen,
+interventions (e.g. Jäppinen, Toivonen, and Salonen 2013; Larsen,
 Patterson, and El-Geneidy 2013; Tribby and a. Zandbergen 2012). But
 there has been less research into digital geographic *tools*, as
 discussed in Section <a href="#the-current-landscape">3</a>, despite the
@@ -160,7 +99,7 @@ of this paper is to add to the literature on geographic tools in
 transport planning, with a focus on open source options.
 
 At this point some definitions are in order. Although ubiquitous in the
-literature, terms such as ‘tool’, ‘software’ and ‘model’ are often used
+literature, terms such as ‘tool,’ ‘software’ and ‘model’ are often used
 interchangeably, relying on the (potentially unsafe) implicit assumption
 that everyone shares the same idea of what they mean (see Salter et al.
 2009 for an example). For the purposes of this paper, a **tool** is a
@@ -240,46 +179,43 @@ enterprise.
 The influential textbook *Modelling Transport* outlines the main stages
 of transport planning as follows (Dios Ort’uzar S. and Willumsen 2011).
 
-1)  problem formulation
-2)  data collection
-3)  modelling/analysis
-4)  evaluation
-5)  implementation of solutions
+1.  problem formulation
+2.  data collection
+3.  modelling/analysis
+4.  evaluation
+5.  implementation of solutions
 
 Each of these stages, illustrated in Figure
-<a href="#fig:schematic">1</a>, has geographic components. The
+<a href="#fig:schematic">1.1</a>, has geographic components. The
 3<sup>rd</sup> stage, can refer to at least three distinct processes:
 the ‘four stage’ transport model (left box); statistical modelling
 (central box) or geographic analysis and modelling (right box, Figure
-<a href="#fig:schematic">1</a>). The wider point is that geographic
+<a href="#fig:schematic">1.1</a>). The wider point is that geographic
 techniques can supplement and in some cases replace traditional
 modelling, and the classic four stage transport model. Many of the
 inputs (datasets with geographic coordinates) and outputs (maps and
 geographically specific recommendations) shown in Figure
-<a href="#fig:schematic">1</a> are spatial, suggesting the importance of
-geographic tools throughout the transport planning process.
+<a href="#fig:schematic">1.1</a> are spatial, suggesting the importance
+of geographic tools throughout the transport planning process.
 
 <div class="figure">
 
 <img src="flow-diagram.png" alt="Schematic diagram illustrating the modelling process, geographic analysis and the four-stage in the context of the wider transport planning process (adapted from Ortúzar and Willumsen, 2011, with the 'Geographic analysis and modelling component' added for this paper)." width="100%" />
-
 <p class="caption">
-
-Figure 1: Schematic diagram illustrating the modelling process,
+Figure 1.1: Schematic diagram illustrating the modelling process,
 geographic analysis and the four-stage in the context of the wider
 transport planning process (adapted from Ortúzar and Willumsen, 2011,
 with the ‘Geographic analysis and modelling component’ added for this
 paper).
-
 </p>
 
 </div>
 
 **Formulation of the problem** (stage 1 in the transport planning
-process illustrated in Figure <a href="#fig:schematic">1</a>) and
+process illustrated in Figure <a href="#fig:schematic">1.1</a>) and
 identification of the scope of solutions that the transport planning
 process can propose is inherently geographic. The first step of many
-projects is defining the ‘region of interest’. This step has important
+projects is defining the ‘region of interest.’ This step has important
 implications because it can focus the analysis on areas where solutions
 are most likely to be implemented and, conversely, highlight the
 potential for inter-regional collaboration. Although the region of
@@ -328,7 +264,7 @@ creation of new public transport routes on specific roads) in nature.
 The latter type of scenario require geographical inputs, such as
 simulating a new cycleway or bus stop. These are arguably more tangible
 and relevant to the city and regional levels at which many transport
-plans are developed than abstract ‘global’ changes (e.g. Larsen,
+plans are developed than abstract ‘global’ changes (e.g. Larsen,
 Patterson, and El-Geneidy 2013).
 
 Geographic considerations are particularly important in stage 4,
@@ -345,8 +281,8 @@ solutions relies on results that are specific, including being
 geographically specific and presented in clear and accurate geographic
 visualisations (Pensa, Masala, and Lami 2013). <!-- Todo: add refs -->
 
-The stages represented in Figure <a href="#fig:schematic">1</a> have
-been criticized for being simplistic, linear and ‘top-down’, with
+The stages represented in Figure <a href="#fig:schematic">1.1</a> have
+been criticized for being simplistic, linear and ‘top-down,’ with
 particularly strong criticisms focusing on the lack of stages for impact
 assessment and public participation (Löfgren, Nilsson, and Johansson
 2018; Tornberg and Odhage 2018), and more sophisticated representations
@@ -394,40 +330,24 @@ of researchers, companies, governments and interested citizens with
 stakes in transport planning processes.
 
 <!-- Transport planning documents often contain maps only for the *proposed intervention*, omitting important geographic data (and analysis) showing the geographic factors that were considered during and influenced the final design. -->
-
 <!-- To pick one prominent example... -->
-
 <!-- Perhaps in response to an upsurge in the amount of geographic transport data available, interest in geographic analysis in transport planning journals seems to have grown over the last decade. -->
-
 <!-- relative to other terms, according to data obtained using the **gtrendsR** package [@massicotte_gtrendsr_2019] from Google Trends (Figure 1). -->
-
 <!-- It is interesting to compare this growth with relative levels of interest in 'geographic information systems' and 'spatial planning', both of which seem to have seen relative declines over time, notwithstanding the limitations associated with search data [@mellon_internet_2014].  -->
-
 <!-- The growing research interest in the subject is also reflected in teaching. -->
-
 <!-- Modules dedicated to Transport Geography have been advertised at the Universities of Aberdeen and Hofstra and, at the University of Leeds the Masters module Sustainable Spatial Planning and Analysis ([SSPA](https://github.com/ITSLeeds/SSPA)) is focussed on GIS skills for transport planning (declaration of interest: I teach on this module), and there are even dedicated 3 year degrees Transport Geography. -->
-
 <!-- , in relation to the history of geographic thinking in transport research and practice (in Section 3) and the resulting specialisation and monopolisation of particular transport planning software products (outlined in Section 4). -->
-
 <!-- The focus of the paper is Section 4, which reviews open source software ecosystems that enable an integrated approach, which combines non geographically explicit stages (e.g. modelling) and geographic processing stages *in a single workflow*. -->
-
 <!-- Three software ecosystems are reviewed in detail: -->
-
 <!-- the statistical programming language R [@rcoreteam_language_2019], -->
-
 <!-- the general purpose programming language Python [@rossum_python_1995], -->
-
 <!-- and the desktop GIS QGIS [@qgisdevelopmentteam_qgis_2019]. -->
-
 <!-- Alternative current and potential future approaches, including 'cloud lock in' are discussed; and the relative merits of different approaches are discussed. -->
-
 <!-- Building on this discussion, Section 6 concludes by returning to the importance of integrating geographic analysis in transport planning workflows. -->
-
 <!-- Before proceeding with the main task of this paper --- to review new tools for integrating geographic analysis in transport planning, and provide guidance to transport researchers and practitioners tackling 21^st^ Century challenges --- it is worth taking a step back, to think about the key policy drivers of 21^st^ century transport planning. -->
-
 <!-- and outlines concrete steps that can be taken to accelerate the transition to open source software in transport planning in support of policies that accelerate the transition away from fossil fuels. -->
 
-# Policy and technological drivers
+# 2 Policy and technological drivers
 
 <!-- for geographic analysis in transport planning -->
 
@@ -438,7 +358,7 @@ the importance of geographic analysis in recent years. Environmental,
 health and equality regulations — which can be seen as a manifestation
 of political change — have also influenced transport planning practice
 and some specific transport planning tools have emerged to tackle
-particular issues (e.g. Vandenbulcke et al. 2009). Environmental
+particular issues (e.g. Vandenbulcke et al. 2009). Environmental
 concerns, including fears about the impact of climate change, have risen
 up policy agendas in recent years, meaning that such environmental
 policy drivers a likely to become more important in the coming years. In
@@ -451,17 +371,17 @@ slow to change in this direction (Legacy 2016). No less important is the
 demand for localised results; while a national transport model can
 provide a high level overview of the transport system for policy-makers,
 tools that provide geographically specific results, potentially down to
-the street level, can support transport planners ‘on the ground’. These
+the street level, can support transport planners ‘on the ground.’ These
 two factors drive demand for transport planning tools that are both open
 and enable geographic analysis. A final driver of demand for such tools
 is technology. Rapidly emerging digital technologies could transform
 transport planning, with two-way communications between planning
 authorities and citizens, and even peer-to-peer communications on
-transport planning issues, now feasible.\[2\] These drivers of change
+transport planning issues, now feasible.[2] These drivers of change
 provide the context in which open source tools for transport planning
 are being developed.
 
-## Political drivers
+## 2.1 Political drivers
 
 The history of transport modelling shows that transport planning
 software was originally designed to plan for “increased use of cars
@@ -494,14 +414,14 @@ near future and the reality of polluting and unhealthy transport systems
 grows, so does the need for transparent models that stand up to scrutiny
 and enable participation and informed debate. This has been well
 documented in with respect to energy models by Morrison (2018), who
-observed that “opaque policy models simply engender distrust”. The same
+observed that “opaque policy models simply engender distrust.” The same
 could be said of transport models, driving demand for tools that are
 open to public scrutiny and community involvement. In parallel, growing
 awareness of the need for sustainable transport planning solutions has
 also driven demand for geographically locallised transport planning
 tools.
 
-## Demand for localised results
+## 2.2 Demand for localised results
 
 With the emphasis shifting to reducing travel by building ‘liveable’
 communities and enabling mode shift (Sallis et al. 2016), localised and
@@ -529,10 +449,10 @@ the still ongoing local implementation of Dutch cycling ambitions
 aspects of transport planning can be considered in isolation, but an
 integrated approach is necessary for effective policies (Hull 2008).
 This is well illustrated by prominent Mayoral transport policies in
-cities such as London,\[3\] Paris\[4\], and Bogotá,\[5\] where
-geographically specific interventions (such as congestion charges in
-carefully demarcated central zones) combined with citywide vision have
-enabled modal shift.
+cities such as London,[3] Paris[4], and Bogotá,[5] where geographically
+specific interventions (such as congestion charges in carefully
+demarcated central zones) combined with citywide vision have enabled
+modal shift.
 
 With issues such as climate change, air pollution, obesity and social
 inequalities high on the political agenda, and the benefits for ‘early
@@ -558,7 +478,7 @@ and the Propensity to Cycle Tool (PCT, publicly available, including
 source code, at [www.pct.bike](https://www.pct.bike)) (Goodman et al.
 2019). <!-- refs? -->
 
-## Technological drivers
+## 2.3 Technological drivers
 
 Technological change has increased the capabilities of transport
 planners since the the beginning of the discipline, with transport
@@ -585,109 +505,60 @@ geographic methods, public involvement and technological innovation in
 transport planning.
 
 <!-- This *policy* question raises important *research* questions: -->
-
 <!-- Which methods are most suitable for designing future transport systems? -->
-
 <!-- What is the evidence base, and analysis, that should be used to inform transition towards a healthy, zero carbon transport system? -->
-
 <!-- Which interventions, from the multitude of options available, are most likely to be effective? -->
-
 <!-- And where are different types of intervention most likely to succeed? -->
-
 <!-- The premise of this paper is that new approaches, enabled by software, are needed to provide answers to these questions. -->
-
 <!-- 21^st^ Century demands for transport planning cannot be delivered by 20^th^ century technology. -->
-
 <!-- Could open source solutions are poised to bridge the gap between the geographic and the --- historically dominant --- non-geographic aspects of transport planning? -->
-
 <!-- Planning for sustainable modes, walking and cycling in particular, requires analysis at higher geographic resolutions than planning for motor traffic. -->
-
 <!-- Furthermore, the policy context increasingly demands transparency and citizen involvement in the decision-making process. -->
-
 <!-- Only open source ecosystems, of the type outlined in Section <a href="#new-tools-of-the-trade"><strong>??</strong></a> can deliver true transparency and encourage 'citizen science' for everyone. -->
-
 <!-- These policy drivers make an exploration of open source options for transport planning workflows timely. -->
-
 <!-- Additional drivers of change in transport planning software include new datasets and technologies. -->
-
 <!-- Technological change has historically driven innovation in transport planning tools [@boyce_forecasting_2015] and the rate of change now is faster than ever. -->
-
 <!-- In the inter-war period (1918-1939) disciplinary homes for transport research had yet to emerge and geographic analysis was limited by lack of datasets and computers on which to process them. -->
-
 <!-- The term 'transport geography' itself only became widespread in the 1950s: -->
-
 <!-- as noted in a report commissioned by the US Office of Naval Research: -->
-
 <!-- "geographers, both in Europe and America, are coming to recognize that the study of the connections between areas and of spatial interchange can provide a new and deeper insight into the meaning of areal differentiation" [@ullman_transportation_1954].  -->
-
 <!-- In the pre-computing age the relationship between geographic analysis and transport planning was characterised by growing interest in the topic, an understanding of the importance of geographic considerations in the design and evolution of transport systems, but lack of data and computational resources.^[ -->
-
 <!-- @paterson_horse_1926, for example, speculated quite accurately on the continued rise of motor traffic at the expense of horse powered transport during the 20^th^ Century, noting the importance of geographic factors in determining mode choice, down to the street level: -->
-
 <!-- "Many streets, like our Bond Street, Watling Street or Lombard Street, and in Seville, the Calle de las Sierpes or Kalver Straat in Amsterdam, may be unsuited to motor traffic, and frontage values may be so high that widening can hardly be considered." -->
-
 <!-- In a geographic review of Japanese cities @trewartha_japanese_1934 also alluded to the relationship between geography and mode choice: -->
-
 <!-- "widening and paving of [roads] have (sic) been accomplished [allowing] numerous taxis, motor busses, and tram cars contrasting with the slow human and animal-drawn carts and the ubiquitous bicycle". -->
-
 <!-- Rapid industrialisation during the largely unconscious build-up to World War II was associated with major road building schemes in many developed regions, demanding the practical application of new methods from a range of disciplines [e.g. @greenshields_studying_1936]. -->
-
 <!-- In the USA, highway engineering even became a recommended case study for geography lessons [@fox_main_1923]. -->
-
 <!-- ] -->
-
 <!-- At the turn of the computing age in the 1950s and 1960s transport planners, whose primary task was often to enable rapid growth in car ownership and use, quickly saw the potential for computational tools to assist their work [@boyce_forecasting_2015]: "essential to [new methods in transport planning] were new computational capabilities, the first mainframe computers, unprecedented in memory and speed [yet] tiny from today’s perspective". -->
-
 <!-- As *Forecasting Urban Travel* [@boyce_forecasting_2015] recounts, geographic questions were at the forefront of many planners' minds and a key task for the early transport models was to visualise and model the results of large origin-destination surveys to help decide where new highways should be constructed. -->
-
 <!-- Much of the early work in this field was publicly funded and focussed on solving real world problems associated with population growth, economic development, changes in lifestyles, and mobility behaviours. -->
-
 <!-- However academics, and quantitative geographers in particular, soon started working with newly available transport datasets. -->
-
 <!-- An important development was the emergence of spatial interaction models, which were formally defined, refined and implemented throughout the 1960s and 1970s [@wilson_statistical_1967; @wilson_family_1971]. -->
-
 <!-- It is notable that Alan Wilson, whose research influenced both transport planning and academic practice, worked in both the public sector (for the UK's Ministry of Transport) and academia (the University of Leeds) while writing each paper. -->
-
 <!-- Most academic research at the interface between transport planning and geographic research is far less 'practitioner facing' and, if anything, it seems that tools used in geographic analysis of transport systems in practice since the 1970s have diverged from academic research. -->
-
 <!-- perhaps explaining why the field of Transport Geography, which emerged in the 1960s and grew rapidly since then [@hay_transport_1979], has (to the author's knowledge) had relatively few other notable impacts on transport planning practice. -->
-
 <!-- By the late 1970s, there was enough research for review papers reflecting on the status of Transport Geography as a self-standing branch of Geography [@rimmer_redirections_1978]. -->
-
 <!-- A book on the transport geography of India provides an insight into the field at the time, with a focus on infrastructure and statistics, transport geography sat firmly in the quantitative tradition of geographic research [@raza_transport_1986], despite Rimmer (1979) criticism that much of the field ignored the wider impacts of transport systems. -->
-
 <!-- Geographic analysis in transport research was given a substantial boost in the 1990s, with the first publication of the Journal of Transport Geography [@knowles_research_1993]. -->
-
 <!-- Transport Geography has subsequently come to be defined as a branch of geography. -->
-
 <!-- Notwithstanding influential methodological and review papers proving transport planners with insight into the state-of-the-art [e.g. @martinez_new_2013], the level of engagement between academic transport geographers and transport planning practitioners is debatable (although the same could also be said of academic planners).  -->
-
 <!-- Search term for interwar period: https://scholar.google.co.uk/scholar?q="transport+geography" -->
-
 <!-- something on the lack of open source? -->
-
 <!-- https://www.abdn.ac.uk/registry/courses/undergraduate/2016-2017/geography/gg4016
 https://people.hofstra.edu/jean-paul_rodrigue/course_transport.html
  in Geography with Transport Studies BA advertised by the University of Leeds
 -->
-
 <!-- Transport planning has been slow to adapt to the data revolution and, while it evolves to enable a wider range of input data sources and analysis 'in the cloud', the open source element is conspicuously lacking. -->
-
 <!-- To understand and effectively challenge the incumbent software landscape (which is described in Section xx) it is worth understanding something of the history that led to this situation. -->
-
 <!-- # Geographic analysis and transport planning -->
-
 <!-- The concept of integrating geographic data analysis in transport planning is not new, although tools and datasets for doing so quantitatively are. -->
-
 <!-- Geographic perspectives have contributed to transport thinking for over 100 years, as documented in papers on geographic considerations in railway design and other transport engineering challenges [@farnham_relation_1912; @buxton_balkan_1908]. -->
-
 <!-- Since then, the importance of geographic analysis in transport planning has only grown, with the realisation that interventions in the transport system are most effective when they are placed where they are most needed: infrastructure designs and localised policies are most effective when they account for the geographic distribution of intricate spatial networks and interacting places of transport supply and demand -->
-
 <!--  [@rodrigue_geography_2013; @loidl_gis_2016; @lovelace_propensity_2017]. -->
-
 <!-- The paper concludes that 'integrated approach' can support efficient, scalable and reproducible transport planning workflows which can provide a strong and transparent evidence base needed for rapid transition away from fossil fuels in the transport sector. -->
 
-# The current landscape
+# 3 The current landscape
 
 In broad terms, digital transport planning tools are like any other
 computer program in that they take inputs which are processed to
@@ -695,8 +566,8 @@ generate outputs (Knuth 1997). The broader term ‘transport model’ is
 sometimes used interchangeably with transport software but in this paper
 we follow (Hollander 2016) in using ‘model’ to refer to the theories and
 mathematics underlying transport planning software, rather than the
-software that implements the model.\[6\] In relation to the narrower
-concept of ‘algorithm’, transport planning software can be seen as a
+software that implements the model.[6] In relation to the narrower
+concept of ‘algorithm,’ transport planning software can be seen as a
 computing environment or system that provides a user interface to run a
 range of algorithms interactively on a range of input datasets to
 generate outputs that can feed into the wider transport planning process
@@ -725,7 +596,7 @@ and intersections), and their geographic analysis capabilities.
 
 This history is detailed in Chapter 10 of *Forecasting Urban Travel*
 (Boyce and Williams 2015) called “Computing environment and travel
-forecasting software”, which provides an insight into how software has
+forecasting software,” which provides an insight into how software has
 been used in transport planning over the years. Of course, software
 development has always depended on the physical hardware on which it
 runs and the early days of transport planning software were
@@ -738,9 +609,9 @@ ownership and use that was taking place during those decades. More
 overtly political factors also influenced the direction of transport
 planning software: “certain private firms complained to US DoT
 \[Department of Transport\] that its agencies were developing software
-in competition with the private sector”, leading to the abandonment of
+in competition with the private sector,” leading to the abandonment of
 publicly funded transport planning software development projects,
-notably UTPS (Boyce and Williams 2015).\[7\] This transfer of transport
+notably UTPS (Boyce and Williams 2015).[7] This transfer of transport
 planning software development to the private sector contrasts with the
 history of GIS. The example of GRASS (Geographic Resources Analysis
 Support System) illustrates this point and helps explain the dominance
@@ -759,7 +630,7 @@ an open source approach.
 In response to the ‘siloed’ development of GIS and transport software,
 there have been calls for greater integration. Loidl et al. (2016),
 building on the observation that “geography and GIS remained a niche
-topic within traditional transport modeling”, made a case for
+topic within traditional transport modeling,” made a case for
 strengthening the ‘spatial perspective’ in transport modelling. The
 paper emphasised the growing importance of well-defined data types,
 disaggregating detailed (and difficult to interpret) transport model
@@ -782,7 +653,7 @@ shows that popular transport planning tools have differing levels of
 geographic capabilities.
 
 | Software | Company/Developer  | Company HQ | Licence           | Citations |
-| :------- | :----------------- | :--------- | :---------------- | --------: |
+|:---------|:-------------------|:-----------|:------------------|----------:|
 | MATSim   | TU Berlin          | Germany    | Open source (GPL) |       901 |
 | Visum    | PTV                | Germany    | Proprietary       |       512 |
 | ArcMap   | ESRI               | USA        | Proprietary       |       449 |
@@ -792,18 +663,18 @@ geographic capabilities.
 | Cube     | Citilabs           | USA        | Proprietary       |        91 |
 | sDNA     | Cardiff University | UK         | Open source (GPL) |        27 |
 
-Table 1: Sample of transport modelling software in use by practitioners,
-with citation counts based on citation from searches for the product
-name (plus company name for the common word ‘cube’) and ‘transport
-planning’. Data source: Google Scholar searches, August 2020.
+Table 3.1: Sample of transport modelling software in use by
+practitioners, with citation counts based on citation from searches for
+the product name (plus company name for the common word ‘cube’) and
+‘transport planning.’ Data source: Google Scholar searches, August 2020.
 
 <!-- The geographic capabilities were assessed based on reading of publicly available manuals (to be linked to in an appendix accompanying this paper) and that each software product is actively developed, meaning that the results may change with additional information and subsequent releases. -->
 
 An interesting observation is that the open source options — MATSim,
 SUMO and sDNA — all have limited ‘in house’ geographic capabilities.
-This can be explained by the ‘Unix philosophy’, the second tenet of
+This can be explained by the ‘Unix philosophy,’ the second tenet of
 which is modularity, meaning that “each program should do one thing
-well”, reducing duplication of effort and allowing the best tool to be
+well,” reducing duplication of effort and allowing the best tool to be
 used for each job (Gancarz 2003). The next section describes the this
 modularity in more detail, including outstanding support for geographic
 data in open source software.
@@ -821,13 +692,12 @@ professional planners.
 <!-- As is the case with GUI based GIS software, this has the "unintended consequence of discouraging reproducibility" by enabling the user to get to a solution without writing a script that others can use [@lovelace_geocomputation_2019]. -->
 
 <!-- Another barrier, which may affect the open source options listed in Table 1 more than the proprietary options, is that they can be (in the author's experience) difficult to install and use. -->
-
 <!-- This creates an additional barrier to the integration of geographic analysis in transport planning for people, especially the majority of people who have limited computing skills. -->
 
 A wider barrier is that organisations’ GIS and Transport functions tend
 to be siloed into their respective departments/teams with little
 communication between them, meaning that transport planners may not have
-access to the latest geographic data or software.\[8\] This relates to
+access to the latest geographic data or software.[8] This relates to
 tools because if transport planners and GIS analysts are using different
 programs for their work, transport planners will be less likely to
 collaborate with people with geographic analysis skills or identify
@@ -837,10 +707,9 @@ ecosystems is explored in the next section.
 
 <!-- @kammeier_new_1999 -->
 
-# Open source tools for geographic analysis in transport planning
+# 4 Open source tools for geographic analysis in transport planning
 
 <!-- The previous sections support and expand on the two main premises of this paper: that geographic analysis has much to offer transport planning, and that the incumbent proprietary software products are not well suited to tackle 21^st^ Century transport planning needs. -->
-
 <!-- In this section the paper shifts gear, and moves onto solutions. -->
 
 The previous sections suggest that technological, environment and
@@ -853,21 +722,21 @@ planning have not emerged in a vacuum. They were developed in the wider
 landscape of open source software (Dhir and Dhir 2017).
 
 These tools could be classified by the five main stages illustrated in
-Figure <a href="#fig:schematic">1</a> (data collection, processing,
+Figure <a href="#fig:schematic">1.1</a> (data collection, processing,
 routing, modelling and visualisation). Instead, because many tools can
 be used in multiple stages, can be more usefully classified from the
 user’s perspective. Based on open tools identified through web searches,
 they can be classified into the follow broad, and to some extent
-overlapping,\[9\] user interface (UI) types (see Table
-<a href="#tab:open-tools">2</a>):
+overlapping,[9] user interface (UI) types (see Table
+<a href="#tab:open-tools">4.1</a>):
 
-  - command-line interface (CLI) tools, primarily controlled by typing
+-   command-line interface (CLI) tools, primarily controlled by typing
     commands
-  - graphical user interface (GUI) tools, primarily controlled by mouse
+-   graphical user interface (GUI) tools, primarily controlled by mouse
     clicks
-  - web user interface (WUI) tools that users access through a web
+-   web user interface (WUI) tools that users access through a web
     browser
-  - web application programming interfaces (API) that computers access
+-   web application programming interfaces (API) that computers access
     over the web
 
 In this paper we will focus on projects in the first three categories.
@@ -877,9 +746,9 @@ application programming interface (API). While technically these can be
 used for geographic analysis tasks, they are more commonly used by
 transport planners as remote services, and are usually the preserve of
 software developers, so were excluded from Table
-<a href="#tab:open-tools">2</a>.
+<a href="#tab:open-tools">4.1</a>.
 
-## Defining open source
+## 4.1 Defining open source
 
 Before describing open source tools for transport planning, classified
 by their main user interface, is worth considering what ‘open source’
@@ -891,8 +760,7 @@ means.
 Open source software differs from proprietary software in that users are
 free to see, download and modify the source code. Freedom is central to
 open source software, which is sometimes referred to simply as ‘free
-software’, defined by the Free Software Foundation (FSF) as
-follows:\[10\]
+software,’ defined by the Free Software Foundation (FSF) as follows:[10]
 
 > software that gives you the user the freedom to share, study and
 > modify it.
@@ -906,7 +774,7 @@ projects written in dozens of programming languages, many of which are
 no longer actively maintained (Coelho et al. 2020). Transport planners
 should use solutions that are future proof and actively maintained.
 
-## Methods to identify open source tools
+## 4.2 Methods to identify open source tools
 
 To identify open source tools for transport planning, a search approach
 was used to incorporate projects that have been written-up in the
@@ -921,13 +789,13 @@ with a minimum level of popularity. The method was as follows:
 3.  Verify that the projects are open source and actively maintained by
     analysis of package documentation and source code.
 4.  Classify and the projects based on their main user interface,
-    resulting in Table <a href="#tab:open-tools">2</a> (see the appendix
-    for a complete table of results). These tools are described in more
-    detail in the following three sections.
+    resulting in Table <a href="#tab:open-tools">4.1</a> (see the
+    appendix for a complete table of results). These tools are described
+    in more detail in the following three sections.
 
 The following search terms were used to find relevant projects using
 Google Scholar, the result of a search shown in Figure
-<a href="#fig:scholar-search">2</a>:
+<a href="#fig:scholar-search">4.1</a>:
 
 <!-- > "open source" software "transport planning" "geographic data" OR "geographic analysis" OR "spatial data" OR spatial OR analysis" -->
 
@@ -937,13 +805,10 @@ Google Scholar, the result of a search shown in Figure
 <div class="figure">
 
 <img src="scholar-search.png" alt="Illustration of the Google Scholar search terms used to identify open source software for geographic analysis in transport planning." width="60%" />
-
 <p class="caption">
-
-Figure 2: Illustration of the Google Scholar search terms used to
+Figure 4.1: Illustration of the Google Scholar search terms used to
 identify open source software for geographic analysis in transport
 planning.
-
 </p>
 
 </div>
@@ -955,11 +820,11 @@ was used. The ‘topic’ descriptions of previously identified open tools
 were used to identify additional projects and search terms. This method
 worked as follows:
 
-  - The GitHub page of the previously identified project stplanr project
+-   The GitHub page of the previously identified project stplanr project
     was visited.
-  - One of the ‘topics’ in the stplanr repository was was the broader
+-   One of the ‘topics’ in the stplanr repository was was the broader
     term `transport`, which was used to identify the SUMO project
-  - The SUMO project had the topic ‘simulation’, leading to the
+-   The SUMO project had the topic ‘simulation,’ leading to the
     discovery of the A/B Street project
 
 The complete list of GitHub topics used to identify projects was as
@@ -976,1174 +841,591 @@ planning):
 > [trajectory](https://github.com/topics/trajectory)
 
 <table>
-
 <caption>
-
-Table 2: Open source tools for geographic analysis in transport
+Table 4.1: Open source tools for geographic analysis in transport
 planning, based on data from Google Scholar, GitHub and web searches and
 classified in by their primary user interface. CLI, GUI and WUI refer to
 command-line, graphical user and web user interfaces respectively.
-
 </caption>
-
 <thead>
-
 <tr>
-
 <th style="text-align:left;">
-
 Tool
-
 </th>
-
 <th style="text-align:left;">
-
 Type
-
 </th>
-
 <th style="text-align:left;">
-
 Licence
-
 </th>
-
 <th style="text-align:left;">
-
 Language
-
 </th>
-
 <th style="text-align:right;">
-
 Stars
-
 </th>
-
 <th style="text-align:right;">
-
 Citations
-
 </th>
-
 <th style="text-align:left;">
-
 Reference
-
 </th>
-
 </tr>
-
 </thead>
-
 <tbody>
-
 <tr>
-
 <td style="text-align:left;">
-
 [OSMnx](https://github.com/gboeing/osmnx/)
-
 </td>
-
 <td style="text-align:left;">
-
 Python package
-
 </td>
-
 <td style="text-align:left;">
-
 MIT
-
 </td>
-
 <td style="text-align:left;">
-
 Python
-
 </td>
-
 <td style="text-align:right;">
-
 2496
-
 </td>
-
 <td style="text-align:right;">
-
 302
-
 </td>
-
 <td style="text-align:left;">
-
 (Boeing 2017)
-
 </td>
-
 </tr>
-
 <tr>
-
 <td style="text-align:left;">
-
 [SUMO](https://github.com/eclipse/sumo)
-
 </td>
-
 <td style="text-align:left;">
-
 Standalone
-
 </td>
-
 <td style="text-align:left;">
-
 EPL-2.0
-
 </td>
-
 <td style="text-align:left;">
-
 C++
-
 </td>
-
 <td style="text-align:right;">
-
 736
-
 </td>
-
 <td style="text-align:right;">
-
 219
-
 </td>
-
 <td style="text-align:left;">
-
 (Lopez et al. 2018)
-
 </td>
-
 </tr>
-
 <tr>
-
 <td style="text-align:left;">
-
 [UrbanSim](https://github.com/UDST/urbansim)
-
 </td>
-
 <td style="text-align:left;">
-
 Python package
-
 </td>
-
 <td style="text-align:left;">
-
 AGPLv3
-
 </td>
-
 <td style="text-align:left;">
-
 Python
-
 </td>
-
 <td style="text-align:right;">
-
 310
-
 </td>
-
 <td style="text-align:right;">
-
 1444
-
 </td>
-
 <td style="text-align:left;">
-
 (Waddell 2002)
-
 </td>
-
 </tr>
-
 <tr>
-
 <td style="text-align:left;">
-
 [MovingPandas](https://github.com/anitagraser/movingpandas/)
-
 </td>
-
 <td style="text-align:left;">
-
 Python package
-
 </td>
-
 <td style="text-align:left;">
-
 BSD-3
-
 </td>
-
 <td style="text-align:left;">
-
 Python
-
 </td>
-
 <td style="text-align:right;">
-
 307
-
 </td>
-
 <td style="text-align:right;">
-
 6
-
 </td>
-
 <td style="text-align:left;">
-
 (Graser 2019)
-
 </td>
-
 </tr>
-
 <tr>
-
 <td style="text-align:left;">
-
 [MATSim](https://github.com/matsim-org/matsim-libs)
-
 </td>
-
 <td style="text-align:left;">
-
 Standalone
-
 </td>
-
 <td style="text-align:left;">
-
 GPLv2
-
 </td>
-
 <td style="text-align:left;">
-
 Java
-
 </td>
-
 <td style="text-align:right;">
-
 285
-
 </td>
-
 <td style="text-align:right;">
-
 564
-
 </td>
-
 <td style="text-align:left;">
-
 (Horni et al. 2016)
-
 </td>
-
 </tr>
-
 <tr>
-
 <td style="text-align:left;">
-
 [Scikit-mobility](https://github.com/scikit-mobility/scikit-mobility)
-
 </td>
-
 <td style="text-align:left;">
-
 Python package
-
 </td>
-
 <td style="text-align:left;">
-
 BSD-3
-
 </td>
-
 <td style="text-align:left;">
-
 Python
-
 </td>
-
 <td style="text-align:right;">
-
 251
-
 </td>
-
 <td style="text-align:right;">
-
 1
-
 </td>
-
 <td style="text-align:left;">
-
 (Pappalardo et al. 2019)
-
 </td>
-
 </tr>
-
 <tr>
-
 <td style="text-align:left;">
-
 [stplanr](https://github.com/ropensci/stplanr)
-
 </td>
-
 <td style="text-align:left;">
-
 R package
-
 </td>
-
 <td style="text-align:left;">
-
 MIT
-
 </td>
-
 <td style="text-align:left;">
-
 R
-
 </td>
-
 <td style="text-align:right;">
-
 201
-
 </td>
-
 <td style="text-align:right;">
-
 9
-
 </td>
-
 <td style="text-align:left;">
-
 (Lovelace et al. 2018)
-
 </td>
-
 </tr>
-
 <tr>
-
 <td style="text-align:left;">
-
 [momepy](https://github.com/martinfleis/momepy)
-
 </td>
-
 <td style="text-align:left;">
-
 Python package
-
 </td>
-
 <td style="text-align:left;">
-
 MIT
-
 </td>
-
 <td style="text-align:left;">
-
 Python
-
 </td>
-
 <td style="text-align:right;">
-
 133
-
 </td>
-
 <td style="text-align:right;">
-
 3
-
 </td>
-
 <td style="text-align:left;">
-
 (Fleischmann 2019)
-
 </td>
-
 </tr>
-
 <tr>
-
 <td style="text-align:left;">
-
 [Trip-simulator](https://github.com/sharedstreets/trip-simulator)
-
 </td>
-
 <td style="text-align:left;">
-
 JavaScript package
-
 </td>
-
 <td style="text-align:left;">
-
 MIT
-
 </td>
-
 <td style="text-align:left;">
-
 JavaScript
-
 </td>
-
 <td style="text-align:right;">
-
 117
-
 </td>
-
 <td style="text-align:right;">
-
 NA
-
 </td>
-
 <td style="text-align:left;">
-
 NA
-
 </td>
-
 </tr>
-
 <tr>
-
 <td style="text-align:left;">
-
 [urbanaccess](https://github.com/UDST/urbanaccess)
-
 </td>
-
 <td style="text-align:left;">
-
 Python package
-
 </td>
-
 <td style="text-align:left;">
-
 AGPLv3
-
 </td>
-
 <td style="text-align:left;">
-
 Python
-
 </td>
-
 <td style="text-align:right;">
-
 105
-
 </td>
-
 <td style="text-align:right;">
-
 12
-
 </td>
-
 <td style="text-align:left;">
-
 (Blanchard 2017)
-
 </td>
-
 </tr>
-
 <tr>
-
 <td style="text-align:left;">
-
 [spaghetti](https://github.com/pysal/spaghetti)
-
 </td>
-
 <td style="text-align:left;">
-
 Python package
-
 </td>
-
 <td style="text-align:left;">
-
 BSD-3
-
 </td>
-
 <td style="text-align:left;">
-
 Python
-
 </td>
-
 <td style="text-align:right;">
-
 60
-
 </td>
-
 <td style="text-align:right;">
-
 0
-
 </td>
-
 <td style="text-align:left;">
-
 (Gaboardi et al., 2018)
-
 </td>
-
 </tr>
-
 <tr>
-
 <td style="text-align:left;">
-
 [urbanpy](https://github.com/EL-BID/urbanpy)
-
 </td>
-
 <td style="text-align:left;">
-
 Python package
-
 </td>
-
 <td style="text-align:left;">
-
 MIT
-
 </td>
-
 <td style="text-align:left;">
-
 Python
-
 </td>
-
 <td style="text-align:right;">
-
 16
-
 </td>
-
 <td style="text-align:right;">
-
 NA
-
 </td>
-
 <td style="text-align:left;">
-
 NA
-
 </td>
-
 </tr>
-
 <tr>
-
 <td style="text-align:left;">
-
 [abstreet](https://github.com/dabreegster/abstreet)
-
 </td>
-
 <td style="text-align:left;">
-
 Standalone
-
 </td>
-
 <td style="text-align:left;">
-
 Apache-2.0
-
 </td>
-
 <td style="text-align:left;">
-
 Rust
-
 </td>
-
 <td style="text-align:right;">
-
 4896
-
 </td>
-
 <td style="text-align:right;">
-
 NA
-
 </td>
-
 <td style="text-align:left;">
-
 NA
-
 </td>
-
 </tr>
-
 <tr>
-
 <td style="text-align:left;">
-
 [AequilibraE](https://github.com/AequilibraE/AequilibraE-GUI)
-
 </td>
-
 <td style="text-align:left;">
-
 QGIS plugin
-
 </td>
-
 <td style="text-align:left;">
-
 Custom
-
 </td>
-
 <td style="text-align:left;">
-
 Python
-
 </td>
-
 <td style="text-align:right;">
-
 57
-
 </td>
-
 <td style="text-align:right;">
-
 3
-
 </td>
-
 <td style="text-align:left;">
-
 (Carmargo 2015)
-
 </td>
-
 </tr>
-
 <tr>
-
 <td style="text-align:left;">
-
 [QNEAT3](https://github.com/root676/QNEAT3/)
-
 </td>
-
 <td style="text-align:left;">
-
 QGIS plugin
-
 </td>
-
 <td style="text-align:left;">
-
 GPLv3
-
 </td>
-
 <td style="text-align:left;">
-
 Python
-
 </td>
-
 <td style="text-align:right;">
-
 35
-
 </td>
-
 <td style="text-align:right;">
-
 NA
-
 </td>
-
 <td style="text-align:left;">
-
 NA
-
 </td>
-
 </tr>
-
 <tr>
-
 <td style="text-align:left;">
-
 [Networks plugin](https://github.com/crocovert/networks)
-
 </td>
-
 <td style="text-align:left;">
-
 QGIS plugin
-
 </td>
-
 <td style="text-align:left;">
-
 GPLv3
-
 </td>
-
 <td style="text-align:left;">
-
 Python
-
 </td>
-
 <td style="text-align:right;">
-
 9
-
 </td>
-
 <td style="text-align:right;">
-
 NA
-
 </td>
-
 <td style="text-align:left;">
-
 NA
-
 </td>
-
 </tr>
-
 <tr>
-
 <td style="text-align:left;">
-
 [sDNA](https://github.com/fiftysevendegreesofrad/sdna_open)
-
 </td>
-
 <td style="text-align:left;">
-
 QGIS plugin
-
 </td>
-
 <td style="text-align:left;">
-
 GPLv3
-
 </td>
-
 <td style="text-align:left;">
-
 C++
-
 </td>
-
 <td style="text-align:right;">
-
 9
-
 </td>
-
 <td style="text-align:right;">
-
 27
-
 </td>
-
 <td style="text-align:left;">
-
 (Cooper 2015)
-
 </td>
-
 </tr>
-
 <tr>
-
 <td style="text-align:left;">
-
 [AwaP](https://github.com/Awapic/AwaP)
-
 </td>
-
 <td style="text-align:left;">
-
 QGIS plugin
-
 </td>
-
 <td style="text-align:left;">
-
 GPLv3
-
 </td>
-
 <td style="text-align:left;">
-
 Python
-
 </td>
-
 <td style="text-align:right;">
-
 3
-
 </td>
-
 <td style="text-align:right;">
-
 2
-
 </td>
-
 <td style="text-align:left;">
-
 (Majik and Pafka 2019)
-
 </td>
-
 </tr>
-
 <tr>
-
 <td style="text-align:left;">
-
 [Citybound](https://github.com/citybound/citybound)
-
 </td>
-
 <td style="text-align:left;">
-
 Standalone
-
 </td>
-
 <td style="text-align:left;">
-
 AGPLv3
-
 </td>
-
 <td style="text-align:left;">
-
 Rust
-
 </td>
-
 <td style="text-align:right;">
-
 6124
-
 </td>
-
 <td style="text-align:right;">
-
 NA
-
 </td>
-
 <td style="text-align:left;">
-
 NA
-
 </td>
-
 </tr>
-
 <tr>
-
 <td style="text-align:left;">
-
 [StreetMix](https://github.com/streetmix/streetmix)
-
 </td>
-
 <td style="text-align:left;">
-
 Hosted service
-
 </td>
-
 <td style="text-align:left;">
-
 BSD-3
-
 </td>
-
 <td style="text-align:left;">
-
 JavaScript
-
 </td>
-
 <td style="text-align:right;">
-
 440
-
 </td>
-
 <td style="text-align:right;">
-
 6
-
 </td>
-
 <td style="text-align:left;">
-
 (Riggs et al. 2016)
-
 </td>
-
 </tr>
-
 <tr>
-
 <td style="text-align:left;">
-
 [flowmap.blue](https://github.com/FlowmapBlue/flowmap.blue)
-
 </td>
-
 <td style="text-align:left;">
-
 Standalone
-
 </td>
-
 <td style="text-align:left;">
-
 MIT
-
 </td>
-
 <td style="text-align:left;">
-
 TypeScript
-
 </td>
-
 <td style="text-align:right;">
-
 90
-
 </td>
-
 <td style="text-align:right;">
-
 NA
-
 </td>
-
 <td style="text-align:left;">
-
 NA
-
 </td>
-
 </tr>
-
 <tr>
-
 <td style="text-align:left;">
-
 [Conveyal Analysis](https://github.com/conveyal/analysis-backend)
-
 </td>
-
 <td style="text-align:left;">
-
 Hosted service
-
 </td>
-
 <td style="text-align:left;">
-
 MIT
-
 </td>
-
 <td style="text-align:left;">
-
 Java
-
 </td>
-
 <td style="text-align:right;">
-
 19
-
 </td>
-
 <td style="text-align:right;">
-
 NA
-
 </td>
-
 <td style="text-align:left;">
-
 NA
-
 </td>
-
 </tr>
-
 <tr>
-
 <td style="text-align:left;">
-
 [PCT](https://github.com/npct/pct-shiny/)
-
 </td>
-
 <td style="text-align:left;">
-
 Hosted service
-
 </td>
-
 <td style="text-align:left;">
-
 AGPLv3
-
 </td>
-
 <td style="text-align:left;">
-
 R
-
 </td>
-
 <td style="text-align:right;">
-
 16
-
 </td>
-
 <td style="text-align:right;">
-
 66
-
 </td>
-
 <td style="text-align:left;">
-
 (Lovelace et al. 2017)
-
 </td>
-
 </tr>
-
 <tr>
-
 <td style="text-align:left;">
-
 [TrajAnalytics](http://vis.cs.kent.edu/TrajAnalytics/)
-
 </td>
-
 <td style="text-align:left;">
-
 Standalone
-
 </td>
-
 <td style="text-align:left;">
-
 BSD-3
-
 </td>
-
 <td style="text-align:left;">
-
 JavaScript
-
 </td>
-
 <td style="text-align:right;">
-
 NA
-
 </td>
-
 <td style="text-align:right;">
-
 0
-
 </td>
-
 <td style="text-align:left;">
-
 (Shamal et al. 2019)
-
 </td>
-
 </tr>
-
 </tbody>
-
 </table>
 
 To overcome the limitation that not all open source software projects
@@ -2163,17 +1445,15 @@ included (see [link here]() for online version):
 4.  Availability of source code with a visible open source license
 
 <!-- Projects or papers were identified using the methods outlined using the methods described above. -->
-
 <!-- 30 projects were identified that met the criteria listed above. -->
-
 <!-- 7 of those were routing engines, which were excluded for reasons outlined in the previous section, resulting in 23 projects outlined in. -->
 
 A secondary filter was used to focus attention on tools for analysis:
 projects whose primary purpose is to provide an interface to an existing
-software/services, such as the R package **opentripplanner**
-(e.g. Morgan et al. 2019; Giraud 2019) and routing engines (Luxen and
-Vetter 2011; Padgham 2019) are omitted from Table
-<a href="#tab:open-tools">2</a> for brevity (routing engines are
+software/services, such as the R package **opentripplanner** (e.g.
+Morgan et al. 2019; Giraud 2019) and routing engines (Luxen and Vetter
+2011; Padgham 2019) are omitted from Table
+<a href="#tab:open-tools">4.1</a> for brevity (routing engines are
 mentioned in the final section of the paper). Tools can be classified in
 a variety of ways from a developer’s perspective including sometimes
 tribal ‘ecosystems’ such as R packages, Python packages and QGIS
@@ -2191,32 +1471,31 @@ suggests they are more likely to be used from graphical interfaces via
 QGIS plugins.
 
 It should be clear that the ‘Type’ and ‘Language’ values shown in Table
-<a href="#tab:open-tools">2</a> are also fuzzy: open source software is
-by nature modular and flexible, meaning that the same piece of code can
-take multiple different forms and the same method can be implemented in
-multiple languages. The AequilibraE QGIS plugin (Camargo 2015), for
+<a href="#tab:open-tools">4.1</a> are also fuzzy: open source software
+is by nature modular and flexible, meaning that the same piece of code
+can take multiple different forms and the same method can be implemented
+in multiple languages. The AequilibraE QGIS plugin (Camargo 2015), for
 example, is also a Python package. Conversely, the MovingPandas Python
 package by Graser (2019) is also a QGIS plugin. The point is that the
 *most prominent* category into which each project seemed to fall, based
 on documentation, was used. The rest of this section outlines some of
 the capabilities of each tool presented in Table
-<a href="#tab:open-tools">2</a> based on the author’s reading of easily
-available documentation: due to time constraints no systematic
+<a href="#tab:open-tools">4.1</a> based on the author’s reading of
+easily available documentation: due to time constraints no systematic
 installation tests or benchmarks were undertaken, although this could be
 a direction of future research.
 
 <!-- --- such as R, Python and QGIS.  -->
-
 <!-- Each open source ecosystem, and it's potential to be used for geographic analysis in transport planning, is outlined below. -->
 
-## Command-line interface (CLI) tools
+## 4.3 Command-line interface (CLI) tools
 
 Tools based on a *command line interface* (CLI) are designed to be
 controlled primarily by typing commands. CLIs predate *graphical user
 interfaces* (GUIs), which are controlled by ‘pointing and clicking’
 (Sherman 2008). CLIs can take time to learn, especially for people who
 have been trained on GUI-based software such as Microsoft Word. After
-overcoming often steep ‘learning curves’, the advantages of CLI-based
+overcoming often steep ‘learning curves,’ the advantages of CLI-based
 tools for *users* become substantial. The approach can be highly
 productive, with hundreds of commands only a few keystrokes away and the
 benefits of reproducibility and scalability associated with representing
@@ -2232,7 +1511,7 @@ geographic analysis.
 
 The longest standing and still actively maintained CLI tools for
 geographic analysis in transport planning shown in Table
-<a href="#tab:open-tools">2</a> are **SUMO** (first released in 2001)
+<a href="#tab:open-tools">4.1</a> are **SUMO** (first released in 2001)
 and **MATSim** (first released in 2006). Both projects operate at the
 ‘microscropic’ (street) level and simulate individual vehicles at high
 spatial and temporal resolution, although the emphasis of **MATSim** is
@@ -2261,7 +1540,7 @@ This has the advantage of enabling many research and (particularly in
 the case of **MATSim**) applied use cases due to the flexibility of the
 tools, but has the disadvantage of reducing accessibility.
 
-The remaining CLI-based tools in Table <a href="#tab:open-tools">2</a>
+The remaining CLI-based tools in Table <a href="#tab:open-tools">4.1</a>
 are smaller, simpler and more accessible R/Python packages that fit
 within the framework of these pre-existing open source software
 ecosystems. **OSMnx** is a Python package for downloading and analysing
@@ -2272,18 +1551,18 @@ spatial network analysis via functions for calculating a range of
 transport network measures. **Movingpandas** is a Python package and
 QGIS plug-in for visualising a wide range of movement datasets, with a
 focus on trajectory data (Graser 2019). **momepy** is a Python package
-for measuring ‘urban morphology’, meaning the measurement and analysis
+for measuring ‘urban morphology,’ meaning the measurement and analysis
 of collections of geographic entities that constitute cities
 (Fleischmann 2019).
 
-The other Python packages in Table <a href="#tab:open-tools">2</a> have
-broader (and to some extent overlapping) remits, aiming to support a
-range of transport planning objectives. **UrbanSim** and **UrbanAccess**
-are Python packages that are part of the [Urban Data Science
-Toolkit](https://github.com/UDST) project, with the former oriented
-towards statistical analysis of citywide transport systems and the
-latter focused on analyzing geographic transport network data from an
-accessibility perspective. The documentation describing these tool
+The other Python packages in Table <a href="#tab:open-tools">4.1</a>
+have broader (and to some extent overlapping) remits, aiming to support
+a range of transport planning objectives. **UrbanSim** and
+**UrbanAccess** are Python packages that are part of the [Urban Data
+Science Toolkit](https://github.com/UDST) project, with the former
+oriented towards statistical analysis of citywide transport systems and
+the latter focused on analyzing geographic transport network data from
+an accessibility perspective. The documentation describing these tool
 highlights their ability to assist metropolitan planning organizations
 (MPOs) to prioritise investments that cost-effectively increase
 accessibility for those most in need (Blanchard and Waddell 2017). In
@@ -2311,7 +1590,7 @@ simulated which can, given a new street network layout, be used to
 estimate the impact of changes to the network.
 
 The remaining two CLI-based tools in Table
-<a href="#tab:open-tools">2</a> are R packages focussed on applied
+<a href="#tab:open-tools">4.1</a> are R packages focussed on applied
 transport planning. **stplanr** (which stands for sustainable transport
 planning with R) contains a range of functions for processing
 origin-destination, routes and route networks. The package takes an
@@ -2326,10 +1605,10 @@ Java library, enabling not only calculation of travel times and route
 geometries but also monetary costs and accessibility isochrone maps
 where GTFS data allow (Morgan et al. 2019).
 
-## Graphical user interface (GUI) tools
+## 4.4 Graphical user interface (GUI) tools
 
 Other than A/B Street, all of the GUI-based tools presented in Table
-<a href="#tab:open-tools">2</a> are QGIS plugin. This came as a
+<a href="#tab:open-tools">4.1</a> are QGIS plugin. This came as a
 surprise: given the dominance of GUIs in many areas of computing one
 would expect a range of stand-alone transport planning tools to have
 been developed (the criterion that tools must be actively maintained to
@@ -2342,7 +1621,7 @@ it lacks capabilities. A/B Street combines the real-time capabilities of
 MATSim with the usability of online tools such as Streetmix, discussed
 in the next section, taking a ‘SimCity’ approach to transport planning,
 while still allowing the user to zoom in to single vehicles (while they
-are in motion via a moving camera\!) and change the geometries of street
+are in motion via a moving camera!) and change the geometries of street
 layouts with an intuitive in-built editor.
 
 QGIS plugins for transport planning are explicitly focussed on
@@ -2375,7 +1654,7 @@ every vertex on the network. By changing network characteristics and
 geometries or adjusting parameters, model experiments can be undertaken
 in sDNA to represent scenarios of change (Cooper 2018).
 
-## Web user interface (WUI) tools
+## 4.5 Web user interface (WUI) tools
 
 <!-- ### The propensity to cycle tool -->
 
@@ -2407,7 +1686,7 @@ service hosted at [streetmix.net](https://streetmix.net/), but it is
 also an open source software project supported by free software giant
 Mozilla that enables anyone to create a locally hosted instance of the
 service. Unlike the other projects listed in Table
-<a href="#tab:open-tools">2</a>, **Streetmix** does not use 2
+<a href="#tab:open-tools">4.1</a>, **Streetmix** does not use 2
 dimensional (longitude/latitude) data but instead allows the user to
 interactively edit a 1D street profile, from the edge of buildings on
 one side to the other side. You can add pavements, cycleways, aesthetic
@@ -2448,26 +1727,26 @@ cases for investment along desire lines with high cycling potential and
 better understand health and environmental benefits of interventions in
 different places.
 
-## Geographic capabilities
+## 4.6 Geographic capabilities
 
 The brief descriptions of CLI, GUI and WUI-based tools for transport
 planning above show diversity of approaches to geographic data, ranging
 from 1D editing in **Streetmix** to full geographic data editing and
 analysis functionality available to users of QGIS-based tools. With
 reference to the transport planning process shown in Figure
-<a href="#fig:schematic">1</a>, the geographic capabilities of the tools
-is shown in Table <a href="#tab:capabilities">3</a>. The columns in
-<a href="#tab:capabilities">3</a> broadly match the main stages of
+<a href="#fig:schematic">1.1</a>, the geographic capabilities of the
+tools is shown in Table <a href="#tab:capabilities">4.2</a>. The columns
+in <a href="#tab:capabilities">4.2</a> broadly match the main stages of
 transport planning as follows:
 
 <!-- {:start="2"} -->
 
-2)  data collection: supported by download (Dld) functionality
-3)  modelling/analysis: supported by routing (Rou) and geographic
+1.  data collection: supported by download (Dld) functionality
+2.  modelling/analysis: supported by routing (Rou) and geographic
     analysis (Geo)
-4)  evaluation: supported by modelling and data analysis (Mod)
+3.  evaluation: supported by modelling and data analysis (Mod)
     capabilities
-5)  implementation of solutions: supported by visualisation (Vis)
+4.  implementation of solutions: supported by visualisation (Vis)
 
 Additional important considerations include the geographic resolution,
 support for time series analysis (over seconds to years), the scale at
@@ -2479,8 +1758,8 @@ modelling capabilities in their native environment and QGIS plugins
 place the user in a mature environment for geographic analyis and
 visualisation, for example.
 
-Another key finding from Table <a href="#tab:capabilities">3</a> is that
-there is no single tool that every desirable feature of tools for
+Another key finding from Table <a href="#tab:capabilities">4.2</a> is
+that there is no single tool that every desirable feature of tools for
 geographic analysis in transport planning. There is generally a
 trade-off between the complexity of the tool and ease-of-use, with
 **MATSim** and **SUMO** being sophisticated yet hard to use and
@@ -2493,10 +1772,8 @@ real-world transport planning these capabilities have yet to be
 documented in applied settings.
 
 <table>
-
 <caption>
-
-Table 3: Geographic capabilities and features of open source tools for
+Table 4.2: Geographic capabilities and features of open source tools for
 transport planning. Dld, Rou, Geo, Mod and Vis refer to Downloading,
 Routing, Geographic analysis, Modelling and Visualisation capabilities,
 respectively. Cell values y, i, and e mean Yes (with in-house
@@ -2511,1822 +1788,915 @@ values p, c, n and g referring to Point, City, National and Global
 scales respectively. Expertise refers to the level of expertise needed
 to install, set-up and run the tool, ranging from 1 (easy) via 2
 (intermediate) to 3 (expertise required).
-
 </caption>
-
 <thead>
-
 <tr>
-
 <th style="text-align:left;">
-
 Tool
-
 </th>
-
 <th style="text-align:left;">
-
 Type
-
 </th>
-
 <th style="text-align:left;">
-
 Dld
-
 </th>
-
 <th style="text-align:left;">
-
 Rou
-
 </th>
-
 <th style="text-align:left;">
-
 Geo
-
 </th>
-
 <th style="text-align:left;">
-
 Mod
-
 </th>
-
 <th style="text-align:left;">
-
 Vis
-
 </th>
-
 <th style="text-align:left;">
-
 Resolution
-
 </th>
-
 <th style="text-align:left;">
-
 Time
-
 </th>
-
 <th style="text-align:left;">
-
 Scale
-
 </th>
-
 <th style="text-align:right;">
-
 Expertise
-
 </th>
-
 </tr>
-
 </thead>
-
 <tbody>
-
 <tr>
-
 <td style="text-align:left;">
-
 OSMnx
-
 </td>
-
 <td style="text-align:left;">
-
 Python package
-
 </td>
-
 <td style="text-align:left;">
-
 ✓
-
 </td>
-
 <td style="text-align:left;">
-
 ✓
-
 </td>
-
 <td style="text-align:left;">
-
 i
-
 </td>
-
 <td style="text-align:left;">
-
 ✓
-
 </td>
-
 <td style="text-align:left;">
-
 i
-
 </td>
-
 <td style="text-align:left;">
-
 s
-
 </td>
-
 <td style="text-align:left;">
-
 </td>
-
 <td style="text-align:left;">
-
 c
-
 </td>
-
 <td style="text-align:right;">
-
 2
-
 </td>
-
 </tr>
-
 <tr>
-
 <td style="text-align:left;">
-
 SUMO
-
 </td>
-
 <td style="text-align:left;">
-
 Standalone
-
 </td>
-
 <td style="text-align:left;">
-
 </td>
-
 <td style="text-align:left;">
-
 ✓
-
 </td>
-
 <td style="text-align:left;">
-
 e
-
 </td>
-
 <td style="text-align:left;">
-
 i
-
 </td>
-
 <td style="text-align:left;">
-
 ✓
-
 </td>
-
 <td style="text-align:left;">
-
 s
-
 </td>
-
 <td style="text-align:left;">
-
 ✓
-
 </td>
-
 <td style="text-align:left;">
-
 c
-
 </td>
-
 <td style="text-align:right;">
-
 3
-
 </td>
-
 </tr>
-
 <tr>
-
 <td style="text-align:left;">
-
 UrbanSim
-
 </td>
-
 <td style="text-align:left;">
-
 Python package
-
 </td>
-
 <td style="text-align:left;">
-
 i
-
 </td>
-
 <td style="text-align:left;">
-
 i
-
 </td>
-
 <td style="text-align:left;">
-
 ✓
-
 </td>
-
 <td style="text-align:left;">
-
 ✓
-
 </td>
-
 <td style="text-align:left;">
-
 i
-
 </td>
-
 <td style="text-align:left;">
-
 s
-
 </td>
-
 <td style="text-align:left;">
-
 ✓
-
 </td>
-
 <td style="text-align:left;">
-
 c
-
 </td>
-
 <td style="text-align:right;">
-
 2
-
 </td>
-
 </tr>
-
 <tr>
-
 <td style="text-align:left;">
-
 MovingPandas
-
 </td>
-
 <td style="text-align:left;">
-
 Python package
-
 </td>
-
 <td style="text-align:left;">
-
 i
-
 </td>
-
 <td style="text-align:left;">
-
 </td>
-
 <td style="text-align:left;">
-
 ✓
-
 </td>
-
 <td style="text-align:left;">
-
 ✓
-
 </td>
-
 <td style="text-align:left;">
-
 i
-
 </td>
-
 <td style="text-align:left;">
-
 t
-
 </td>
-
 <td style="text-align:left;">
-
 </td>
-
 <td style="text-align:left;">
-
 c
-
 </td>
-
 <td style="text-align:right;">
-
 2
-
 </td>
-
 </tr>
-
 <tr>
-
 <td style="text-align:left;">
-
 MATSim
-
 </td>
-
 <td style="text-align:left;">
-
 Standalone
-
 </td>
-
 <td style="text-align:left;">
-
 </td>
-
 <td style="text-align:left;">
-
 ✓
-
 </td>
-
 <td style="text-align:left;">
-
 e
-
 </td>
-
 <td style="text-align:left;">
-
 i
-
 </td>
-
 <td style="text-align:left;">
-
 ✓
-
 </td>
-
 <td style="text-align:left;">
-
 a
-
 </td>
-
 <td style="text-align:left;">
-
 </td>
-
 <td style="text-align:left;">
-
 c
-
 </td>
-
 <td style="text-align:right;">
-
 3
-
 </td>
-
 </tr>
-
 <tr>
-
 <td style="text-align:left;">
-
 Scikit-mobility
-
 </td>
-
 <td style="text-align:left;">
-
 Python package
-
 </td>
-
 <td style="text-align:left;">
-
 i
-
 </td>
-
 <td style="text-align:left;">
-
 ✓
-
 </td>
-
 <td style="text-align:left;">
-
 i
-
 </td>
-
 <td style="text-align:left;">
-
 ✓
-
 </td>
-
 <td style="text-align:left;">
-
 i
-
 </td>
-
 <td style="text-align:left;">
-
 a
-
 </td>
-
 <td style="text-align:left;">
-
 </td>
-
 <td style="text-align:left;">
-
 c
-
 </td>
-
 <td style="text-align:right;">
-
 2
-
 </td>
-
 </tr>
-
 <tr>
-
 <td style="text-align:left;">
-
 stplanr
-
 </td>
-
 <td style="text-align:left;">
-
 R package
-
 </td>
-
 <td style="text-align:left;">
-
 i
-
 </td>
-
 <td style="text-align:left;">
-
 i
-
 </td>
-
 <td style="text-align:left;">
-
 ✓
-
 </td>
-
 <td style="text-align:left;">
-
 ✓
-
 </td>
-
 <td style="text-align:left;">
-
 i
-
 </td>
-
 <td style="text-align:left;">
-
 od
-
 </td>
-
 <td style="text-align:left;">
-
 </td>
-
 <td style="text-align:left;">
-
 c
-
 </td>
-
 <td style="text-align:right;">
-
 2
-
 </td>
-
 </tr>
-
 <tr>
-
 <td style="text-align:left;">
-
 momepy
-
 </td>
-
 <td style="text-align:left;">
-
 Python package
-
 </td>
-
 <td style="text-align:left;">
-
 i
-
 </td>
-
 <td style="text-align:left;">
-
 i
-
 </td>
-
 <td style="text-align:left;">
-
 ✓
-
 </td>
-
 <td style="text-align:left;">
-
 ✓
-
 </td>
-
 <td style="text-align:left;">
-
 i
-
 </td>
-
 <td style="text-align:left;">
-
 s
-
 </td>
-
 <td style="text-align:left;">
-
 </td>
-
 <td style="text-align:left;">
-
 c
-
 </td>
-
 <td style="text-align:right;">
-
 2
-
 </td>
-
 </tr>
-
 <tr>
-
 <td style="text-align:left;">
-
 Trip-simulator
-
 </td>
-
 <td style="text-align:left;">
-
 JavaScript package
-
 </td>
-
 <td style="text-align:left;">
-
 </td>
-
 <td style="text-align:left;">
-
 </td>
-
 <td style="text-align:left;">
-
 </td>
-
 <td style="text-align:left;">
-
 </td>
-
 <td style="text-align:left;">
-
 ✓
-
 </td>
-
 <td style="text-align:left;">
-
 t
-
 </td>
-
 <td style="text-align:left;">
-
 </td>
-
 <td style="text-align:left;">
-
 c
-
 </td>
-
 <td style="text-align:right;">
-
 2
-
 </td>
-
 </tr>
-
 <tr>
-
 <td style="text-align:left;">
-
 urbanaccess
-
 </td>
-
 <td style="text-align:left;">
-
 Python package
-
 </td>
-
 <td style="text-align:left;">
-
 i
-
 </td>
-
 <td style="text-align:left;">
-
 i
-
 </td>
-
 <td style="text-align:left;">
-
 ✓
-
 </td>
-
 <td style="text-align:left;">
-
 ✓
-
 </td>
-
 <td style="text-align:left;">
-
 i
-
 </td>
-
 <td style="text-align:left;">
-
 s
-
 </td>
-
 <td style="text-align:left;">
-
 </td>
-
 <td style="text-align:left;">
-
 c
-
 </td>
-
 <td style="text-align:right;">
-
 2
-
 </td>
-
 </tr>
-
 <tr>
-
 <td style="text-align:left;">
-
 spaghetti
-
 </td>
-
 <td style="text-align:left;">
-
 Python package
-
 </td>
-
 <td style="text-align:left;">
-
 i
-
 </td>
-
 <td style="text-align:left;">
-
 ✓
-
 </td>
-
 <td style="text-align:left;">
-
 ✓
-
 </td>
-
 <td style="text-align:left;">
-
 ✓
-
 </td>
-
 <td style="text-align:left;">
-
 ✓
-
 </td>
-
 <td style="text-align:left;">
-
 s
-
 </td>
-
 <td style="text-align:left;">
-
 </td>
-
 <td style="text-align:left;">
-
 c
-
 </td>
-
 <td style="text-align:right;">
-
 2
-
 </td>
-
 </tr>
-
 <tr>
-
 <td style="text-align:left;">
-
 urbanpy
-
 </td>
-
 <td style="text-align:left;">
-
 Python package
-
 </td>
-
 <td style="text-align:left;">
-
 i
-
 </td>
-
 <td style="text-align:left;">
-
 i
-
 </td>
-
 <td style="text-align:left;">
-
 ✓
-
 </td>
-
 <td style="text-align:left;">
-
 i
-
 </td>
-
 <td style="text-align:left;">
-
 i
-
 </td>
-
 <td style="text-align:left;">
-
 s
-
 </td>
-
 <td style="text-align:left;">
-
 </td>
-
 <td style="text-align:left;">
-
 c
-
 </td>
-
 <td style="text-align:right;">
-
 2
-
 </td>
-
 </tr>
-
 <tr>
-
 <td style="text-align:left;">
-
 abstreet
-
 </td>
-
 <td style="text-align:left;">
-
 Standalone
-
 </td>
-
 <td style="text-align:left;">
-
 </td>
-
 <td style="text-align:left;">
-
 ✓
-
 </td>
-
 <td style="text-align:left;">
-
 e
-
 </td>
-
 <td style="text-align:left;">
-
 ✓
-
 </td>
-
 <td style="text-align:left;">
-
 ✓
-
 </td>
-
 <td style="text-align:left;">
-
 a
-
 </td>
-
 <td style="text-align:left;">
-
 ✓
-
 </td>
-
 <td style="text-align:left;">
-
 c
-
 </td>
-
 <td style="text-align:right;">
-
 1
-
 </td>
-
 </tr>
-
 <tr>
-
 <td style="text-align:left;">
-
 AequilibraE
-
 </td>
-
 <td style="text-align:left;">
-
 QGIS plugin
-
 </td>
-
 <td style="text-align:left;">
-
 i
-
 </td>
-
 <td style="text-align:left;">
-
 i
-
 </td>
-
 <td style="text-align:left;">
-
 i
-
 </td>
-
 <td style="text-align:left;">
-
 ✓
-
 </td>
-
 <td style="text-align:left;">
-
 i
-
 </td>
-
 <td style="text-align:left;">
-
 s
-
 </td>
-
 <td style="text-align:left;">
-
 </td>
-
 <td style="text-align:left;">
-
 c
-
 </td>
-
 <td style="text-align:right;">
-
 2
-
 </td>
-
 </tr>
-
 <tr>
-
 <td style="text-align:left;">
-
 QNEAT3
-
 </td>
-
 <td style="text-align:left;">
-
 QGIS plugin
-
 </td>
-
 <td style="text-align:left;">
-
 i
-
 </td>
-
 <td style="text-align:left;">
-
 i
-
 </td>
-
 <td style="text-align:left;">
-
 i
-
 </td>
-
 <td style="text-align:left;">
-
 ✓
-
 </td>
-
 <td style="text-align:left;">
-
 i
-
 </td>
-
 <td style="text-align:left;">
-
 s
-
 </td>
-
 <td style="text-align:left;">
-
 </td>
-
 <td style="text-align:left;">
-
 c
-
 </td>
-
 <td style="text-align:right;">
-
 2
-
 </td>
-
 </tr>
-
 <tr>
-
 <td style="text-align:left;">
-
 Networks plugin
-
 </td>
-
 <td style="text-align:left;">
-
 QGIS plugin
-
 </td>
-
 <td style="text-align:left;">
-
 i
-
 </td>
-
 <td style="text-align:left;">
-
 i
-
 </td>
-
 <td style="text-align:left;">
-
 i
-
 </td>
-
 <td style="text-align:left;">
-
 ✓
-
 </td>
-
 <td style="text-align:left;">
-
 i
-
 </td>
-
 <td style="text-align:left;">
-
 s
-
 </td>
-
 <td style="text-align:left;">
-
 </td>
-
 <td style="text-align:left;">
-
 c
-
 </td>
-
 <td style="text-align:right;">
-
 2
-
 </td>
-
 </tr>
-
 <tr>
-
 <td style="text-align:left;">
-
 sDNA
-
 </td>
-
 <td style="text-align:left;">
-
 QGIS plugin
-
 </td>
-
 <td style="text-align:left;">
-
 </td>
-
 <td style="text-align:left;">
-
 ✓
-
 </td>
-
 <td style="text-align:left;">
-
 i
-
 </td>
-
 <td style="text-align:left;">
-
 i
-
 </td>
-
 <td style="text-align:left;">
-
 i
-
 </td>
-
 <td style="text-align:left;">
-
 s
-
 </td>
-
 <td style="text-align:left;">
-
 </td>
-
 <td style="text-align:left;">
-
 c
-
 </td>
-
 <td style="text-align:right;">
-
 2
-
 </td>
-
 </tr>
-
 <tr>
-
 <td style="text-align:left;">
-
 AwaP
-
 </td>
-
 <td style="text-align:left;">
-
 QGIS plugin
-
 </td>
-
 <td style="text-align:left;">
-
 i
-
 </td>
-
 <td style="text-align:left;">
-
 </td>
-
 <td style="text-align:left;">
-
 i
-
 </td>
-
 <td style="text-align:left;">
-
 i
-
 </td>
-
 <td style="text-align:left;">
-
 i
-
 </td>
-
 <td style="text-align:left;">
-
 s
-
 </td>
-
 <td style="text-align:left;">
-
 </td>
-
 <td style="text-align:left;">
-
 c
-
 </td>
-
 <td style="text-align:right;">
-
 2
-
 </td>
-
 </tr>
-
 <tr>
-
 <td style="text-align:left;">
-
 Citybound
-
 </td>
-
 <td style="text-align:left;">
-
 Standalone
-
 </td>
-
 <td style="text-align:left;">
-
 </td>
-
 <td style="text-align:left;">
-
 ✓
-
 </td>
-
 <td style="text-align:left;">
-
 e
-
 </td>
-
 <td style="text-align:left;">
-
 </td>
-
 <td style="text-align:left;">
-
 ✓
-
 </td>
-
 <td style="text-align:left;">
-
 a
-
 </td>
-
 <td style="text-align:left;">
-
 ✓
-
 </td>
-
 <td style="text-align:left;">
-
 c
-
 </td>
-
 <td style="text-align:right;">
-
 1
-
 </td>
-
 </tr>
-
 <tr>
-
 <td style="text-align:left;">
-
 StreetMix
-
 </td>
-
 <td style="text-align:left;">
-
 Hosted service
-
 </td>
-
 <td style="text-align:left;">
-
 </td>
-
 <td style="text-align:left;">
-
 </td>
-
 <td style="text-align:left;">
-
 </td>
-
 <td style="text-align:left;">
-
 </td>
-
 <td style="text-align:left;">
-
 ✓
-
 </td>
-
 <td style="text-align:left;">
-
 p
-
 </td>
-
 <td style="text-align:left;">
-
 </td>
-
 <td style="text-align:left;">
-
 p
-
 </td>
-
 <td style="text-align:right;">
-
 1
-
 </td>
-
 </tr>
-
 <tr>
-
 <td style="text-align:left;">
-
 flowmap.blue
-
 </td>
-
 <td style="text-align:left;">
-
 Standalone
-
 </td>
-
 <td style="text-align:left;">
-
 i
-
 </td>
-
 <td style="text-align:left;">
-
 </td>
-
 <td style="text-align:left;">
-
 </td>
-
 <td style="text-align:left;">
-
 </td>
-
 <td style="text-align:left;">
-
 ✓
-
 </td>
-
 <td style="text-align:left;">
-
 od
-
 </td>
-
 <td style="text-align:left;">
-
 </td>
-
 <td style="text-align:left;">
-
 g
-
 </td>
-
 <td style="text-align:right;">
-
 1
-
 </td>
-
 </tr>
-
 <tr>
-
 <td style="text-align:left;">
-
 Conveyal Analysis
-
 </td>
-
 <td style="text-align:left;">
-
 Hosted service
-
 </td>
-
 <td style="text-align:left;">
-
 i
-
 </td>
-
 <td style="text-align:left;">
-
 i
-
 </td>
-
 <td style="text-align:left;">
-
 e
-
 </td>
-
 <td style="text-align:left;">
-
 ✓
-
 </td>
-
 <td style="text-align:left;">
-
 ✓
-
 </td>
-
 <td style="text-align:left;">
-
 s
-
 </td>
-
 <td style="text-align:left;">
-
 </td>
-
 <td style="text-align:left;">
-
 c
-
 </td>
-
 <td style="text-align:right;">
-
 3
-
 </td>
-
 </tr>
-
 <tr>
-
 <td style="text-align:left;">
-
 PCT
-
 </td>
-
 <td style="text-align:left;">
-
 Hosted service
-
 </td>
-
 <td style="text-align:left;">
-
 i
-
 </td>
-
 <td style="text-align:left;">
-
 i
-
 </td>
-
 <td style="text-align:left;">
-
 </td>
-
 <td style="text-align:left;">
-
 </td>
-
 <td style="text-align:left;">
-
 ✓
-
 </td>
-
 <td style="text-align:left;">
-
 od
-
 </td>
-
 <td style="text-align:left;">
-
 </td>
-
 <td style="text-align:left;">
-
 n
-
 </td>
-
 <td style="text-align:right;">
-
 1
-
 </td>
-
 </tr>
-
 <tr>
-
 <td style="text-align:left;">
-
 TrajAnalytics
-
 </td>
-
 <td style="text-align:left;">
-
 Standalone
-
 </td>
-
 <td style="text-align:left;">
-
 </td>
-
 <td style="text-align:left;">
-
 </td>
-
 <td style="text-align:left;">
-
 </td>
-
 <td style="text-align:left;">
-
 ✓
-
 </td>
-
 <td style="text-align:left;">
-
 ✓
-
 </td>
-
 <td style="text-align:left;">
-
 t
-
 </td>
-
 <td style="text-align:left;">
-
 </td>
-
 <td style="text-align:left;">
-
 c
-
 </td>
-
 <td style="text-align:right;">
-
 3
-
 </td>
-
 </tr>
-
 </tbody>
-
 </table>
-
 <!-- # Software ecosystems -->
-
 <!-- Many of the tools presented in the previous section fit into one or more software 'ecosystems', communities of software developers linked by an overarching organisation, technology or language. -->
-
 <!-- Software is not developed in isolation but in a social context [@dhir_adoption_2017]. -->
-
-<!-- While some of the most popular tools shown in table <a href="#tab:open-tools">2</a> arose from new contexts (Rust is not generally seen as a language for data analysis, alone transport planning for example), such ecosystems can be important for longevity of projects, support and getting new people involved in the software development process. -->
-
-<!-- Three software ecosystems --- R, Python and QGIS --- account for over half of the projects presented in table <a href="#tab:open-tools">2</a>. -->
-
+<!-- While some of the most popular tools shown in table <a href="#tab:open-tools">4.1</a> arose from new contexts (Rust is not generally seen as a language for data analysis, alone transport planning for example), such ecosystems can be important for longevity of projects, support and getting new people involved in the software development process. -->
+<!-- Three software ecosystems --- R, Python and QGIS --- account for over half of the projects presented in table <a href="#tab:open-tools">4.1</a>. -->
 <!-- Other open source ecosystems include those surrounding the languages JavaScript, Julia and Rust, and the GUI-based Java traffic management system [IRIS](http://iris.dot.state.mn.us/). -->
-
 <!-- These were selected due to their maturity, relatively low barrier to entry wide uptake in industry and academia and, above all, for their support for geographic data analysis. -->
-
 <!-- They have also seen impressive growth in popularity over the past decade, suggesting they are future proof. -->
-
 <!-- ## R -->
-
 <!-- R is a "a language and environment for statistical computing and graphics" [@rcoreteam_language_2019]. -->
-
 <!-- First announced and released as a binary program in 1993 by University of Aukland statisticians Robert Gentleman and Ross Ihaka, the project was only open sourced and released under the conditions of the GNU General Public License (GPL) in 1995, thanks to input from one of R's first international collaborators, Martin Mächler of ETH Zurich -->
-
 <!-- [@ihaka_future_1998]. -->
-
 <!-- This history highlight's how open source software development is an inherently collaborative process, usually involving people from many different countries and backgrounds. -->
-
 <!-- R has several strengths from the perspective of transport planning and has an active community of developers working between academia and industry. -->
-
 <!-- Strengths include support for with temporal and geographic data, outstanding visualisation capabilities, and support for a very wide range of statistical techniques, many of which are useful in transport problems [@lovelace_stplanr_2018]. -->
-
 <!-- R is a statistical statistical programming language, meaning the base R installation can solve a wide range of problems, including generalised linear models (GLMs, implemented with the function `glm`) and constrained optimisation problems that appear frequently in transport research. -->
-
 <!-- Additional capabilities are supported by 10,000+ packages that can be installed from a central repository with commands such as `install.packages("stplanr")`.^[ -->
-
 <!-- Like Python packages, R packages are analogous to Apps on smartphones and plugins in QGIS (described below), that provide new functionality. -->
-
 <!-- Many implement recently developed statistical and computational techniques (some of which are accompanied by papers describing new methods in academic journals such as the *Journal for Statistical Software*) or provide interfaces to software written in other languages, meaning that R can provide transport researchers with access to many cutting-edge methods via a single system. -->
-
 <!-- ] -->
-
 <!-- A good example of a transport problem that R's statistical capabilities are well suited to solving is mode choice. -->
-
 <!-- Unimodal models estimating mode share (or the logit thereof) can use R's inbuilt statistical capabilities, as demonstrated in the Propensity to Cycle Tool project [@lovelace_propensity_2017]. -->
-
 <!-- More sophisticated multinomial models are needed when estimating mode share across multiple travel options such as walk, cycle, bus [@martin_individual_2019]. -->
-
 <!-- R has mature support for such models via the `multinom` function in the long-standing package `nnet` [@venables_modern_2002], as demonstrated by [Germán Rodríguez](https://data.princeton.edu/wws509/r/c6s2). -->
-
 <!-- Subsequent packages provide additional methods for estimating mode split [@hasan_fast_2016; @croissant_mlogit_2019]. -->
-
 <!-- Appollo and mlr3 are recently developed examples of R packages providing support for sophisticated choice models and cutting edge machine learning functionality, respectively. -->
-
 <!-- [@hess_apollo_2019;@bischl_mlr_2016]. -->
-
 <!-- R is well known for having outstanding statistical analysis and modelling capabilities, of the type useful in transport planning. -->
-
 <!-- Less known is that R also has a mature ecosystem for working with geographic data, making it well suited to the task of integrating geographic analysis in transport planning: R excels at doing modelling *and* geographic analysis. -->
-
 <!-- This is particular interest here because, as outlined in previous sections, 'context switching' between programs for statistical and geographic analysis is time consuming.^[ -->
-
 <!-- The author has first hand experience of the costs of context-switching: during my PhD I used R for the statistical and modelling analysis, and then switched to QGIS for geographic analysis and visualisation. -->
-
 <!-- While this approach worked well, the cognitive burden of having to learn and manage two substantial programs was substantial. -->
-
 <!-- ] -->
-
 <!-- Support for geographic data and methods have a long history in R [@bivand_implementing_2006;@pebesma_software_2015;@bivand_applied_2013]. -->
-
 <!-- The development of R's spatial capabilities are well documented elsewhere [link to other articles in the special edition]. -->
-
 <!-- However, a few advances are worth mentioning due to their relevance to transport transport planning. -->
-
 <!-- The package `sf` [@pebesma_simple_2018] provides a unified and high performance system for working geographic lines (in addition to its support for points and polygons), which can be used to represent roads. -->
-
 <!-- Building on `sf`, the package `stplanr` [@lovelace_stplanr_2018] provides many functions for working with geographic transport data, including `overline` which enables thousands routes to be aggregated to create route networks (Morgan and Lovelace, in press) and `dl_stats19`, which has evolved into the `stats19` package [@lovelace_stats19_2019]. -->
-
 <!-- Geographic data visualisation, cartography, is another area where R excels, with packages such as `tmap` [@tennekes_tmap_2018] providing powerful functions for map making. -->
-
 <!-- These and many other packages for working with geographic data in R are described in detail in *Geocomputation with R* [@lovelace_geocomputation_2019]. -->
-
 <!-- Chapter 12 this of this open source book is dedicated to transport applications, and provides a good starting point for learning more about using R's impressive geographic capabilities for transport planning. -->
-
 <!-- ## Python -->
-
 <!-- Python is a general-purpose programming language originally conceived in the late 1980s and first released in 1991 [@rossum_python_1995]. -->
-
 <!-- The language was designed from a computer science perspective, with a focus on code elegance and consistency, rather than R's focus on statistical functionality. -->
-
 <!-- However, Python has become very popular for data analysis and 'data science' thanks to packages such as [Pandas](https://github.com/pandas-dev/pandas), and SciKitLearn [@mckinney_python_2017]. -->
-
 <!-- Due to its range of features, large open source community, and flexibility, Python has been used as a 'glue' language to interact with many other software systems. -->
-
 <!-- It is a highly diverse language that is widely used in domains ranging from web development [@grinberg_flask_2018], to computer vision and [@zafar_hands-convolutional_2018] text analysis [@bengfort_applied_2018]. -->
-
 <!-- Of particular interest here is Python's support for geographic data. -->
-
 <!-- There are dozens of geographic projects written in Python, ranging from the use of the language to teach low level geographic concepts and algorithms [@xiao_gis_2016] to its use as an interface to libraries such as GDAL. -->
-
 <!-- Dozens of Python packages have been published for solving specific geographic problems, ranging from the processing of scientific gravimetric measurements [@mccubbine_gsolve_2018] to handling remote sensing data for Ireland [@serbin_opensourced_2018], both of which could have transport applications. -->
-
 <!-- Furthermore, Python is used as the language of choice of choice for command-line interfaces to the popular proprietary GIS ArcMAP [@zandbergen_python_2015]. -->
-
 <!-- More general purpose package for handling spatial datasets that could be used for transport research include [GeoPandas](http://geopandas.org/), for handling vector data such as roads and [rasterio](https://rasterio.readthedocs.io/en/stable/) for handling raster datasets. -->
-
 <!-- Building on such foundations, a number of Python developers have written packages with a transport focus. -->
-
 <!-- This include OSMnx [@boeing_osmnx_2017], for downloading and analysing street network data from OpenStreetMap and the recent and ambitious project  -->
-
 <!-- [@pappalardo_scikitmobility_2019] which, despite limited documentation at the time of writing, sets out to create a framework for modelling transport systems. -->
-
 <!-- Because Python is a general purpose language, it has been used as the basis of transport applications that go beyond the transport planning remit of this paper. -->
-
 <!-- A couple of projects are worth mentioning to give an indication of the wider Python transport ecosystem. -->
-
 <!-- [Itinerum](https://github.com/TRIP-Lab) is an open source travel survey development project, which includes a backend written in Python and smartphone apps [@patterson_itinerum_2019]. -->
-
 <!-- A similar project is [E-mission](https://github.com/e-mission) [@shankari_emission_2018] the backend of which is partly written in Python.  -->
-
 <!-- ## QGIS -->
-
 <!-- QGIS is a cross-platform desktop GIS application with a huge user base (likely the most popular GIS software in the world) and more than 1000 community supported plugins [@qgisdevelopmentteam_qgis_2019]. -->
-
 <!-- QGIS itself is written primarily in C++ and Python, meaning that there is strong symbiosis between the Python and QGIS ecosystems. -->
-
 <!-- In fact the majority of QGIS plugins are written in Python, meaning that Python developers can use QGIS as a platform for providing users with a graphical user interface and, conversely, QGIS users can learn to use a CLI, via QGIS's Python console. -->
-
 <!-- A good example of the flexibility of QGIS's plugin model, and illustrating the wider point that open source software tends to be modular and do 'one thing well', is that sDNA, mentioned in Section <a href="#the-current-landscape">3</a> can be used in QGIS via the sDNA plugin [@chan_using_2019]. -->
-
 <!-- Indeed, the open source transport modelling framework MATSim also benefits from being used alongside QGIS, for road network editing and visualisation [@horni_multiagent_2016]. -->
-
 <!-- QGIS plugins and extensions specifically designed for transport planning applications include the AwaP-IC walkability analysis plugin [@majic_awap-icopen-source_2019], extensions to QGIS's Processing model development framework for assessing road network completeness [@sehra_assessing_2017] and the ORS (OpenRouteService) plugin, for multi-modal routing. -->
-
 <!-- QGIS can also be used as a self-standing application for transport data analysis. -->
-
 <!-- @ilayaraja_road_2013, for example, used QGIS as the platform of choice for analysing street networks using the [Road Graph plugin](https://docs.qgis.org/2.14/en/docs/user_manual/plugins/plugins_road_graph.html), which ships with QGIS by default. -->
-
 <!-- @dong_population-weighted_2016, to provide another example, used QGIS as the basis of geographic analysis of route network efficiency. -->
-
 <!-- Many other transport planning projects have used QGIS for the mapping and geographic analysis component of the work and, due to the application's user friendly GUI, it is gaining in popularity among government transport planning departments, including Transport for Wales and Transport for Greater Manchester. -->
 
-# Discussion and conclusion
+# 5 Discussion and conclusion
 
 Geographic analysis is an important yet often under-appreciated aspect
 of transport planning, and looks set to play a more prominent role in
@@ -4384,19 +2754,15 @@ to lack of opportunities to engage in democratic processes (Legacy 2016;
 Monbiot 2017). Open tools can also support data and software literacy
 (Christozov and Rasheva-Yordanova 2017). A key feature of geographic
 tools for transport planning is that they encourage users to focus on
-local areas, moving beyond ‘one size fits all’, enabling diverse designs
+local areas, moving beyond ‘one size fits all,’ enabling diverse designs
 to fit a wide range of diverse local needs. A key feature of open tools,
 and especially open online tools that are easy to use, is that anyone
 can use them, encouraging citizen engagement.
 
 <!-- Following the Unix philosophy of modularity [@gancarz_linux_2003], each of the tools outlined in Section <a href="#open-source-tools">4</a> has a particular niche. -->
-
 <!-- Geographic thinking has a long history in transport planning and calls to strengthen the links between GIS and transport software have  [@loidl_gis_2016] but none of the open source solutions reviewed provide 'in house' GIS capabilities of the type needed for an integrated transport planning workflow in which a single piece of software can be used to import a range data, undertake statistical analysis and modelling and plot the results in interactive maps, e.g. for the design and modelling of new walking and cycling networks. -->
-
 <!-- With a view to the future of transport planning software, three established 'software ecosystems', each of which has a substantial following and large community of developers building extensions, were reviewed with respect to their capacity to support geographic analysis in transport planning. -->
-
 <!-- Although each ecosystem is mature (yet still growing), their use in transport planning is still in a nascent phase, suggesting that much innovation, evolution and consolidation will occur before any strong conclusions about which is most appropriate for different transport planning tasks can be made.  -->
-
 <!-- There is a huge amount of overlap between the three ecosystems and, in practice, the prior experience and preferences of transport planners may be more important than functionality. -->
 
 From a user perspective, Section <a href="#open-source-tools">4</a>
@@ -4407,7 +2773,7 @@ transport planning tasks. This can take time. On the other hand, a
 benefit of the range of free and open options offered is that users are
 encouraged to think about and better understand the tools they are using
 rather than blindly using established (and perhaps expensive and dated)
-‘tools of the trade’. From a *developer perspective*, the community of
+‘tools of the trade.’ From a *developer perspective*, the community of
 support and feedback may be more important than current functionality of
 tools. The literature shows that R, Python and QGIS communities have
 already developed several tools for transport planning that, when
@@ -4419,8 +2785,8 @@ that it is not comprehensive, omitting due to space constraints
 consideration of routing engines such as **pgRouting**, **OSRM**,
 **GraphHopper** (and related project **OpenRouteService**),
 **OpenTripPlanner**, **Valhalla** and the recently developed
-**motis**\[11\] and tools that *can* be applied to transport planning
-but which were not designed for transport planning such as the
+**motis**[11] and tools that *can* be applied to transport planning but
+which were not designed for transport planning such as the
 [**gama**](https://github.com/gama-platform/gama) platform and general
 purpose geographic data processing projects. Future research could
 review and benchmark such alternative tools for transport planning to
@@ -4434,14 +2800,14 @@ its very nature is collaborative, innovative and evolving (Gancarz
 2003), allowing it to out-compete and eventually dominate in sectors
 from machine learning to web development. This paper shows that
 high-performance and innovative solutions are already available in the
-‘ecological niche’ of geographic analysis for transport planning.
-Given the nascent nature of many of the transport-oriented packages,
-plugins and extensions in each ecosystem, fruitful directions of
-research would explore the relative merits of different options, and
-combinations of options, in terms of computer and programmer efficiency.
-Furthermore, the modular and ‘pluginable’ nature of open source software
-suggests there are great opportunities for integration: could there be R
-and Python interfaces to MATSim, SUMO and sDNA? And from a research
+‘ecological niche’ of geographic analysis for transport planning. Given
+the nascent nature of many of the transport-oriented packages, plugins
+and extensions in each ecosystem, fruitful directions of research would
+explore the relative merits of different options, and combinations of
+options, in terms of computer and programmer efficiency. Furthermore,
+the modular and ‘pluginable’ nature of open source software suggests
+there are great opportunities for integration: could there be R and
+Python interfaces to MATSim, SUMO and sDNA? And from a research
 perspective, how can the growth of open source solutions for geographic
 transport data analysis be monitored to identify ‘tipping points’ in
 uptake?
@@ -4456,28 +2822,28 @@ highlights the importance of not only processes, but also the tools used
 for designing geographically specific transport plans. Open source tools
 generate evidence that is more likely to be rigorous, transparent,
 reproducible and shared than evidence generated by the established
-proprietary tools of the trade. Plans based on such open evidence are
-likely to be effective. Given the importance of effective policies to
-improve the social, economic and environmental performance of transport
-systems worldwide, the conclusion of this paper is that uptake of open
-source tools for geographic analysis. In other words, alongside systemic
-political and institutional shifts to prioritize sustainability over
-simplistic and out-dated indicators of economic and transport system
-performance (Beddoe et al. 2009; Litman 2007), open source software can
-save the world.
+proprietary tools. Plans based on such open evidence are likely to be
+effective. Given the importance of effective policies to improve the
+environmental and social performance of transport systems worldwide, the
+conclusion of this paper is that uptake of open source tools for
+geographic analysis. In other words, alongside systemic political and
+institutional shifts to prioritize sustainability over simplistic and
+out-dated indicators of economic and transport system performance
+(Beddoe et al. 2009; Litman 2007), open source software can save the
+world.
 
-# References
+# 6 References
 
-<div id="refs" class="references hanging-indent">
+<div id="refs" class="references csl-bib-body hanging-indent">
 
-<div id="ref-anderson_applying_1991">
+<div id="ref-anderson_applying_1991" class="csl-entry">
 
 Anderson, Larry D. 1991. “Applying Geographic Information Systems to
 Transportation Planning.” *Transportation Research Record*, no. 1305.
 
 </div>
 
-<div id="ref-aryandoust_cityscale_2019">
+<div id="ref-aryandoust_cityscale_2019" class="csl-entry">
 
 Aryandoust, Arsam, Oscar van Vliet, and Anthony Patt. 2019. “City-Scale
 Car Traffic and Parking Density Maps from Uber Movement Travel Time
@@ -4486,39 +2852,39 @@ Data.” *Scientific Data* 6 (1): 1–18.
 
 </div>
 
-<div id="ref-banister_sustainable_2008">
+<div id="ref-banister_sustainable_2008" class="csl-entry">
 
 Banister, David. 2008. “The Sustainable Mobility Paradigm.” *Transport
 Policy* 15 (2): 73–80.
-[https://doi.org/DOI: 10.1016/j.tranpol.2007.10.005](https://doi.org/DOI:%2010.1016/j.tranpol.2007.10.005).
+[https://doi.org/DOI: 10.1016/j.tranpol.2007.10.005](https://doi.org/DOI: 10.1016/j.tranpol.2007.10.005).
 
 </div>
 
-<div id="ref-barthelemy_spatial_2011">
+<div id="ref-barthelemy_spatial_2011" class="csl-entry">
 
-Barth’elemy, Marc. 2011. “Spatial Networks.” *Physics Reports* 499
-(1–3): 1–101.
+Barth’elemy, Marc. 2011. “Spatial Networks.” *Physics Reports* 499 (1):
+1–101.
 
 </div>
 
-<div id="ref-batty_planning_1995">
+<div id="ref-batty_planning_1995" class="csl-entry">
 
 Batty, Michael. 1995. “Planning Support Systems and the New Logic of
 Computation.” *Regional Development Dialogue* 16 (1): 1–17.
 
 </div>
 
-<div id="ref-beddoe_overcoming_2009">
+<div id="ref-beddoe_overcoming_2009" class="csl-entry">
 
 Beddoe, Rachael, Robert Costanza, Joshua Farley, Eric Garza, Jennifer
 Kent, Ida Kubiszewski, Luz Martinez, et al. 2009. “Overcoming Systemic
 Roadblocks to Sustainability: The Evolutionary Redesign of Worldviews,
 Institutions, and Technologies.” *Proceedings of the National Academy of
-Sciences* 106 (8): 2483–9. <https://doi.org/10.1073/pnas.0812570106>.
+Sciences* 106 (8): 2483–89. <https://doi.org/10.1073/pnas.0812570106>.
 
 </div>
 
-<div id="ref-blanchard_urbanaccess_2017">
+<div id="ref-blanchard_urbanaccess_2017" class="csl-entry">
 
 Blanchard, Samuel D., and Paul Waddell. 2017. “Urbanaccess: Generalized
 Methodology for Measuring Regional Accessibility with an Integrated
@@ -4527,7 +2893,7 @@ Pedestrian and Transit Network.” *Transportation Research Record* 2653
 
 </div>
 
-<div id="ref-boeing_osmnx_2017">
+<div id="ref-boeing_osmnx_2017" class="csl-entry">
 
 Boeing, Geoff. 2017. “OSMnx: New Methods for Acquiring, Constructing,
 Analyzing, and Visualizing Complex Street Networks.” *Computers,
@@ -4536,21 +2902,21 @@ Environment and Urban Systems* 65 (September): 126–39.
 
 </div>
 
-<div id="ref-boyce_forecasting_2015">
+<div id="ref-boyce_forecasting_2015" class="csl-entry">
 
 Boyce, David E., and Huw C. W. L. Williams. 2015. *Forecasting Urban
 Travel: Past, Present and Future*. Edward Elgar Publishing.
 
 </div>
 
-<div id="ref-camargo_aequilibrae_2015">
+<div id="ref-camargo_aequilibrae_2015" class="csl-entry">
 
-Camargo, P. 2015. “AequilibraE: A Free QGIS Add-on for Transportation
-Modeling.” *FOSS4G North America*.
+Camargo, P. 2015. “AequilibraE: A Free QGIS Add-On for Transportation
+Modeling.” *Foss4g North America*.
 
 </div>
 
-<div id="ref-christozov_data_2017">
+<div id="ref-christozov_data_2017" class="csl-entry">
 
 Christozov, Dimitar, and Katia Rasheva-Yordanova. 2017. “Data Literacy.”
 *International Journal of Digital Literacy and Digital Competence* 8
@@ -4558,7 +2924,7 @@ Christozov, Dimitar, and Katia Rasheva-Yordanova. 2017. “Data Literacy.”
 
 </div>
 
-<div id="ref-coelho_this_2020">
+<div id="ref-coelho_this_2020" class="csl-entry">
 
 Coelho, Jailton, Marco Tulio Valente, Luciano Milen, and Luciana L.
 Silva. 2020. “Is This GitHub Project Maintained? Measuring the Level of
@@ -4568,7 +2934,7 @@ Technology* 122 (June): 106274.
 
 </div>
 
-<div id="ref-cooper_predictive_2018">
+<div id="ref-cooper_predictive_2018" class="csl-entry">
 
 Cooper, Crispin H. V. 2018. “Predictive Spatial Network Analysis for
 High-Resolution Transport Modeling, Applied to Cyclist Flows, Mode
@@ -4578,16 +2944,16 @@ Transportation* 0 (0): 1–11.
 
 </div>
 
-<div id="ref-cooper_sdna_2020">
+<div id="ref-cooper_sdna_2020" class="csl-entry">
 
-Cooper, Crispin H. V., and Alain J. F. Chiaradia. 2020. “sDNA: 3-d
-Spatial Network Analysis for GIS, CAD, Command Line & Python.”
-*SoftwareX* 12 (July): 100525.
+Cooper, Crispin H. V., and Alain J. F. Chiaradia. 2020. “<span
+class="nocase">sDNA</span>: 3-d Spatial Network Analysis for GIS, CAD,
+Command Line & Python.” *SoftwareX* 12 (July): 100525.
 <https://doi.org/10.1016/j.softx.2020.100525>.
 
 </div>
 
-<div id="ref-delabarra_tranusj_1984">
+<div id="ref-delabarra_tranusj_1984" class="csl-entry">
 
 de la Barra, T, B P’erez, and N Vera. 1984. “TRANUS-J: Putting Large
 Models into Small Computers.” *Environment and Planning B: Planning and
@@ -4595,7 +2961,7 @@ Design* 11 (1): 87–101. <https://doi.org/10.1068/b110087>.
 
 </div>
 
-<div id="ref-dhir_adoption_2017">
+<div id="ref-dhir_adoption_2017" class="csl-entry">
 
 Dhir, Swati, and Sanjay Dhir. 2017. “Adoption of Open-Source Software
 Versus Proprietary Software: An Exploratory Study.” *Strategic Change*
@@ -4603,7 +2969,7 @@ Versus Proprietary Software: An Exploratory Study.” *Strategic Change*
 
 </div>
 
-<div id="ref-ortuzars._modelling_2011">
+<div id="ref-ortuzars._modelling_2011" class="csl-entry">
 
 Dios Ort’uzar S., Juan de, and Luis G. Willumsen. 2011. *Modelling
 Transport*. Fourth edition. Chichester, West Sussex, United Kingdom:
@@ -4611,7 +2977,7 @@ John Wiley & Sons.
 
 </div>
 
-<div id="ref-ebdon_spans_1992">
+<div id="ref-ebdon_spans_1992" class="csl-entry">
 
 Ebdon, David. 1992. “SPANSA Quadtree-Based GIS.” *Computers &
 Geosciences*, GIS Design Models, 18 (4): 471–75.
@@ -4619,14 +2985,14 @@ Geosciences*, GIS Design Models, 18 (4): 471–75.
 
 </div>
 
-<div id="ref-fleischmann_momepy_2019">
+<div id="ref-fleischmann_momepy_2019" class="csl-entry">
 
 Fleischmann, Martin. 2019. “MOMEPY: Urban Morphology Measuring Toolkit.”
 *Journal of Open Source Software* 4 (43): 1807.
 
 </div>
 
-<div id="ref-franco-bedoya_open_2017">
+<div id="ref-franco-bedoya_open_2017" class="csl-entry">
 
 Franco-Bedoya, Oscar, David Ameller, Dolors Costal, and Xavier Franch.
 2017. “Open Source Software Ecosystems: A Systematic Mapping.”
@@ -4634,7 +3000,7 @@ Franco-Bedoya, Oscar, David Ameller, Dolors Costal, and Xavier Franch.
 
 </div>
 
-<div id="ref-Gaboardi2018">
+<div id="ref-Gaboardi2018" class="csl-entry">
 
 Gaboardi, James D., Jay Laura, Sergio Rey, Levi John Wolf, David C.
 Folch, Wei Kang, Philip Stephens, and Charles Schmidt. 2018.
@@ -4642,20 +3008,20 @@ Folch, Wei Kang, Philip Stephens, and Charles Schmidt. 2018.
 
 </div>
 
-<div id="ref-gancarz_linux_2003">
+<div id="ref-gancarz_linux_2003" class="csl-entry">
 
 Gancarz, Mike. 2003. *Linux and the Unix Philosophy*. Digital Press.
 
 </div>
 
-<div id="ref-R-osrm">
+<div id="ref-R-osrm" class="csl-entry">
 
 Giraud, Timoth’ee. 2019. *Osrm: Interface Between R and the
 OpenStreetMap-Based Routing Service OSRM*.
 
 </div>
 
-<div id="ref-goodman_scenarios_2019">
+<div id="ref-goodman_scenarios_2019" class="csl-entry">
 
 Goodman, Anna, Ilan Fridman Rojas, James Woodcock, Rachel Aldred,
 Nikolai Berkoff, Malcolm Morgan, Ali Abbas, and Robin Lovelace. 2019.
@@ -4666,7 +3032,7 @@ of Transport & Health* 12 (March): 263–78.
 
 </div>
 
-<div id="ref-grabowicz_social_2012">
+<div id="ref-grabowicz_social_2012" class="csl-entry">
 
 Grabowicz, Przemyslaw A., Jos’e J. Ramasco, Esteban Moro, Josep M.
 Pujol, and Victor M. Eguiluz. 2012. “Social Features of Online Networks:
@@ -4675,14 +3041,14 @@ The Strength of Intermediary Ties in Online Social Media.” *PloS One* 7
 
 </div>
 
-<div id="ref-graser_movingpandas_2019">
+<div id="ref-graser_movingpandas_2019" class="csl-entry">
 
 Graser, Anita. 2019. “Movingpandas: Efficient Structures for Movement
 Data in Python.” *GIForum* 1: 54–68.
 
 </div>
 
-<div id="ref-hackl_promoting_2019">
+<div id="ref-hackl_promoting_2019" class="csl-entry">
 
 Hackl, Roland, Clemens Raffler, Michael Friesenecker, Hans Kramar,
 Robert Kalasek, Aggelos Soteropoulos, Susanne Wolf-Eberl, Patrick Posch,
@@ -4693,7 +3059,7 @@ Geography* 80 (October): 102541.
 
 </div>
 
-<div id="ref-hadfield_financing_2019">
+<div id="ref-hadfield_financing_2019" class="csl-entry">
 
 Hadfield, Paris, and Nicole Cook. 2019. “Financing the Low-Carbon City:
 Can Local Government Leverage Public Finance to Facilitate Equitable
@@ -4702,14 +3068,14 @@ Decarbonisation?” *Urban Policy and Research* 37 (1): 13–29.
 
 </div>
 
-<div id="ref-harrison_environmental_2017">
+<div id="ref-harrison_environmental_2017" class="csl-entry">
 
 Harrison, R. M., and R. E. Hester. 2017. *Environmental Impacts of Road
 Vehicles: Past, Present and Future*. Royal Society of Chemistry.
 
 </div>
 
-<div id="ref-hickman_transitions_2011">
+<div id="ref-hickman_transitions_2011" class="csl-entry">
 
 Hickman, Robin, Olu Ashiru, and David Banister. 2011. “Transitions to
 Low Carbon Transport Futures: Strategic Conversations from London and
@@ -4719,29 +3085,29 @@ Travel futures, 19 (6): 1553–62.
 
 </div>
 
-<div id="ref-hildebrand_comparative_2014">
+<div id="ref-hildebrand_comparative_2014" class="csl-entry">
 
 Hildebrand, Cisilia, and Stina Hörtin. 2014. *A Comparative Study
 Between Emme and Visum with Respect to Public Transport Assignment*.
 
 </div>
 
-<div id="ref-hollander_transport_2016">
+<div id="ref-hollander_transport_2016" class="csl-entry">
 
 Hollander, Yaron. 2016. *Transport Modelling for a Complete Beginner*.
-CTthink\!
+CTthink!
 
 </div>
 
-<div id="ref-horni_multi-agent_2016">
+<div id="ref-horni_multiagent_2016" class="csl-entry">
 
 Horni, Andreas, Kai Nagel, and Kay W. Axhausen. 2016. *The Multi-Agent
 Transport Simulation MATSim*. Ubiquity Press.
-<https://www.ubiquitypress.com/site/books/10.5334/baw/>.
+<https://doi.org/10.5334/baw>.
 
 </div>
 
-<div id="ref-hull_policy_2008">
+<div id="ref-hull_policy_2008" class="csl-entry">
 
 Hull, Angela. 2008. “Policy Integration: What Will It Take to Achieve
 More Sustainable Transport Solutions in Cities?” *Transport Policy*, New
@@ -4750,7 +3116,7 @@ Developments in Urban Transportation Planning, 15 (2): 94–103.
 
 </div>
 
-<div id="ref-iacono_measuring_2010">
+<div id="ref-iacono_measuring_2010" class="csl-entry">
 
 Iacono, Michael, Kevin J. Krizek, and Ahmed El-Geneidy. 2010. “Measuring
 Non-Motorized Accessibility: Issues, Alternatives, and Execution.”
@@ -4759,7 +3125,7 @@ Non-Motorized Accessibility: Issues, Alternatives, and Execution.”
 
 </div>
 
-<div id="ref-jappinen_modelling_2013">
+<div id="ref-jappinen_modelling_2013" class="csl-entry">
 
 Jäppinen, Sakari, Tuuli Toivonen, and Maria Salonen. 2013. “Modelling
 the Potential Effect of Shared Bicycles on Public Transport Travel Times
@@ -4768,7 +3134,7 @@ in Greater Helsinki: An Open Data Approach.” *Applied Geography* 43:
 
 </div>
 
-<div id="ref-kampa_human_2008">
+<div id="ref-kampa_human_2008" class="csl-entry">
 
 Kampa, Marilena, and Elias Castanas. 2008. “Human Health Effects of Air
 Pollution.” *Environmental Pollution*, Proceedings of the 4th
@@ -4778,16 +3144,16 @@ Emphasis on Trace Elements), 151 (2): 362–67.
 
 </div>
 
-<div id="ref-kilian_emerging_2018">
+<div id="ref-kilian_emerging_2018" class="csl-entry">
 
 Kilian, Jason, and Masashi Kitazawa. 2018. “The Emerging Risk of
 Exposure to Air Pollution on Cognitive Decline and Alzheimer’s
-Disease–Evidence from Epidemiological and Animal Studies.” *Biomedical
+Diseaseevidence from Epidemiological and Animal Studies.” *Biomedical
 Journal*.
 
 </div>
 
-<div id="ref-klosterman_what_1999">
+<div id="ref-klosterman_what_1999" class="csl-entry">
 
 Klosterman, R. E. 1999. “The What If? Collaborative Planning Support
 System.” *Environment and Planning B: Planning and Design* 26 (3):
@@ -4795,22 +3161,22 @@ System.” *Environment and Planning B: Planning and Design* 26 (3):
 
 </div>
 
-<div id="ref-knuth_art_1997">
+<div id="ref-knuth_art_1997" class="csl-entry">
 
 Knuth, Donald E. 1997. *The Art of Computer Programming: Volume 1:
 Fundamental Algorithms*. Addison-Wesley Professional.
 
 </div>
 
-<div id="ref-kotusevski_review_2009">
+<div id="ref-kotusevski_review_2009" class="csl-entry">
 
 Kotusevski, G., and K. A. Hawick. 2009. “A Review of Traffic Simulation
 Software.” *Research Letters in the Information and Mathematical
-Sciences* 13: 35–54. <https://mro.massey.ac.nz/handle/10179/4506>.
+Sciences* 13: 35–54.
 
 </div>
 
-<div id="ref-larsen_build_2013">
+<div id="ref-larsen_build_2013" class="csl-entry">
 
 Larsen, Jacob, Zachary Patterson, and Ahmed El-Geneidy. 2013. “Build It.
 But Where? The Use of Geographic Information Systems in Identifying
@@ -4819,7 +3185,7 @@ Sustainable Transportation* 7 (4): 299–317.
 
 </div>
 
-<div id="ref-legacy_there_2016">
+<div id="ref-legacy_there_2016" class="csl-entry">
 
 Legacy, Crystal. 2016. “Is There a Crisis of Participatory Planning?”
 *Planning Theory* 16 (4): 425–42.
@@ -4827,14 +3193,14 @@ Legacy, Crystal. 2016. “Is There a Crisis of Participatory Planning?”
 
 </div>
 
-<div id="ref-levinson_network_2012">
+<div id="ref-levinson_network_2012" class="csl-entry">
 
 Levinson, David. 2012. “Network Structure and City Size.” *PloS One* 7
 (1): e29721. <https://doi.org/10.1371/journal.pone.0029721>.
 
 </div>
 
-<div id="ref-liao_largescale_2018">
+<div id="ref-liao_largescale_2018" class="csl-entry">
 
 Liao, Siyu, Liutong Zhou, Xuan Di, Bo Yuan, and Jinjun Xiong. 2018.
 “Large-Scale Short-Term Urban Taxi Demand Forecasting Using Deep
@@ -4843,7 +3209,7 @@ Conference (ASP-DAC)*, 428–33. IEEE.
 
 </div>
 
-<div id="ref-lindsey_minnesota_2013">
+<div id="ref-lindsey_minnesota_2013" class="csl-entry">
 
 Lindsey, Greg, Steve Hankey, Xize Wang, and Junzhou Chen. 2013. “The
 Minnesota Bicycle and Pedestrian Counting Initiative: Methodologies for
@@ -4852,7 +3218,7 @@ Transportation.
 
 </div>
 
-<div id="ref-litman_developing_2007">
+<div id="ref-litman_developing_2007" class="csl-entry">
 
 Litman, Todd. 2007. “Developing Indicators for Comprehensive and
 Sustainable Transport Planning.” *Transportation Research Record:
@@ -4861,17 +3227,16 @@ Journal of the Transportation Research Board* 2017 (December): 10–15.
 
 </div>
 
-<div id="ref-loidl_gis_2016">
+<div id="ref-loidl_gis_2016" class="csl-entry">
 
 Loidl, Martin, Gudrun Wallentin, Rita Cyganski, Anita Graser, Johannes
-Scholz, and Eva Haslauer. 2016. “GIS and Transport
-Modeling—Strengthening the Spatial Perspective.” *ISPRS International
-Journal of Geo-Information* 5 (6): 84.
-<https://doi.org/10.3390/ijgi5060084>.
+Scholz, and Eva Haslauer. 2016. “GIS and Transport ModelingStrengthening
+the Spatial Perspective.” *ISPRS International Journal of
+Geo-Information* 5 (6): 84. <https://doi.org/10.3390/ijgi5060084>.
 
 </div>
 
-<div id="ref-lopez_microscopic_2018">
+<div id="ref-lopez_microscopic_2018" class="csl-entry">
 
 Lopez, Pablo Alvarez, Michael Behrisch, Laura Bieker-Walz, Jakob
 Erdmann, Yun-Pang Flötteröd, Robert Hilbrich, Leonhard Lücken, Johannes
@@ -4881,16 +3246,16 @@ Intelligent Transportation Systems (ITSC)*, 2575–82. IEEE.
 
 </div>
 
-<div id="ref-lovelace_big_2016">
+<div id="ref-lovelace_big_2016" class="csl-entry">
 
 Lovelace, Robin, Mark Birkin, Philip Cross, and Martin Clarke. 2016.
-“From Big Noise to Big Data: Toward the Verification of Large Data
-Sets for Understanding Regional Retail Flows.” *Geographical Analysis*
-48 (1): 59–81. <https://doi.org/10.1111/gean.12081>.
+“From Big Noise to Big Data: Toward the Verification of Large Data Sets
+for Understanding Regional Retail Flows.” *Geographical Analysis* 48
+(1): 59–81. <https://doi.org/10.1111/gean.12081>.
 
 </div>
 
-<div id="ref-lovelace_stplanr:_2018">
+<div id="ref-lovelace_stplanr_2018" class="csl-entry">
 
 Lovelace, Robin, and Richard Ellison. 2018. “Stplanr: A Package for
 Transport Planning.” *The R Journal* 10 (2): 7–23.
@@ -4898,7 +3263,7 @@ Transport Planning.” *The R Journal* 10 (2): 7–23.
 
 </div>
 
-<div id="ref-lovelace_propensity_2017">
+<div id="ref-lovelace_propensity_2017" class="csl-entry">
 
 Lovelace, Robin, Anna Goodman, Rachel Aldred, Nikolai Berkoff, Ali
 Abbas, and James Woodcock. 2017. “The Propensity to Cycle Tool: An Open
@@ -4907,16 +3272,16 @@ Transport and Land Use* 10 (1). <https://doi.org/10.5198/jtlu.2016.862>.
 
 </div>
 
-<div id="ref-lofgren_considering_2018">
+<div id="ref-lofgren_considering_2018" class="csl-entry">
 
 Löfgren, Sofia, Kristina L. Nilsson, and Charlotta M. Johansson. 2018.
-“Considering Landscape in Strategic Transport Planning.”
-*Transportation Research Part D: Transport and Environment* 65
-(December): 396–408. <https://doi.org/10.1016/j.trd.2018.09.001>.
+“Considering Landscape in Strategic Transport Planning.” *Transportation
+Research Part D: Transport and Environment* 65 (December): 396–408.
+<https://doi.org/10.1016/j.trd.2018.09.001>.
 
 </div>
 
-<div id="ref-luxen_realtime_2011">
+<div id="ref-luxen_realtime_2011" class="csl-entry">
 
 Luxen, Dennis, and Christian Vetter. 2011. “Real-Time Routing with
 OpenStreetMap Data.” In *Proceedings of the 19th ACM SIGSPATIAL
@@ -4925,14 +3290,14 @@ International Conference on Advances in Geographic Information Systems*,
 
 </div>
 
-<div id="ref-majic_awapic_2019">
+<div id="ref-majic_awapic_2019" class="csl-entry">
 
 Majic, Ivan, and Elek Pafka. 2019. “AwaP-ICAn Open-Source GIS Tool for
 Measuring Walkable Access.” *Urban Science* 3 (2): 48.
 
 </div>
 
-<div id="ref-miller_potential_1999">
+<div id="ref-miller_potential_1999" class="csl-entry">
 
 Miller, Harvey J. 1999. “Potential Contributions of Spatial Analysis to
 Geographic Information Systems for Transportation (GIS-T).”
@@ -4941,7 +3306,7 @@ Geographic Information Systems for Transportation (GIS-T).”
 
 </div>
 
-<div id="ref-moeckel_trends_2018">
+<div id="ref-moeckel_trends_2018" class="csl-entry">
 
 Moeckel, Rolf, Carlos Llorca Garcia, Ana Tsui Moreno Chou, and Matthew
 Bediako Okrah. 2018. “Trends in Integrated Land Use/Transport Modeling:
@@ -4950,22 +3315,22 @@ Use* 11 (1). <https://doi.org/10.5198/jtlu.2018.1205>.
 
 </div>
 
-<div id="ref-monbiot_out_2017">
+<div id="ref-monbiot_out_2017" class="csl-entry">
 
 Monbiot, George. 2017. *Out of the Wreckage: A New Politics for an Age
 of Crisis*. Brooklyn, NY: Verso Books.
 
 </div>
 
-<div id="ref-morgan_opentripplanner_2019">
+<div id="ref-morgan_opentripplanner_2019" class="csl-entry">
 
 Morgan, Malcolm, Marcus Young, Robin Lovelace, and Layik Hama. 2019.
-“OpenTripPlanner for R.” *Journal of Open Source Software* 4 (44):
-1926. <https://doi.org/10.21105/joss.01926>.
+“OpenTripPlanner for R.” *Journal of Open Source Software* 4 (44): 1926.
+<https://doi.org/10.21105/joss.01926>.
 
 </div>
 
-<div id="ref-moriarty_prospects_2008">
+<div id="ref-moriarty_prospects_2008" class="csl-entry">
 
 Moriarty, Patrick, and Damon Honnery. 2008. “The Prospects for Global
 Green Car Mobility.” *Journal of Cleaner Production* 16 (16): 1717–26.
@@ -4973,7 +3338,7 @@ Green Car Mobility.” *Journal of Cleaner Production* 16 (16): 1717–26.
 
 </div>
 
-<div id="ref-morrison_energy_2018">
+<div id="ref-morrison_energy_2018" class="csl-entry">
 
 Morrison, Robbie. 2018. “Energy System Modeling: Public Transparency,
 Scientific Reproducibility, and Open Development.” *Energy Strategy
@@ -4981,45 +3346,44 @@ Reviews* 20: 49–63.
 
 </div>
 
-<div id="ref-neteler_open_2008">
+<div id="ref-neteler_open_2008" class="csl-entry">
 
 Neteler, Markus, and Helena Mitasova. 2008. *Open Source GIS: A GRASS
-GIS Approach*. Third. New York, NY: Springer.
+GIS Approach*. 3. ed. New York, NY: Springer.
 
 </div>
 
-<div id="ref-oflaherty_transport_1997">
+<div id="ref-oflaherty_transport_1997" class="csl-entry">
 
 O’Flaherty, Coleman, and Michael GH Bell. 1997. *Transport Planning and
 Traffic Engineering*. Elsevier.
 
 </div>
 
-<div id="ref-padgham_dodgr_2019">
+<div id="ref-padgham_dodgr_2019" class="csl-entry">
 
 Padgham, Mark. 2019. “Dodgr: An R Package for Network Flow Aggregation.”
 *Transport Findings*, February. <https://doi.org/10.32866/6945>.
 
 </div>
 
-<div id="ref-pappalardo_scikit-mobility:_2019">
+<div id="ref-pappalardo_scikitmobility_2019" class="csl-entry">
 
 Pappalardo, Luca, Gianni Barlacchi, Filippo Simini, and Roberto
 Pellungrini. 2019. “Scikit-Mobility: An Open-Source Python Library for
-Human Mobility Analysis and Simulation.” *arXiv:1907.07062 \[Physics\]*,
+Human Mobility Analysis and Simulation.” *arXiv:1907.07062 \[physics\]*,
 July. <http://arxiv.org/abs/1907.07062>.
 
 </div>
 
-<div id="ref-parkin_designing_2018">
+<div id="ref-parkin_designing_2018" class="csl-entry">
 
 Parkin, John. 2018. *Designing for Cycle Traffic: International
 Principles and Practice*. ICE Publishing.
-<https://www.icevirtuallibrary.com/isbn/9780727763495>.
 
 </div>
 
-<div id="ref-pensa_supporting_2013">
+<div id="ref-pensa_supporting_2013" class="csl-entry">
 
 Pensa, Stefano, Elena Masala, and Isabella M. Lami. 2013. “Supporting
 Planning Processes by the Use of Dynamic Visualisation.” In *Planning
@@ -5027,7 +3391,7 @@ Support Systems for Sustainable Urban Development*, 451–67. Springer.
 
 </div>
 
-<div id="ref-peters_citizen_2020">
+<div id="ref-peters_citizen_2020" class="csl-entry">
 
 Peters, Michael A. 2020. “Citizen Science and Ecological Democracy in
 the Global Science Regime: The Need for Openness and Participation.”
@@ -5036,7 +3400,7 @@ the Global Science Regime: The Need for Openness and Participation.”
 
 </div>
 
-<div id="ref-pettit_australian_2014">
+<div id="ref-pettit_australian_2014" class="csl-entry">
 
 Pettit, C. J., J Barton, X Goldie, R Sinnott, R Stimson, and T Kvan.
 2014. “The Australian Urban Intelligence Network Supporting Smart
@@ -5045,15 +3409,15 @@ Geertma, J Stillwell, J Ferreira, and J Goodspeed. Springer.
 
 </div>
 
-<div id="ref-pucher_making_2008">
+<div id="ref-pucher_making_2008" class="csl-entry">
 
 Pucher, John, and Ralph Buehler. 2008. “Making Cycling Irresistible:
-Lessons from the Netherlands, Denmark and Germany.” *Transport Reviews*
-28 (4): 495–528. <https://doi.org/10.1080/01441640701806612>.
+Lessons from The Netherlands, Denmark and Germany.” *Transport Reviews*
+28: 495–528.
 
 </div>
 
-<div id="ref-riggs_streetplan_2016">
+<div id="ref-riggs_streetplan_2016" class="csl-entry">
 
 Riggs, William W., Michael R. Boswell, and Ryder Ross. 2016.
 “Streetplan: Hacking Streetmix for Community-Based Outreach on the
@@ -5061,14 +3425,15 @@ Future of Streets.” *Focus* 13 (1): 14.
 
 </div>
 
-<div id="ref-rodrigue_geography_2013">
+<div id="ref-rodrigue_geography_2013" class="csl-entry">
 
 Rodrigue, Jean-Paul, Claude Comtois, and Brian Slack. 2013. *The
-Geography of Transport Systems*. Third. London, New York: Routledge.
+Geography of Transport Systems*. 3 edition. London ; New York:
+Routledge.
 
 </div>
 
-<div id="ref-sallis_use_2016">
+<div id="ref-sallis_use_2016" class="csl-entry">
 
 Sallis, James F., Fiona Bull, Ricky Burdett, Lawrence D. Frank, Peter
 Griffiths, Billie Giles-Corti, and Mark Stevenson. 2016. “Use of Science
@@ -5077,7 +3442,7 @@ Sustainable Future Cities.” *The Lancet* 388 (10062): 2936–47.
 
 </div>
 
-<div id="ref-salter_digital_2009">
+<div id="ref-salter_digital_2009" class="csl-entry">
 
 Salter, Jonathan D., Cam Campbell, Murray Journeay, and Stephen R. J.
 Sheppard. 2009. “The Digital Workshop: Exploring the Use of Interactive
@@ -5088,21 +3453,21 @@ support and visualization, 90 (6): 2090–2101.
 
 </div>
 
-<div id="ref-sherman_desktop_2008">
+<div id="ref-sherman_desktop_2008" class="csl-entry">
 
 Sherman, Gary. 2008. *Desktop GIS: Mapping the Planet with Open Source
 Tools*. Pragmatic Bookshelf.
 
 </div>
 
-<div id="ref-singleton_geographic_2019">
+<div id="ref-singleton_geographic_2019" class="csl-entry">
 
 Singleton, Alex, and Daniel Arribas-Bel. 2019. “Geographic Data
 Science.” *Geographical Analysis*.
 
 </div>
 
-<div id="ref-te_brommelstroet_developing_2008">
+<div id="ref-tebrommelstroet_developing_2008" class="csl-entry">
 
 te Brömmelstroet, Marco, and Luca Bertolini. 2008. “Developing Land Use
 and Transport PSS: Meaningful Information Through a Dialogue Between
@@ -5111,7 +3476,7 @@ Modelers and Planners.” *Transport Policy* 15 (4): 251–59.
 
 </div>
 
-<div id="ref-timms_imagineering_2014">
+<div id="ref-timms_imagineering_2014" class="csl-entry">
 
 Timms, Paul, Miles Tight, and David Watling. 2014. “Imagineering
 Mobility: Constructing Utopias for Future Urban Transport.” *Environment
@@ -5119,7 +3484,7 @@ and Planning A* 46 (1): 78–93. <https://doi.org/10.1068/a45669>.
 
 </div>
 
-<div id="ref-tornberg_making_2018">
+<div id="ref-tornberg_making_2018" class="csl-entry">
 
 Tornberg, Patrik, and John Odhage. 2018. “Making Transport Planning More
 Collaborative? The Case of Strategic Choice of Measures in Swedish
@@ -5129,15 +3494,14 @@ Practice* 118 (December): 416–29.
 
 </div>
 
-<div id="ref-transport_systems_catapult_transport_2015">
+<div id="ref-transportsystemscatapult_transport_2015" class="csl-entry">
 
 Transport Systems Catapult. 2015. “The Transport Data Revolution.”
 Government. Transport Systems Catapult.
-<https://ts.catapult.org.uk/wp-content/uploads/2016/04/The-Transport-Data-Revolution.pdf>.
 
 </div>
 
-<div id="ref-tribby_highresolution_2012">
+<div id="ref-tribby_highresolution_2012" class="csl-entry">
 
 Tribby, Calvin P., and Paul a. Zandbergen. 2012. “High-Resolution
 Spatio-Temporal Modeling of Public Transit Accessibility.” *Applied
@@ -5146,7 +3510,7 @@ Geography* 34 (May): 345–55.
 
 </div>
 
-<div id="ref-vandenbulcke_mapping_2009">
+<div id="ref-vandenbulcke_mapping_2009" class="csl-entry">
 
 Vandenbulcke, Gr’egory, Isabelle Thomas, Bas de Geus, Bart Degraeuwe,
 Rudi Torfs, Romain Meeusen, and Luc Int Panis. 2009. “Mapping Bicycle
@@ -5156,72 +3520,70 @@ Belgium.” *Transport Policy* 16 (2): 77–87.
 
 </div>
 
-<div id="ref-world_health_organization_global_2018">
+<div id="ref-worldhealthorganization_global_2018" class="csl-entry">
 
-World Health Organization. 2018. *Global Status Report on Road Safety
+World Health Organization. 2018. *Global Status Report On Road Safety
 2018*. S.l.
-<https://www.who.int/violence_injury_prevention/road_safety_status/2018/en/>.
 
 </div>
 
-<div id="ref-xie_evolving_2011">
+<div id="ref-xie_evolving_2011" class="csl-entry">
 
 Xie, Feng, and David Levinson. 2011. *Evolving Transportation Networks*.
 Transportation Research, Economics and Policy. New York:
-Springer-Verlag. <https://www.springer.com/gp/book/9781441998033>.
+Springer-Verlag.
 
 </div>
 
 </div>
 
-1.   Articles about successful transport planners illustrate the point.
-    Ben Hamilton-Baillie (1955 - 2019), for example, was an influential
-    transport planner and street designer whose obituary emphasised the
-    “hundreds of thousands of people who are safer and happier as a
-    result of his achievements” (Tim Stornor, quoted in
-    [TransportExtra](https://www.transportxtra.com/publications/local-transport-today/news/60655/obituary-ben-hamilton-baillie/)).
+[1]  Articles about successful transport planners illustrate the point.
+Ben Hamilton-Baillie (1955 - 2019), for example, was an influential
+transport planner and street designer whose obituary emphasised the
+“hundreds of thousands of people who are safer and happier as a result
+of his achievements” (Tim Stornor, quoted in
+[TransportExtra](https://www.transportxtra.com/publications/local-transport-today/news/60655/obituary-ben-hamilton-baillie/)).
 
-2.   See <https://www.cyclescape.org/> for an example of such a
-    peer-to-peer transport planning tool.
+[2]  See <https://www.cyclescape.org/> for an example of such a
+peer-to-peer transport planning tool.
 
-3.  Transport is a major electoral issue in London and the current
-    Mayor, Sadiq Kahn, has made tackling air pollution a policy
-    priority. See
-    [tfl.gov.uk/corporate/about-tfl/the-mayors-transport-strategy](https://tfl.gov.uk/corporate/about-tfl/the-mayors-transport-strategy).
+[3] Transport is a major electoral issue in London and the current
+Mayor, Sadiq Kahn, has made tackling air pollution a policy priority.
+See
+[tfl.gov.uk/corporate/about-tfl/the-mayors-transport-strategy](https://tfl.gov.uk/corporate/about-tfl/the-mayors-transport-strategy).
 
-4.   The current Mayor of Paris, Anne Hidalgo, sees transport as a
-    priority and has plans to make public transport free. See
-    [paris.fr](https://www.paris.fr/rechercher/transport).
+[4]  The current Mayor of Paris, Anne Hidalgo, sees transport as a
+priority and has plans to make public transport free. See
+[paris.fr](https://www.paris.fr/rechercher/transport).
 
-5.   Bogotá has an innovative and prominent transport policy, led by the
-    two times mayor Enrique Peñalosa, who has led the roll-out of major
-    bus and cycleway projects in the city. See
-    [sitp.gov.co](https://www.sitp.gov.co/).
+[5]  Bogotá has an innovative and prominent transport policy, led by the
+two times mayor Enrique Peñalosa, who has led the roll-out of major bus
+and cycleway projects in the city. See
+[sitp.gov.co](https://www.sitp.gov.co/).
 
-6.   There is of course a close relationship between transport planning
-    software and models because theoretical models can inform the
-    direction of software developments, as was the case with the
-    development of spatial interaction models (Boyce and Williams 2015).
-    Conversely, ‘upstream’ developments in computer languages affect the
-    range of models that can be implemented, as can be seen with the
-    current shift towards cloud-based and more visual and interactive
-    transport models such as the open source
-    [Streetmix](https://streetmix.net) and the Institute of Transport
-    Engineers endorsed [StreetPlan](https://streetplan.net) tools for
-    visualising 1D street layouts and cloud-based transport planning
-    services such as [Remix](https://www.remix.com/).
+[6]  There is of course a close relationship between transport planning
+software and models because theoretical models can inform the direction
+of software developments, as was the case with the development of
+spatial interaction models (Boyce and Williams 2015). Conversely,
+‘upstream’ developments in computer languages affect the range of models
+that can be implemented, as can be seen with the current shift towards
+cloud-based and more visual and interactive transport models such as the
+open source [Streetmix](https://streetmix.net) and the Institute of
+Transport Engineers endorsed [StreetPlan](https://streetplan.net) tools
+for visualising 1D street layouts and cloud-based transport planning
+services such as [Remix](https://www.remix.com/).
 
-7.   UTPS stands for the UMT (Urban Mass Transportation Administration,
-    an agency of the DoT responsible for transport planning)
-    Transportation Planning System (UTPS).
+[7]  UTPS stands for the UMT (Urban Mass Transportation Administration,
+an agency of the DoT responsible for transport planning) Transportation
+Planning System (UTPS).
 
-8.   Thanks to Crispin Cooper, author of sDNA, for raising this barrier.
+[8]  Thanks to Crispin Cooper, author of sDNA, for raising this barrier.
 
-9.   Some tools can be used through multiple interfaces but most have a
-    dominant interface type.
+[9]  Some tools can be used through multiple interfaces but most have a
+dominant interface type.
 
-10.  See <https://www.fsf.org/about/what-is-free-software> for a full
-    definition and context.
+[10]  See <https://www.fsf.org/about/what-is-free-software> for a full
+definition and context.
 
-11.  See <https://jakobmiksch.eu/post/openstreetmap_routing/> for an
-    overview or routing engines for OpenStreetMap data.
+[11]  See <https://jakobmiksch.eu/post/openstreetmap_routing/> for an
+overview or routing engines for OpenStreetMap data.
