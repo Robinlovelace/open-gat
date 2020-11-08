@@ -4,7 +4,7 @@ date: '`r Sys.Date()`'
 # header-includes:
 #    - \usepackage{coloremoji}
 output:
-  bookdown::github_document2: default
+  # bookdown::github_document2: default
   bookdown::pdf_document2:
     latex_engine: xelatex
 header-includes:
@@ -82,10 +82,10 @@ The influential textbook *Modelling Transport* outlines the main stages of trans
 
 Each of these stages, illustrated in Figure \@ref(fig:schematic), has geographic components. The 3^rd^ stage, can refer to at least three distinct processes: the 'four stage' transport model (left box); scenario modelling (central box) or geographic analysis and modelling (right box, Figure \@ref(fig:schematic)). The wider point is that geographic techniques can supplement and in some cases replace traditional modelling, and the classic four stage transport model. Many of the inputs (datasets with geographic coordinates) and outputs (maps and geographically specific recommendations) shown in Figure \@ref(fig:schematic) are spatial, suggesting the importance of geographic tools throughout the transport planning process.
 
-```{r schematic, fig.show='hold', out.width="100%", fig.cap="Schematic diagram illustrating the modelling process, geographic analysis and the four-stage in the context of the wider transport planning process (adapted from Ortúzar and Willumsen, 2011, with the 'Geographic analysis and modelling component' added for this paper)."}
+```{r schematic, fig.show='hold', out.width="100%", fig.cap="Schematic diagram illustrating the modelling process, geographic analysis and the four-stage in the context of the wider transport planning process (adapted from Ortúzar and Willumsen, 2011, with the 'Geographic analysis and modelling component' added for this paper).", fig.align='center'}
 # knitr::include_graphics(c("4stage.png", "geo-4stage.png"))
-# knitr::include_graphics("flow-diagram.pdf")
-knitr::include_graphics("flow-diagram.png")
+knitr::include_graphics("flow-diagram.pdf")
+# knitr::include_graphics("flow-diagram.png")
 ```
 
 **Formulation of the problem** (stage 1 in the transport planning process illustrated in Figure \@ref(fig:schematic)) and identification of the scope of solutions that the transport planning process can propose is inherently geographic. The first step of many projects is defining the 'region of interest'. This step has important implications because it can focus the analysis on areas where solutions are most likely to be implemented and, conversely, highlight the potential for inter-regional collaboration. Although the region of interest may be pre-determined by administrative boundaries over which a planning authority presides, geographic analysis this first stage in the transport planning process can help refine the definition of the 'region of interest' to include different 'spheres of influence' such as the wider catchment area, the administrative region, and the area that is the focus of the study. <!-- Defining, demarcating and visualising the study region in a more nuanced way could... --> <!-- Todo: could add (e.g. the city centre) and other comments to each sphere comment. --> <!-- To take one example, in a project where the study region was Leeds city centre... -->
@@ -493,17 +493,18 @@ open_tools_filtered = open_tools %>%
   filter(Emphasis != "GIS") %>% 
   filter(Emphasis != "routing engine") %>% 
   filter(Type != "Routing engine")
+readr::write_csv(open_tools_filtered, "open_tools_filtered.csv")
 open_tools_filtered %>% 
-  # mutate(Tool = paste0("\\href{http://", Website, "}{", Tool, "}")) %>%
-  mutate(Tool = paste0("[", Tool, "](", Website, ")")) %>%
+  mutate(Tool = paste0("\\href{http://", Website, "}{", Tool, "}")) %>%
+  # mutate(Tool = paste0("[", Tool, "](", Website, ")")) %>%
   select(Tool, Type, Licence, Language, Stars, Citations, Reference) %>% 
   # nrow()
-    knitr::kable(caption = "Open source tools for geographic analysis in transport planning, based on data from Google Scholar, GitHub and web searches and classified in by their primary user interface. CLI, GUI and WUI refer to command-line, graphical user and web user interfaces respectively.", format = "markdown")
-  # kable(format = "latex", escape = F, booktabs = T, caption = "Open source tools for geographic analysis in transport planning, based on data from Google Scholar, GitHub and web searches and classified in by their primary user interface. CLI, GUI and WUI refer to command-line, graphical user and web user interfaces respectively.") %>%
-  # pack_rows(group_label = "CLI", start_row = 1, end_row = 12) %>%
-  # pack_rows(group_label = "GUI", start_row = 13, end_row = 18) %>%
-  # pack_rows(group_label = "WUI", start_row = 19, end_row = 24) %>%
-  # kable_styling(bootstrap_options = c("hover", "condensed"), latex_options = c("scale_down"))
+    # knitr::kable(caption = "Open source tools for geographic analysis in transport planning, based on data from Google Scholar, GitHub and web searches and classified in by their primary user interface. CLI, GUI and WUI refer to command-line, graphical user and web user interfaces respectively.", format = "markdown")
+  kable(format = "latex", escape = F, booktabs = T, caption = "Open source tools for geographic analysis in transport planning, based on data from Google Scholar, GitHub and web searches and classified in by their primary user interface. CLI, GUI and WUI refer to command-line, graphical user and web user interfaces respectively.") %>%
+  pack_rows(group_label = "CLI", start_row = 1, end_row = 12) %>%
+  pack_rows(group_label = "GUI", start_row = 13, end_row = 19) %>%
+  pack_rows(group_label = "WUI", start_row = 20, end_row = 25) %>%
+  kable_styling(bootstrap_options = c("hover", "condensed"), latex_options = c("scale_down"))
 ```
 
 ```{r, eval=FALSE, echo=FALSE}
@@ -657,35 +658,31 @@ Likewise, there is a growing ecosystem of Python packages for geographic analysi
 Another key finding from Table \@ref(tab:capabilities) is that there is no single tool that every desirable feature of tools for geographic analysis in transport planning. There is generally a trade-off between the complexity of the tool and ease-of-use, with **MATSim** and **SUMO** being sophisticated yet hard to use and **Streetmix** providing an intuitive interface yet limited geographic capabilities, for example. There are exceptions: **A/B Street** provides a user friendly interface and even a 'demo' mode inspired by computer game design yet also has sophisticated functionality, although due to the nascent nature of the project and focus on education/fun rather than real-world transport planning these capabilities have yet to be documented in applied settings.
 
 ```{r capabilities, message=FALSE}
-open_tools = readr::read_csv("open_tools.csv")
+open_tools = readr::read_csv("open_tools_filtered.csv")
 # table(open_tools$emphasis)
 # edit the data:
 # remotes::install_github("DillonHammill/DataEditR")
 # open_tools_new = DataEditR::data_edit(open_tools)
 # readr::write_csv(open_tools_new, "open_tools.csv")
 names(open_tools) = tools::toTitleCase(names(open_tools))  
-open_tools_filtered = open_tools %>% 
-  filter(Emphasis != "interface") %>% 
-  filter(Emphasis != "routing engine") %>% 
-  filter(Type != "Routing engine")
 open_tools_filtered %>% 
   select(Tool, Type, Dld, Rou, Geo, Mod, Vis, Resolution, Time, Scale, Expertise) %>% 
-  # mutate_if(is.character, str_replace_all, pattern = "✓", replacement = "y") %>% 
+  mutate_if(is.character, str_replace_all, pattern = "✓", replacement = "y") %>%
   mutate_if(is.character, replace_na, replace = "") %>% 
-  kable(escape = F, caption = "Geographic capabilities and features of open source tools for transport planning. Dld, Rou, Geo, Mod and Vis refer to Downloading, Routing, Geographic analysis, Modelling and Visualisation capabilities, respectively. Cell values y, i, and e mean Yes (with in-house capabilities), yes via Interfaces to other packages/software and Editing capabilities. a, od, p, s and t refer to Agent, Origin-destination, Point (transect), Street (segment) and Trajectory as the main level of geographic resolution of data used by each tool, respectively. Values in the Time column report whether the tool has inbuilt support and documentation for incremental time simulations. Scale refers to the most common scale of analysis that the tool is documented to work at, with values p, c, n and  g referring to Point, City, National and Global scales respectively. Expertise refers to the level of expertise needed to install, set-up and run the tool, ranging from 1 (easy) via 2 (intermediate) to 3 (expertise required).")
-  # kable(format = "latex", escape = F, booktabs = T, caption = "Geographic capabilities and features of open source tools for transport planning. Dld, Rou, Geo, Mod and Vis refer to Downloading, Routing, Geographic analysis, Modelling and Visualisation capabilities, respectively. Cell values y, i, and e mean Yes (with in-house capabilities), yes via Interfaces to other packages/software and Editing capabilities. a, od, p, s and t refer to Agent, Origin-destination, Point (transect), Street (segment) and Trajectory as the main level of geographic resolution of data used by each tool, respectively. Values in the Time column report whether the tool has inbuilt support and documentation for incremental time simulations. Scale refers to the most common scale of analysis that the tool is documented to work at, with values p, c, n and  g referring to Point, City, National and Global scales respectively. Expertise refers to the level of expertise needed to install, set-up and run the tool, ranging from 1 (easy) via 2 (intermediate) to 3 (expertise required).") %>%
-  # pack_rows(group_label = "CLI", start_row = 1, end_row = 12) %>%
-  # pack_rows(group_label = "GUI", start_row = 13, end_row = 18) %>%
-  # pack_rows(group_label = "WUI", start_row = 19, end_row = 24) %>%
-  # kable_styling(latex_options = c("scale_down"))
+  # kable(escape = F, caption = "Geographic capabilities and features of open source tools for transport planning. Dld, Rou, Geo, Mod and Vis refer to Downloading, Routing, Geographic analysis, Modelling and Visualisation capabilities, respectively. Cell values y, i, and e mean Yes (with in-house capabilities), yes via Interfaces to other packages/software and Editing capabilities. a, od, p, s and t refer to Agent, Origin-destination, Point (transect), Street (segment) and Trajectory as the main level of geographic resolution of data used by each tool, respectively. Values in the Time column report whether the tool has inbuilt support and documentation for incremental time simulations. Scale refers to the most common scale of analysis that the tool is documented to work at, with values p, c, n and  g referring to Point, City, National and Global scales respectively. Expertise refers to the level of expertise needed to install, set-up and run the tool, ranging from 1 (easy) via 2 (intermediate) to 3 (expertise required).")
+  kable(format = "latex", escape = F, booktabs = T, caption = "Geographic capabilities and features of open source tools for transport planning. Dld, Rou, Geo, Mod and Vis refer to Downloading, Routing, Geographic analysis, Modelling and Visualisation capabilities, respectively. Cell values y, i, and e mean Yes (with in-house capabilities), yes via Interfaces to other packages/software and Editing capabilities. a, od, p, s and t refer to Agent, Origin-destination, Point (transect), Street (segment) and Trajectory as the main level of geographic resolution of data used by each tool, respectively. Values in the Time column report whether the tool has inbuilt support and documentation for incremental time simulations. Scale refers to the most common scale of analysis that the tool is documented to work at, with values p, c, n and  g referring to Point, City, National and Global scales respectively. Expertise refers to the level of expertise needed to install, set-up and run the tool, ranging from 1 (easy) via 2 (intermediate) to 3 (expertise required).") %>%
+  pack_rows(group_label = "CLI", start_row = 1, end_row = 12) %>%
+  pack_rows(group_label = "GUI", start_row = 13, end_row = 19) %>%
+  pack_rows(group_label = "WUI", start_row = 20, end_row = 25) %>%
+  kable_styling(latex_options = c("scale_down"))
 ```
 
 <!-- # Software ecosystems -->
 
-Table \@ref(capabilities) shows that there is great diversity of open source tools, even within the limited and still nascent niche of tools for geographic analysis in transport planning.
+Table \@ref(tab:capabilities) shows that there is great diversity of open source tools, even within the limited and still nascent niche of tools for geographic analysis in transport planning.
 There seems to be more diversity *within* each software ecosystems such as R packages, Python packages and QGIS plugins than *between* them, despite the fact that software developers within each ecosystem are linked by an overarching language/approach.
 Software is not developed in isolation but in a social context and the collaborative nature of open source tools tends to encourage solutions that are mutually supportive rather than competing  [@dhir_adoption_2017].
-Indeed, many of the tools presented in Table \@ref(capabilities) have a particular speciality, ranging from analysis of citywide transport networks in OSMnx [@boeing_osmnx_2017] to the analysis of cycling potential in the PCT [@lovelace_propensity_2017] and the visualisation of origin-destination data in flowmap.blue.
+Indeed, many of the tools presented in Table \@ref(tab:capabilities) have a particular speciality, ranging from analysis of citywide transport networks in OSMnx [@boeing_osmnx_2017] to the analysis of cycling potential in the PCT [@lovelace_propensity_2017] and the visualisation of origin-destination data in flowmap.blue.
 
 A few of the tools can be seen as general purpose transport planning tools, with particular strengths.
 Veins (which uses SUMO behind the scenes), MATSim and A/B Street are well suited to a wide range of geographic transport planning tasks, ranging from the simulation of the impact of new infrastructure on the flow of individual vehicles to city-wide impacts of new policies.
@@ -883,7 +880,8 @@ Indeed, there is a need research evaluating the potential of 'WebAPI' based tool
 <!-- These considerations wider questions, about if and when will open source software rise to ascendancy in the wider field of transport planning. -->
 
 Returning to the 'big picture' introduced in Section \@ref(intro), it is clear that there are strong arguments for a paradigm shift in transport planning overall.
-Academic attention has tended to focus on changes that are needed in the overall planning process [@banister_sustainable_2008; @legacy_there_2016] rather than changes that are needed in the transport planning 'tools of the trade', notwithstanding research advocating for change in transport modelling from practitioner [e.g. @hollander_transport_2016], academic [e.g. @lovelace_open_2020] and advocacy [e.g. @beimborn_blackbox_1996] perspectives.  
+Academic attention has tended to focus on changes that are needed in the overall planning process [@banister_sustainable_2008; @legacy_there_2016] rather than changes that are needed in the transport planning 'tools of the trade', notwithstanding research advocating for change in transport modelling from practitioner [e.g. @hollander_transport_2016], academic [e.g. @lovelace_open_2020] and advocacy [e.g. @beimborn_blackbox_1996] perspectives.
+
 Building on prior research and a review of existing open source options, this paper highlights the importance of not only processes and models, but also the tools used for designing geographically specific transport plans.
 Open source tools generate evidence that is more likely to be rigorous, transparent, reproducible and shared than evidence generated by the established proprietary tools [@peters_citizen_2020; @brunsdon_opening_2020].
 Transport interventions based on such open evidence are more likely to be effective at meeting policy objectives.
