@@ -34,3 +34,4 @@ Conveyal Analysis,WUI,Hosted service,scenarios,MIT,Java,19,NA,11,NA,NA,https://g
 PCT,WUI,Hosted service,scenarios,AGPLv3,R,16,66,97,NA,(Lovelace et al. 2017),https://github.com/npct/pct-shiny/,✓,i,i,NA,NA,od,NA,n,1
 Routino,WUI,Routing engine,routing,AGPLv3,C,NA,NA,11,NA,NA,https://www.routino.org/,i,NA,✓,NA,NA,s,NA,g,3
 TrajAnalytics,WUI,Standalone,trajectory analysis,BSD-3,JavaScript,NA,0,NA,NA,(Shamal et al. 2019),http://vis.cs.kent.edu/TrajAnalytics/,✓,NA,NA,✓,NA,t,NA,c,3
+Veins,GUI,Standalone,traffic simulation,GPLv2,C++,155,NA,NA,NA,NA,https://github.com/sommer/veins,✓,NA,✓,i,e,s,✓,c,3

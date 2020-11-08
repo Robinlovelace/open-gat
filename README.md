@@ -927,6 +927,7 @@ QGIS plugins, resulting in the categorisation shown in Table
 | [Conveyal Analysis](https://github.com/conveyal/analysis-backend)     | Hosted service     | MIT        | Java       |    19 |        NA | NA                       |
 | [PCT](https://github.com/npct/pct-shiny/)                             | Hosted service     | AGPLv3     | R          |    16 |        66 | (Lovelace et al. 2017)   |
 | [TrajAnalytics](http://vis.cs.kent.edu/TrajAnalytics/)                | Standalone         | BSD-3      | JavaScript |    NA |         0 | (Shamal et al. 2019)     |
+| [Veins](https://github.com/sommer/veins)                              | Standalone         | GPLv2      | C++        |   155 |        NA | NA                       |
 
 Table 4.1: Open source tools for geographic analysis in transport
 planning, based on data from Google Scholar, GitHub and web searches and
@@ -2140,11 +2141,64 @@ c
 3
 </td>
 </tr>
+<tr>
+<td style="text-align:left;">
+Veins
+</td>
+<td style="text-align:left;">
+Standalone
+</td>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+✓
+</td>
+<td style="text-align:left;">
+e
+</td>
+<td style="text-align:left;">
+i
+</td>
+<td style="text-align:left;">
+✓
+</td>
+<td style="text-align:left;">
+s
+</td>
+<td style="text-align:left;">
+✓
+</td>
+<td style="text-align:left;">
+c
+</td>
+<td style="text-align:right;">
+3
+</td>
+</tr>
 </tbody>
 </table>
 <!-- # Software ecosystems -->
-<!-- Many of the tools presented in the previous section fit into one or more software 'ecosystems', communities of software developers linked by an overarching organisation, technology or language. -->
-<!-- Software is not developed in isolation but in a social context [@dhir_adoption_2017]. -->
+
+Table <a href="#capabilities"><strong>??</strong></a> shows that there
+is great diversity of open source tools, even within the limited and
+still nascent niche of tools for geographic analysis in transport
+planning. There seems to be more diversity *within* each software
+ecosystems such as R packages, Python packages and QGIS plugins than
+*between* them, despite the fact that software developers within each
+ecosystem are linked by an overarching language/approach. Software is
+not developed in isolation but in a social context and the collaborative
+nature of open source tools tends to encourage solutions that are
+mutually supportive rather than competing (Dhir and Dhir 2017). Indeed,
+many of the tools presented in Table
+<a href="#capabilities"><strong>??</strong></a> have a particular
+speciality, ranging from analysis of citywide transport networks in
+OSMnx (Boeing 2017) to the analysis of cycling potential in the PCT
+(Lovelace et al. 2017) and the visualisation of origin-destination data
+in flowmap.blue.
+
+A few of the tools can be seen as general purpose transport planning
+tools, with particular strengths. SUMO is
+
 <!-- While some of the most popular tools shown in table @ref(tab:open-tools) arose from new contexts (Rust is not generally seen as a language for data analysis, alone transport planning for example), such ecosystems can be important for longevity of projects, support and getting new people involved in the software development process. -->
 <!-- Three software ecosystems --- R, Python and QGIS --- account for over half of the projects presented in table @ref(tab:open-tools). -->
 <!-- Other open source ecosystems include those surrounding the languages JavaScript, Julia and Rust, and the GUI-based Java traffic management system [IRIS](http://iris.dot.state.mn.us/). -->
