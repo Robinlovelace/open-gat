@@ -7,6 +7,7 @@ motis,API,Routing engine,routing,MIT,C++,16,NA,NA,NA,NA,https://github.com/motis
 OSMnx,CLI,Python package,network analysis,MIT,Python,2496,302,25,NA,(Boeing 2017),https://github.com/gboeing/osmnx/,i,✓,✓,✓,i,s,NA,c,2
 SUMO,CLI,Standalone,traffic simulation,EPL-2.0,C++,736,219,330,NA,(Lopez et al. 2018),https://github.com/eclipse/sumo,✓,NA,✓,i,e,s,✓,c,3
 pgRouting,CLI,Routing engine,routing,GPLv2,C++,731,NA,35,NA,NA,https://github.com/pgRouting/pgrouting,i,NA,✓,i,i,s,NA,g,3
+PostGIS,CLI,GIS,GIS,GPLv2,C,870,NA,NA,NA,NA,https://github.com/postgis/postgis,i,NA,✓,i,i,s,NA,g,3
 UrbanSim,CLI,Python package,abm,AGPLv3,Python,310,1444,461,2014,(Waddell 2002),https://github.com/UDST/urbansim,i,i,i,✓,✓,s,✓,c,2
 MovingPandas,CLI,Python package,trajectory analysis,BSD-3,Python,307,6,NA,NA,(Graser 2019),https://github.com/anitagraser/movingpandas/,i,i,NA,✓,✓,t,NA,c,2
 MATSim,CLI,Standalone,abm,GPLv2,Java,285,564,901,NA,(Horni et al. 2016),https://github.com/matsim-org/matsim-libs,✓,NA,✓,i,e,a,NA,c,3

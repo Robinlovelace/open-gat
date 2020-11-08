@@ -1,6 +1,6 @@
 Open source tools for geographic analysis in transport planning
 ================
-2020-10-25
+2020-11-08
 
 
 
@@ -514,7 +514,7 @@ transport planning.
 <!-- Could open source solutions are poised to bridge the gap between the geographic and the --- historically dominant --- non-geographic aspects of transport planning? -->
 <!-- Planning for sustainable modes, walking and cycling in particular, requires analysis at higher geographic resolutions than planning for motor traffic. -->
 <!-- Furthermore, the policy context increasingly demands transparency and citizen involvement in the decision-making process. -->
-<!-- Only open source ecosystems, of the type outlined in Section <a href="#new-tools-of-the-trade"><strong>??</strong></a> can deliver true transparency and encourage 'citizen science' for everyone. -->
+<!-- Only open source ecosystems, of the type outlined in Section @ref(new-tools-of-the-trade) can deliver true transparency and encourage 'citizen science' for everyone. -->
 <!-- These policy drivers make an exploration of open source options for transport planning workflows timely. -->
 <!-- Additional drivers of change in transport planning software include new datasets and technologies. -->
 <!-- Technological change has historically driven innovation in transport planning tools [@boyce_forecasting_2015] and the rate of change now is faster than ever. -->
@@ -783,7 +783,7 @@ with a minimum level of popularity. The method was as follows:
 
 1.  Undertake searches of Google Scholar, DuckDuckGo and the popular
     code hosting platform with search terms set to identify open source
-    projects.
+    projects for transport planning.
 2.  Combine results from the searches into a single dataset and rank the
     projects according to evidence of usage.
 3.  Verify that the projects are open source and actively maintained by
@@ -840,593 +840,37 @@ planning):
 > [simulation](https://github.com/topics/simulation),
 > [trajectory](https://github.com/topics/trajectory)
 
-<table>
-<caption>
+| Tool                                                                  | Type               | Licence    | Language   | Stars | Citations | Reference                |
+|:----------------------------------------------------------------------|:-------------------|:-----------|:-----------|------:|----------:|:-------------------------|
+| [OSMnx](https://github.com/gboeing/osmnx/)                            | Python package     | MIT        | Python     |  2496 |       302 | (Boeing 2017)            |
+| [SUMO](https://github.com/eclipse/sumo)                               | Standalone         | EPL-2.0    | C++        |   736 |       219 | (Lopez et al. 2018)      |
+| [UrbanSim](https://github.com/UDST/urbansim)                          | Python package     | AGPLv3     | Python     |   310 |      1444 | (Waddell 2002)           |
+| [MovingPandas](https://github.com/anitagraser/movingpandas/)          | Python package     | BSD-3      | Python     |   307 |         6 | (Graser 2019)            |
+| [MATSim](https://github.com/matsim-org/matsim-libs)                   | Standalone         | GPLv2      | Java       |   285 |       564 | (Horni et al. 2016)      |
+| [Scikit-mobility](https://github.com/scikit-mobility/scikit-mobility) | Python package     | BSD-3      | Python     |   251 |         1 | (Pappalardo et al. 2019) |
+| [stplanr](https://github.com/ropensci/stplanr)                        | R package          | MIT        | R          |   201 |         9 | (Lovelace et al. 2018)   |
+| [momepy](https://github.com/martinfleis/momepy)                       | Python package     | MIT        | Python     |   133 |         3 | (Fleischmann 2019)       |
+| [Trip-simulator](https://github.com/sharedstreets/trip-simulator)     | JavaScript package | MIT        | JavaScript |   117 |        NA | NA                       |
+| [urbanaccess](https://github.com/UDST/urbanaccess)                    | Python package     | AGPLv3     | Python     |   105 |        12 | (Blanchard 2017)         |
+| [spaghetti](https://github.com/pysal/spaghetti)                       | Python package     | BSD-3      | Python     |    60 |         0 | (Gaboardi et al., 2018)  |
+| [urbanpy](https://github.com/EL-BID/urbanpy)                          | Python package     | MIT        | Python     |    16 |        NA | NA                       |
+| [abstreet](https://github.com/dabreegster/abstreet)                   | Standalone         | Apache-2.0 | Rust       |  4896 |        NA | NA                       |
+| [AequilibraE](https://github.com/AequilibraE/AequilibraE-GUI)         | QGIS plugin        | Custom     | Python     |    57 |         3 | (Carmargo 2015)          |
+| [QNEAT3](https://github.com/root676/QNEAT3/)                          | QGIS plugin        | GPLv3      | Python     |    35 |        NA | NA                       |
+| [Networks plugin](https://github.com/crocovert/networks)              | QGIS plugin        | GPLv3      | Python     |     9 |        NA | NA                       |
+| [sDNA](https://github.com/fiftysevendegreesofrad/sdna_open)           | QGIS plugin        | GPLv3      | C++        |     9 |        27 | (Cooper 2015)            |
+| [AwaP](https://github.com/Awapic/AwaP)                                | QGIS plugin        | GPLv3      | Python     |     3 |         2 | (Majik and Pafka 2019)   |
+| [Citybound](https://github.com/citybound/citybound)                   | Standalone         | AGPLv3     | Rust       |  6124 |        NA | NA                       |
+| [StreetMix](https://github.com/streetmix/streetmix)                   | Hosted service     | BSD-3      | JavaScript |   440 |         6 | (Riggs et al. 2016)      |
+| [flowmap.blue](https://github.com/FlowmapBlue/flowmap.blue)           | Standalone         | MIT        | TypeScript |    90 |        NA | NA                       |
+| [Conveyal Analysis](https://github.com/conveyal/analysis-backend)     | Hosted service     | MIT        | Java       |    19 |        NA | NA                       |
+| [PCT](https://github.com/npct/pct-shiny/)                             | Hosted service     | AGPLv3     | R          |    16 |        66 | (Lovelace et al. 2017)   |
+| [TrajAnalytics](http://vis.cs.kent.edu/TrajAnalytics/)                | Standalone         | BSD-3      | JavaScript |    NA |         0 | (Shamal et al. 2019)     |
+
 Table 4.1: Open source tools for geographic analysis in transport
 planning, based on data from Google Scholar, GitHub and web searches and
 classified in by their primary user interface. CLI, GUI and WUI refer to
 command-line, graphical user and web user interfaces respectively.
-</caption>
-<thead>
-<tr>
-<th style="text-align:left;">
-Tool
-</th>
-<th style="text-align:left;">
-Type
-</th>
-<th style="text-align:left;">
-Licence
-</th>
-<th style="text-align:left;">
-Language
-</th>
-<th style="text-align:right;">
-Stars
-</th>
-<th style="text-align:right;">
-Citations
-</th>
-<th style="text-align:left;">
-Reference
-</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left;">
-[OSMnx](https://github.com/gboeing/osmnx/)
-</td>
-<td style="text-align:left;">
-Python package
-</td>
-<td style="text-align:left;">
-MIT
-</td>
-<td style="text-align:left;">
-Python
-</td>
-<td style="text-align:right;">
-2496
-</td>
-<td style="text-align:right;">
-302
-</td>
-<td style="text-align:left;">
-(Boeing 2017)
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-[SUMO](https://github.com/eclipse/sumo)
-</td>
-<td style="text-align:left;">
-Standalone
-</td>
-<td style="text-align:left;">
-EPL-2.0
-</td>
-<td style="text-align:left;">
-C++
-</td>
-<td style="text-align:right;">
-736
-</td>
-<td style="text-align:right;">
-219
-</td>
-<td style="text-align:left;">
-(Lopez et al. 2018)
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-[UrbanSim](https://github.com/UDST/urbansim)
-</td>
-<td style="text-align:left;">
-Python package
-</td>
-<td style="text-align:left;">
-AGPLv3
-</td>
-<td style="text-align:left;">
-Python
-</td>
-<td style="text-align:right;">
-310
-</td>
-<td style="text-align:right;">
-1444
-</td>
-<td style="text-align:left;">
-(Waddell 2002)
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-[MovingPandas](https://github.com/anitagraser/movingpandas/)
-</td>
-<td style="text-align:left;">
-Python package
-</td>
-<td style="text-align:left;">
-BSD-3
-</td>
-<td style="text-align:left;">
-Python
-</td>
-<td style="text-align:right;">
-307
-</td>
-<td style="text-align:right;">
-6
-</td>
-<td style="text-align:left;">
-(Graser 2019)
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-[MATSim](https://github.com/matsim-org/matsim-libs)
-</td>
-<td style="text-align:left;">
-Standalone
-</td>
-<td style="text-align:left;">
-GPLv2
-</td>
-<td style="text-align:left;">
-Java
-</td>
-<td style="text-align:right;">
-285
-</td>
-<td style="text-align:right;">
-564
-</td>
-<td style="text-align:left;">
-(Horni et al. 2016)
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-[Scikit-mobility](https://github.com/scikit-mobility/scikit-mobility)
-</td>
-<td style="text-align:left;">
-Python package
-</td>
-<td style="text-align:left;">
-BSD-3
-</td>
-<td style="text-align:left;">
-Python
-</td>
-<td style="text-align:right;">
-251
-</td>
-<td style="text-align:right;">
-1
-</td>
-<td style="text-align:left;">
-(Pappalardo et al. 2019)
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-[stplanr](https://github.com/ropensci/stplanr)
-</td>
-<td style="text-align:left;">
-R package
-</td>
-<td style="text-align:left;">
-MIT
-</td>
-<td style="text-align:left;">
-R
-</td>
-<td style="text-align:right;">
-201
-</td>
-<td style="text-align:right;">
-9
-</td>
-<td style="text-align:left;">
-(Lovelace et al. 2018)
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-[momepy](https://github.com/martinfleis/momepy)
-</td>
-<td style="text-align:left;">
-Python package
-</td>
-<td style="text-align:left;">
-MIT
-</td>
-<td style="text-align:left;">
-Python
-</td>
-<td style="text-align:right;">
-133
-</td>
-<td style="text-align:right;">
-3
-</td>
-<td style="text-align:left;">
-(Fleischmann 2019)
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-[Trip-simulator](https://github.com/sharedstreets/trip-simulator)
-</td>
-<td style="text-align:left;">
-JavaScript package
-</td>
-<td style="text-align:left;">
-MIT
-</td>
-<td style="text-align:left;">
-JavaScript
-</td>
-<td style="text-align:right;">
-117
-</td>
-<td style="text-align:right;">
-NA
-</td>
-<td style="text-align:left;">
-NA
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-[urbanaccess](https://github.com/UDST/urbanaccess)
-</td>
-<td style="text-align:left;">
-Python package
-</td>
-<td style="text-align:left;">
-AGPLv3
-</td>
-<td style="text-align:left;">
-Python
-</td>
-<td style="text-align:right;">
-105
-</td>
-<td style="text-align:right;">
-12
-</td>
-<td style="text-align:left;">
-(Blanchard 2017)
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-[spaghetti](https://github.com/pysal/spaghetti)
-</td>
-<td style="text-align:left;">
-Python package
-</td>
-<td style="text-align:left;">
-BSD-3
-</td>
-<td style="text-align:left;">
-Python
-</td>
-<td style="text-align:right;">
-60
-</td>
-<td style="text-align:right;">
-0
-</td>
-<td style="text-align:left;">
-(Gaboardi et al., 2018)
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-[urbanpy](https://github.com/EL-BID/urbanpy)
-</td>
-<td style="text-align:left;">
-Python package
-</td>
-<td style="text-align:left;">
-MIT
-</td>
-<td style="text-align:left;">
-Python
-</td>
-<td style="text-align:right;">
-16
-</td>
-<td style="text-align:right;">
-NA
-</td>
-<td style="text-align:left;">
-NA
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-[abstreet](https://github.com/dabreegster/abstreet)
-</td>
-<td style="text-align:left;">
-Standalone
-</td>
-<td style="text-align:left;">
-Apache-2.0
-</td>
-<td style="text-align:left;">
-Rust
-</td>
-<td style="text-align:right;">
-4896
-</td>
-<td style="text-align:right;">
-NA
-</td>
-<td style="text-align:left;">
-NA
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-[AequilibraE](https://github.com/AequilibraE/AequilibraE-GUI)
-</td>
-<td style="text-align:left;">
-QGIS plugin
-</td>
-<td style="text-align:left;">
-Custom
-</td>
-<td style="text-align:left;">
-Python
-</td>
-<td style="text-align:right;">
-57
-</td>
-<td style="text-align:right;">
-3
-</td>
-<td style="text-align:left;">
-(Carmargo 2015)
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-[QNEAT3](https://github.com/root676/QNEAT3/)
-</td>
-<td style="text-align:left;">
-QGIS plugin
-</td>
-<td style="text-align:left;">
-GPLv3
-</td>
-<td style="text-align:left;">
-Python
-</td>
-<td style="text-align:right;">
-35
-</td>
-<td style="text-align:right;">
-NA
-</td>
-<td style="text-align:left;">
-NA
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-[Networks plugin](https://github.com/crocovert/networks)
-</td>
-<td style="text-align:left;">
-QGIS plugin
-</td>
-<td style="text-align:left;">
-GPLv3
-</td>
-<td style="text-align:left;">
-Python
-</td>
-<td style="text-align:right;">
-9
-</td>
-<td style="text-align:right;">
-NA
-</td>
-<td style="text-align:left;">
-NA
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-[sDNA](https://github.com/fiftysevendegreesofrad/sdna_open)
-</td>
-<td style="text-align:left;">
-QGIS plugin
-</td>
-<td style="text-align:left;">
-GPLv3
-</td>
-<td style="text-align:left;">
-C++
-</td>
-<td style="text-align:right;">
-9
-</td>
-<td style="text-align:right;">
-27
-</td>
-<td style="text-align:left;">
-(Cooper 2015)
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-[AwaP](https://github.com/Awapic/AwaP)
-</td>
-<td style="text-align:left;">
-QGIS plugin
-</td>
-<td style="text-align:left;">
-GPLv3
-</td>
-<td style="text-align:left;">
-Python
-</td>
-<td style="text-align:right;">
-3
-</td>
-<td style="text-align:right;">
-2
-</td>
-<td style="text-align:left;">
-(Majik and Pafka 2019)
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-[Citybound](https://github.com/citybound/citybound)
-</td>
-<td style="text-align:left;">
-Standalone
-</td>
-<td style="text-align:left;">
-AGPLv3
-</td>
-<td style="text-align:left;">
-Rust
-</td>
-<td style="text-align:right;">
-6124
-</td>
-<td style="text-align:right;">
-NA
-</td>
-<td style="text-align:left;">
-NA
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-[StreetMix](https://github.com/streetmix/streetmix)
-</td>
-<td style="text-align:left;">
-Hosted service
-</td>
-<td style="text-align:left;">
-BSD-3
-</td>
-<td style="text-align:left;">
-JavaScript
-</td>
-<td style="text-align:right;">
-440
-</td>
-<td style="text-align:right;">
-6
-</td>
-<td style="text-align:left;">
-(Riggs et al. 2016)
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-[flowmap.blue](https://github.com/FlowmapBlue/flowmap.blue)
-</td>
-<td style="text-align:left;">
-Standalone
-</td>
-<td style="text-align:left;">
-MIT
-</td>
-<td style="text-align:left;">
-TypeScript
-</td>
-<td style="text-align:right;">
-90
-</td>
-<td style="text-align:right;">
-NA
-</td>
-<td style="text-align:left;">
-NA
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-[Conveyal Analysis](https://github.com/conveyal/analysis-backend)
-</td>
-<td style="text-align:left;">
-Hosted service
-</td>
-<td style="text-align:left;">
-MIT
-</td>
-<td style="text-align:left;">
-Java
-</td>
-<td style="text-align:right;">
-19
-</td>
-<td style="text-align:right;">
-NA
-</td>
-<td style="text-align:left;">
-NA
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-[PCT](https://github.com/npct/pct-shiny/)
-</td>
-<td style="text-align:left;">
-Hosted service
-</td>
-<td style="text-align:left;">
-AGPLv3
-</td>
-<td style="text-align:left;">
-R
-</td>
-<td style="text-align:right;">
-16
-</td>
-<td style="text-align:right;">
-66
-</td>
-<td style="text-align:left;">
-(Lovelace et al. 2017)
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-[TrajAnalytics](http://vis.cs.kent.edu/TrajAnalytics/)
-</td>
-<td style="text-align:left;">
-Standalone
-</td>
-<td style="text-align:left;">
-BSD-3
-</td>
-<td style="text-align:left;">
-JavaScript
-</td>
-<td style="text-align:right;">
-NA
-</td>
-<td style="text-align:right;">
-0
-</td>
-<td style="text-align:left;">
-(Shamal et al. 2019)
-</td>
-</tr>
-</tbody>
-</table>
 
 To overcome the limitation that not all open source software projects
 are hosted on GitHub *or* described in academic papers, snowballing via
@@ -1890,6 +1334,39 @@ s
 </td>
 <td style="text-align:left;">
 c
+</td>
+<td style="text-align:right;">
+3
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+PostGIS
+</td>
+<td style="text-align:left;">
+GIS
+</td>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+✓
+</td>
+<td style="text-align:left;">
+i
+</td>
+<td style="text-align:left;">
+i
+</td>
+<td style="text-align:left;">
+i
+</td>
+<td style="text-align:left;">
+s
+</td>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+g
 </td>
 <td style="text-align:right;">
 3
@@ -2628,8 +2105,8 @@ c
 <!-- # Software ecosystems -->
 <!-- Many of the tools presented in the previous section fit into one or more software 'ecosystems', communities of software developers linked by an overarching organisation, technology or language. -->
 <!-- Software is not developed in isolation but in a social context [@dhir_adoption_2017]. -->
-<!-- While some of the most popular tools shown in table <a href="#tab:open-tools">4.1</a> arose from new contexts (Rust is not generally seen as a language for data analysis, alone transport planning for example), such ecosystems can be important for longevity of projects, support and getting new people involved in the software development process. -->
-<!-- Three software ecosystems --- R, Python and QGIS --- account for over half of the projects presented in table <a href="#tab:open-tools">4.1</a>. -->
+<!-- While some of the most popular tools shown in table @ref(tab:open-tools) arose from new contexts (Rust is not generally seen as a language for data analysis, alone transport planning for example), such ecosystems can be important for longevity of projects, support and getting new people involved in the software development process. -->
+<!-- Three software ecosystems --- R, Python and QGIS --- account for over half of the projects presented in table @ref(tab:open-tools). -->
 <!-- Other open source ecosystems include those surrounding the languages JavaScript, Julia and Rust, and the GUI-based Java traffic management system [IRIS](http://iris.dot.state.mn.us/). -->
 <!-- These were selected due to their maturity, relatively low barrier to entry wide uptake in industry and academia and, above all, for their support for geographic data analysis. -->
 <!-- They have also seen impressive growth in popularity over the past decade, suggesting they are future proof. -->
@@ -2688,7 +2165,7 @@ c
 <!-- QGIS is a cross-platform desktop GIS application with a huge user base (likely the most popular GIS software in the world) and more than 1000 community supported plugins [@qgisdevelopmentteam_qgis_2019]. -->
 <!-- QGIS itself is written primarily in C++ and Python, meaning that there is strong symbiosis between the Python and QGIS ecosystems. -->
 <!-- In fact the majority of QGIS plugins are written in Python, meaning that Python developers can use QGIS as a platform for providing users with a graphical user interface and, conversely, QGIS users can learn to use a CLI, via QGIS's Python console. -->
-<!-- A good example of the flexibility of QGIS's plugin model, and illustrating the wider point that open source software tends to be modular and do 'one thing well', is that sDNA, mentioned in Section <a href="#the-current-landscape">3</a> can be used in QGIS via the sDNA plugin [@chan_using_2019]. -->
+<!-- A good example of the flexibility of QGIS's plugin model, and illustrating the wider point that open source software tends to be modular and do 'one thing well', is that sDNA, mentioned in Section @ref(the-current-landscape) can be used in QGIS via the sDNA plugin [@chan_using_2019]. -->
 <!-- Indeed, the open source transport modelling framework MATSim also benefits from being used alongside QGIS, for road network editing and visualisation [@horni_multiagent_2016]. -->
 <!-- QGIS plugins and extensions specifically designed for transport planning applications include the AwaP-IC walkability analysis plugin [@majic_awap-icopen-source_2019], extensions to QGIS's Processing model development framework for assessing road network completeness [@sehra_assessing_2017] and the ORS (OpenRouteService) plugin, for multi-modal routing. -->
 <!-- QGIS can also be used as a self-standing application for transport data analysis. -->
@@ -2759,7 +2236,7 @@ to fit a wide range of diverse local needs. A key feature of open tools,
 and especially open online tools that are easy to use, is that anyone
 can use them, encouraging citizen engagement.
 
-<!-- Following the Unix philosophy of modularity [@gancarz_linux_2003], each of the tools outlined in Section <a href="#open-source-tools">4</a> has a particular niche. -->
+<!-- Following the Unix philosophy of modularity [@gancarz_linux_2003], each of the tools outlined in Section @ref(open-source-tools) has a particular niche. -->
 <!-- Geographic thinking has a long history in transport planning and calls to strengthen the links between GIS and transport software have  [@loidl_gis_2016] but none of the open source solutions reviewed provide 'in house' GIS capabilities of the type needed for an integrated transport planning workflow in which a single piece of software can be used to import a range data, undertake statistical analysis and modelling and plot the results in interactive maps, e.g. for the design and modelling of new walking and cycling networks. -->
 <!-- With a view to the future of transport planning software, three established 'software ecosystems', each of which has a substantial following and large community of developers building extensions, were reviewed with respect to their capacity to support geographic analysis in transport planning. -->
 <!-- Although each ecosystem is mature (yet still growing), their use in transport planning is still in a nascent phase, suggesting that much innovation, evolution and consolidation will occur before any strong conclusions about which is most appropriate for different transport planning tasks can be made.  -->
@@ -3537,14 +3014,14 @@ Springer-Verlag.
 
 </div>
 
-[1]  Articles about successful transport planners illustrate the point.
+[1] Articles about successful transport planners illustrate the point.
 Ben Hamilton-Baillie (1955 - 2019), for example, was an influential
 transport planner and street designer whose obituary emphasised the
 “hundreds of thousands of people who are safer and happier as a result
 of his achievements” (Tim Stornor, quoted in
 [TransportExtra](https://www.transportxtra.com/publications/local-transport-today/news/60655/obituary-ben-hamilton-baillie/)).
 
-[2]  See <https://www.cyclescape.org/> for an example of such a
+[2] See <https://www.cyclescape.org/> for an example of such a
 peer-to-peer transport planning tool.
 
 [3] Transport is a major electoral issue in London and the current
@@ -3552,16 +3029,16 @@ Mayor, Sadiq Kahn, has made tackling air pollution a policy priority.
 See
 [tfl.gov.uk/corporate/about-tfl/the-mayors-transport-strategy](https://tfl.gov.uk/corporate/about-tfl/the-mayors-transport-strategy).
 
-[4]  The current Mayor of Paris, Anne Hidalgo, sees transport as a
+[4] The current Mayor of Paris, Anne Hidalgo, sees transport as a
 priority and has plans to make public transport free. See
 [paris.fr](https://www.paris.fr/rechercher/transport).
 
-[5]  Bogotá has an innovative and prominent transport policy, led by the
+[5] Bogotá has an innovative and prominent transport policy, led by the
 two times mayor Enrique Peñalosa, who has led the roll-out of major bus
 and cycleway projects in the city. See
 [sitp.gov.co](https://www.sitp.gov.co/).
 
-[6]  There is of course a close relationship between transport planning
+[6] There is of course a close relationship between transport planning
 software and models because theoretical models can inform the direction
 of software developments, as was the case with the development of
 spatial interaction models (Boyce and Williams 2015). Conversely,
@@ -3573,17 +3050,17 @@ Transport Engineers endorsed [StreetPlan](https://streetplan.net) tools
 for visualising 1D street layouts and cloud-based transport planning
 services such as [Remix](https://www.remix.com/).
 
-[7]  UTPS stands for the UMT (Urban Mass Transportation Administration,
+[7] UTPS stands for the UMT (Urban Mass Transportation Administration,
 an agency of the DoT responsible for transport planning) Transportation
 Planning System (UTPS).
 
-[8]  Thanks to Crispin Cooper, author of sDNA, for raising this barrier.
+[8] Thanks to Crispin Cooper, author of sDNA, for raising this barrier.
 
-[9]  Some tools can be used through multiple interfaces but most have a
+[9] Some tools can be used through multiple interfaces but most have a
 dominant interface type.
 
-[10]  See <https://www.fsf.org/about/what-is-free-software> for a full
+[10] See <https://www.fsf.org/about/what-is-free-software> for a full
 definition and context.
 
-[11]  See <https://jakobmiksch.eu/post/openstreetmap_routing/> for an
+[11] See <https://jakobmiksch.eu/post/openstreetmap_routing/> for an
 overview or routing engines for OpenStreetMap data.
