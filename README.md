@@ -272,14 +272,15 @@ Geographic considerations are particularly important in stage 4,
 are often overlooked. If recommendations resulting from an ‘optimal’
 model have geographically uneven impacts, it risks exacerbating existing
 spatial inequalities. Geographic analysis of the results of the
-transport planning process, in addition to geographic analyis of input
+transport planning process, in addition to geographic analysis of input
 data, can support more spatially equitable development which could have
 a co-benefit of reducing travel demand: wage and other differences
 between cities are a major driver of (often energy intensive) inter-city
-travel demand. And of course the the implementation of effective
-solutions relies on results that are specific, including being
-geographically specific and presented in clear and accurate geographic
-visualisations (Pensa, Masala, and Lami 2013). <!-- Todo: add refs -->
+travel demand (Schmutz and Sidib’e 2019). And of course the the
+implementation of effective solutions relies on results that are
+specific, including being geographically specific and presented in clear
+and accurate geographic visualisations (Pensa, Masala, and Lami 2013).
+<!-- Todo: add refs -->
 
 The stages represented in Figure <a href="#fig:schematic">1.1</a> have
 been criticized for being simplistic, linear and ‘top-down,’ with
@@ -353,31 +354,38 @@ stakes in transport planning processes.
 
 Two major drivers of change in transport planning tools have
 historically been technological development and shifting political
-priorities (Boyce and Williams 2015) and each of these have emphasised
-the importance of geographic analysis in recent years. Environmental,
-health and equality regulations — which can be seen as a manifestation
-of political change — have also influenced transport planning practice
-and some specific transport planning tools have emerged to tackle
-particular issues (e.g. Vandenbulcke et al. 2009). Environmental
-concerns, including fears about the impact of climate change, have risen
-up policy agendas in recent years, meaning that such environmental
-policy drivers a likely to become more important in the coming years. In
-parallel, the ‘obesity crisis’ and mounting evidence of the health
-benefits of physical activity have provided impetus to plans that
-prioritise walking and cycling, with environmental co-benefits. There
-have also been calls for more ‘bottom-up’ and participatory (implying
-open source) approaches, although transport planning practice has been
-slow to change in this direction (Legacy 2016). No less important is the
-demand for localised results; while a national transport model can
-provide a high level overview of the transport system for policy-makers,
-tools that provide geographically specific results, potentially down to
-the street level, can support transport planners ‘on the ground.’ These
-two factors drive demand for transport planning tools that are both open
-and enable geographic analysis. A final driver of demand for such tools
-is technology. Rapidly emerging digital technologies could transform
-transport planning, with two-way communications between planning
-authorities and citizens, and even peer-to-peer communications on
-transport planning issues, now feasible.[2] These drivers of change
+priorities (Boyce and Williams 2015). Environmental, health and equality
+regulations — which can be seen as a manifestation of political change —
+have also influenced transport planning practice and some specific
+transport planning tools have emerged to tackle particular issues (e.g.
+Vandenbulcke et al. 2009). Environmental concerns, including fears about
+the impact of climate change, have risen up policy agendas in recent
+years, meaning that such environmental policy drivers a likely to become
+more important in the coming years. In parallel, the ‘obesity crisis’
+and mounting evidence of the health benefits of physical activity have
+provided impetus to plans that prioritise walking and cycling, with
+environmental co-benefits. There have also been calls for more
+‘bottom-up’ and participatory approaches, although transport planning
+practice has been slow to change in this direction (Legacy 2016). No
+less important is the demand for localised results; while a national
+transport model can provide a high level overview of the transport
+system for policy-makers, tools that provide geographically specific
+results, potentially down to the street level, can support transport
+planners ‘on the ground.’
+
+Environmental and (local participatory) political factors drive demand
+for transport planning tools that enable geographic analysis:
+sustainable modes such as walking and cycling (and to a lesser extent
+public transport) require greater consideration in the spatial variation
+in trip origins and destinations at high levels of geographic
+resolution: analysis with limited consideration of geographic factors,
+such as the spatial distribution of locations within walking distance of
+new infrastructure, is less able to inform investment in active travel
+or provide citizens with localised information. A final driver of demand
+for such tools is technology. Rapidly emerging digital technologies
+could transform transport planning, with two-way communications between
+planning authorities and citizens, and even peer-to-peer communications
+on transport planning issues, now feasible.[2] These drivers of change
 provide the context in which open source tools for transport planning
 are being developed.
 
@@ -789,9 +797,10 @@ with a minimum level of popularity. The method was as follows:
 3.  Verify that the projects are open source and actively maintained by
     analysis of package documentation and source code.
 4.  Classify and the projects based on their main user interface,
-    resulting in Table <a href="#tab:open-tools">4.1</a> (see the
-    appendix for a complete table of results). These tools are described
-    in more detail in the following three sections.
+    resulting in Table <a href="#tab:open-tools">4.1</a> (see
+    [open\_tools.csv](https://github.com/Robinlovelace/open-gat/blob/master/open_tools.csv)
+    for a more complete list that includes web APIs). These tools are
+    described in more detail in the following three sections.
 
 The following search terms were used to find relevant projects using
 Google Scholar, the result of a search shown in Figure
@@ -877,11 +886,14 @@ are hosted on GitHub *or* described in academic papers, snowballing via
 fora such as the [QGIS plugin homepage](https://plugins.qgis.org/),
 links in project README files and social media were used to find
 additional projects. Only projects with the following criteria were
-included (see [link here]() for online version):
+included (see
+[open\_tools.csv](https://github.com/Robinlovelace/open-gat/blob/master/open_tools.csv)
+for online version):
 
-1.  The tool uses geographic analysis for transport planning, supporting
-    the design and placement of physical infrastructure for urban
-    mobility, based on the project’s website or code repository
+1.  The tool was designed to support transport planning using geographic
+    data analysis and supports the design and placement of physical
+    infrastructure for urban mobility, based on the project’s website or
+    code repository
 2.  Evidence that the tool is being used in practice, via citations,
     ‘stars’ or other type of ‘upvote’
 3.  Evidence that the tool is actively maintained, with activity in the
@@ -2289,6 +2301,16 @@ perspective, how can the growth of open source solutions for geographic
 transport data analysis be monitored to identify ‘tipping points’ in
 uptake?
 
+Further research could find evolving answers to such questions using a
+range of methods. Technical/computing approaches could usefully tackle
+more objective questions, such as the relative performance of different
+routing engines and transport planning APIs. Indeed, there is a need
+research evaluating the potential of ‘WebAPI’ based tools for transport
+planning such as OpenTripPlanner, mentioned in the [online
+version](https://github.com/Robinlovelace/open-gat/blob/master/open_tools.csv)
+of Table <a href="#tab:open-tools">4.1</a> but not discussed in this
+paper due to space constraints.
+
 <!-- These considerations wider questions, about if and when will open source software rise to ascendancy in the wider field of transport planning. -->
 
 Returning to the pressing policy driver of climate change mitigation
@@ -2927,6 +2949,14 @@ and Immersive Visualisation Tools in Participatory Planning.” *Journal
 of Environmental Management*, Collaborative GIS for spatial decision
 support and visualization, 90 (6): 2090–2101.
 <https://doi.org/10.1016/j.jenvman.2007.08.023>.
+
+</div>
+
+<div id="ref-schmutz_frictional_2019" class="csl-entry">
+
+Schmutz, Benoît, and Modibo Sidib’e. 2019. “Frictional Labour Mobility.”
+*The Review of Economic Studies* 86 (4): 1779–1826.
+<https://doi.org/10.1093/restud/rdy056>.
 
 </div>
 
