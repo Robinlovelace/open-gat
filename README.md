@@ -2219,7 +2219,7 @@ community-driven transport planning processes. Game-like approaches to
 city/street analysis tools such as **A/B Street**, **CityBound** and the
 intuitive and popular **Streetmix** web service demonstrate the huge
 potential for tools to revolutionise not only *how* transport plans are
-developed by *who* can be involved in the planning process. This raises
+developed but *who* can be involved in the planning process. This raises
 the question: what would a tool for geographic analysis in transport
 planning that was as powerful and ‘playable’ as [**A/B
 Street**](https://github.com/dabreegster/abstreet/#ab-street) yet as
@@ -2231,15 +2231,15 @@ open source, participatory and reproducible landscape for transport
 planning look like?
 
 Answers to these broader questions are beyond the scope of this paper,
-but the tools and ecosystems outlined in previous sections provide
-provide an indication of what is possible. Insights from open tools that
-are already widely used suggest that the continued uptake of open tools
-will have substantial benefits in the coming years and decades. Benefits
-of the free and open source approach range from the increased
-opportunities for participation that tools such as the **PCT** and
-**Streetmix** enable, to the possibilities for extending capabilities,
-as shown by the various plug-ins that have been developed for tools such
-as **QGIS** and **MATSim**.
+but the tools and ecosystems outlined in previous sections provide an
+indication of what is possible. Insights from open tools that are
+already widely used suggest that the continued uptake of open tools will
+have substantial benefits in the coming years and decades. Benefits of
+the free and open source approach range from the increased opportunities
+for participation that tools such as the **PCT** and **Streetmix**
+enable, to the possibilities for extending capabilities, as shown by the
+various plug-ins that have been developed for tools such as **QGIS** and
+**MATSim**.
 
 <!-- --- which some have blamed for the election of populist leaders and the UK Brexit vote [@monbiot_out_2017] --- -->
 
@@ -2263,19 +2263,19 @@ can use them, encouraging citizen engagement.
 <!-- There is a huge amount of overlap between the three ecosystems and, in practice, the prior experience and preferences of transport planners may be more important than functionality. -->
 
 From a user perspective, Section <a href="#open-source-tools">4</a>
-demonstrates that a wide range tools available. A potential limitation
-of the paradigm shift to open source is the time taken to understand
-which tool or combination of tools is most appropriate particular
-transport planning tasks. This can take time. On the other hand, a
-benefit of the range of free and open options offered is that users are
-encouraged to think about and better understand the tools they are using
-rather than blindly using established (and perhaps expensive and dated)
-‘tools of the trade.’ From a *developer perspective*, the community of
-support and feedback may be more important than current functionality of
-tools. The literature shows that R, Python and QGIS communities have
-already developed several tools for transport planning that, when
-combined with other open source solutions, can solve a wide range of
-spatial transport planning problems.
+demonstrates that a wide range tools are available. A potential
+limitation of the paradigm shift to open source is the time taken to
+understand which tool or combination of tools is most appropriate
+particular transport planning tasks. This can take time. On the other
+hand, a benefit of the range of free and open options offered is that
+users are encouraged to think about and better understand the tools they
+are using rather than blindly using established (and perhaps expensive
+and dated) ‘tools of the trade.’ From a *developer perspective*, the
+community of support and feedback may be more important than current
+functionality of tools. The literature shows that R, Python and QGIS
+communities have already developed several tools for transport planning
+that, when combined with other open source solutions, can solve a wide
+range of spatial transport planning problems.
 
 Many other tools and communities exist. A limitation of the paper is
 that it is not comprehensive, omitting due to space constraints
@@ -2302,7 +2302,7 @@ eventually dominate in the field of transport planning — as has already
 happened in fields including machine learning (e.g. Abadi et al. 2016)
 and web development (e.g. Grinberg 2018; Wickham 2020)? Only time and
 much-needed further research into the topic will tell. Regardless of the
-answer, this paper has conclusively found that that high-performance and
+answer, this paper has conclusively found that high-performance and
 innovative open source solutions are already available in the
 ‘ecological niche’ of geographic analysis for transport planning. The
 nascent and rapidly evolving nature of open source transport planning
@@ -2322,7 +2322,7 @@ research, asking a wide range of related questions, including:
     data analysis be monitored, e.g. to identify ‘tipping points’ in
     uptake?
 -   In which contexts — e.g. along wealthy/low income, urban/rural,
-    democratic/dictatorship spectra — are open source tools for
+    democratic/dictatorship continua — are open source tools for
     transport planning, and evidence-based decision-making in general,
     most effective and most needed?
 
@@ -2368,7 +2368,7 @@ and non-communicable disease. This paper therefore concludes that open
 source tools for geographic analysis in transport planning can support
 emerging environmental, health and social objectives. In other words —
 alongside wider political and institutional shifts to decarbonise the
-economy (Beddoe et al. 2009; Litman 2007) — open source software can not
+economy (Beddoe et al. 2009; Litman 2007) — open source software cannot
 only provide cost-effective solutions to 21<sup>st</sup> Century
 transport planning needs, it can save lives.
 <!-- can save the world. -->
