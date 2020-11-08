@@ -841,10 +841,10 @@ worked as follows:
 -   The SUMO project had the topic ‘simulation,’ leading to the
     discovery of the A/B Street project
 
-The complete list of GitHub topics used to identify projects was as
-follows (manual reading of the README for each project was used to
-confirm if the projects were related to transport planning, many were
-not, e.g. because they were for web transport rather than transport
+The list of GitHub topics used to identify projects was as follows
+(manual reading of the README for each project was used to confirm if
+the projects were related to transport planning, many were not,
+e.g. because they were for web transport rather than transport
 planning):
 
 > [transport planning](https://github.com/topics/transport-planning),
@@ -853,38 +853,6 @@ planning):
 > [traffic-simulation](https://github.com/topics/traffic-simulation),
 > [simulation](https://github.com/topics/simulation),
 > [trajectory](https://github.com/topics/trajectory)
-
-| Tool                                                                  | Type               | Licence    | Language   | Stars | Citations | Reference                |
-|:----------------------------------------------------------------------|:-------------------|:-----------|:-----------|------:|----------:|:-------------------------|
-| [OSMnx](https://github.com/gboeing/osmnx/)                            | Python package     | MIT        | Python     |  2496 |       302 | (Boeing 2017)            |
-| [SUMO](https://github.com/eclipse/sumo)                               | Standalone         | EPL-2.0    | C++        |   736 |       219 | (Lopez et al. 2018)      |
-| [UrbanSim](https://github.com/UDST/urbansim)                          | Python package     | AGPLv3     | Python     |   310 |      1444 | (Waddell 2002)           |
-| [MovingPandas](https://github.com/anitagraser/movingpandas/)          | Python package     | BSD-3      | Python     |   307 |         6 | (Graser 2019)            |
-| [MATSim](https://github.com/matsim-org/matsim-libs)                   | Standalone         | GPLv2      | Java       |   285 |       564 | (Horni et al. 2016)      |
-| [Scikit-mobility](https://github.com/scikit-mobility/scikit-mobility) | Python package     | BSD-3      | Python     |   251 |         1 | (Pappalardo et al. 2019) |
-| [stplanr](https://github.com/ropensci/stplanr)                        | R package          | MIT        | R          |   201 |         9 | (Lovelace et al. 2018)   |
-| [momepy](https://github.com/martinfleis/momepy)                       | Python package     | MIT        | Python     |   133 |         3 | (Fleischmann 2019)       |
-| [Trip-simulator](https://github.com/sharedstreets/trip-simulator)     | JavaScript package | MIT        | JavaScript |   117 |        NA | NA                       |
-| [urbanaccess](https://github.com/UDST/urbanaccess)                    | Python package     | AGPLv3     | Python     |   105 |        12 | (Blanchard 2017)         |
-| [spaghetti](https://github.com/pysal/spaghetti)                       | Python package     | BSD-3      | Python     |    60 |         0 | (Gaboardi et al., 2018)  |
-| [urbanpy](https://github.com/EL-BID/urbanpy)                          | Python package     | MIT        | Python     |    16 |        NA | NA                       |
-| [abstreet](https://github.com/dabreegster/abstreet)                   | Standalone         | Apache-2.0 | Rust       |  4896 |        NA | NA                       |
-| [AequilibraE](https://github.com/AequilibraE/AequilibraE-GUI)         | QGIS plugin        | Custom     | Python     |    57 |         3 | (Carmargo 2015)          |
-| [QNEAT3](https://github.com/root676/QNEAT3/)                          | QGIS plugin        | GPLv3      | Python     |    35 |        NA | NA                       |
-| [Networks plugin](https://github.com/crocovert/networks)              | QGIS plugin        | GPLv3      | Python     |     9 |        NA | NA                       |
-| [sDNA](https://github.com/fiftysevendegreesofrad/sdna_open)           | QGIS plugin        | GPLv3      | C++        |     9 |        27 | (Cooper 2015)            |
-| [AwaP](https://github.com/Awapic/AwaP)                                | QGIS plugin        | GPLv3      | Python     |     3 |         2 | (Majik and Pafka 2019)   |
-| [Citybound](https://github.com/citybound/citybound)                   | Standalone         | AGPLv3     | Rust       |  6124 |        NA | NA                       |
-| [StreetMix](https://github.com/streetmix/streetmix)                   | Hosted service     | BSD-3      | JavaScript |   440 |         6 | (Riggs et al. 2016)      |
-| [flowmap.blue](https://github.com/FlowmapBlue/flowmap.blue)           | Standalone         | MIT        | TypeScript |    90 |        NA | NA                       |
-| [Conveyal Analysis](https://github.com/conveyal/analysis-backend)     | Hosted service     | MIT        | Java       |    19 |        NA | NA                       |
-| [PCT](https://github.com/npct/pct-shiny/)                             | Hosted service     | AGPLv3     | R          |    16 |        66 | (Lovelace et al. 2017)   |
-| [TrajAnalytics](http://vis.cs.kent.edu/TrajAnalytics/)                | Standalone         | BSD-3      | JavaScript |    NA |         0 | (Shamal et al. 2019)     |
-
-Table 4.1: Open source tools for geographic analysis in transport
-planning, based on data from Google Scholar, GitHub and web searches and
-classified in by their primary user interface. CLI, GUI and WUI refer to
-command-line, graphical user and web user interfaces respectively.
 
 To overcome the limitation that not all open source software projects
 are hosted on GitHub *or* described in academic papers, snowballing via
@@ -930,7 +898,40 @@ which predate WUIs), acknowledging the fact that most tools with a
 prominent GUI and WUI can also be used from the command line. While sDNA
 and AequilibraE *can* be used from the command-line, their documentation
 suggests they are more likely to be used from graphical interfaces via
-QGIS plugins.
+QGIS plugins, resulting in the categorisation shown in Table
+<a href="#tab:open-tools">4.1</a>.
+
+| Tool                                                                  | Type               | Licence    | Language   | Stars | Citations | Reference                |
+|:----------------------------------------------------------------------|:-------------------|:-----------|:-----------|------:|----------:|:-------------------------|
+| [OSMnx](https://github.com/gboeing/osmnx/)                            | Python package     | MIT        | Python     |  2496 |       302 | (Boeing 2017)            |
+| [SUMO](https://github.com/eclipse/sumo)                               | Standalone         | EPL-2.0    | C++        |   736 |       219 | (Lopez et al. 2018)      |
+| [UrbanSim](https://github.com/UDST/urbansim)                          | Python package     | AGPLv3     | Python     |   310 |      1444 | (Waddell 2002)           |
+| [MovingPandas](https://github.com/anitagraser/movingpandas/)          | Python package     | BSD-3      | Python     |   307 |         6 | (Graser 2019)            |
+| [MATSim](https://github.com/matsim-org/matsim-libs)                   | Standalone         | GPLv2      | Java       |   285 |       564 | (Horni et al. 2016)      |
+| [Scikit-mobility](https://github.com/scikit-mobility/scikit-mobility) | Python package     | BSD-3      | Python     |   251 |         1 | (Pappalardo et al. 2019) |
+| [stplanr](https://github.com/ropensci/stplanr)                        | R package          | MIT        | R          |   201 |         9 | (Lovelace et al. 2018)   |
+| [momepy](https://github.com/martinfleis/momepy)                       | Python package     | MIT        | Python     |   133 |         3 | (Fleischmann 2019)       |
+| [Trip-simulator](https://github.com/sharedstreets/trip-simulator)     | JavaScript package | MIT        | JavaScript |   117 |        NA | NA                       |
+| [urbanaccess](https://github.com/UDST/urbanaccess)                    | Python package     | AGPLv3     | Python     |   105 |        12 | (Blanchard 2017)         |
+| [spaghetti](https://github.com/pysal/spaghetti)                       | Python package     | BSD-3      | Python     |    60 |         0 | (Gaboardi et al., 2018)  |
+| [urbanpy](https://github.com/EL-BID/urbanpy)                          | Python package     | MIT        | Python     |    16 |        NA | NA                       |
+| [abstreet](https://github.com/dabreegster/abstreet)                   | Standalone         | Apache-2.0 | Rust       |  4896 |        NA | NA                       |
+| [AequilibraE](https://github.com/AequilibraE/AequilibraE-GUI)         | QGIS plugin        | Custom     | Python     |    57 |         3 | (Carmargo 2015)          |
+| [QNEAT3](https://github.com/root676/QNEAT3/)                          | QGIS plugin        | GPLv3      | Python     |    35 |        NA | NA                       |
+| [Networks plugin](https://github.com/crocovert/networks)              | QGIS plugin        | GPLv3      | Python     |     9 |        NA | NA                       |
+| [sDNA](https://github.com/fiftysevendegreesofrad/sdna_open)           | QGIS plugin        | GPLv3      | C++        |     9 |        27 | (Cooper 2015)            |
+| [AwaP](https://github.com/Awapic/AwaP)                                | QGIS plugin        | GPLv3      | Python     |     3 |         2 | (Majik and Pafka 2019)   |
+| [Citybound](https://github.com/citybound/citybound)                   | Standalone         | AGPLv3     | Rust       |  6124 |        NA | NA                       |
+| [StreetMix](https://github.com/streetmix/streetmix)                   | Hosted service     | BSD-3      | JavaScript |   440 |         6 | (Riggs et al. 2016)      |
+| [flowmap.blue](https://github.com/FlowmapBlue/flowmap.blue)           | Standalone         | MIT        | TypeScript |    90 |        NA | NA                       |
+| [Conveyal Analysis](https://github.com/conveyal/analysis-backend)     | Hosted service     | MIT        | Java       |    19 |        NA | NA                       |
+| [PCT](https://github.com/npct/pct-shiny/)                             | Hosted service     | AGPLv3     | R          |    16 |        66 | (Lovelace et al. 2017)   |
+| [TrajAnalytics](http://vis.cs.kent.edu/TrajAnalytics/)                | Standalone         | BSD-3      | JavaScript |    NA |         0 | (Shamal et al. 2019)     |
+
+Table 4.1: Open source tools for geographic analysis in transport
+planning, based on data from Google Scholar, GitHub and web searches and
+classified in by their primary user interface. CLI, GUI and WUI refer to
+command-line, graphical user and web user interfaces respectively.
 
 It should be clear that the ‘Type’ and ‘Language’ values shown in Table
 <a href="#tab:open-tools">4.1</a> are also fuzzy: open source software
@@ -946,6 +947,24 @@ the capabilities of each tool presented in Table
 easily available documentation: due to time constraints no systematic
 installation tests or benchmarks were undertaken, although this could be
 a direction of future research.
+
+An interesting insight provided by the popularity metrics of ‘Stars’
+(meaning the number of people who had ‘starred’ the project on GitHub)
+and Citations (to the main paper outlining the tool, where available) as
+of September 2020 is that the choice of metric has a large impact on
+perceived popularity. While MatSIM is perhaps the tool in Table
+<a href="#tab:open-tools">4.1</a> that has most uptake in applied
+transport planning, it had only a moderate number of Stars (285)
+compared with the number of papers citing the tool’s main reference the
+tool, which is in itself a free and open resource (Horni, Nagel, and
+Axhausen 2016). A/B Street, by contrast, had more than *twenty times*
+the number of Stars on GitHub but no academic paper that could be found
+in the public domain at the time of writing. This highlights the fact
+that different user communities visit different forums and, furthermore,
+many transport practitioners will neither write academic papers not be
+active GitHub users, making the uptake of different software projects
+even harder to monitor, an issue we return to in Section
+<a href="#conclusion">5</a>.
 
 <!-- --- such as R, Python and QGIS.  -->
 <!-- Each open source ecosystem, and it's potential to be used for geographic analysis in transport planning, is outlined below. -->
