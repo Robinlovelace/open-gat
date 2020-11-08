@@ -378,6 +378,7 @@ ft_search("visum", from = "crossref", scopusopts = )
 scopus_search(query = "visum", key = Sys.getenv("SCOPUS"))
 ```
 
+
 <!-- @kammeier_new_1999 -->
 
 # Open source tools for geographic analysis in transport planning {#open-source-tools}
@@ -386,7 +387,10 @@ scopus_search(query = "visum", key = Sys.getenv("SCOPUS"))
 
 <!-- In this section the paper shifts gear, and moves onto solutions. -->
 
-The previous sections suggest that technological, environment and societal changes are driving demand for geographic analysis via accessible tools in transport planning. This section reviews prominent open source tools that could, and in some cases already are, being used to tackle research, and increasingly applied, transport planning challenges. Open source tools for geographic analysis in transport planning have not emerged in a vacuum. They were developed in the wider landscape of open source software [@dhir_adoption_2017].
+Technological, environment and societal changes are driving demand for accessible tools for geographic analysis transport planning.
+This section reviews prominent open source tools that are already being used to tackle transport planning challenges.
+Open source tools for geographic analysis in transport planning have not emerged in a vacuum.
+They were developed in the wider landscape of open source software [@dhir_adoption_2017].
 
 These tools could be classified by the five main stages illustrated in Figure \@ref(fig:schematic) (data collection, processing, routing, modelling and visualisation). Instead, because many tools can be used in multiple stages, can be more usefully classified from the user's perspective. Based on open tools identified through web searches, they can be classified into the follow broad, and to some extent overlapping,[^9] user interface (UI) types (see Table \@ref(tab:open-tools)):
 

@@ -726,14 +726,13 @@ ecosystems is explored in the next section.
 <!-- The previous sections support and expand on the two main premises of this paper: that geographic analysis has much to offer transport planning, and that the incumbent proprietary software products are not well suited to tackle 21^st^ Century transport planning needs. -->
 <!-- In this section the paper shifts gear, and moves onto solutions. -->
 
-The previous sections suggest that technological, environment and
-societal changes are driving demand for geographic analysis via
-accessible tools in transport planning. This section reviews prominent
-open source tools that could, and in some cases already are, being used
-to tackle research, and increasingly applied, transport planning
-challenges. Open source tools for geographic analysis in transport
-planning have not emerged in a vacuum. They were developed in the wider
-landscape of open source software (Dhir and Dhir 2017).
+Technological, environment and societal changes are driving demand for
+accessible tools for geographic analysis transport planning. This
+section reviews prominent open source tools that are already being used
+to tackle transport planning challenges. Open source tools for
+geographic analysis in transport planning have not emerged in a vacuum.
+They were developed in the wider landscape of open source software (Dhir
+and Dhir 2017).
 
 These tools could be classified by the five main stages illustrated in
 Figure <a href="#fig:schematic">1.1</a> (data collection, processing,
