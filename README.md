@@ -915,7 +915,7 @@ QGIS plugins, resulting in the categorisation shown in Table
 | [urbanaccess](https://github.com/UDST/urbanaccess)                    | Python package     | AGPLv3     | Python     |   105 |        12 | (Blanchard 2017)         |
 | [spaghetti](https://github.com/pysal/spaghetti)                       | Python package     | BSD-3      | Python     |    60 |         0 | (Gaboardi et al., 2018)  |
 | [urbanpy](https://github.com/EL-BID/urbanpy)                          | Python package     | MIT        | Python     |    16 |        NA | NA                       |
-| [abstreet](https://github.com/dabreegster/abstreet)                   | Standalone         | Apache-2.0 | Rust       |  4896 |        NA | NA                       |
+| [A/B Street](https://github.com/dabreegster/abstreet)                 | Standalone         | Apache-2.0 | Rust       |  4896 |        NA | NA                       |
 | [AequilibraE](https://github.com/AequilibraE/AequilibraE-GUI)         | QGIS plugin        | Custom     | Python     |    57 |         3 | (Carmargo 2015)          |
 | [QNEAT3](https://github.com/root676/QNEAT3/)                          | QGIS plugin        | GPLv3      | Python     |    35 |        NA | NA                       |
 | [Networks plugin](https://github.com/crocovert/networks)              | QGIS plugin        | GPLv3      | Python     |     9 |        NA | NA                       |
@@ -1750,7 +1750,7 @@ c
 </tr>
 <tr>
 <td style="text-align:left;">
-abstreet
+A/B Street
 </td>
 <td style="text-align:left;">
 Standalone
@@ -2197,7 +2197,34 @@ OSMnx (Boeing 2017) to the analysis of cycling potential in the PCT
 in flowmap.blue.
 
 A few of the tools can be seen as general purpose transport planning
-tools, with particular strengths. SUMO is
+tools, with particular strengths. Veins (which uses SUMO behind the
+scenes), MATSim and A/B Street are well suited to a wide range of
+geographic transport planning tasks, ranging from the simulation of the
+impact of new infrastructure on the flow of individual vehicles to
+city-wide impacts of new policies. All three have mechanisms to not only
+describe but to *change* transport networks interactively and all can
+work on scales ranging from single junctions to entire cities (although
+at the time of writing, A/B Street struggles to represent the central
+areas of large cities such as London, the performance of the other tools
+on large cities is not known). Tools focussed on origin-destination data
+such as the PCT and flowmap.blue are not constrained by the need to
+visualise complex city networks, and can show the transport cities of
+entire countries.
+
+This raises the question of scale. Clearly, different tools have
+different capabilities and most tools can be used to analyse phenomena
+at more than one scale of analysis. Furthermore, although a tool has a
+‘most common scale’ that does not mean it cannot be used at larger or
+smaller scales. MATSim, for example, is most often used to study
+city-level phenomena and requires substantial computing resources to
+study regional or even national systems at high temporal resolution, but
+that does not mean it *cannot* be done if sufficiently powerful hardware
+and set-up resources are available (the same point applies to the other
+microsimulation tools SUMO, A/B Street and Veins). And although tools
+have a main level (Resolution) of analysis, that does not stop them from
+using or producing datasets at higher resolution, the PCT’s production
+of data at the route network segment (s) level using OD data as inputs
+being a case in point (**morgan\_travel\_2020?**)
 
 <!-- While some of the most popular tools shown in table @ref(tab:open-tools) arose from new contexts (Rust is not generally seen as a language for data analysis, alone transport planning for example), such ecosystems can be important for longevity of projects, support and getting new people involved in the software development process. -->
 <!-- Three software ecosystems --- R, Python and QGIS --- account for over half of the projects presented in table @ref(tab:open-tools). -->

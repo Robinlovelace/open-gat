@@ -20,7 +20,7 @@ dodgr,CLI,R package,routing engine,GPLv3,C++,84,2,NA,NA,NA,https://github.com/AT
 spaghetti,CLI,Python package,network analysis,BSD-3,Python,60,0,NA,NA,"(Gaboardi et al., 2018)",https://github.com/pysal/spaghetti,✓,i,✓,✓,✓,s,NA,c,2
 opentripplanner,CLI,R package,interface,GPLv3,R,47,0,NA,NA,(Morgan et al. 2019),https://github.com/ropensci/opentripplanner,i,i,i,i,i,s,NA,c,2
 urbanpy,CLI,Python package,network analysis,MIT,Python,16,NA,NA,2020,NA,https://github.com/EL-BID/urbanpy,i,i,i,i,✓,s,NA,c,2
-abstreet,GUI,Standalone,abm,Apache-2.0,Rust,4896,NA,NA,NA,NA,https://github.com/dabreegster/abstreet,✓,NA,✓,✓,e,a,✓,c,1
+A/B Street,GUI,Standalone,abm,Apache-2.0,Rust,4896,NA,NA,NA,NA,https://github.com/dabreegster/abstreet,✓,NA,✓,✓,e,a,✓,c,1
 AequilibraE,GUI,QGIS plugin,network analysis,Custom,Python,57,3,5,NA,(Carmargo 2015),https://github.com/AequilibraE/AequilibraE-GUI,i,i,i,✓,i,s,NA,c,2
 ORS Tools,GUI,QGIS plugin,interface,MIT,Python,39,NA,NA,NA,NA,https://github.com/GIScience/orstools-qgis-plugin,i,i,i,i,i,s,NA,c,2
 QNEAT3,GUI,QGIS plugin,network analysis,GPLv3,Python,35,NA,NA,NA,NA,https://github.com/root676/QNEAT3/,i,i,i,✓,i,s,NA,c,2
