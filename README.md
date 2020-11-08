@@ -392,17 +392,23 @@ are being developed.
 ## 2.1 Political drivers
 
 The history of transport modelling shows that transport planning
-software was originally designed to plan for “increased use of cars
-\[for personal travel\], and trucks for deliveries and goods movement”
-(Boyce and Williams 2015). Despite the fact that policy drivers have
-changed dramatically — with climate change mitigation, air quality
-improvement and public health prioritised in the ‘sustainable mobility
-paradigm’ (Hickman, Ashiru, and Banister 2011) — incumbent transport
-software still largely based on tools focussed on motor traffic,
-emphasising travel time savings and (de)congestion effects of
-interventions at relatively low levels of geographic resolution that may
-be insufficient to map the relatively intricate details needed to
-effectively design for active transport (Parkin 2018).
+software was originally designed in the late 1950s and onwards to plan
+for “increased use of cars \[for personal travel\], and trucks for
+deliveries and goods movement” (Boyce and Williams 2015). Policy drivers
+have changed dramatically since then: climate change mitigation, air
+quality improvement and public health are prioritised in the emergent
+‘sustainable mobility paradigm’ (Hickman, Ashiru, and Banister 2011;
+Johansson et al. 2017; Department for Transport 2020). Yet many
+traditional transport planning tools focus on motor traffic, emphasising
+travel time savings impacts over environmental and health savings (Hall,
+Willumsen, and Van Vliet 1980; Dios Ort’uzar S. and Willumsen 2011),
+often at low levels of geographic resolution (Hollander 2016). These
+observations have led to criticism of transport models which are deemed
+unable to represent transport network details such as pavement and way
+widths that are needed effectively design for active transport (Parkin
+2018) or capture
+[community](https://www.researchgate.net/publication/246480147_Inside_the_Blackbox_Making_Transportation_Models_Work_for_Livable_Communities)
+input (Beimborn and Kennedy 1996).
 
 <!-- Todo: define 'tool' vs software vs ecosystem -->
 
@@ -2194,10 +2200,12 @@ obesity crisis, air pollution concerns and the climate emergency that
 has been declared by some city authorities — many transport planners
 have been tasked with new sustainable transport targets, including
 reduced private car use and increasing levels of walking and cycling
-(Hickman, Ashiru, and Banister 2011). In the age of evidence-based
-policy, open data and citizen science, there is an onus on practitioners
-to provide solutions that are transparent, accessible and, increasingly,
-participatory (Banister 2008; Peters 2020).
+(Hickman, Ashiru, and Banister 2011). In the context of calls for
+evidence-based policy, open data and citizen science (Banister 2008;
+Peters 2020) — and political commitments to and actions implementing
+such principles by actors at state and regional levels (Monbiot 2017;
+Peters 2020) — there is a growing onus on practitioners to provide
+solutions that are transparent, accessible and, participatory.
 
 This poses a challenge to the vendors of proprietary transport planning
 software, which tends to be expensive and thereby inaccessible to most
@@ -2213,12 +2221,12 @@ intuitive and popular **Streetmix** web service demonstrate the huge
 potential for tools to revolutionise not only *how* transport plans are
 developed by *who* can be involved in the planning process. This raises
 the question: what would a tool for geographic analysis in transport
-planning that was as powerful and flexible as **CityBound**, as
-‘playable’ and ‘analysis ready’ as **A/B Street** and as user friendly
-as **Streetmix** look like? Each of the projects outlined in this paper
-show that open source solutions to transport planning needs are
-advanced, and in a growing number of areas more advanced, than propriety
-software raising a more fundamental question: what would a completely
+planning that was as powerful and ‘playable’ as [**A/B
+Street**](https://github.com/dabreegster/abstreet/#ab-street) yet as
+user friendly as **Streetmix** look like? Each of the projects outlined
+in this paper show that open source solutions to transport planning
+needs are advanced, and in a growing number of areas more advanced, than
+propriety software. This raises the question: what would a completely
 open source, participatory and reproducible landscape for transport
 planning look like?
 
@@ -2283,57 +2291,100 @@ provide valuable insight into which tools work best for different
 applications including, critically, how to rapidly decarbonise transport
 systems worldwide (Hickman, Ashiru, and Banister 2011).
 
-As the FOSS philosophy described in Section
-<a href="#open-source-tools">4</a> emphasizes, open source software by
-its very nature is collaborative, innovative and evolving (Gancarz
-2003), allowing it to out-compete and eventually dominate in sectors
-from machine learning to web development. This paper shows that
-high-performance and innovative solutions are already available in the
-‘ecological niche’ of geographic analysis for transport planning. Given
-the nascent nature of many of the transport-oriented packages, plugins
-and extensions in each ecosystem, fruitful directions of research would
-explore the relative merits of different options, and combinations of
-options, in terms of computer and programmer efficiency. Furthermore,
-the modular and ‘pluginable’ nature of open source software suggests
-there are great opportunities for integration: could there be R and
-Python interfaces to MATSim, SUMO and sDNA? And from a research
-perspective, how can the growth of open source solutions for geographic
-transport data analysis be monitored to identify ‘tipping points’ in
-uptake?
+In terms of further research, a hypothesis raised in this paper is that
+open source tools for transport planning, underpinned by the FOSS
+philosophy described in Section <a href="#open-source-tools">4</a>, will
+continue to gain market share in academic, public sector and consultancy
+applications. The paper supports the characterisation of open source
+software as collaborative, innovative and evolving (Gancarz 2003). Will
+these features of open source tools allow them to out-compete and
+eventually dominate in the field of transport planning — as has already
+happened in fields including machine learning (e.g. Abadi et al. 2016)
+and web development (e.g. Grinberg 2018; Wickham 2020)? Only time and
+much-needed further research into the topic will tell. Regardless of the
+answer, this paper has conclusively found that that high-performance and
+innovative open source solutions are already available in the
+‘ecological niche’ of geographic analysis for transport planning. The
+nascent and rapidly evolving nature of open source transport planning
+ecosystems means that there are many fruitful directions of future
+research, asking a wide range of related questions, including:
 
-Further research could find evolving answers to such questions using a
-range of methods. Technical/computing approaches could usefully tackle
-more objective questions, such as the relative performance of different
-routing engines and transport planning APIs. Indeed, there is a need
-research evaluating the potential of ‘WebAPI’ based tools for transport
-planning such as OpenTripPlanner, mentioned in the [online
+-   What are the relative merits of different tools and combinations of
+    tools for different transport planning applications, in terms of
+    criteria such as computer/programmer efficiency and public
+    accessibility?
+-   What scope is there for greater integration and collaboration
+    between tools, building on the modular and ‘pluginable’ nature of
+    open source software (this questions raises the prospect
+    R/Python/QGIS/other interfaces to established transport tools such
+    as MATSim, SUMO and sDNA)?
+-   How can the growth of open source solutions for geographic transport
+    data analysis be monitored, e.g. to identify ‘tipping points’ in
+    uptake?
+-   In which contexts — e.g. along wealthy/low income, urban/rural,
+    democratic/dictatorship spectra — are open source tools for
+    transport planning, and evidence-based decision-making in general,
+    most effective and most needed?
+
+This is clearly a multi-disciplinary area of research, and it is not
+immediately clear which methodological approaches — ranging from
+action-based research developing “practical solutions to issues of
+pressing concern,” e.g. by creating or contributing to the source code
+underpinning open source tools (Brydon-Miller, Greenwood, and Maguire
+2003), to more conventional literature/software reviews of emerging
+ecosystems (e.g. Joo et al. 2020).
+
+Technical/computing approaches could usefully tackle more objective
+questions, such as the relative performance of different routing engines
+and transport planning APIs. Indeed, there is a need research evaluating
+the potential of ‘WebAPI’ based tools for transport planning such as
+OpenTripPlanner, mentioned in the [online
 version](https://github.com/Robinlovelace/open-gat/blob/master/open_tools.csv)
 of Table <a href="#tab:open-tools">4.1</a> but not discussed in this
 paper due to space constraints.
 
 <!-- These considerations wider questions, about if and when will open source software rise to ascendancy in the wider field of transport planning. -->
 
-Returning to the pressing policy driver of climate change mitigation
-introduced in Section <a href="#intro">1</a>, it is clear that a
-paradigm shift is needed. Attention has focused on changes to the
-overall planning process (Banister 2008; Legacy 2016). This paper
-highlights the importance of not only processes, but also the tools used
-for designing geographically specific transport plans. Open source tools
-generate evidence that is more likely to be rigorous, transparent,
-reproducible and shared than evidence generated by the established
-proprietary tools. Plans based on such open evidence are likely to be
-effective. Given the importance of effective policies to improve the
-environmental and social performance of transport systems worldwide, the
-conclusion of this paper is that uptake of open source tools for
-geographic analysis. In other words, alongside systemic political and
-institutional shifts to prioritize sustainability over simplistic and
-out-dated indicators of economic and transport system performance
-(Beddoe et al. 2009; Litman 2007), open source software can save the
-world.
+Returning to the ‘big picture’ introduced in Section
+<a href="#intro">1</a>, it is clear that there are strong arguments for
+a paradigm shift in transport planning overall. Academic attention has
+tended to focus on changes that are needed in the overall planning
+process (Banister 2008; Legacy 2016) rather than changes that are needed
+in the transport planning ‘tools of the trade,’ notwithstanding research
+advocating for change in transport modelling from practitioner (e.g.
+Hollander 2016), academic (e.g. Lovelace, Parkin, and Cohen 2020) and
+advocacy (e.g. Beimborn and Kennedy 1996) perspectives.  
+Building on prior research and a review of existing open source options,
+this paper highlights the importance of not only processes and models,
+but also the tools used for designing geographically specific transport
+plans. Open source tools generate evidence that is more likely to be
+rigorous, transparent, reproducible and shared than evidence generated
+by the established proprietary tools (Peters 2020). Transport
+interventions based on such open evidence are more likely to be
+effective at meeting policy objectives. Effective interventions are
+necessary to improve the environmental and health performance of
+transport systems worldwide, to reduce lives lost due to climate change
+and non-communicable disease. This paper therefore concludes that open
+source tools for geographic analysis in transport planning can support
+emerging environmental, health and social objectives. In other words —
+alongside wider political and institutional shifts to decarbonise the
+economy (Beddoe et al. 2009; Litman 2007) — open source software can not
+only provide cost-effective solutions to 21<sup>st</sup> Century
+transport planning needs, it can save lives.
+<!-- can save the world. -->
 
 # 6 References
 
 <div id="refs" class="references csl-bib-body hanging-indent">
+
+<div id="ref-abadi_tensorflow_2016" class="csl-entry">
+
+Abadi, Martín, Ashish Agarwal, Paul Barham, Eugene Brevdo, Zhifeng Chen,
+Craig Citro, Greg S. Corrado, et al. 2016. “TensorFlow: Large-Scale
+Machine Learning on Heterogeneous Distributed Systems.”
+*arXiv:1603.04467 \[cs\]*, March. <http://arxiv.org/abs/1603.04467>.
+
+</div>
 
 <div id="ref-anderson_applying_1991" class="csl-entry">
 
@@ -2383,6 +2434,14 @@ Sciences* 106 (8): 2483–89. <https://doi.org/10.1073/pnas.0812570106>.
 
 </div>
 
+<div id="ref-beimborn_blackbox_1996" class="csl-entry">
+
+Beimborn, Edward, and Rob Kennedy. 1996. “Inside the Blackbox: Making
+Transportation Models Work for Livable Communities.” Citizens for a
+Better Environment.
+
+</div>
+
 <div id="ref-blanchard_urbanaccess_2017" class="csl-entry">
 
 Blanchard, Samuel D., and Paul Waddell. 2017. “Urbanaccess: Generalized
@@ -2405,6 +2464,14 @@ Environment and Urban Systems* 65 (September): 126–39.
 
 Boyce, David E., and Huw C. W. L. Williams. 2015. *Forecasting Urban
 Travel: Past, Present and Future*. Edward Elgar Publishing.
+
+</div>
+
+<div id="ref-brydon-miller_why_2003" class="csl-entry">
+
+Brydon-Miller, Mary, Davydd Greenwood, and Patricia Maguire. 2003. “Why
+Action Research?” *Action Research* 1 (1): 9–28.
+<https://doi.org/10.1177/14767503030011002>.
 
 </div>
 
@@ -2457,6 +2524,14 @@ Command Line & Python.” *SoftwareX* 12 (July): 100525.
 de la Barra, T, B P’erez, and N Vera. 1984. “TRANUS-J: Putting Large
 Models into Small Computers.” *Environment and Planning B: Planning and
 Design* 11 (1): 87–101. <https://doi.org/10.1068/b110087>.
+
+</div>
+
+<div id="ref-departmentfortransport_decarbonising_2020"
+class="csl-entry">
+
+Department for Transport. 2020. “Decarbonising Transport: Setting the
+Challenge.” Department for Transport.
 
 </div>
 
@@ -2547,6 +2622,13 @@ Data in Python.” *GIForum* 1: 54–68.
 
 </div>
 
+<div id="ref-grinberg_flask_2018" class="csl-entry">
+
+Grinberg, Miguel. 2018. *Flask Web Development: Developing Web
+Applications with Python*. " O’Reilly Media, Inc.".
+
+</div>
+
 <div id="ref-hackl_promoting_2019" class="csl-entry">
 
 Hackl, Roland, Clemens Raffler, Michael Friesenecker, Hans Kramar,
@@ -2564,6 +2646,14 @@ Hadfield, Paris, and Nicole Cook. 2019. “Financing the Low-Carbon City:
 Can Local Government Leverage Public Finance to Facilitate Equitable
 Decarbonisation?” *Urban Policy and Research* 37 (1): 13–29.
 <https://doi.org/10.1080/08111146.2017.1421532>.
+
+</div>
+
+<div id="ref-hall_saturn_1980" class="csl-entry">
+
+Hall, M., L. G. Willumsen, and D Van Vliet. 1980. “SATURNa
+Simulation-Assignment Model for the Evaluation of Traffic Management
+Schemes.” *Traffic Engineering & Control* 21 (4).
 
 </div>
 
@@ -2630,6 +2720,26 @@ Jäppinen, Sakari, Tuuli Toivonen, and Maria Salonen. 2013. “Modelling
 the Potential Effect of Shared Bicycles on Public Transport Travel Times
 in Greater Helsinki: An Open Data Approach.” *Applied Geography* 43:
 13–24.
+
+</div>
+
+<div id="ref-johansson_impacts_2017" class="csl-entry">
+
+Johansson, Christer, Boel Lövenheim, Peter Schantz, Lina Wahlgren, Peter
+Almström, Anders Markstedt, Magnus Strömgren, Bertil Forsberg, and Johan
+Nilsson Sommar. 2017. “Impacts on Air Pollution and Health by Changing
+Commuting from Car to Bicycle.” *Science of The Total Environment*
+584-585 (April): 55–63.
+<https://doi.org/10.1016/j.scitotenv.2017.01.145>.
+
+</div>
+
+<div id="ref-joo_navigating_2020" class="csl-entry">
+
+Joo, Rocio, Matthew E. Boone, Thomas A. Clay, Samantha C. Patrick,
+Susana Clusella-Trullas, and Mathieu Basille. 2020. “Navigating Through
+the R Packages for Movement.” *Journal of Animal Ecology* 89 (1):
+248–67. <https://doi.org/10.1111/1365-2656.13116>.
 
 </div>
 
@@ -2768,6 +2878,15 @@ Lovelace, Robin, Anna Goodman, Rachel Aldred, Nikolai Berkoff, Ali
 Abbas, and James Woodcock. 2017. “The Propensity to Cycle Tool: An Open
 Source Online System for Sustainable Transport Planning.” *Journal of
 Transport and Land Use* 10 (1). <https://doi.org/10.5198/jtlu.2016.862>.
+
+</div>
+
+<div id="ref-lovelace_open_2020" class="csl-entry">
+
+Lovelace, Robin, John Parkin, and Tom Cohen. 2020. “Open Access
+Transport Models: A Leverage Point in Sustainable Transport Planning.”
+*Transport Policy* 97 (October): 47–54.
+<https://doi.org/10.1016/j.tranpol.2020.06.015>.
 
 </div>
 
@@ -3024,6 +3143,12 @@ Rudi Torfs, Romain Meeusen, and Luc Int Panis. 2009. “Mapping Bicycle
 Use and the Risk of Accidents for Commuters Who Cycle to Work in
 Belgium.” *Transport Policy* 16 (2): 77–87.
 <https://doi.org/10.1016/j.tranpol.2009.03.004>.
+
+</div>
+
+<div id="ref-wickham_mastering_2020" class="csl-entry">
+
+Wickham, Hadley. 2020. *Mastering Shiny*.
 
 </div>
 
