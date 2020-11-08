@@ -6,34 +6,44 @@ Open source tools for geographic analysis in transport planning
 
 # Abstract
 
-Geographic methods have long supported transport planners to develop
-effective and evidence-based interventions that are appropriate to local
-contexts. Many popular ‘tools of the trade’ for geographic analysis used
-in practice are proprietary, reducing access to the benefits of methods
-such as spatial interaction modeling, routing and route network
-analysis. In this context, the aim of this paper is to explore emerging
-open source tools for geographic analysis in transport planning, with
-reference to the literature. A key finding is that a growing number of
-open source options exist. These can be classified as command-line
-interface (CLI), graphical user interface (GUI) or web-based tools,
-instances of which can be accessed remotely or set-up locally. Open
-source tools for transport planning come in many forms, ranging from
-single functions dedicated to a particular task to large software
-projects and enabling geographic analysis at every stage of the
-transport planning process, from data collection and demand modeling to
-visualization of results on publicly available and interactive web-based
-maps. Although options are abundant, many lack documentation explaining
-how they can be used ‘in production’ and few case studies exist showing
-how they can support established transport planning workflows. Thus,
-while open source tools for geographic analysis in transport planning
-*as they exist today* hold great promise, their *future potential* is
-even greater. There are many ways for developers, researchers,
-practitioners and the interested public to participate and ‘fill gaps’
-in the emerging landscape, particularly in relation to: integration and
-cross-compatibility of diverse tools; accessible tutorials; and real
-world case studies published in the academic literature. The paper
-concludes that time invested in developing open source tools and
-associated communities of practice is time well-spent.
+Geographic analysis has long supported transport plans that are
+appropriate to local contexts. Many incumbent ‘tools of the trade’ are
+proprietary and were developed to support growth in motor traffic,
+limiting their utility for transport planners who have been tasked with
+21<sup>st</sup> Century objectives such as enabling citizen
+participation, reducing pollution, and increasing levels of physical
+activity by getting more people walking and cycling. Geographic
+techniques — such as route analysis, network editing, localised impact
+assessment and interactive map visualisation — have great potential to
+support modern transport planning priorities. The aim of this paper is
+to explore emerging open source tools for geographic analysis in
+transport planning, with reference to the literature and a review of
+open source tools that are already being used. A key finding is that a
+growing number of options exist, challenging the current landscape of
+proprietary tools. These can be classified as command-line interface
+(CLI), graphical user interface (GUI) or web-based user interface (GUI)
+tools and by the framework in which they were implemented, with numerous
+tools released as R, Python and JavaScript packages, and QGIS plugins.
+The review found a diverse and rapidly evolving ‘ecosystem’ tools, with
+25 tools that were designed for geographic analysis to support transport
+planning outlined in terms of their popularity and functionality based
+on online documentation. They ranged in size from single-purpose tools
+such as the QGIS plugin AwaP to sophisticated stand-alone multi-modal
+traffic simulation software such as MATSim, SUMO and Veins. Building on
+their ability to re-use the most effective components from other open
+source projects, developers of open source transport planning tools can
+avoid ‘reinventing the wheel’ and focus on innovation, the ‘gamified’
+A/B Street simulation software, based on OpenStreetMap, a case in point.
+The paper concludes that, although many of the tools reviewed are still
+evolving and further research is needed to understand their relative
+strengths and barriers to uptake, open source tools for geographic
+analysis in transport planning already hold great potential to help
+generate the strategic visions of change and evidence that is needed by
+transport planners in the 21<sup>st</sup> Century.
+
+<!-- There are many ways for developers, researchers, practitioners and the interested public to participate and 'fill gaps' in the emerging landscape, and many unanswered questions suggesting the need for further research, particularly around the assessment, monitoring, integration and the contexts in which open tools have most to offer the transport planning process. -->
+<!-- particularly in relation to: integration and cross-compatibility of diverse tools; accessible tutorials; and real world case studies published in the academic literature. -->
+<!-- The paper concludes that time invested in developing open source tools and associated communities of practice is time well-spent. -->
 
 # 1 Introduction: geographic analysis in transport planning
 
@@ -188,8 +198,8 @@ of transport planning as follows (Dios Ort’uzar S. and Willumsen 2011).
 Each of these stages, illustrated in Figure
 <a href="#fig:schematic">1.1</a>, has geographic components. The
 3<sup>rd</sup> stage, can refer to at least three distinct processes:
-the ‘four stage’ transport model (left box); statistical modelling
-(central box) or geographic analysis and modelling (right box, Figure
+the ‘four stage’ transport model (left box); scenario modelling (central
+box) or geographic analysis and modelling (right box, Figure
 <a href="#fig:schematic">1.1</a>). The wider point is that geographic
 techniques can supplement and in some cases replace traditional
 modelling, and the classic four stage transport model. Many of the
@@ -693,8 +703,8 @@ used for each job (Gancarz 2003). The next section describes the this
 modularity in more detail, including outstanding support for geographic
 data in open source software.
 
-There are many ‘barriers to access’ prominent tools in the current
-landscape of transport planning. Proprietary tools are expensive
+There are many barriers reducing access to prominent tools in the
+current landscape of transport planning. Proprietary tools are expensive
 (costing up to hundreds of dollars for a single license), ensuring that
 only a small fraction of transport planners, let alone the public, has
 access to them. Many proprietary tools are tied to a particular Windows,
@@ -2224,7 +2234,7 @@ microsimulation tools SUMO, A/B Street and Veins). And although tools
 have a main level (Resolution) of analysis, that does not stop them from
 using or producing datasets at higher resolution, the PCT’s production
 of data at the route network segment (s) level using OD data as inputs
-being a case in point (**morgan\_travel\_2020?**)
+being a case in point (Morgan and Lovelace 2020)
 
 <!-- While some of the most popular tools shown in table @ref(tab:open-tools) arose from new contexts (Rust is not generally seen as a language for data analysis, alone transport planning for example), such ecosystems can be important for longevity of projects, support and getting new people involved in the software development process. -->
 <!-- Three software ecosystems --- R, Python and QGIS --- account for over half of the projects presented in table @ref(tab:open-tools). -->
@@ -2424,6 +2434,9 @@ research, asking a wide range of related questions, including:
 -   How can the growth of open source solutions for geographic transport
     data analysis be monitored, e.g. to identify ‘tipping points’ in
     uptake?
+-   What are the barriers to uptake and ‘discoverability’ of leading
+    open source tools, including in relation to documentation and case
+    studies?
 -   In which contexts — e.g. along wealthy/low income, urban/rural,
     democratic/dictatorship continua — are open source tools for
     transport planning, and evidence-based decision-making in general,
@@ -3071,6 +3084,15 @@ Use* 11 (1). <https://doi.org/10.5198/jtlu.2018.1205>.
 
 Monbiot, George. 2017. *Out of the Wreckage: A New Politics for an Age
 of Crisis*. Brooklyn, NY: Verso Books.
+
+</div>
+
+<div id="ref-morgan_travel_2020" class="csl-entry">
+
+Morgan, Malcolm, and Robin Lovelace. 2020. “Travel Flow Aggregation:
+Nationally Scalable Methods for Interactive and Online Visualisation of
+Transport Behaviour at the Road Network Level.” *Environment & Planning
+B: Planning & Design*. <https://doi.org/10.1177/2399808320942779>.
 
 </div>
 
