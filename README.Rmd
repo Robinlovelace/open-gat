@@ -852,7 +852,7 @@ Open source tools generate evidence that is more likely to be rigorous, transpar
 Transport interventions based on such open evidence are more likely to be effective at meeting policy objectives.
 Effective interventions are necessary to improve the environmental and health performance of transport systems worldwide, to reduce lives lost due to climate change and non-communicable disease.
 This paper therefore concludes that open source tools for geographic analysis in transport planning can support emerging environmental, health and social objectives.
-In other words --- alongside wider political and institutional shifts to decarbonise the economy [@beddoe_overcoming_2009; @litman_developing_2007] --- open source software cannot only provide cost-effective solutions to 21^st^ Century transport planning needs, it can save lives.
+In other words --- alongside wider political and institutional shifts to decarbonise the economy [@beddoe_overcoming_2009; @litman_developing_2007] --- open source software can, in addition to providing cost-effective solutions to 21^st^ Century transport planning needs, save lives.
 <!-- can save the world. -->
 
 # References

@@ -2368,9 +2368,9 @@ and non-communicable disease. This paper therefore concludes that open
 source tools for geographic analysis in transport planning can support
 emerging environmental, health and social objectives. In other words —
 alongside wider political and institutional shifts to decarbonise the
-economy (Beddoe et al. 2009; Litman 2007) — open source software cannot
-only provide cost-effective solutions to 21<sup>st</sup> Century
-transport planning needs, it can save lives.
+economy (Beddoe et al. 2009; Litman 2007) — open source software can, in
+addition to providing cost-effective solutions to 21<sup>st</sup>
+Century transport planning needs, save lives.
 <!-- can save the world. -->
 
 # 6 References
