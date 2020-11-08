@@ -888,10 +888,11 @@ command-line, graphical user and web user interfaces respectively.
 
 To overcome the limitation that not all open source software projects
 are hosted on GitHub *or* described in academic papers, snowballing via
-fora such as the [QGIS plugin homepage](https://plugins.qgis.org/),
-links in project README files and social media were used to find
-additional projects. Only projects with the following criteria were
-included (see
+web pages such as the [QGIS plugin homepage](https://plugins.qgis.org/),
+links in project README files and [social
+media](https://twitter.com/robinlovelace/status/1290636806078201856)
+were used to find additional projects. Only projects with the following
+criteria were included (see
 [open\_tools.csv](https://github.com/Robinlovelace/open-gat/blob/master/open_tools.csv)
 for online version):
 
@@ -1213,11 +1214,14 @@ Additional important considerations include the geographic resolution,
 support for time series analysis (over seconds to years), the scale at
 which the tools are documented to run at and the level of expertise
 needed to install, set-up and use the tool. Many tools provide
-functionality through documented interfaces to other packages. R and
-Python packages have access to advanced statistical analyisis and
-modelling capabilities in their native environment and QGIS plugins
-place the user in a mature environment for geographic analyis and
-visualisation, for example.
+functionality through documented interfaces to other packages. R has a
+mature ecosystem of packages for geographic analysis, with particular
+strengths in statistical analysis Bivand (2020) and visualisation
+(Lovelace, Nowosad, and Muenchow 2019, Chapter
+[8](https://geocompr.robinlovelace.net/adv-map.html)). Likewise, there
+is a growing ecosystem of Python packages for geographic analysis
+(Garrard 2016), some of which are available as QGIS plugins, placing the
+user in an advance GIS.
 
 Another key finding from Table <a href="#tab:capabilities">4.2</a> is
 that there is no single tool that every desirable feature of tools for
@@ -2358,19 +2362,19 @@ this paper highlights the importance of not only processes and models,
 but also the tools used for designing geographically specific transport
 plans. Open source tools generate evidence that is more likely to be
 rigorous, transparent, reproducible and shared than evidence generated
-by the established proprietary tools (Peters 2020). Transport
-interventions based on such open evidence are more likely to be
-effective at meeting policy objectives. Effective interventions are
-necessary to improve the environmental and health performance of
-transport systems worldwide, to reduce lives lost due to climate change
-and non-communicable disease. This paper therefore concludes that open
-source tools for geographic analysis in transport planning can support
-emerging environmental, health and social objectives. In other words —
-alongside wider political and institutional shifts to decarbonise the
-economy (Beddoe et al. 2009; Litman 2007) — open source software can, in
-addition to providing cost-effective solutions to 21<sup>st</sup>
-Century transport planning needs, save lives.
-<!-- can save the world. -->
+by the established proprietary tools (Peters 2020; Brunsdon and Comber
+2020). Transport interventions based on such open evidence are more
+likely to be effective at meeting policy objectives. Effective
+interventions are necessary to improve the environmental and health
+performance of transport systems worldwide, to reduce lives lost due to
+climate change and non-communicable disease. This paper therefore
+concludes that open source tools for geographic analysis in transport
+planning can support emerging environmental, health and social
+objectives. In other words — alongside wider political and institutional
+shifts to decarbonise the economy (Beddoe et al. 2009; Litman 2007) —
+open source software can, in addition to providing cost-effective
+solutions to 21<sup>st</sup> Century transport planning needs, save
+lives. <!-- can save the world. -->
 
 # 6 References
 
@@ -2441,6 +2445,14 @@ Better Environment.
 
 </div>
 
+<div id="ref-bivand_progress_2020" class="csl-entry">
+
+Bivand, Roger S. 2020. “Progress in the R Ecosystem for Representing and
+Handling Spatial Data.” *Journal of Geographical Systems*, October.
+<https://doi.org/10.1007/s10109-020-00336-0>.
+
+</div>
+
 <div id="ref-blanchard_urbanaccess_2017" class="csl-entry">
 
 Blanchard, Samuel D., and Paul Waddell. 2017. “Urbanaccess: Generalized
@@ -2463,6 +2475,15 @@ Environment and Urban Systems* 65 (September): 126–39.
 
 Boyce, David E., and Huw C. W. L. Williams. 2015. *Forecasting Urban
 Travel: Past, Present and Future*. Edward Elgar Publishing.
+
+</div>
+
+<div id="ref-brunsdon_opening_2020" class="csl-entry">
+
+Brunsdon, Chris, and Alexis Comber. 2020. “Opening Practice: Supporting
+Reproducibility and Critical Spatial Data Science.” *Journal of
+Geographical Systems*, August.
+<https://doi.org/10.1007/s10109-020-00334-2>.
 
 </div>
 
@@ -2584,6 +2605,13 @@ Folch, Wei Kang, Philip Stephens, and Charles Schmidt. 2018.
 <div id="ref-gancarz_linux_2003" class="csl-entry">
 
 Gancarz, Mike. 2003. *Linux and the Unix Philosophy*. Digital Press.
+
+</div>
+
+<div id="ref-garrard_geoprocessing_2016" class="csl-entry">
+
+Garrard, Chris. 2016. *Geoprocessing with Python*. Shelter Island, NY:
+Manning Publications.
 
 </div>
 
@@ -2877,6 +2905,13 @@ Lovelace, Robin, Anna Goodman, Rachel Aldred, Nikolai Berkoff, Ali
 Abbas, and James Woodcock. 2017. “The Propensity to Cycle Tool: An Open
 Source Online System for Sustainable Transport Planning.” *Journal of
 Transport and Land Use* 10 (1). <https://doi.org/10.5198/jtlu.2016.862>.
+
+</div>
+
+<div id="ref-lovelace_geocomputation_2019" class="csl-entry">
+
+Lovelace, Robin, Jakub Nowosad, and Jannes Muenchow. 2019.
+*Geocomputation with R*. CRC Press.
 
 </div>
 
